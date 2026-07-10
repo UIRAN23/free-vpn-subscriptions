@@ -1,0 +1,122 @@
+name: Update subscriptions
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "37 * * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: public-subscription-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 70
+
+    steps:
+      - name: Checkout public repository
+        uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5
+        with:
+          path: public
+          fetch-depth: 20
+          persist-credentials: false
+
+      - name: Check whether the public build is stale
+        id: freshness
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          set -euo pipefail
+          if [[ "$EVENT_NAME" == "workflow_dispatch" ]]; then
+            echo "Manual run: build is due."
+            echo "due=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          last_epoch="$(git -C public log -1 --format=%ct -- sub/summary.json || true)"
+          now_epoch="$(date +%s)"
+          if [[ -z "$last_epoch" ]]; then
+            echo "No previous public summary commit: build is due."
+            echo "due=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          age_seconds="$((now_epoch - last_epoch))"
+          echo "Last public subscription update is ${age_seconds}s old."
+          if (( age_seconds >= 6000 )); then
+            echo "Build is older than 100 minutes: build is due."
+            echo "due=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "Build is still fresh: this watchdog run will stop here."
+            echo "due=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Checkout private builder
+        if: steps.freshness.outputs.due == 'true'
+        uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5
+        with:
+          repository: UIRAN23/free-vpn-builder
+          ssh-key: ${{ secrets.PRIVATE_BUILDER_DEPLOY_KEY }}
+          persist-credentials: false
+          path: builder
+
+      - name: Set up Python
+        if: steps.freshness.outputs.due == 'true'
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: "3.12"
+
+      - name: Install pinned runtime tools
+        if: steps.freshness.outputs.due == 'true'
+        working-directory: builder
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python -u scripts/download_tools.py
+
+      - name: Build private subscriptions
+        if: steps.freshness.outputs.due == 'true'
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_API_MODEL: gemini-3.5-flash
+          SKIP_TOOL_DOWNLOAD: "1"
+        run: |
+          set -euo pipefail
+          log_file="${RUNNER_TEMP}/uran-private-build.log"
+          if ! bash builder/scripts/run_publish.sh builder public >"$log_file" 2>&1; then
+            echo "Private builder failed. Run the private diagnostic workflow for detailed logs."
+            exit 1
+          fi
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          data = json.loads(Path("public/sub/summary.json").read_text(encoding="utf-8"))
+          print(
+              "Published candidate: "
+              f"nodes={data['mihomo_nodes']['all']}, "
+              f"gemini={data['gemini_nodes']['all']}, "
+              f"validation={data['validation']['ok']}"
+          )
+          PY
+
+      - name: Commit public update
+        if: steps.freshness.outputs.due == 'true'
+        working-directory: public
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          git config user.name "Vladimir"
+          git config user.email "nemsasa29@gmail.com"
+          git add -A sub
+          if git diff --cached --quiet; then
+            echo "No subscription changes."
+          else
+            git commit -m "Update subscriptions"
+            gh auth setup-git
+            git push
+          fi

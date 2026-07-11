@@ -401,19 +401,21 @@
     area.style.opacity = "0";
     document.body.appendChild(area);
     area.select();
-    document.execCommand("copy");
+    const copied = document.execCommand("copy");
     area.remove();
+    return copied;
   }
 
   function copyText(value) {
+    try {
+      legacyCopy(value);
+    } catch {
+    }
     if (navigator.clipboard?.writeText) {
       try {
-        navigator.clipboard.writeText(value).catch(() => legacyCopy(value));
+        navigator.clipboard.writeText(value).catch(() => {});
       } catch {
-        legacyCopy(value);
       }
-    } else {
-      legacyCopy(value);
     }
     showToast("Ссылка скопирована");
   }

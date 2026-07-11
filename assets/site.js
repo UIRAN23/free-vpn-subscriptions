@@ -398,9 +398,14 @@
     area.value = value;
     area.setAttribute("readonly", "");
     area.style.position = "fixed";
-    area.style.opacity = "0";
+    area.style.left = "-9999px";
+    area.style.top = "0";
+    area.style.width = "1px";
+    area.style.height = "1px";
     document.body.appendChild(area);
+    area.focus();
     area.select();
+    area.setSelectionRange(0, area.value.length);
     const copied = document.execCommand("copy");
     area.remove();
     return copied;

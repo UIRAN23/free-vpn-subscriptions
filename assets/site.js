@@ -137,9 +137,17 @@
     }
   }
 
-  function nodeCount(modeKey) {
-    const nodes = state.summary?.mihomo_nodes || state.summary?.sing_box_nodes || {};
+  function nodeCount(modeKey, clientKey = state.client) {
+    let nodes = state.summary?.mihomo_nodes || {};
+    if (clientKey === "xray-json") nodes = state.summary?.xray_json || {};
+    if (clientKey === "singbox") nodes = state.summary?.sing_box_nodes || {};
     return Number(nodes[modeKey] ?? 0);
+  }
+
+  function countLabel(clientKey, count, compact = false) {
+    if (!count) return "";
+    if (clientKey === "xray-json") return `${count} ${compact ? "проф." : "профилей"}`;
+    return `${count} ${compact ? "узл." : "локаций"}`;
   }
 
   function renderSwitches() {
@@ -160,12 +168,12 @@
     const client = clients[state.client];
     const mode = modes[state.mode];
     const path = client.paths[state.mode];
-    const count = nodeCount(state.mode);
+    const count = nodeCount(state.mode, state.client);
     $("#selection-output").innerHTML = `
       <div class="selection-meta">
         <div class="selection-title">
           <h3>${escapeHtml(mode.title)}</h3>
-          <p>${escapeHtml(client.note)}${count ? ` Внутри: ${count} локаций.` : ""}</p>
+          <p>${escapeHtml(client.note)}${count ? ` Внутри: ${countLabel(state.client, count)}.` : ""}</p>
         </div>
         <span class="format-tag">${escapeHtml(client.format)}</span>
       </div>
@@ -199,7 +207,7 @@
     $("#subscription-grid").innerHTML = modeOrder.map((modeKey, index) => {
       const mode = modes[modeKey];
       const path = client.paths[modeKey];
-      const count = nodeCount(modeKey);
+      const count = nodeCount(modeKey, state.catalog);
       return `
         <article class="subscription-card" data-mode="${modeKey}">
           <div class="card-head">
@@ -207,7 +215,7 @@
               <span class="card-mode"><i data-lucide="${mode.icon}"></i>${escapeHtml(mode.label)}</span>
               <h3>${escapeHtml(mode.title)}</h3>
             </div>
-            <span class="node-count">${count ? `${count} узл.` : String(index + 1).padStart(2, "0")}</span>
+            <span class="node-count">${count ? countLabel(state.catalog, count, true) : String(index + 1).padStart(2, "0")}</span>
           </div>
           <p class="card-description">${escapeHtml(mode.description)}</p>
           <code class="card-path" title="${escapeHtml(canonicalUrl(state.catalog, modeKey))}">${escapeHtml(path.replace("sub/", ""))}</code>

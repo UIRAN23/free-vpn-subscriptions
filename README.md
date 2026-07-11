@@ -1,45 +1,41 @@
-# VPN-подписки
+# URAN VPN
 
-Публичная страница с готовыми подписками для Mihomo/FlClashX, sing-box и Xray-клиентов: Happ, Incy и других.
+Публичная страница с готовыми подписками для Xray-клиентов, Happ, Incy, Mihomo, FlClashX и sing-box.
 
 Сайт: https://uiran23.github.io/free-vpn-subscriptions/
 
-В сборке оставлены только VLESS и Hysteria2. Публичный репозиторий хранит сайт и те подписки, которые показаны на сайте.
+В сборке остаются VLESS и Hysteria2. Узлы проверяются через реальное прокси-соединение, получают страну по выходному IP и удаляются при повторяющемся выходном IP. Итоговые конфиги проходят валидаторы Xray, Mihomo и sing-box.
 
-## Xray: 6 основных подписок
-
-3 JSON-подписки со встроенными правилами и auto/fallback:
+## Xray JSON
 
 ```text
-https://uiran23.github.io/free-vpn-subscriptions/sub/incy-xray-all-array.json
-https://uiran23.github.io/free-vpn-subscriptions/sub/incy-xray-normal-array.json
-https://uiran23.github.io/free-vpn-subscriptions/sub/incy-xray-bwl-array.json
+https://uiran23.github.io/free-vpn-subscriptions/sub/uran-vpn-xray-json-all.json
+https://uiran23.github.io/free-vpn-subscriptions/sub/uran-vpn-xray-json-normal.json
+https://uiran23.github.io/free-vpn-subscriptions/sub/uran-vpn-xray-json-bwl.json
 ```
 
-3 raw URI-подписки без JSON, просто ссылки:
+## Xray URI
 
 ```text
-https://uiran23.github.io/free-vpn-subscriptions/sub/xray-all.txt
-https://uiran23.github.io/free-vpn-subscriptions/sub/xray-normal.txt
-https://uiran23.github.io/free-vpn-subscriptions/sub/xray-bwl.txt
+https://uiran23.github.io/free-vpn-subscriptions/sub/uran-vpn-xray-uri-all.txt
+https://uiran23.github.io/free-vpn-subscriptions/sub/uran-vpn-xray-uri-normal.txt
+https://uiran23.github.io/free-vpn-subscriptions/sub/uran-vpn-xray-uri-bwl.txt
 ```
-
-Raw URI формат не умеет хранить rules/proxy-groups внутри подписки. В таком режиме авто-выбор делает сам клиент, если он умеет выбирать лучшую ноду из списка.
 
 ## Mihomo / FlClashX
 
 ```text
-https://uiran23.github.io/free-vpn-subscriptions/sub/mihomo-all.yaml
-https://uiran23.github.io/free-vpn-subscriptions/sub/mihomo-normal.yaml
-https://uiran23.github.io/free-vpn-subscriptions/sub/mihomo-bwl.yaml
+https://uiran23.github.io/free-vpn-subscriptions/sub/uran-vpn-mihomo-all.yaml
+https://uiran23.github.io/free-vpn-subscriptions/sub/uran-vpn-mihomo-normal.yaml
+https://uiran23.github.io/free-vpn-subscriptions/sub/uran-vpn-mihomo-bwl.yaml
 ```
 
 ## sing-box
 
 ```text
-https://uiran23.github.io/free-vpn-subscriptions/sub/sing-box-all.json
-https://uiran23.github.io/free-vpn-subscriptions/sub/sing-box-normal.json
-https://uiran23.github.io/free-vpn-subscriptions/sub/sing-box-bwl.json
+https://uiran23.github.io/free-vpn-subscriptions/sub/uran-vpn-sing-box-all.json
+https://uiran23.github.io/free-vpn-subscriptions/sub/uran-vpn-sing-box-normal.json
+https://uiran23.github.io/free-vpn-subscriptions/sub/uran-vpn-sing-box-bwl.json
 ```
 
-Публичные ноды нестабильны и небезопасны для личных данных. Для постоянного VPN лучше свой сервер, домен и свои протоколы.
+Публичные узлы нестабильны и не подходят для передачи чувствительных данных. Для постоянного личного VPN надёжнее собственный сервер и закрытая подписка.

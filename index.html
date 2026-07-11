@@ -3,574 +3,147 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>VPN-подписки</title>
-  <style>
-    :root {
-      color-scheme: dark;
-      --bg: #101214;
-      --panel: #181c20;
-      --panel-2: #20262b;
-      --line: #303840;
-      --text: #eef3f7;
-      --muted: #aab6bf;
-      --soft: #6f7d88;
-      --green: #49d18d;
-      --yellow: #ffc857;
-      --blue: #62a8ff;
-      --red: #ff6b6b;
-      --black: #0b0d0f;
-    }
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      min-height: 100vh;
-      background: linear-gradient(180deg, #151b1f 0%, #101214 44%, #0d0f11 100%);
-      color: var(--text);
-      font: 15px/1.5 Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
-    a { color: inherit; }
-
-    .wrap {
-      width: min(1180px, calc(100% - 28px));
-      margin: 0 auto;
-    }
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      border-bottom: 1px solid rgba(255,255,255,.08);
-      background: rgba(16, 18, 20, .82);
-      backdrop-filter: blur(16px);
-    }
-
-    .topbar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      min-height: 64px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      min-width: 0;
-    }
-
-    .mark {
-      width: 34px;
-      height: 34px;
-      display: grid;
-      place-items: center;
-      border: 1px solid rgba(255,255,255,.16);
-      border-radius: 8px;
-      background: linear-gradient(135deg, #111, #29323a);
-      font-weight: 800;
-      color: var(--green);
-    }
-
-    h1, h2, h3, p { margin: 0; }
-
-    h1 {
-      font-size: clamp(22px, 3vw, 34px);
-      line-height: 1.08;
-      letter-spacing: 0;
-    }
-
-    h2 {
-      font-size: 19px;
-      letter-spacing: 0;
-    }
-
-    h3 {
-      font-size: 15px;
-      letter-spacing: 0;
-    }
-
-    .muted { color: var(--muted); }
-    .soft { color: var(--soft); }
-
-    .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 1.08fr) minmax(320px, .92fr);
-      gap: 22px;
-      padding: 36px 0 22px;
-      align-items: stretch;
-    }
-
-    .intro {
-      display: grid;
-      gap: 18px;
-      align-content: center;
-      min-height: 260px;
-    }
-
-    .intro p {
-      max-width: 720px;
-      color: var(--muted);
-      font-size: 16px;
-    }
-
-    .status-strip {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 8px;
-    }
-
-    .metric {
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      padding: 12px;
-      background: rgba(24, 28, 32, .72);
-      min-width: 0;
-    }
-
-    .metric strong {
-      display: block;
-      font-size: 20px;
-      line-height: 1.15;
-    }
-
-    .panel {
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: rgba(24, 28, 32, .78);
-      box-shadow: 0 22px 48px rgba(0,0,0,.22);
-    }
-
-    .quick {
-      padding: 16px;
-      display: grid;
-      gap: 12px;
-      align-content: start;
-    }
-
-    .quick-row {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 10px;
-      align-items: center;
-      padding: 12px;
-      border: 1px solid rgba(255,255,255,.08);
-      border-radius: 8px;
-      background: rgba(255,255,255,.035);
-    }
-
-    .tabs {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin: 16px 0 18px;
-    }
-
-    .tab {
-      border: 1px solid var(--line);
-      background: var(--panel);
-      color: var(--muted);
-      border-radius: 8px;
-      padding: 9px 12px;
-      cursor: pointer;
-    }
-
-    .tab.active {
-      color: var(--black);
-      background: var(--green);
-      border-color: var(--green);
-      font-weight: 750;
-    }
-
-    section {
-      padding: 16px 0 24px;
-    }
-
-    .section-head {
-      display: flex;
-      align-items: end;
-      justify-content: space-between;
-      gap: 16px;
-      margin-bottom: 12px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 12px;
-    }
-
-    .card {
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      padding: 14px;
-      background: var(--panel);
-      min-width: 0;
-      display: grid;
-      gap: 12px;
-    }
-
-    .card-top {
-      display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      align-items: flex-start;
-    }
-
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      min-height: 24px;
-      border-radius: 999px;
-      padding: 2px 8px;
-      background: rgba(255,255,255,.08);
-      color: var(--muted);
-      font-size: 12px;
-      white-space: nowrap;
-    }
-
-    .badge.green { color: var(--green); background: rgba(73, 209, 141, .12); }
-    .badge.blue { color: var(--blue); background: rgba(98, 168, 255, .13); }
-    .badge.yellow { color: var(--yellow); background: rgba(255, 200, 87, .13); }
-
-    .url {
-      padding: 9px 10px;
-      border-radius: 8px;
-      border: 1px solid rgba(255,255,255,.08);
-      background: #0d1012;
-      color: var(--muted);
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
-      font-size: 12px;
-    }
-
-    .actions {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-
-    button, .button {
-      border: 1px solid rgba(255,255,255,.14);
-      border-radius: 8px;
-      min-height: 36px;
-      padding: 8px 11px;
-      background: var(--panel-2);
-      color: var(--text);
-      font: inherit;
-      text-decoration: none;
-      cursor: pointer;
-    }
-
-    button.primary, .button.primary {
-      background: var(--green);
-      border-color: var(--green);
-      color: var(--black);
-      font-weight: 800;
-    }
-
-    footer {
-      padding: 28px 0 40px;
-      color: var(--soft);
-    }
-
-    .toast {
-      position: fixed;
-      left: 50%;
-      bottom: 20px;
-      transform: translateX(-50%) translateY(12px);
-      opacity: 0;
-      pointer-events: none;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: #0d1012;
-      color: var(--text);
-      padding: 10px 14px;
-      transition: .18s ease;
-      z-index: 20;
-    }
-
-    .toast.show {
-      opacity: 1;
-      transform: translateX(-50%) translateY(0);
-    }
-
-    @media (max-width: 880px) {
-      .hero, .grid { grid-template-columns: 1fr; }
-      .status-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .topbar { align-items: flex-start; padding: 12px 0; }
-    }
-
-    @media (max-width: 560px) {
-      .wrap { width: min(100% - 20px, 1180px); }
-      .status-strip { grid-template-columns: 1fr; }
-      .quick-row, .section-head { grid-template-columns: 1fr; display: grid; }
-      .actions button, .actions .button { flex: 1 1 auto; }
-    }
-  </style>
+  <meta name="theme-color" content="#090d10">
+  <meta name="description" content="URAN VPN: готовые подписки для Xray, Happ, Incy, Mihomo, FlClashX и sing-box.">
+  <title>URAN VPN</title>
+  <link rel="stylesheet" href="assets/site.css">
+  <script defer src="assets/lucide.min.js"></script>
+  <script defer src="assets/site.js"></script>
 </head>
 <body>
-  <header>
-    <div class="wrap topbar">
-      <div class="brand">
-        <div class="mark">VPN</div>
-        <div>
-          <h3>VPN-подписки</h3>
-          <p class="soft">Xray, Happ/Incy, Mihomo и sing-box</p>
-        </div>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="#top" aria-label="URAN VPN, в начало">
+        <span class="element-mark" aria-hidden="true">
+          <span class="atomic-number">92</span>
+          <strong>U</strong>
+          <small>URAN</small>
+        </span>
+        <span class="brand-copy">
+          <strong>URAN VPN</strong>
+          <small>публичные подписки</small>
+        </span>
+      </a>
+      <div class="header-state">
+        <span class="live-label"><span class="live-dot"></span>Сборка активна</span>
+        <span class="header-time" id="header-time">обновление...</span>
       </div>
-      <a class="button" href="https://github.com/UIRAN23/free-vpn-subscriptions">Репозиторий</a>
     </div>
   </header>
 
-  <main class="wrap">
-    <div class="hero">
-      <div class="intro">
-        <div>
-          <h1>Подписки без лишних протоколов</h1>
-          <p>В сборке оставлены только актуальные протоколы без лишнего мусора. Есть три режима: all, normal для обычных блокировок и BWL для белых списков. JSON-профили уже содержат маршрутизацию и авто-выбор, URI-списки подходят для клиентов, где выбор делает само приложение.</p>
-        </div>
-        <div class="status-strip" id="stats">
-          <div class="metric"><span class="soft">Обычные</span><strong>...</strong></div>
-          <div class="metric"><span class="soft">Белые списки</span><strong>...</strong></div>
-          <div class="metric"><span class="soft">Gemini</span><strong>...</strong></div>
-          <div class="metric"><span class="soft">В подписке</span><strong>...</strong></div>
-          <div class="metric"><span class="soft">Обновлено</span><strong>...</strong></div>
+  <main id="top">
+    <section class="launch shell">
+      <div class="launch-copy reveal">
+        <p class="eyebrow"><span>URAN / 92</span><span>VLESS + HYSTERIA2</span></p>
+        <h1>URAN VPN</h1>
+        <p class="lead">Одна сборка для обычных блокировок и режима белых списков. Локации определяются по выходному IP, дубликаты удаляются, конфиги проходят проверку перед публикацией.</p>
+        <div class="mode-key" aria-label="Режимы подписки">
+          <span><i data-lucide="layers-3"></i><b>Все</b> оба режима</span>
+          <span><i data-lucide="shield"></i><b>Обычный</b> RU напрямую</span>
+          <span><i data-lucide="radio-tower"></i><b>Белые списки</b> резерв</span>
         </div>
       </div>
 
-      <div class="panel quick">
-        <div class="quick-row">
+      <section class="selector-console reveal" aria-labelledby="selector-title">
+        <div class="console-head">
           <div>
-            <h3>Xray JSON all</h3>
-            <p class="soft">smart auto, normal auto и BWL auto</p>
+            <span class="console-kicker">БЫСТРЫЙ ДОСТУП</span>
+            <h2 id="selector-title">Выберите подписку</h2>
           </div>
-          <button class="primary" data-copy="sub/incy-xray-all-array.json">Скопировать</button>
+          <span class="console-signal" title="Состояние последней сборки"><i data-lucide="activity"></i></span>
         </div>
-        <div class="quick-row">
-          <div>
-            <h3>Mihomo all</h3>
-            <p class="soft">FlClashX / Clash Meta</p>
-          </div>
-          <button data-copy="sub/mihomo-all.yaml">Скопировать</button>
-        </div>
-        <div class="quick-row">
-          <div>
-            <h3>sing-box all</h3>
-            <p class="soft">авто-выбор и маршрутизация</p>
-          </div>
-          <button data-copy="sub/sing-box-all.json">Скопировать</button>
-        </div>
-      </div>
-    </div>
 
-    <div class="tabs" aria-label="Фильтр клиентов">
-      <button class="tab active" data-filter="all">Все клиенты</button>
-      <button class="tab" data-filter="xray">Xray / Happ / Incy</button>
-      <button class="tab" data-filter="mihomo">Mihomo</button>
-      <button class="tab" data-filter="singbox">sing-box</button>
-    </div>
-
-    <section data-section="xray">
-      <div class="section-head">
-        <div>
-          <h2>Xray / Happ / Incy: 6 основных подписок</h2>
-          <p class="soft">3 JSON с правилами и авто-выбором, 3 URI-списка для обычных Xray-клиентов.</p>
+        <div class="control-block">
+          <div class="control-label">Клиент</div>
+          <div class="segmented client-switch" id="client-switch" role="tablist" aria-label="Клиент"></div>
         </div>
-      </div>
-      <div class="grid" id="xray-grid"></div>
+
+        <div class="control-block">
+          <div class="control-label">Режим</div>
+          <div class="segmented mode-switch" id="mode-switch" role="tablist" aria-label="Режим"></div>
+        </div>
+
+        <div class="selection-output" id="selection-output" aria-live="polite"></div>
+        <div class="signal-track" aria-hidden="true"><span></span></div>
+      </section>
     </section>
 
-    <section data-section="mihomo">
-      <div class="section-head">
-        <div>
-          <h2>Mihomo / FlClashX</h2>
-          <p class="soft">Компактные группы по режимам и странам, RU напрямую в normal.</p>
-        </div>
+    <section class="metrics-band" aria-label="Статистика последней сборки">
+      <div class="shell metrics-grid" id="metrics-grid">
+        <div class="metric"><span>Обычные</span><strong>...</strong><small>локаций</small></div>
+        <div class="metric"><span>Белые списки</span><strong>...</strong><small>локаций</small></div>
+        <div class="metric"><span>Страны</span><strong>...</strong><small>по выходному IP</small></div>
+        <div class="metric"><span>Gemini</span><strong>...</strong><small>регион доступен</small></div>
+        <div class="metric"><span>Проверка</span><strong>...</strong><small>валидные файлы</small></div>
       </div>
-      <div class="grid" id="mihomo-grid"></div>
     </section>
 
-    <section data-section="singbox">
-      <div class="section-head">
+    <section class="catalog shell page-section reveal" id="subscriptions">
+      <div class="section-heading">
         <div>
-          <h2>sing-box</h2>
-          <p class="soft">Готовые JSON-профили для all, normal и BWL.</p>
+          <p class="section-index">01 / ПОДПИСКИ</p>
+          <h2>Готовые профили</h2>
         </div>
+        <p>Для каждого формата доступны три одинаковых режима.</p>
       </div>
-      <div class="grid" id="singbox-grid"></div>
+
+      <div class="catalog-tabs" id="catalog-tabs" role="tablist" aria-label="Формат подписки"></div>
+      <div class="subscription-grid" id="subscription-grid"></div>
+    </section>
+
+    <section class="coverage page-section reveal">
+      <div class="shell">
+        <div class="section-heading">
+          <div>
+            <p class="section-index">02 / ГЕОГРАФИЯ</p>
+            <h2>Локации по выходному IP</h2>
+          </div>
+          <p id="coverage-caption">Загрузка актуальных стран...</p>
+        </div>
+        <div class="coverage-list" id="coverage-list"></div>
+      </div>
+    </section>
+
+    <section class="diagnostics shell page-section reveal">
+      <div class="section-heading">
+        <div>
+          <p class="section-index">03 / КОНТРОЛЬ</p>
+          <h2>Последняя проверка</h2>
+        </div>
+        <p>Публикация останавливается, если итоговый конфиг не проходит валидатор.</p>
+      </div>
+
+      <div class="diagnostic-layout">
+        <div class="pipeline" id="pipeline"></div>
+        <div class="services" id="services"></div>
+      </div>
+    </section>
+
+    <section class="compatibility page-section reveal">
+      <div class="shell">
+        <div class="section-heading">
+          <div>
+            <p class="section-index">04 / КЛИЕНТЫ</p>
+            <h2>Имена и обновление</h2>
+          </div>
+          <p>Формат метаданных зависит от приложения.</p>
+        </div>
+        <div class="compat-table" id="compat-table"></div>
+      </div>
     </section>
   </main>
 
-  <footer class="wrap">
-    <p>Это бесплатная проверочная сборка из публичных источников. Для постоянного личного VPN надежнее свой сервер, домен и закрытая подписка.</p>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <span>URAN VPN</span>
+      <span><i data-lucide="refresh-cw"></i> цикл обновления: 2 часа</span>
+    </div>
   </footer>
 
-  <div class="toast" id="toast">Скопировано</div>
+  <div class="toast" id="toast" role="status" aria-live="polite">
+    <i data-lucide="check"></i><span>Ссылка скопирована</span>
+  </div>
 
-  <script>
-    const root = new URL(".", location.href);
-    const abs = (path) => new URL(path, root).href;
-
-    const cards = {
-      xray: [
-        ["JSON All", "Smart auto, normal auto и BWL auto", "sub/uran-vpn-xray-json-all.json", "JSON", "green"],
-        ["JSON Normal", "Авто-выбор для обычных блокировок", "sub/uran-vpn-xray-json-normal.json", "JSON", "green"],
-        ["JSON BWL", "Авто-выбор для белых списков", "sub/uran-vpn-xray-json-bwl.json", "JSON", "green"],
-        ["URI All", "Ссылки normal + BWL без правил", "sub/uran-vpn-xray-uri-all.txt", "URI", "blue"],
-        ["URI Normal", "Ссылки для обычных блокировок", "sub/uran-vpn-xray-uri-normal.txt", "URI", "blue"],
-        ["URI BWL", "Ссылки для белых списков", "sub/uran-vpn-xray-uri-bwl.txt", "URI", "blue"],
-      ],
-      mihomo: [
-        ["Mihomo All", "Smart, normal, BWL и страны", "sub/uran-vpn-mihomo-all.yaml", "YAML", "yellow"],
-        ["Mihomo Normal", "RU напрямую, остальное через proxy", "sub/uran-vpn-mihomo-normal.yaml", "YAML", "yellow"],
-        ["Mihomo BWL", "Напрямую только whitelist", "sub/uran-vpn-mihomo-bwl.yaml", "YAML", "yellow"],
-      ],
-      singbox: [
-        ["sing-box All", "Smart, normal и BWL", "sub/uran-vpn-sing-box-all.json", "JSON", "blue"],
-        ["sing-box Normal", "Маршрутизация normal", "sub/uran-vpn-sing-box-normal.json", "JSON", "blue"],
-        ["sing-box BWL", "Маршрутизация BWL", "sub/uran-vpn-sing-box-bwl.json", "JSON", "blue"],
-      ],
-    };
-
-    const subscriptionNames = new Map(
-      Object.values(cards).flat().map(([title, _desc, path]) => [path, `URAN VPN ${title}`])
-    );
-
-    function subscriptionUrl(path) {
-      const title = subscriptionNames.get(path) || `URAN VPN ${path.split("/").pop()}`;
-      const url = new URL(path, root);
-      url.searchParams.set("name", title);
-      url.searchParams.set("tag", title);
-      url.searchParams.set("filename", title);
-      url.hash = encodeURIComponent(title);
-      return url.href;
-    }
-
-    function renderCards(id, items) {
-      const el = document.getElementById(id);
-      el.innerHTML = items.map(([title, desc, path, type, tone]) => `
-        <article class="card">
-          <div class="card-top">
-            <div>
-              <h3>${title}</h3>
-              <p class="soft">${desc}</p>
-            </div>
-            <span class="badge ${tone}">${type}</span>
-          </div>
-          <div class="url" title="${subscriptionUrl(path)}">${subscriptionUrl(path)}</div>
-          <div class="actions">
-            <button class="primary" data-copy="${path}">Скопировать</button>
-            <a class="button" href="${subscriptionUrl(path)}">Открыть</a>
-          </div>
-        </article>
-      `).join("");
-    }
-
-    renderCards("xray-grid", cards.xray);
-    renderCards("mihomo-grid", cards.mihomo);
-    renderCards("singbox-grid", cards.singbox);
-
-    function showToast(text) {
-      const toast = document.getElementById("toast");
-      toast.textContent = text;
-      toast.classList.add("show");
-      clearTimeout(showToast.timer);
-      showToast.timer = setTimeout(() => toast.classList.remove("show"), 1300);
-    }
-
-    async function copyPath(path) {
-      const text = subscriptionUrl(path);
-      try {
-        await navigator.clipboard.writeText(text);
-        showToast("Ссылка скопирована");
-      } catch {
-        const area = document.createElement("textarea");
-        area.value = text;
-        document.body.appendChild(area);
-        area.select();
-        document.execCommand("copy");
-        area.remove();
-        showToast("Ссылка скопирована");
-      }
-    }
-
-    document.addEventListener("click", (event) => {
-      const copy = event.target.closest("[data-copy]");
-      if (copy) copyPath(copy.dataset.copy);
-      const tab = event.target.closest("[data-filter]");
-      if (tab) {
-        document.querySelectorAll(".tab").forEach((item) => item.classList.toggle("active", item === tab));
-        const filter = tab.dataset.filter;
-        document.querySelectorAll("[data-section]").forEach((section) => {
-          section.hidden = filter !== "all" && section.dataset.section !== filter;
-        });
-      }
-    });
-
-    function paintSummary(data) {
-      const stats = document.getElementById("stats");
-      stats.innerHTML = `
-        <div class="metric"><span class="soft">Обычные</span><strong>${data.mihomo_nodes?.normal ?? data.exit_probe?.normal ?? "..."}</strong></div>
-        <div class="metric"><span class="soft">Белые списки</span><strong>${data.mihomo_nodes?.bwl ?? data.exit_probe?.bwl ?? "..."}</strong></div>
-        <div class="metric"><span class="soft">Gemini</span><strong>${data.gemini_nodes?.all ?? "..."}</strong></div>
-        <div class="metric"><span class="soft">В подписке</span><strong>${data.mihomo_nodes?.all ?? data.sing_box_nodes?.all ?? "..."}</strong></div>
-        <div class="metric"><span class="soft">Обновлено</span><strong>${(data.generated_at || "").slice(5, 16) || "..."}</strong></div>
-      `;
-    }
-
-    function loadJson(path) {
-      if (typeof fetch === "function") {
-        return fetch(path, { cache: "no-store" }).then((response) => {
-          if (!response.ok) throw new Error(String(response.status));
-          return response.json();
-        });
-      }
-      return new Promise((resolve, reject) => {
-        const request = new XMLHttpRequest();
-        request.open("GET", path, true);
-        request.onreadystatechange = () => {
-          if (request.readyState !== 4) return;
-          if (request.status >= 200 && request.status < 300) {
-            try {
-              resolve(JSON.parse(request.responseText));
-            } catch (error) {
-              reject(error);
-            }
-          } else {
-            reject(new Error(String(request.status)));
-          }
-        };
-        request.send();
-      });
-    }
-
-    function loadScriptSummary() {
-      if (window.__VPN_SUMMARY__) return Promise.resolve(window.__VPN_SUMMARY__);
-      return new Promise((resolve) => {
-        const script = document.createElement("script");
-        script.src = `sub/summary.js?v=${Date.now()}`;
-        script.onload = () => resolve(window.__VPN_SUMMARY__ || null);
-        script.onerror = () => resolve(null);
-        document.head.appendChild(script);
-      });
-    }
-
-    async function loadSummary() {
-      const fallbackSummary = await loadScriptSummary() || { mihomo_nodes: {}, exit_probe: {} };
-      paintSummary(fallbackSummary);
-      try {
-        const data = await loadJson("sub/summary.json");
-        paintSummary(data);
-      } catch {
-      }
-    }
-
-    loadSummary();
-  </script>
+  <noscript><div class="noscript">Для выбора и копирования подписок нужен JavaScript.</div></noscript>
 </body>
 </html>

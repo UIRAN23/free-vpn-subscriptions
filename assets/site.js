@@ -135,8 +135,10 @@
       const health = await response.json();
       if (health?.ok !== true || Number(health?.endpoints) !== 12) return;
       subscriptionRoot = gatewayRoot;
+      document.documentElement.dataset.subscriptionSource = "gateway";
       renderSelection();
       renderCatalog();
+      renderCompatibility();
     } catch {
     } finally {
       window.clearTimeout(timeout);
@@ -363,11 +365,36 @@
   }
 
   function renderCompatibility() {
+    const gatewayActive = subscriptionRoot.origin === gatewayRoot.origin;
     const rows = [
-      ["braces", "Incy / Xray JSON", "profile-title + remarks", "2 часа", true],
-      ["link-2", "Happ", "profile-title + имя файла", "2 часа", true],
-      ["waypoints", "Hiddify", "HTTP-заголовок + URL", "2 часа", true],
-      ["gauge", "Mihomo / FlClashX", "Content-Disposition", "2 часа", true],
+      [
+        "braces",
+        "Incy / Xray JSON",
+        gatewayActive ? "profile-title + remarks" : "remarks в профилях",
+        gatewayActive ? "2 часа" : "в клиенте",
+        gatewayActive,
+      ],
+      [
+        "link-2",
+        "Happ",
+        gatewayActive ? "profile-title + имя файла" : "profile-title в теле",
+        "2 часа",
+        true,
+      ],
+      [
+        "waypoints",
+        "Hiddify",
+        gatewayActive ? "HTTP-заголовок + URL" : "имя в URL",
+        gatewayActive ? "2 часа" : "в клиенте",
+        gatewayActive,
+      ],
+      [
+        "gauge",
+        "Mihomo / FlClashX",
+        gatewayActive ? "Content-Disposition" : "имена групп и узлов",
+        gatewayActive ? "2 часа" : "в клиенте",
+        gatewayActive,
+      ],
       ["box", "sing-box", "tag + имя в deep-link", "в интерфейсе клиента", false],
     ];
     $("#compat-table").innerHTML = `
@@ -515,6 +542,7 @@
   });
 
   renderSwitches();
+  document.documentElement.dataset.subscriptionSource = "direct";
   renderSelection();
   renderCatalogTabs();
   renderCatalog();

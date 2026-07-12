@@ -2,6 +2,8 @@
   "use strict";
 
   const root = new URL(".", window.location.href);
+  const gatewayRoot = new URL("https://uran-vpn-subscriptions.guiltless-swift.workers.dev/");
+  let subscriptionRoot = root;
   const state = {
     client: "xray-json",
     mode: "all",
@@ -116,9 +118,29 @@
 
   function canonicalUrl(clientKey, modeKey, withTitle = true) {
     const path = clients[clientKey].paths[modeKey];
-    const url = new URL(path, root);
+    const url = new URL(path, subscriptionRoot);
     if (withTitle) url.hash = encodeURIComponent(modes[modeKey].title);
     return url.href;
+  }
+
+  async function activateMetadataGateway() {
+    const controller = new AbortController();
+    const timeout = window.setTimeout(() => controller.abort(), 2500);
+    try {
+      const response = await fetch(new URL("health", gatewayRoot), {
+        cache: "no-store",
+        signal: controller.signal,
+      });
+      if (!response.ok) return;
+      const health = await response.json();
+      if (health?.ok !== true || Number(health?.endpoints) !== 12) return;
+      subscriptionRoot = gatewayRoot;
+      renderSelection();
+      renderCatalog();
+    } catch {
+    } finally {
+      window.clearTimeout(timeout);
+    }
   }
 
   function importUrl(clientKey, modeKey) {
@@ -342,10 +364,10 @@
 
   function renderCompatibility() {
     const rows = [
-      ["braces", "Incy / Xray JSON", "remarks в каждом профиле", "на стороне клиента", true],
-      ["link-2", "Happ", "profile-title в подписке", "2 часа", true],
-      ["waypoints", "Hiddify", "имя в URL fragment", "на стороне клиента", false],
-      ["gauge", "Mihomo / FlClashX", "имена узлов и групп", "зависит от клиента", false],
+      ["braces", "Incy / Xray JSON", "profile-title + remarks", "2 часа", true],
+      ["link-2", "Happ", "profile-title + имя файла", "2 часа", true],
+      ["waypoints", "Hiddify", "HTTP-заголовок + URL", "2 часа", true],
+      ["gauge", "Mihomo / FlClashX", "Content-Disposition", "2 часа", true],
       ["box", "sing-box", "tag + имя в deep-link", "в интерфейсе клиента", false],
     ];
     $("#compat-table").innerHTML = `
@@ -500,4 +522,5 @@
   installRevealObserver();
   refreshIcons();
   loadSummary();
+  activateMetadataGateway();
 })();

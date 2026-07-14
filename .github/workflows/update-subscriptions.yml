@@ -3,7 +3,7 @@ name: Update subscriptions
 on:
   workflow_dispatch:
   schedule:
-    - cron: "37 * * * *"
+    - cron: "17 * * * *"
 
 permissions:
   contents: write
@@ -25,35 +25,12 @@ jobs:
           fetch-depth: 20
           persist-credentials: false
 
-      - name: Check whether the public build is stale
+      - name: Start subscription build
         id: freshness
-        env:
-          EVENT_NAME: ${{ github.event_name }}
         run: |
           set -euo pipefail
-          if [[ "$EVENT_NAME" == "workflow_dispatch" ]]; then
-            echo "Manual run: build is due."
-            echo "due=true" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-
-          last_epoch="$(git -C public log -1 --format=%ct -- sub/summary.json || true)"
-          now_epoch="$(date +%s)"
-          if [[ -z "$last_epoch" ]]; then
-            echo "No previous public summary commit: build is due."
-            echo "due=true" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-
-          age_seconds="$((now_epoch - last_epoch))"
-          echo "Last public subscription update is ${age_seconds}s old."
-          if (( age_seconds >= 6000 )); then
-            echo "Build is older than 100 minutes: build is due."
-            echo "due=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "Build is still fresh: this watchdog run will stop here."
-            echo "due=false" >> "$GITHUB_OUTPUT"
-          fi
+          echo "Every scheduled or manual run performs a full subscription refresh."
+          echo "due=true" >> "$GITHUB_OUTPUT"
 
       - name: Checkout private builder
         if: steps.freshness.outputs.due == 'true'
@@ -70,6 +47,15 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Restore Gemini region cache
+        if: steps.freshness.outputs.due == 'true'
+        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
+        with:
+          path: builder/.cache/gemini-regions.json
+          key: uran-gemini-regions-v1-${{ github.run_id }}
+          restore-keys: |
+            uran-gemini-regions-v1-
+
       - name: Install pinned runtime tools
         if: steps.freshness.outputs.due == 'true'
         working-directory: builder
@@ -82,6 +68,7 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_API_MODEL: gemini-3.5-flash
+          GEMINI_CACHE_PATH: ${{ github.workspace }}/builder/.cache/gemini-regions.json
           SKIP_TOOL_DOWNLOAD: "1"
         run: |
           set -euo pipefail

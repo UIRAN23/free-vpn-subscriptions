@@ -316,11 +316,13 @@
     const nodes = summary?.mihomo_nodes || summary?.sing_box_nodes || {};
     const countries = countryItems(summary).length;
     const valid = summary?.validation?.ok === true;
+    const geminiReady = Number(summary?.gemini_nodes?.all || 0);
+    const geminiTotal = Number(summary?.gemini_nodes?.published_normal || nodes.normal || 0);
     const values = [
-      ["Обычные", nodes.normal ?? "...", "локаций"],
-      ["Белые списки", nodes.bwl ?? "...", "локаций"],
+      ["Обычные", nodes.normal ?? "...", "уникальных выходных IP"],
+      ["Белые списки", nodes.bwl ?? "...", "уникальных выходных IP"],
       ["Страны", countries || "...", "по выходному IP"],
-      ["Gemini", summary?.gemini_nodes?.all ?? "...", "регион доступен"],
+      ["Gemini", geminiTotal ? `${geminiReady} / ${geminiTotal}` : "...", "доступно на обычных IP"],
       ["Проверка", valid ? "OK" : "...", valid ? "валидные файлы" : "ожидание"],
     ];
     $("#metrics-grid").innerHTML = values.map(([label, value, note]) => `
@@ -333,10 +335,10 @@
     const dedupeNormal = summary?.dedupe?.normal || {};
     const dedupeBwl = summary?.dedupe?.bwl || {};
     const pipeline = [
-      ["database", "Проверено выходов", "Запуск через реальные прокси", summary?.exit_probe?.tested ?? "..."],
-      ["route", "Выходной IP получен", "Геолокация по фактическому выходу", summary?.exit_probe?.ok ?? "..."],
-      ["scan-search", "Сервисы доступны", "Прошёл минимум один целевой сервис", (Number(filter.kept_normal || 0) + Number(filter.kept_bwl || 0)) || "..."],
-      ["fingerprint", "Уникальные IP", "Повторы удалены перед публикацией", (Number(dedupeNormal.after || 0) + Number(dedupeBwl.after || 0)) || "..."],
+      ["database", "Кандидатов запущено", "Каждый узел проверяется через реальный прокси", summary?.exit_probe?.tested ?? "..."],
+      ["route", "Рабочий выход получен", "Узел отдал фактический выходной IP", summary?.exit_probe?.ok ?? "..."],
+      ["scan-search", "Прошли сервисы", "Доступен хотя бы один целевой сервис", (Number(filter.kept_normal || 0) + Number(filter.kept_bwl || 0)) || "..."],
+      ["fingerprint", "Опубликовано", "Уникальные выходные IP после удаления повторов", (Number(dedupeNormal.after || 0) + Number(dedupeBwl.after || 0)) || "..."],
     ];
     $("#pipeline").innerHTML = pipeline.map(([icon, title, note, value]) => `
       <div class="pipeline-row">
@@ -346,17 +348,42 @@
       </div>
     `).join("");
 
-    const normalServices = summary?.service_probe?.summary?.normal || {};
+    const publishedServices = summary?.service_probe?.published_summary?.normal;
+    const hasPublishedServices = Boolean(publishedServices && Object.keys(publishedServices).length);
+    const normalServices = publishedServices || summary?.service_probe?.summary?.normal || {};
+    const publishedNormal = Number(
+      summary?.service_probe?.published_nodes?.normal
+      || summary?.mihomo_nodes?.normal
+      || 0,
+    );
     const serviceKeys = ["telegram", "discord", "youtube", "github", "gemini"];
     $("#services").innerHTML = serviceKeys.map((key) => {
       const item = normalServices[key] || {};
-      const region = key === "gemini" ? Number(item.region_ok || 0) : Number(item.ok || 0);
+      const success = key === "gemini" ? Number(item.region_ok || 0) : Number(item.ok || 0);
       const tested = Number(item.tested || 0);
-      const percent = tested ? Math.round(region / tested * 100) : 0;
+      const total = Number(
+        item.total_nodes
+        || (hasPublishedServices ? publishedNormal : key === "gemini" ? publishedNormal : tested)
+        || tested,
+      );
+      const percent = total ? Math.round(success / total * 100) : 0;
+      const population = hasPublishedServices ? "опубликованных узлов" : "кандидатов до удаления повторов";
+      let note = `доступен на ${success} из ${tested || total} проверенных ${population}`;
+      if (key === "gemini") {
+        const hasEligible = Object.prototype.hasOwnProperty.call(item, "eligible");
+        const eligible = Number(hasEligible ? item.eligible : total || tested);
+        const cached = Number(item.cached || 0);
+        const live = Number(item.live_tested || Math.max(0, tested - cached));
+        const excluded = hasEligible ? Math.max(0, total - eligible) : 0;
+        note = tested >= eligible
+          ? `проверены все ${eligible} допустимых IP: ${live} сейчас, ${cached} из кэша до 24 ч`
+          : `проверено ${tested} из ${eligible} допустимых IP`;
+        if (excluded) note += `; ${excluded} исключено по региону`;
+      }
       return `
         <div class="service-row">
-          <span class="service-copy"><strong>${escapeHtml(item.name || key)}</strong><small>${key === "gemini" ? "проверка региона" : "HTTP через узлы"}</small></span>
-          <span class="service-score">${region}/${tested || "–"}</span>
+          <span class="service-copy"><strong>${escapeHtml(item.name || key)}</strong><small>${escapeHtml(note)}</small></span>
+          <span class="service-score">${success} из ${total || "–"}</span>
           <span class="service-state">${percent ? `${percent}%` : "—"}</span>
         </div>
       `;
@@ -366,33 +393,35 @@
 
   function renderCompatibility() {
     const gatewayActive = subscriptionRoot.origin === gatewayRoot.origin;
+    const intervalHours = Number(state.summary?.subscription?.update_interval_hours || 1);
+    const intervalLabel = intervalHours === 1 ? "1 час" : `${intervalHours} часа`;
     const rows = [
       [
         "braces",
         "Incy / Xray JSON",
         gatewayActive ? "profile-title + remarks" : "remarks в профилях",
-        gatewayActive ? "2 часа" : "в клиенте",
+        gatewayActive ? intervalLabel : "в клиенте",
         gatewayActive,
       ],
       [
         "link-2",
         "Happ",
         gatewayActive ? "profile-title + имя файла" : "profile-title в теле",
-        "2 часа",
+        intervalLabel,
         true,
       ],
       [
         "waypoints",
         "Hiddify",
         gatewayActive ? "HTTP-заголовок + URL" : "имя в URL",
-        gatewayActive ? "2 часа" : "в клиенте",
+        gatewayActive ? intervalLabel : "в клиенте",
         gatewayActive,
       ],
       [
         "gauge",
         "Mihomo / FlClashX",
         gatewayActive ? "Content-Disposition" : "имена групп и узлов",
-        gatewayActive ? "2 часа" : "в клиенте",
+        gatewayActive ? intervalLabel : "в клиенте",
         gatewayActive,
       ],
       ["box", "sing-box", "tag + имя в deep-link", "в интерфейсе клиента", false],
@@ -430,6 +459,7 @@
     renderMetrics(summary);
     renderCountries(summary);
     renderDiagnostics(summary);
+    renderCompatibility();
     renderSelection();
     renderCatalog();
   }

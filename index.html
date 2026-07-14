@@ -71,8 +71,8 @@
 
     <section class="metrics-band" aria-label="Статистика последней сборки">
       <div class="shell metrics-grid" id="metrics-grid">
-        <div class="metric"><span>Обычные</span><strong>...</strong><small>локаций</small></div>
-        <div class="metric"><span>Белые списки</span><strong>...</strong><small>локаций</small></div>
+        <div class="metric"><span>Обычные</span><strong>...</strong><small>уникальных выходных IP</small></div>
+        <div class="metric"><span>Белые списки</span><strong>...</strong><small>уникальных выходных IP</small></div>
         <div class="metric"><span>Страны</span><strong>...</strong><small>по выходному IP</small></div>
         <div class="metric"><span>Gemini</span><strong>...</strong><small>регион доступен</small></div>
         <div class="metric"><span>Проверка</span><strong>...</strong><small>валидные файлы</small></div>
@@ -105,13 +105,13 @@
       </div>
     </section>
 
-    <section class="diagnostics shell page-section reveal">
+    <section class="diagnostics shell page-section reveal" id="diagnostics">
       <div class="section-heading">
         <div>
           <p class="section-index">03 / КОНТРОЛЬ</p>
           <h2>Последняя проверка</h2>
         </div>
-        <p>Публикация останавливается, если итоговый конфиг не проходит валидатор.</p>
+        <p>Доступность сервисов считается по опубликованным обычным узлам после удаления повторных выходных IP.</p>
       </div>
 
       <div class="diagnostic-layout">
@@ -137,7 +137,7 @@
   <footer class="site-footer">
     <div class="shell footer-inner">
       <span>URAN VPN</span>
-      <span><i data-lucide="refresh-cw"></i> цикл обновления: 2 часа</span>
+      <span><i data-lucide="refresh-cw"></i> цикл обновления: 1 час</span>
     </div>
   </footer>
 

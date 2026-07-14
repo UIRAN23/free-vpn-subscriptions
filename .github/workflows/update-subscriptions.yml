@@ -4,6 +4,7 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "17 * * * *"
+    - cron: "47 * * * *"
 
 permissions:
   contents: write
@@ -25,12 +26,34 @@ jobs:
           fetch-depth: 20
           persist-credentials: false
 
-      - name: Start subscription build
+      - name: Check whether a refresh is due
         id: freshness
+        env:
+          EVENT_NAME: ${{ github.event_name }}
         run: |
           set -euo pipefail
-          echo "Every scheduled or manual run performs a full subscription refresh."
-          echo "due=true" >> "$GITHUB_OUTPUT"
+          if [[ "$EVENT_NAME" == "workflow_dispatch" ]]; then
+            echo "Manual run: a full refresh is due."
+            echo "due=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          last_epoch="$(git -C public log -1 --format=%ct -- sub/summary.json || true)"
+          if [[ -z "$last_epoch" ]]; then
+            echo "No previous public summary commit: a full refresh is due."
+            echo "due=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          age_seconds="$(( $(date +%s) - last_epoch ))"
+          echo "Last public subscription update is ${age_seconds}s old."
+          if (( age_seconds >= 2700 )); then
+            echo "The published build is at least 45 minutes old: refresh is due."
+            echo "due=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "The second half-hour watchdog found a fresh build; no duplicate work."
+            echo "due=false" >> "$GITHUB_OUTPUT"
+          fi
 
       - name: Checkout private builder
         if: steps.freshness.outputs.due == 'true'

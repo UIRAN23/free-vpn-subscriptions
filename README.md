@@ -22,6 +22,28 @@ https://uiran23.github.io/free-vpn-subscriptions/sub/uran-vpn-xray-uri-normal.tx
 https://uiran23.github.io/free-vpn-subscriptions/sub/uran-vpn-xray-uri-bwl.txt
 ```
 
+## Xray Base64
+
+Для v2rayN, NekoBox и других клиентов, которым нужна подписка в base64.
+
+```text
+https://uiran23.github.io/free-vpn-subscriptions/sub/uran-vpn-xray-base64-all.txt
+https://uiran23.github.io/free-vpn-subscriptions/sub/uran-vpn-xray-base64-normal.txt
+https://uiran23.github.io/free-vpn-subscriptions/sub/uran-vpn-xray-base64-bwl.txt
+```
+
+## Подписки по странам
+
+Отдельная подписка на каждую страну из текущей сборки. Список стран и точные имена файлов есть на сайте в разделе «География» и в `sub/summary.json`.
+
+```text
+https://uiran23.github.io/free-vpn-subscriptions/sub/xray-countries/all/DE-Германия.txt
+https://uiran23.github.io/free-vpn-subscriptions/sub/xray-countries/normal/NL-Нидерланды.txt
+https://uiran23.github.io/free-vpn-subscriptions/sub/xray-countries/bwl/FI-Финляндия.txt
+```
+
+Состав стран меняется от сборки к сборке: если страна выпала, её файл исчезает до следующего появления.
+
 ## Mihomo / FlClashX
 
 ```text

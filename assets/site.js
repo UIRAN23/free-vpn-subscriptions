@@ -59,6 +59,20 @@
       },
       importScheme: "hiddify",
     },
+    "xray-base64": {
+      label: "Xray Base64",
+      shortLabel: "Base64",
+      icon: "file-code-2",
+      format: "TXT",
+      note: "v2rayN, NekoBox и клиенты, которым нужна подписка в base64.",
+      paths: {
+        all: "sub/uran-vpn-xray-base64-all.txt",
+        normal: "sub/uran-vpn-xray-base64-normal.txt",
+        bwl: "sub/uran-vpn-xray-base64-bwl.txt",
+      },
+      importScheme: "hiddify",
+      gatewayServed: false,
+    },
     mihomo: {
       label: "Mihomo",
       shortLabel: "Mihomo",
@@ -88,7 +102,16 @@
   };
 
   const modeOrder = ["all", "normal", "bwl"];
-  const clientOrder = ["xray-json", "xray-uri", "mihomo", "singbox"];
+  const baseClientOrder = ["xray-json", "xray-uri", "xray-base64", "mihomo", "singbox"];
+  const clientRequirements = { "xray-base64": "xray-all-base64.txt" };
+
+  function clientOrder() {
+    const aliases = state.summary?.public_aliases || {};
+    return baseClientOrder.filter((key) => {
+      const required = clientRequirements[key];
+      return !required || Boolean(aliases[required]);
+    });
+  }
   const countryFallback = {
     AT: ["🇦🇹", "Австрия"], BE: ["🇧🇪", "Бельгия"], BG: ["🇧🇬", "Болгария"],
     CA: ["🇨🇦", "Канада"], CH: ["🇨🇭", "Швейцария"], CN: ["🇨🇳", "Китай"],
@@ -116,11 +139,19 @@
     if (window.lucide?.createIcons) window.lucide.createIcons();
   }
 
+  function clientRoot(clientKey) {
+    return clients[clientKey].gatewayServed === false ? root : subscriptionRoot;
+  }
+
   function canonicalUrl(clientKey, modeKey, withTitle = true) {
     const path = clients[clientKey].paths[modeKey];
-    const url = new URL(path, subscriptionRoot);
+    const url = new URL(path, clientRoot(clientKey));
     if (withTitle) url.hash = encodeURIComponent(modes[modeKey].title);
     return url.href;
+  }
+
+  function countryUrl(file) {
+    return new URL(`sub/${String(file).replace(/^\/+/, "")}`, root).href;
   }
 
   async function activateMetadataGateway() {
@@ -175,7 +206,7 @@
   }
 
   function renderSwitches() {
-    $("#client-switch").innerHTML = clientOrder.map((key) => `
+    $("#client-switch").innerHTML = clientOrder().map((key) => `
       <button type="button" role="tab" data-client="${key}" aria-selected="${state.client === key}" class="${state.client === key ? "active" : ""}">
         ${escapeHtml(clients[key].shortLabel)}
       </button>
@@ -218,7 +249,7 @@
   }
 
   function renderCatalogTabs() {
-    $("#catalog-tabs").innerHTML = clientOrder.map((key) => `
+    $("#catalog-tabs").innerHTML = clientOrder().map((key) => `
       <button type="button" role="tab" class="catalog-tab ${state.catalog === key ? "active" : ""}" data-catalog="${key}" aria-selected="${state.catalog === key}">
         <i data-lucide="${clients[key].icon}"></i><span>${escapeHtml(clients[key].label)}</span>
       </button>
@@ -262,6 +293,7 @@
 
   function countryItems(summary) {
     const detailed = summary?.countries?.all;
+    const filesPublished = summary?.countries_published === true;
     if (Array.isArray(detailed) && detailed.length) {
       return detailed
         .map((item) => ({
@@ -269,6 +301,7 @@
           flag: item.flag || countryFallback[item.code]?.[0] || "🏳️",
           country: item.country || countryFallback[item.code]?.[1] || item.code || "Неизвестно",
           count: Number(item.count || 0),
+          file: filesPublished ? String(item.file || "") : "",
         }))
         .sort((a, b) => b.count - a.count || a.country.localeCompare(b.country, "ru"));
     }
@@ -289,6 +322,7 @@
         flag: countryFallback[code]?.[0] || "🏳️",
         country: countryFallback[code]?.[1] || code,
         count,
+        file: "",
       }))
       .sort((a, b) => b.count - a.count || a.country.localeCompare(b.country, "ru"));
   }
@@ -297,19 +331,36 @@
     const items = countryItems(summary);
     const visible = items.slice(0, 16);
     const max = Math.max(1, ...visible.map((item) => item.count));
+    const withFiles = items.filter((item) => item.file).length;
     $("#coverage-caption").textContent = items.length
-      ? `${items.length} стран в текущей сборке`
+      ? withFiles
+        ? `${items.length} стран в текущей сборке, у ${withFiles} есть отдельная подписка`
+        : `${items.length} стран в текущей сборке`
       : "Страны появятся после следующей сборки";
-    $("#coverage-list").innerHTML = visible.map((item) => `
+    $("#coverage-list").innerHTML = visible.map((item) => {
+      const actions = item.file
+        ? `
+        <span class="country-actions">
+          <button class="icon-button" type="button" data-copy-country="${escapeHtml(item.file)}" title="Копировать подписку: ${escapeHtml(item.country)}">
+            <i data-lucide="copy"></i>
+          </button>
+          <a class="icon-button" href="${escapeHtml(countryUrl(item.file))}" title="Открыть подписку: ${escapeHtml(item.country)}">
+            <i data-lucide="external-link"></i>
+          </a>
+        </span>`
+        : "";
+      return `
       <div class="country-row">
         <div class="country-label">
           <span class="country-flag" aria-hidden="true">${escapeHtml(item.flag)}</span>
           <span class="country-name">${escapeHtml(item.country)}</span>
         </div>
         <span class="country-bar" aria-hidden="true"><span style="width:${Math.max(7, Math.round(item.count / max * 100))}%"></span></span>
-        <span class="country-count">${item.count}</span>
+        <span class="country-count">${item.count}</span>${actions}
       </div>
-    `).join("") || '<p class="card-description">Нет данных о странах.</p>';
+    `;
+    }).join("") || '<p class="card-description">Нет данных о странах.</p>';
+    refreshIcons();
   }
 
   function renderMetrics(summary) {
@@ -455,7 +506,12 @@
 
   function renderSummary(summary) {
     state.summary = summary || {};
+    const available = clientOrder();
+    if (!available.includes(state.client)) state.client = available[0];
+    if (!available.includes(state.catalog)) state.catalog = available[0];
     $("#header-time").textContent = `обновлено ${formatBuildTime(summary?.generated_at)}`;
+    renderSwitches();
+    renderCatalogTabs();
     renderMetrics(summary);
     renderCountries(summary);
     renderDiagnostics(summary);
@@ -568,6 +624,12 @@
     const copyButton = event.target.closest("[data-copy-client]");
     if (copyButton) {
       copyText(canonicalUrl(copyButton.dataset.copyClient, copyButton.dataset.copyMode));
+      return;
+    }
+
+    const countryButton = event.target.closest("[data-copy-country]");
+    if (countryButton) {
+      copyText(countryUrl(countryButton.dataset.copyCountry));
     }
   });
 

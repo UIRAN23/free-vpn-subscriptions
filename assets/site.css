@@ -679,11 +679,23 @@ svg {
 .country-row {
   min-width: 0;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(90px, .7fr) 42px;
+  grid-template-columns: minmax(0, 1fr) minmax(90px, .7fr) 42px auto;
   align-items: center;
   gap: 14px;
   padding: 12px 0;
   border-top: 1px solid var(--line);
+}
+
+.country-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.country-actions .icon-button {
+  min-height: 32px;
+  min-width: 32px;
+  padding: 0 8px;
 }
 
 .country-label {
@@ -1166,7 +1178,7 @@ svg {
   }
 
   .country-row {
-    grid-template-columns: minmax(0, 1fr) 38px;
+    grid-template-columns: minmax(0, 1fr) 38px auto;
   }
 
   .country-bar {

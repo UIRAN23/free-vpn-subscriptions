@@ -105,12 +105,25 @@ jobs:
           from pathlib import Path
 
           data = json.loads(Path("public/sub/summary.json").read_text(encoding="utf-8"))
+          health = data.get("gemini_nodes", {}).get("health", {})
           print(
               "Published candidate: "
               f"nodes={data['mihomo_nodes']['all']}, "
               f"gemini={data['gemini_nodes']['all']}, "
               f"validation={data['validation']['ok']}"
           )
+          if health:
+              print(
+                  "Gemini probe health: "
+                  f"requests={health.get('requests')}, "
+                  f"region_ok={health.get('region_ok')}, "
+                  f"region_blocked={health.get('region_blocked')}, "
+                  f"faults={health.get('faults')}, "
+                  f"network_errors={health.get('network_errors')}, "
+                  f"disabled={health.get('disabled')} {health.get('disabled_reason') or ''}"
+              )
+              print(f"Gemini status counts: {health.get('status_counts')}")
+              print(f"Gemini top errors: {health.get('top_errors')}")
           PY
 
       - name: Commit public update
@@ -125,8 +138,24 @@ jobs:
           git add -A sub
           if git diff --cached --quiet; then
             echo "No subscription changes."
-          else
-            git commit -m "Update subscriptions"
-            gh auth setup-git
-            git push
+            exit 0
           fi
+          git commit -m "Update subscriptions"
+          gh auth setup-git
+          for attempt in 1 2 3 4 5; do
+            if git push; then
+              echo "Pushed on attempt ${attempt}."
+              exit 0
+            fi
+            echo "Push rejected on attempt ${attempt}; rebasing onto the latest main."
+            if ! git pull --rebase -X theirs origin main; then
+              git rebase --abort || true
+              git fetch origin main
+              git reset --soft origin/main
+              git add -A sub
+              git commit -m "Update subscriptions" || true
+            fi
+            sleep $((attempt * 5))
+          done
+          echo "Push still failing after 5 attempts."
+          exit 1

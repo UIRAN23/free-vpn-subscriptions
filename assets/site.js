@@ -381,67 +381,6 @@
     `).join("");
   }
 
-  function renderDiagnostics(summary) {
-    const filter = summary?.service_probe?.filter || {};
-    const dedupeNormal = summary?.dedupe?.normal || {};
-    const dedupeBwl = summary?.dedupe?.bwl || {};
-    const pipeline = [
-      ["database", "Кандидатов запущено", "Каждый узел проверяется через реальный прокси", summary?.exit_probe?.tested ?? "..."],
-      ["route", "Рабочий выход получен", "Узел отдал фактический выходной IP", summary?.exit_probe?.ok ?? "..."],
-      ["scan-search", "Прошли сервисы", "Доступен хотя бы один целевой сервис", (Number(filter.kept_normal || 0) + Number(filter.kept_bwl || 0)) || "..."],
-      ["fingerprint", "Опубликовано", "Уникальные выходные IP после удаления повторов", (Number(dedupeNormal.after || 0) + Number(dedupeBwl.after || 0)) || "..."],
-    ];
-    $("#pipeline").innerHTML = pipeline.map(([icon, title, note, value]) => `
-      <div class="pipeline-row">
-        <span class="step-icon"><i data-lucide="${icon}"></i></span>
-        <span class="pipeline-copy"><strong>${escapeHtml(title)}</strong><small>${escapeHtml(note)}</small></span>
-        <span class="pipeline-value">${escapeHtml(value)}</span>
-      </div>
-    `).join("");
-
-    const publishedServices = summary?.service_probe?.published_summary?.normal;
-    const hasPublishedServices = Boolean(publishedServices && Object.keys(publishedServices).length);
-    const normalServices = publishedServices || summary?.service_probe?.summary?.normal || {};
-    const publishedNormal = Number(
-      summary?.service_probe?.published_nodes?.normal
-      || summary?.mihomo_nodes?.normal
-      || 0,
-    );
-    const serviceKeys = ["telegram", "discord", "youtube", "github", "gemini"];
-    $("#services").innerHTML = serviceKeys.map((key) => {
-      const item = normalServices[key] || {};
-      const success = key === "gemini" ? Number(item.region_ok || 0) : Number(item.ok || 0);
-      const tested = Number(item.tested || 0);
-      const total = Number(
-        item.total_nodes
-        || (hasPublishedServices ? publishedNormal : key === "gemini" ? publishedNormal : tested)
-        || tested,
-      );
-      const percent = total ? Math.round(success / total * 100) : 0;
-      const population = hasPublishedServices ? "опубликованных узлов" : "кандидатов до удаления повторов";
-      let note = `доступен на ${success} из ${tested || total} проверенных ${population}`;
-      if (key === "gemini") {
-        const hasEligible = Object.prototype.hasOwnProperty.call(item, "eligible");
-        const eligible = Number(hasEligible ? item.eligible : total || tested);
-        const cached = Number(item.cached || 0);
-        const live = Number(item.live_tested || Math.max(0, tested - cached));
-        const excluded = hasEligible ? Math.max(0, total - eligible) : 0;
-        note = tested >= eligible
-          ? `проверены все ${eligible} допустимых IP: ${live} сейчас, ${cached} из кэша до 24 ч`
-          : `проверено ${tested} из ${eligible} допустимых IP`;
-        if (excluded) note += `; ${excluded} исключено по региону`;
-      }
-      return `
-        <div class="service-row">
-          <span class="service-copy"><strong>${escapeHtml(item.name || key)}</strong><small>${escapeHtml(note)}</small></span>
-          <span class="service-score">${success} из ${total || "–"}</span>
-          <span class="service-state">${percent ? `${percent}%` : "—"}</span>
-        </div>
-      `;
-    }).join("");
-    refreshIcons();
-  }
-
   function renderCompatibility() {
     const gatewayActive = subscriptionRoot.origin === gatewayRoot.origin;
     const intervalHours = Number(state.summary?.subscription?.update_interval_hours || 1);
@@ -514,7 +453,6 @@
     renderCatalogTabs();
     renderMetrics(summary);
     renderCountries(summary);
-    renderDiagnostics(summary);
     renderCompatibility();
     renderSelection();
     renderCatalog();

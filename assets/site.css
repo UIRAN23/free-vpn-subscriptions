@@ -322,7 +322,8 @@ svg {
 }
 
 .client-switch {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 1fr);
 }
 
 .mode-switch {
@@ -741,91 +742,6 @@ svg {
   text-align: right;
 }
 
-.diagnostic-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1.12fr) minmax(360px, .88fr);
-  gap: 48px;
-}
-
-.pipeline,
-.services {
-  border-top: 1px solid var(--line-strong);
-}
-
-.pipeline-row,
-.service-row {
-  display: grid;
-  align-items: center;
-  gap: 14px;
-  min-height: 64px;
-  border-bottom: 1px solid var(--line);
-}
-
-.pipeline-row {
-  grid-template-columns: 34px minmax(0, 1fr) auto;
-}
-
-.step-icon {
-  width: 30px;
-  height: 30px;
-  display: grid;
-  place-items: center;
-  border: 1px solid rgba(75, 227, 148, .28);
-  border-radius: 5px;
-  color: var(--green);
-  background: rgba(75, 227, 148, .05);
-}
-
-.step-icon svg {
-  width: 15px;
-  height: 15px;
-}
-
-.pipeline-copy,
-.service-copy {
-  min-width: 0;
-}
-
-.pipeline-copy strong,
-.service-copy strong {
-  display: block;
-  font-size: 13px;
-}
-
-.pipeline-copy small,
-.service-copy small {
-  display: block;
-  color: var(--quiet);
-  font-size: 11px;
-}
-
-.pipeline-value {
-  color: var(--text);
-  font: 750 19px/1 ui-monospace, SFMono-Regular, Consolas, monospace;
-}
-
-.service-row {
-  grid-template-columns: minmax(0, 1fr) 92px 50px;
-}
-
-.service-score {
-  color: var(--muted);
-  font: 700 12px/1 ui-monospace, SFMono-Regular, Consolas, monospace;
-  text-align: right;
-}
-
-.service-state {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 24px;
-  border: 1px solid rgba(75, 227, 148, .28);
-  border-radius: 4px;
-  color: var(--green);
-  font-size: 10px;
-  font-weight: 800;
-}
-
 .compat-table {
   border-top: 1px solid var(--line-strong);
 }
@@ -1007,10 +923,6 @@ svg {
     min-height: 0;
   }
 
-  .diagnostic-layout {
-    grid-template-columns: 1fr;
-  }
-
   .compat-row {
     grid-template-columns: minmax(160px, 1fr) minmax(170px, 1fr) minmax(160px, 1fr) 90px;
   }
@@ -1039,7 +951,8 @@ svg {
   }
 
   .client-switch {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-flow: row;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .mode-switch {
@@ -1185,9 +1098,6 @@ svg {
     display: none;
   }
 
-  .service-row {
-    grid-template-columns: minmax(0, 1fr) 54px 46px;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {

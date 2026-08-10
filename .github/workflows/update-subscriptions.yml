@@ -91,6 +91,7 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_API_MODEL: gemini-3.5-flash
+          GEMINI_API_MIN_INTERVAL_SECONDS: "7.5"
           GEMINI_CACHE_PATH: ${{ github.workspace }}/builder/.cache/gemini-regions.json
           SKIP_TOOL_DOWNLOAD: "1"
         run: |

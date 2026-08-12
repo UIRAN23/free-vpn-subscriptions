@@ -2,8 +2,8 @@
 # profile-update-interval: 1
 # subscription-userinfo: upload=0; download=0; total=0
 # profile-web-page-url: https://uiran23.github.io/free-vpn-subscriptions/
-# Обновлено: 2026-08-12 08:38 UTC
-# Серверов: 9
+# Обновлено: 2026-08-12 08:55 UTC
+# Серверов: 8
 
 mixed-port: 7890
 allow-lan: false
@@ -12,15 +12,6 @@ log-level: info
 ipv6: false
 
 proxies:
-  - name: "🇺🇸 США БС 1"
-    type: hysteria2
-    server: "54.213.89.22"
-    port: 443
-    password: "qQe1z5kU8kN6SlKnDt9Ru3Qp"
-    sni: "vk.com"
-    skip-cert-verify: true
-    up: "10"
-    down: "50"
   - name: "🇳🇱 Нидерланды БС 1"
     type: vless
     server: "2.26.70.181"
@@ -37,7 +28,7 @@ proxies:
       short-id: "bdcaf30f86"
   - name: "🇸🇪 Швеция БС 1"
     type: vless
-    server: "92.53.97.70"
+    server: "novea.shieldix.top"
     port: 443
     uuid: "b50a52ba-891f-44ff-af82-f5f0f3317024"
     udp: true
@@ -45,7 +36,7 @@ proxies:
     tls: true
     flow: "xtls-rprx-vision"
     servername: "novea.shieldix.top"
-    client-fingerprint: "firefox"
+    client-fingerprint: "qq"
     reality-opts:
       public-key: "V9MHR6nhlKPenVUq1172uIHJFZYOkRVqSOUkjCS4430"
       short-id: "f0ba53a31b489b3e"
@@ -63,6 +54,20 @@ proxies:
     reality-opts:
       public-key: "fk_aUHA_JijqIiSXZH61Ur6WSfPQ-Ke7J1IGgEZAh0I"
       short-id: ""
+  - name: "🇮🇹 Италия БС 1"
+    type: vless
+    server: "95.129.236.252"
+    port: 443
+    uuid: "851ed0d8-a37b-452d-8ef2-5b6c2d28a060"
+    udp: true
+    network: "ws"
+    tls: true
+    servername: "azs.benz.ink"
+    client-fingerprint: "safari"
+    ws-opts:
+      path: "/api/v2/camera/events/8f4c2d"
+      headers:
+        Host: "azs.benz.ink"
   - name: "🇩🇪 Германия БС 1"
     type: vless
     server: "94.241.141.126"
@@ -73,24 +78,10 @@ proxies:
     tls: true
     flow: "xtls-rprx-vision"
     servername: "boltvia.orbvia.online"
-    client-fingerprint: "firefox"
+    client-fingerprint: "qq"
     reality-opts:
       public-key: "c9FNVDSx_oUTDFW0JewGq511wlGweUkQGgPPY9vsCVM"
       short-id: "08804e078e1257c8"
-  - name: "🇮🇹 Италия БС 1"
-    type: vless
-    server: "95.129.236.252"
-    port: 443
-    uuid: "851ed0d8-a37b-452d-8ef2-5b6c2d28a060"
-    udp: true
-    network: "ws"
-    tls: true
-    servername: "azs.benz.ink"
-    client-fingerprint: "edge"
-    ws-opts:
-      path: "/api/v2/camera/events/8f4c2d"
-      headers:
-        Host: "azs.benz.ink"
   - name: "🇷🇺 Россия БС 1"
     type: vless
     server: "45.12.75.242"
@@ -104,6 +95,20 @@ proxies:
     reality-opts:
       public-key: "l8AubqcxQO-HRFJy4pZL1vbLOo-eXit69s-XulSELE0"
       short-id: "23103e1e"
+  - name: "🇩🇪 Германия БС 2"
+    type: vless
+    server: "159.195.27.99"
+    port: 443
+    uuid: "859a537b-09cf-4bce-8da4-ecbb72950e3a"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "1.oncloudnineservicestreang.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "EuExqpNB141gtIjbCmU0yyurbBqiLtGjDg-n95JIuig"
+      short-id: "28415a7918168947"
   - name: "🇷🇺 Россия БС 2"
     type: vless
     server: "193.168.46.180"
@@ -118,19 +123,6 @@ proxies:
     reality-opts:
       public-key: "D0FqzTuVSzCF8IcFo64SFIpMsaGV47LW3el2GCCVoFY"
       short-id: "c1a7e9b4711d5f60"
-  - name: "🇺🇸 США БС 2"
-    type: vless
-    server: "179.198.49.14"
-    port: 443
-    uuid: "4cfb9456-0921-4547-a684-4614980d4a86"
-    udp: true
-    network: "tcp"
-    tls: true
-    servername: "yandex.ru"
-    client-fingerprint: "safari"
-    reality-opts:
-      public-key: "0tsW6-mbhq0zPODM7BlymfZDYAjSB5S5doDDk8qpYXE"
-      short-id: "8e79809e9958ae22"
 
 proxy-groups:
   - name: "PROXY"
@@ -138,15 +130,14 @@ proxy-groups:
     proxies:
       - "⚪ Авто БС"
       - "🌍 Страны БС"
-      - "🇺🇸 США БС 1"
       - "🇳🇱 Нидерланды БС 1"
       - "🇸🇪 Швеция БС 1"
       - "🇫🇮 Финляндия БС 1"
-      - "🇩🇪 Германия БС 1"
       - "🇮🇹 Италия БС 1"
+      - "🇩🇪 Германия БС 1"
       - "🇷🇺 Россия БС 1"
+      - "🇩🇪 Германия БС 2"
       - "🇷🇺 Россия БС 2"
-      - "🇺🇸 США БС 2"
       - DIRECT
   - name: "⚪ Авто БС"
     type: url-test
@@ -154,39 +145,33 @@ proxy-groups:
     interval: 300
     tolerance: 150
     proxies:
-      - "🇺🇸 США БС 1"
       - "🇳🇱 Нидерланды БС 1"
       - "🇸🇪 Швеция БС 1"
       - "🇫🇮 Финляндия БС 1"
-      - "🇩🇪 Германия БС 1"
       - "🇮🇹 Италия БС 1"
+      - "🇩🇪 Германия БС 1"
       - "🇷🇺 Россия БС 1"
+      - "🇩🇪 Германия БС 2"
       - "🇷🇺 Россия БС 2"
-      - "🇺🇸 США БС 2"
   - name: "🌍 Страны БС"
     type: select
     proxies:
-      - "⚪ 🇷🇺 Россия"
-      - "⚪ 🇺🇸 США"
       - "⚪ 🇩🇪 Германия"
+      - "⚪ 🇷🇺 Россия"
       - "⚪ 🇫🇮 Финляндия"
       - "⚪ 🇮🇹 Италия"
       - "⚪ 🇳🇱 Нидерланды"
       - "⚪ 🇸🇪 Швеция"
+  - name: "⚪ 🇩🇪 Германия"
+    type: select
+    proxies:
+      - "🇩🇪 Германия БС 1"
+      - "🇩🇪 Германия БС 2"
   - name: "⚪ 🇷🇺 Россия"
     type: select
     proxies:
       - "🇷🇺 Россия БС 1"
       - "🇷🇺 Россия БС 2"
-  - name: "⚪ 🇺🇸 США"
-    type: select
-    proxies:
-      - "🇺🇸 США БС 1"
-      - "🇺🇸 США БС 2"
-  - name: "⚪ 🇩🇪 Германия"
-    type: select
-    proxies:
-      - "🇩🇪 Германия БС 1"
   - name: "⚪ 🇫🇮 Финляндия"
     type: select
     proxies:

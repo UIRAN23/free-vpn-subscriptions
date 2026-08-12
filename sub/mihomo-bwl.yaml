@@ -2,8 +2,8 @@
 # profile-update-interval: 1
 # subscription-userinfo: upload=0; download=0; total=0
 # profile-web-page-url: https://uiran23.github.io/free-vpn-subscriptions/
-# Обновлено: 2026-08-12 11:28 UTC
-# Серверов: 8
+# Обновлено: 2026-08-12 13:43 UTC
+# Серверов: 9
 
 mixed-port: 7890
 allow-lan: false
@@ -12,20 +12,21 @@ log-level: info
 ipv6: false
 
 proxies:
-  - name: "🇳🇱 Нидерланды БС 1"
+  - name: "🇺🇸 США БС 1"
     type: vless
-    server: "138.16.141.172"
-    port: 443
-    uuid: "218fd696-e3a2-4c33-b397-a5f13a82969e"
+    server: "67.220.73.204"
+    port: 18662
+    uuid: "814bd064-544d-4255-a070-5705c03f6da9"
     udp: true
     network: "tcp"
     tls: true
-    servername: "media11.abvphelp.cc"
-    client-fingerprint: "safari"
+    flow: "xtls-rprx-vision"
+    servername: "www.apple.com"
+    client-fingerprint: "chrome"
     reality-opts:
-      public-key: "LZyjSvaqbGOe9ELbGAT31gXirkeE294OxksO_-mPk0A"
-      short-id: "40fdb230"
-  - name: "🇳🇱 Нидерланды БС 2"
+      public-key: "k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0"
+      short-id: "48050fab"
+  - name: "🇳🇱 Нидерланды БС 1"
     type: vless
     server: "2.26.70.181"
     port: 443
@@ -35,10 +36,24 @@ proxies:
     tls: true
     flow: "xtls-rprx-vision"
     servername: "1.aws-lbr.amazonaws.com"
-    client-fingerprint: "qq"
+    client-fingerprint: "firefox"
     reality-opts:
       public-key: "s2vIO76C2QmrvyeujAWxTmQtQ51bwMTWDgQESIm8J1c"
       short-id: "bdcaf30f86"
+  - name: "🇩🇪 Германия БС 1"
+    type: vless
+    server: "78.159.247.253"
+    port: 2027
+    uuid: "851ed0d8-a37b-452d-8ef2-5b6c2d28a060"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "ISa-DZOI4LRRb9DHMFYm5oFqBXDjYzz0hVWUfWvzLmo"
+      short-id: "8d3293f0066e129a"
   - name: "🇷🇺 Россия БС 1"
     type: vless
     server: "193.168.46.180"
@@ -67,20 +82,33 @@ proxies:
     reality-opts:
       public-key: "cZF84xUCciKRXxTA39vNnh0U8CjUZiUSjLzuNTMOzV8"
       short-id: "33e48a03db900ff3"
-  - name: "🇩🇪 Германия БС 1"
+  - name: "🇫🇮 Финляндия БС 1"
     type: vless
-    server: "45.153.190.146"
-    port: 8443
-    uuid: "27392d81-048b-45c6-b919-70f4d3f9d60e"
+    server: "46.182.24.50"
+    port: 447
+    uuid: "a80c969b-b6ba-49d4-9fb5-9a1a7c1c4e75"
     udp: true
     network: "tcp"
     tls: true
     flow: "xtls-rprx-vision"
-    servername: "yastatic.net"
-    client-fingerprint: "safari"
+    servername: "ads.x5.ru"
+    client-fingerprint: "firefox"
     reality-opts:
-      public-key: "nzqaN3lDq7ydcGlEpDvQ58WNo2iEETUxDHzSZwvkhmY"
-      short-id: "a1b2c3d4"
+      public-key: "k7bOaMWpjIndkyWDw3WgzWTlE9mSYYbrvNDzdr0Nuwc"
+      short-id: "c226283c4de5b1ad"
+  - name: "🇫🇮 Финляндия БС 2"
+    type: vless
+    server: "185.79.138.71"
+    port: 448
+    uuid: "0b0915d7-6800-4580-a44b-77d84f105e6a"
+    udp: true
+    network: "tcp"
+    tls: true
+    servername: "www.samsung.com"
+    client-fingerprint: "edge"
+    reality-opts:
+      public-key: "CsDgNRcCwCkPIslfZpKTIK71KFpIFNsotbdzKcZVoH8"
+      short-id: "cd21e552537c7c0b"
   - name: "🇷🇺 Россия БС 3"
     type: vless
     server: "45.12.75.242"
@@ -96,32 +124,18 @@ proxies:
       short-id: "23103e1e"
   - name: "🇩🇪 Германия БС 2"
     type: vless
-    server: "78.159.247.253"
-    port: 2027
-    uuid: "851ed0d8-a37b-452d-8ef2-5b6c2d28a060"
-    udp: true
-    network: "tcp"
-    tls: true
-    flow: "xtls-rprx-vision"
-    servername: "storage.yandex.net"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "ISa-DZOI4LRRb9DHMFYm5oFqBXDjYzz0hVWUfWvzLmo"
-      short-id: "8d3293f0066e129a"
-  - name: "🇷🇺 Россия БС 4"
-    type: vless
-    server: "45.91.52.125"
+    server: "159.195.27.99"
     port: 443
-    uuid: "3ab2615c-689d-463b-8990-a95013894348"
+    uuid: "859a537b-09cf-4bce-8da4-ecbb72950e3a"
     udp: true
     network: "tcp"
     tls: true
     flow: "xtls-rprx-vision"
-    servername: "www.cloudflare.com"
-    client-fingerprint: "safari"
+    servername: "1.oncloudnineservicestreang.com"
+    client-fingerprint: "chrome"
     reality-opts:
-      public-key: "8bkjYMx4EXdRTHTgQ6wMaeyGl-HfskzixE0Is-kMQXU"
-      short-id: "e3c60a1b71b462fa"
+      public-key: "EuExqpNB141gtIjbCmU0yyurbBqiLtGjDg-n95JIuig"
+      short-id: "28415a7918168947"
 
 proxy-groups:
   - name: "PROXY"
@@ -129,14 +143,15 @@ proxy-groups:
     proxies:
       - "⚪ Авто БС"
       - "🌍 Страны БС"
+      - "🇺🇸 США БС 1"
       - "🇳🇱 Нидерланды БС 1"
-      - "🇳🇱 Нидерланды БС 2"
+      - "🇩🇪 Германия БС 1"
       - "🇷🇺 Россия БС 1"
       - "🇷🇺 Россия БС 2"
-      - "🇩🇪 Германия БС 1"
+      - "🇫🇮 Финляндия БС 1"
+      - "🇫🇮 Финляндия БС 2"
       - "🇷🇺 Россия БС 3"
       - "🇩🇪 Германия БС 2"
-      - "🇷🇺 Россия БС 4"
       - DIRECT
   - name: "⚪ Авто БС"
     type: url-test
@@ -144,37 +159,47 @@ proxy-groups:
     interval: 300
     tolerance: 150
     proxies:
+      - "🇺🇸 США БС 1"
       - "🇳🇱 Нидерланды БС 1"
-      - "🇳🇱 Нидерланды БС 2"
+      - "🇩🇪 Германия БС 1"
       - "🇷🇺 Россия БС 1"
       - "🇷🇺 Россия БС 2"
-      - "🇩🇪 Германия БС 1"
+      - "🇫🇮 Финляндия БС 1"
+      - "🇫🇮 Финляндия БС 2"
       - "🇷🇺 Россия БС 3"
       - "🇩🇪 Германия БС 2"
-      - "🇷🇺 Россия БС 4"
   - name: "🌍 Страны БС"
     type: select
     proxies:
       - "⚪ 🇷🇺 Россия"
       - "⚪ 🇩🇪 Германия"
+      - "⚪ 🇫🇮 Финляндия"
       - "⚪ 🇳🇱 Нидерланды"
+      - "⚪ 🇺🇸 США"
   - name: "⚪ 🇷🇺 Россия"
     type: select
     proxies:
       - "🇷🇺 Россия БС 1"
       - "🇷🇺 Россия БС 2"
       - "🇷🇺 Россия БС 3"
-      - "🇷🇺 Россия БС 4"
   - name: "⚪ 🇩🇪 Германия"
     type: select
     proxies:
       - "🇩🇪 Германия БС 1"
       - "🇩🇪 Германия БС 2"
+  - name: "⚪ 🇫🇮 Финляндия"
+    type: select
+    proxies:
+      - "🇫🇮 Финляндия БС 1"
+      - "🇫🇮 Финляндия БС 2"
   - name: "⚪ 🇳🇱 Нидерланды"
     type: select
     proxies:
       - "🇳🇱 Нидерланды БС 1"
-      - "🇳🇱 Нидерланды БС 2"
+  - name: "⚪ 🇺🇸 США"
+    type: select
+    proxies:
+      - "🇺🇸 США БС 1"
 
 rules:
   - GEOIP,private,DIRECT,no-resolve

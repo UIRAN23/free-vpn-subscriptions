@@ -2,8 +2,8 @@
 # profile-update-interval: 1
 # subscription-userinfo: upload=0; download=0; total=0
 # profile-web-page-url: https://uiran23.github.io/free-vpn-subscriptions/
-# Обновлено: 2026-08-12 19:46 UTC
-# Серверов: 8
+# Обновлено: 2026-08-12 21:01 UTC
+# Серверов: 13
 
 mixed-port: 7890
 allow-lan: false
@@ -26,11 +26,34 @@ proxies:
     reality-opts:
       public-key: "s2vIO76C2QmrvyeujAWxTmQtQ51bwMTWDgQESIm8J1c"
       short-id: "bdcaf30f86"
+  - name: "🇸🇬 Сингапур БС 1"
+    type: hysteria2
+    server: "47.129.9.33"
+    port: 443
+    password: "qQe1z5kU8kN6SlKnDt9Ru3Qp"
+    sni: "vk.com"
+    skip-cert-verify: true
+    up: "10"
+    down: "50"
+  - name: "🇱🇹 Литва БС 1"
+    type: vless
+    server: "109.73.202.139"
+    port: 443
+    uuid: "463a26c2-eba8-40ea-89c4-ee5c1373ccbe"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "vrutw2.mostserv.xyz"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "pjjJBx8NJzYD_AGmy7mlja9SlmazBoexXsrrjjm6ly4"
+      short-id: ""
   - name: "🇷🇺 Россия БС 1"
     type: vless
     server: "193.168.46.180"
     port: 443
-    uuid: "6fc5a942-eb19-4b71-a459-241006f84428"
+    uuid: "30a1e4a7-b30f-4da5-8855-35e16e35dda6"
     udp: true
     network: "tcp"
     tls: true
@@ -40,6 +63,20 @@ proxies:
     reality-opts:
       public-key: "D0FqzTuVSzCF8IcFo64SFIpMsaGV47LW3el2GCCVoFY"
       short-id: "c1a7e9b4711d5f60"
+  - name: "🇩🇪 Германия БС 1"
+    type: vless
+    server: "72.56.39.10"
+    port: 443
+    uuid: "463a26c2-eba8-40ea-89c4-ee5c1373ccbe"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "vrutw4.mostserv.xyz"
+    client-fingerprint: "safari"
+    reality-opts:
+      public-key: "KtiP21T3EX8Q6d-eZBmqbj8cDYcLyjhb0z2jcTBfwR4"
+      short-id: ""
   - name: "🇷🇺 Россия БС 2"
     type: vless
     server: "45.12.75.242"
@@ -53,18 +90,6 @@ proxies:
     reality-opts:
       public-key: "l8AubqcxQO-HRFJy4pZL1vbLOo-eXit69s-XulSELE0"
       short-id: "23103e1e"
-  - name: "🇬🇧 Великобритания БС 1"
-    type: vless
-    server: "66.90.93.74"
-    port: 8443
-    uuid: "e83af88a-a884-48ba-b462-a1edccff15e7"
-    udp: true
-    network: "ws"
-    tls: true
-    servername: "gateway-v1.bosx.net"
-    client-fingerprint: "firefox"
-    ws-opts:
-      path: "/api/connect"
   - name: "🇳🇱 Нидерланды БС 2"
     type: vless
     server: "138.16.141.172"
@@ -74,23 +99,63 @@ proxies:
     network: "tcp"
     tls: true
     servername: "media11.abvphelp.cc"
-    client-fingerprint: "ios"
+    client-fingerprint: "chrome"
     reality-opts:
       public-key: "LZyjSvaqbGOe9ELbGAT31gXirkeE294OxksO_-mPk0A"
       short-id: "40fdb230"
-  - name: "🇺🇸 США БС 1"
+  - name: "🇬🇧 Великобритания БС 1"
     type: vless
     server: "66.90.93.74"
-    port: 8449
+    port: 8443
     uuid: "e83af88a-a884-48ba-b462-a1edccff15e7"
     udp: true
     network: "ws"
     tls: true
     servername: "gateway-v1.bosx.net"
-    client-fingerprint: "chrome"
+    client-fingerprint: "ios"
     ws-opts:
-      path: "/api/v6/connect"
-  - name: "🇩🇪 Германия БС 1"
+      path: "/api/connect"
+  - name: "🇺🇸 США БС 1"
+    type: vless
+    server: "47.89.186.170"
+    port: 55861
+    uuid: "d51ed55c-d6dd-400b-aaf6-017c33969bfe"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "www.intel.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "t2ndf6SeVxinFCo5bcemnW_ZZhAtmHWiAkllks5qPWs"
+      short-id: "7551ed1b"
+  - name: "🇷🇺 Россия БС 3"
+    type: vless
+    server: "45.152.198.104"
+    port: 25343
+    uuid: "489b61b6-e7fa-4254-ad2b-6ac989b75d86"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "proxy11.h1guro.ovh"
+    client-fingerprint: "ios"
+    reality-opts:
+      public-key: "ibI55x4fumFYQPkdGT5sY7pQn905UF80NuaYuEhfXBg"
+      short-id: "416d4465d2b70b06"
+  - name: "🇬🇧 Великобритания БС 2"
+    type: vless
+    server: "66.90.93.74"
+    port: 8444
+    uuid: "e83af88a-a884-48ba-b462-a1edccff15e7"
+    udp: true
+    network: "ws"
+    tls: true
+    servername: "gateway-v1.bosx.net"
+    client-fingerprint: "qq"
+    ws-opts:
+      path: "/api/v1/connect"
+  - name: "🇩🇪 Германия БС 2"
     type: vless
     server: "159.195.27.99"
     port: 443
@@ -104,20 +169,18 @@ proxies:
     reality-opts:
       public-key: "EuExqpNB141gtIjbCmU0yyurbBqiLtGjDg-n95JIuig"
       short-id: "28415a7918168947"
-  - name: "🇬🇧 Великобритания БС 2"
+  - name: "🇺🇸 США БС 2"
     type: vless
-    server: "46.149.67.39"
-    port: 443
-    uuid: "be243a36-6eb7-4466-8f0a-280e1b819511"
+    server: "66.90.93.74"
+    port: 8449
+    uuid: "e83af88a-a884-48ba-b462-a1edccff15e7"
     udp: true
-    network: "tcp"
+    network: "ws"
     tls: true
-    flow: "xtls-rprx-vision"
-    servername: "slashdot.org"
+    servername: "gateway-v1.bosx.net"
     client-fingerprint: "ios"
-    reality-opts:
-      public-key: "JZ6o_q7-OSJ87w9kTrcn9I4UiMVZdPUnjXoRs4TbLzE"
-      short-id: "61811b12a62fb2a4"
+    ws-opts:
+      path: "/api/v6/connect"
 
 proxy-groups:
   - name: "PROXY"
@@ -126,13 +189,18 @@ proxy-groups:
       - "⚪ Авто БС"
       - "🌍 Страны БС"
       - "🇳🇱 Нидерланды БС 1"
+      - "🇸🇬 Сингапур БС 1"
+      - "🇱🇹 Литва БС 1"
       - "🇷🇺 Россия БС 1"
-      - "🇷🇺 Россия БС 2"
-      - "🇬🇧 Великобритания БС 1"
-      - "🇳🇱 Нидерланды БС 2"
-      - "🇺🇸 США БС 1"
       - "🇩🇪 Германия БС 1"
+      - "🇷🇺 Россия БС 2"
+      - "🇳🇱 Нидерланды БС 2"
+      - "🇬🇧 Великобритания БС 1"
+      - "🇺🇸 США БС 1"
+      - "🇷🇺 Россия БС 3"
       - "🇬🇧 Великобритания БС 2"
+      - "🇩🇪 Германия БС 2"
+      - "🇺🇸 США БС 2"
       - DIRECT
   - name: "⚪ Авто БС"
     type: url-test
@@ -141,21 +209,39 @@ proxy-groups:
     tolerance: 150
     proxies:
       - "🇳🇱 Нидерланды БС 1"
+      - "🇸🇬 Сингапур БС 1"
+      - "🇱🇹 Литва БС 1"
       - "🇷🇺 Россия БС 1"
-      - "🇷🇺 Россия БС 2"
-      - "🇬🇧 Великобритания БС 1"
-      - "🇳🇱 Нидерланды БС 2"
-      - "🇺🇸 США БС 1"
       - "🇩🇪 Германия БС 1"
+      - "🇷🇺 Россия БС 2"
+      - "🇳🇱 Нидерланды БС 2"
+      - "🇬🇧 Великобритания БС 1"
+      - "🇺🇸 США БС 1"
+      - "🇷🇺 Россия БС 3"
       - "🇬🇧 Великобритания БС 2"
+      - "🇩🇪 Германия БС 2"
+      - "🇺🇸 США БС 2"
   - name: "🌍 Страны БС"
     type: select
     proxies:
-      - "⚪ 🇬🇧 Великобритания"
-      - "⚪ 🇳🇱 Нидерланды"
       - "⚪ 🇷🇺 Россия"
       - "⚪ 🇩🇪 Германия"
+      - "⚪ 🇬🇧 Великобритания"
+      - "⚪ 🇳🇱 Нидерланды"
       - "⚪ 🇺🇸 США"
+      - "⚪ 🇱🇹 Литва"
+      - "⚪ 🇸🇬 Сингапур"
+  - name: "⚪ 🇷🇺 Россия"
+    type: select
+    proxies:
+      - "🇷🇺 Россия БС 1"
+      - "🇷🇺 Россия БС 2"
+      - "🇷🇺 Россия БС 3"
+  - name: "⚪ 🇩🇪 Германия"
+    type: select
+    proxies:
+      - "🇩🇪 Германия БС 1"
+      - "🇩🇪 Германия БС 2"
   - name: "⚪ 🇬🇧 Великобритания"
     type: select
     proxies:
@@ -166,19 +252,19 @@ proxy-groups:
     proxies:
       - "🇳🇱 Нидерланды БС 1"
       - "🇳🇱 Нидерланды БС 2"
-  - name: "⚪ 🇷🇺 Россия"
-    type: select
-    proxies:
-      - "🇷🇺 Россия БС 1"
-      - "🇷🇺 Россия БС 2"
-  - name: "⚪ 🇩🇪 Германия"
-    type: select
-    proxies:
-      - "🇩🇪 Германия БС 1"
   - name: "⚪ 🇺🇸 США"
     type: select
     proxies:
       - "🇺🇸 США БС 1"
+      - "🇺🇸 США БС 2"
+  - name: "⚪ 🇱🇹 Литва"
+    type: select
+    proxies:
+      - "🇱🇹 Литва БС 1"
+  - name: "⚪ 🇸🇬 Сингапур"
+    type: select
+    proxies:
+      - "🇸🇬 Сингапур БС 1"
 
 rules:
   - GEOIP,private,DIRECT,no-resolve

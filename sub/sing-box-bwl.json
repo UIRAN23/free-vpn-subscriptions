@@ -46,36 +46,43 @@
       "tag": "proxy",
       "outbounds": [
         "auto-bwl",
-        "🇷🇺 Россия",
-        "🇩🇪 Германия",
-        "🇫🇮 Финляндия",
         "🇳🇱 Нидерланды",
-        "🇷🇺 Россия БС 1",
-        "🇫🇮 Финляндия БС 1",
-        "🇫🇮 Финляндия БС 2",
+        "🇩🇪 Германия",
+        "🇷🇺 Россия",
+        "🇫🇮 Финляндия",
+        "🇫🇷 Франция",
         "🇳🇱 Нидерланды БС 1",
-        "🇷🇺 Россия БС 2",
+        "🇳🇱 Нидерланды БС 2",
         "🇩🇪 Германия БС 1",
         "🇩🇪 Германия БС 2",
+        "🇳🇱 Нидерланды БС 3",
+        "🇷🇺 Россия БС 1",
+        "🇫🇮 Финляндия БС 1",
+        "🇳🇱 Нидерланды БС 4",
+        "🇷🇺 Россия БС 2",
+        "🇫🇷 Франция БС 1",
         "🇷🇺 Россия БС 3",
-        "🇷🇺 Россия БС 4",
-        "🇩🇪 Германия БС 3"
+        "🇩🇪 Германия БС 3",
+        "🇫🇮 Финляндия БС 2"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto-bwl",
       "outbounds": [
-        "🇷🇺 Россия БС 1",
-        "🇫🇮 Финляндия БС 1",
-        "🇫🇮 Финляндия БС 2",
         "🇳🇱 Нидерланды БС 1",
-        "🇷🇺 Россия БС 2",
+        "🇳🇱 Нидерланды БС 2",
         "🇩🇪 Германия БС 1",
         "🇩🇪 Германия БС 2",
+        "🇳🇱 Нидерланды БС 3",
+        "🇷🇺 Россия БС 1",
+        "🇫🇮 Финляндия БС 1",
+        "🇳🇱 Нидерланды БС 4",
+        "🇷🇺 Россия БС 2",
+        "🇫🇷 Франция БС 1",
         "🇷🇺 Россия БС 3",
-        "🇷🇺 Россия БС 4",
-        "🇩🇪 Германия БС 3"
+        "🇩🇪 Германия БС 3",
+        "🇫🇮 Финляндия БС 2"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "5m",
@@ -83,12 +90,12 @@
     },
     {
       "type": "urltest",
-      "tag": "🇷🇺 Россия",
+      "tag": "🇳🇱 Нидерланды",
       "outbounds": [
-        "🇷🇺 Россия БС 1",
-        "🇷🇺 Россия БС 2",
-        "🇷🇺 Россия БС 3",
-        "🇷🇺 Россия БС 4"
+        "🇳🇱 Нидерланды БС 1",
+        "🇳🇱 Нидерланды БС 2",
+        "🇳🇱 Нидерланды БС 3",
+        "🇳🇱 Нидерланды БС 4"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "5m",
@@ -108,6 +115,18 @@
     },
     {
       "type": "urltest",
+      "tag": "🇷🇺 Россия",
+      "outbounds": [
+        "🇷🇺 Россия БС 1",
+        "🇷🇺 Россия БС 2",
+        "🇷🇺 Россия БС 3"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "5m",
+      "tolerance": 150
+    },
+    {
+      "type": "urltest",
       "tag": "🇫🇮 Финляндия",
       "outbounds": [
         "🇫🇮 Финляндия БС 1",
@@ -119,9 +138,9 @@
     },
     {
       "type": "urltest",
-      "tag": "🇳🇱 Нидерланды",
+      "tag": "🇫🇷 Франция",
       "outbounds": [
-        "🇳🇱 Нидерланды БС 1"
+        "🇫🇷 Франция БС 1"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "5m",
@@ -137,16 +156,109 @@
     },
     {
       "type": "vless",
+      "tag": "🇳🇱 Нидерланды БС 1",
+      "server": "189.74.114.136",
+      "server_port": 443,
+      "uuid": "6cdf70e8-7511-414e-b521-edbeffbe1a40",
+      "tls": {
+        "enabled": true,
+        "server_name": "api.yandex-dev.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "IuvAXlAWBpeXehmEk0P-FIGTctUhny2H3UilbWWfJC0",
+          "short_id": "122218f4c1f172e4"
+        }
+      },
+      "flow": "xtls-rprx-vision"
+    },
+    {
+      "type": "vless",
+      "tag": "🇳🇱 Нидерланды БС 2",
+      "server": "189.74.114.99",
+      "server_port": 443,
+      "uuid": "6cdf70e8-7511-414e-b521-edbeffbe1a40",
+      "tls": {
+        "enabled": true,
+        "server_name": "api.yandex-dev.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "IuvAXlAWBpeXehmEk0P-FIGTctUhny2H3UilbWWfJC0",
+          "short_id": "122218f4c1f172e4"
+        }
+      },
+      "flow": "xtls-rprx-vision"
+    },
+    {
+      "type": "vless",
+      "tag": "🇩🇪 Германия БС 1",
+      "server": "189.74.106.34",
+      "server_port": 443,
+      "uuid": "6cdf70e8-7511-414e-b521-edbeffbe1a40",
+      "tls": {
+        "enabled": true,
+        "server_name": "api.yandex-cloud.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "IuvAXlAWBpeXehmEk0P-FIGTctUhny2H3UilbWWfJC0",
+          "short_id": "122218f4c1f172e4"
+        }
+      },
+      "flow": "xtls-rprx-vision"
+    },
+    {
+      "type": "vless",
+      "tag": "🇩🇪 Германия БС 2",
+      "server": "185.55.243.151",
+      "server_port": 443,
+      "uuid": "53c76647-14d1-4df5-99cb-be99ad2e6bd9",
+      "tls": {
+        "enabled": true,
+        "server_name": "de151.mechvpn.online",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "flow": "xtls-rprx-vision"
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇳🇱 Нидерланды БС 3",
+      "server": "5.129.235.85",
+      "server_port": 443,
+      "password": "gf1:gfhysteria2024",
+      "tls": {
+        "enabled": true,
+        "server_name": "vk.com",
+        "insecure": true
+      },
+      "up_mbps": 10,
+      "down_mbps": 50
+    },
+    {
+      "type": "vless",
       "tag": "🇷🇺 Россия БС 1",
       "server": "139.100.197.28",
       "server_port": 52006,
-      "uuid": "2399de5e-4f07-07d0-9601-1cfa83c8f68f",
+      "uuid": "06108b10-635c-07d0-b77c-c58bdbb55d3a",
       "tls": {
         "enabled": true,
         "server_name": "search.setlisting.ru",
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "qq"
         }
       },
       "flow": "xtls-rprx-vision"
@@ -162,7 +274,7 @@
         "server_name": "vk.ru",
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
@@ -174,27 +286,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇫🇮 Финляндия БС 2",
-      "server": "185.79.138.71",
-      "server_port": 448,
-      "uuid": "0b0915d7-6800-4580-a44b-77d84f105e6a",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.samsung.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "CsDgNRcCwCkPIslfZpKTIK71KFpIFNsotbdzKcZVoH8",
-          "short_id": "cd21e552537c7c0b"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇳🇱 Нидерланды БС 1",
+      "tag": "🇳🇱 Нидерланды БС 4",
       "server": "2.26.70.181",
       "server_port": 443,
       "uuid": "a046297b-0f66-4514-8d4f-2a7d200d8d37",
@@ -218,7 +310,7 @@
       "tag": "🇷🇺 Россия БС 2",
       "server": "193.168.46.180",
       "server_port": 443,
-      "uuid": "0ddf3318-bb25-47d7-864f-79ed7b727d64",
+      "uuid": "d8e8b8f0-7b03-4692-943e-07d4c7ec5504",
       "tls": {
         "enabled": true,
         "server_name": "rruu.persik.host",
@@ -236,42 +328,21 @@
     },
     {
       "type": "vless",
-      "tag": "🇩🇪 Германия БС 1",
-      "server": "217.19.122.234",
-      "server_port": 2027,
-      "uuid": "851ed0d8-a37b-452d-8ef2-5b6c2d28a060",
-      "tls": {
-        "enabled": true,
-        "server_name": "storage.yandex.net",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "ISa-DZOI4LRRb9DHMFYm5oFqBXDjYzz0hVWUfWvzLmo",
-          "short_id": "dc8109baf0f607ea"
-        }
-      },
-      "flow": "xtls-rprx-vision"
-    },
-    {
-      "type": "vless",
-      "tag": "🇩🇪 Германия БС 2",
-      "server": "159.195.27.99",
+      "tag": "🇫🇷 Франция БС 1",
+      "server": "api.yandex-api.org",
       "server_port": 443,
-      "uuid": "859a537b-09cf-4bce-8da4-ecbb72950e3a",
+      "uuid": "6cdf70e8-7511-414e-b521-edbeffbe1a40",
       "tls": {
         "enabled": true,
-        "server_name": "1.oncloudnineservicestreang.com",
+        "server_name": "api.yandex-api.org",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "qq"
         },
         "reality": {
           "enabled": true,
-          "public_key": "EuExqpNB141gtIjbCmU0yyurbBqiLtGjDg-n95JIuig",
-          "short_id": "28415a7918168947"
+          "public_key": "IuvAXlAWBpeXehmEk0P-FIGTctUhny2H3UilbWWfJC0",
+          "short_id": "122218f4c1f172e4"
         }
       },
       "flow": "xtls-rprx-vision"
@@ -287,7 +358,7 @@
         "server_name": "ya.ru",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "qq"
         },
         "reality": {
           "enabled": true,
@@ -298,45 +369,44 @@
     },
     {
       "type": "vless",
-      "tag": "🇷🇺 Россия БС 4",
-      "server": "192.144.13.150",
-      "server_port": 9443,
-      "uuid": "2a650f3b-d95b-4bd6-aadf-16ccc0717155",
+      "tag": "🇩🇪 Германия БС 3",
+      "server": "159.195.27.99",
+      "server_port": 443,
+      "uuid": "859a537b-09cf-4bce-8da4-ecbb72950e3a",
       "tls": {
         "enabled": true,
-        "server_name": "io.ozone.ru",
+        "server_name": "1.oncloudnineservicestreang.com",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "im7-98zxWz_OGimQfeoN_Y5p1tAy8KoZCxOe2wOeWS4",
-          "short_id": ""
+          "public_key": "EuExqpNB141gtIjbCmU0yyurbBqiLtGjDg-n95JIuig",
+          "short_id": "28415a7918168947"
         }
       },
       "flow": "xtls-rprx-vision"
     },
     {
       "type": "vless",
-      "tag": "🇩🇪 Германия БС 3",
-      "server": "138.124.255.20",
-      "server_port": 443,
-      "uuid": "423b1d79-08c4-0003-9d5e-c541f791b55f",
+      "tag": "🇫🇮 Финляндия БС 2",
+      "server": "185.79.138.71",
+      "server_port": 448,
+      "uuid": "0b0915d7-6800-4580-a44b-77d84f105e6a",
       "tls": {
         "enabled": true,
-        "server_name": "russia.cendora.ru",
+        "server_name": "www.samsung.com",
         "utls": {
           "enabled": true,
           "fingerprint": "qq"
         },
         "reality": {
           "enabled": true,
-          "public_key": "ZXi0bwZwOe9e5CMticA2-bU7qamHgs_sN-2kHygbDyk",
-          "short_id": "e91da98020a38be9"
+          "public_key": "CsDgNRcCwCkPIslfZpKTIK71KFpIFNsotbdzKcZVoH8",
+          "short_id": "cd21e552537c7c0b"
         }
-      },
-      "flow": "xtls-rprx-vision"
+      }
     }
   ],
   "route": {

@@ -2,8 +2,8 @@
 # profile-update-interval: 1
 # subscription-userinfo: upload=0; download=0; total=0
 # profile-web-page-url: https://uiran23.github.io/free-vpn-subscriptions/
-# Обновлено: 2026-08-16 13:21 UTC
-# Серверов: 11
+# Обновлено: 2026-08-16 14:36 UTC
+# Серверов: 9
 
 mixed-port: 7890
 allow-lan: false
@@ -22,7 +22,18 @@ proxies:
     tls: true
     flow: "xtls-rprx-vision"
     servername: "de151.mechvpn.online"
-    client-fingerprint: "firefox"
+    client-fingerprint: "qq"
+  - name: "🇷🇺 Россия БС 1"
+    type: vless
+    server: "139.100.197.28"
+    port: 52006
+    uuid: "1983a39d-e39f-07d0-b9e1-5d2c4ae04495"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "search.setlisting.ru"
+    client-fingerprint: "qq"
   - name: "🇳🇱 Нидерланды БС 1"
     type: vless
     server: "2.26.70.181"
@@ -33,26 +44,21 @@ proxies:
     tls: true
     flow: "xtls-rprx-vision"
     servername: "1.aws-lbr.amazonaws.com"
-    client-fingerprint: "chrome"
+    client-fingerprint: "firefox"
     reality-opts:
       public-key: "s2vIO76C2QmrvyeujAWxTmQtQ51bwMTWDgQESIm8J1c"
       short-id: "bdcaf30f86"
-  - name: "🇷🇺 Россия БС 1"
-    type: vless
-    server: "139.100.197.28"
-    port: 52006
-    uuid: "d10df94c-a4f6-07d0-b242-c1626b86d108"
-    udp: true
-    network: "tcp"
-    tls: true
-    flow: "xtls-rprx-vision"
-    servername: "search.setlisting.ru"
-    client-fingerprint: "qq"
+  - name: "🇩🇪 Германия БС 2"
+    type: hysteria2
+    server: "node1.vpnushka.lol"
+    port: 443
+    password: "133f76fc-a5ab-463e-b46d-9587d7137e55"
+    sni: "node1.vpnushka.lol"
   - name: "🇷🇺 Россия БС 2"
     type: vless
     server: "193.168.46.180"
     port: 443
-    uuid: "597ad2cb-a0e4-4dd7-9a8a-9cb79f68f8c4"
+    uuid: "393cf343-b4a2-42bc-b726-a8b8de887b7b"
     udp: true
     network: "tcp"
     tls: true
@@ -73,52 +79,6 @@ proxies:
     flow: "xtls-rprx-vision"
     servername: "id.tutdesignstudio.site"
     client-fingerprint: "edge"
-  - name: "🇫🇮 Финляндия БС 1"
-    type: vless
-    server: "fast_s93.slopllex.app"
-    port: 443
-    uuid: "e0cb6bee-13d2-41a8-9c31-f5fa13942e0f"
-    udp: true
-    network: "tcp"
-    tls: true
-    flow: "xtls-rprx-vision"
-    servername: "fast_s93.slopllex.app"
-    client-fingerprint: "edge"
-  - name: "🇫🇮 Финляндия БС 2"
-    type: vless
-    server: "fast_s36.slopllex.app"
-    port: 443
-    uuid: "3bde3993-ece7-4e26-95f1-a2dda32bbf4a"
-    udp: true
-    network: "tcp"
-    tls: true
-    flow: "xtls-rprx-vision"
-    servername: "fast_s36.slopllex.app"
-    client-fingerprint: "edge"
-  - name: "🇫🇮 Финляндия БС 3"
-    type: vless
-    server: "45.139.184.183"
-    port: 2053
-    uuid: "c7e9c591-2764-423a-afca-efbd010fd396"
-    udp: true
-    network: "ws"
-    tls: true
-    servername: "forfreeuse.rtqa.ru"
-    client-fingerprint: "qq"
-    ws-opts:
-      path: "/"
-      headers:
-        Host: "forfreeuse.rtqa.ru"
-  - name: "🇫🇷 Франция БС 1"
-    type: vless
-    server: "begin.magazinetut.online"
-    port: 443
-    uuid: "85bddbfa-4149-4db0-8092-39a2b228ec60"
-    udp: true
-    network: "tcp"
-    tls: true
-    flow: "xtls-rprx-vision"
-    client-fingerprint: "chrome"
   - name: "🇷🇺 Россия БС 3"
     type: vless
     server: "45.12.75.242"
@@ -132,19 +92,32 @@ proxies:
     reality-opts:
       public-key: "l8AubqcxQO-HRFJy4pZL1vbLOo-eXit69s-XulSELE0"
       short-id: "23103e1e"
-  - name: "🇫🇮 Финляндия БС 4"
+  - name: "🇵🇱 Польша БС 2"
     type: vless
-    server: "185.79.138.71"
-    port: 448
-    uuid: "0b0915d7-6800-4580-a44b-77d84f105e6a"
+    server: "85.193.84.49"
+    port: 443
+    uuid: "ca599ed4-f7a0-4ddf-a45d-3cb6276d6cd7"
     udp: true
-    network: "tcp"
+    network: "ws"
     tls: true
-    servername: "www.samsung.com"
+    servername: "files-x.bosx.net"
     client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "CsDgNRcCwCkPIslfZpKTIK71KFpIFNsotbdzKcZVoH8"
-      short-id: "cd21e552537c7c0b"
+    ws-opts:
+      path: "/api/v1/connect"
+  - name: "🇫🇮 Финляндия БС 1"
+    type: vless
+    server: "45.139.184.183"
+    port: 2053
+    uuid: "c7e9c591-2764-423a-afca-efbd010fd396"
+    udp: true
+    network: "ws"
+    tls: true
+    servername: "forfreeuse.rtqa.ru"
+    client-fingerprint: "qq"
+    ws-opts:
+      path: "/"
+      headers:
+        Host: "forfreeuse.rtqa.ru"
 
 proxy-groups:
   - name: "PROXY"
@@ -153,16 +126,14 @@ proxy-groups:
       - "⚪ Авто БС"
       - "🌍 Страны БС"
       - "🇩🇪 Германия БС 1"
-      - "🇳🇱 Нидерланды БС 1"
       - "🇷🇺 Россия БС 1"
+      - "🇳🇱 Нидерланды БС 1"
+      - "🇩🇪 Германия БС 2"
       - "🇷🇺 Россия БС 2"
       - "🇵🇱 Польша БС 1"
-      - "🇫🇮 Финляндия БС 1"
-      - "🇫🇮 Финляндия БС 2"
-      - "🇫🇮 Финляндия БС 3"
-      - "🇫🇷 Франция БС 1"
       - "🇷🇺 Россия БС 3"
-      - "🇫🇮 Финляндия БС 4"
+      - "🇵🇱 Польша БС 2"
+      - "🇫🇮 Финляндия БС 1"
       - DIRECT
   - name: "⚪ Авто БС"
     type: url-test
@@ -171,32 +142,22 @@ proxy-groups:
     tolerance: 150
     proxies:
       - "🇩🇪 Германия БС 1"
-      - "🇳🇱 Нидерланды БС 1"
       - "🇷🇺 Россия БС 1"
+      - "🇳🇱 Нидерланды БС 1"
+      - "🇩🇪 Германия БС 2"
       - "🇷🇺 Россия БС 2"
       - "🇵🇱 Польша БС 1"
-      - "🇫🇮 Финляндия БС 1"
-      - "🇫🇮 Финляндия БС 2"
-      - "🇫🇮 Финляндия БС 3"
-      - "🇫🇷 Франция БС 1"
       - "🇷🇺 Россия БС 3"
-      - "🇫🇮 Финляндия БС 4"
+      - "🇵🇱 Польша БС 2"
+      - "🇫🇮 Финляндия БС 1"
   - name: "🌍 Страны БС"
     type: select
     proxies:
-      - "⚪ 🇫🇮 Финляндия"
       - "⚪ 🇷🇺 Россия"
       - "⚪ 🇩🇪 Германия"
-      - "⚪ 🇫🇷 Франция"
-      - "⚪ 🇳🇱 Нидерланды"
       - "⚪ 🇵🇱 Польша"
-  - name: "⚪ 🇫🇮 Финляндия"
-    type: select
-    proxies:
-      - "🇫🇮 Финляндия БС 1"
-      - "🇫🇮 Финляндия БС 2"
-      - "🇫🇮 Финляндия БС 3"
-      - "🇫🇮 Финляндия БС 4"
+      - "⚪ 🇫🇮 Финляндия"
+      - "⚪ 🇳🇱 Нидерланды"
   - name: "⚪ 🇷🇺 Россия"
     type: select
     proxies:
@@ -207,18 +168,20 @@ proxy-groups:
     type: select
     proxies:
       - "🇩🇪 Германия БС 1"
-  - name: "⚪ 🇫🇷 Франция"
-    type: select
-    proxies:
-      - "🇫🇷 Франция БС 1"
-  - name: "⚪ 🇳🇱 Нидерланды"
-    type: select
-    proxies:
-      - "🇳🇱 Нидерланды БС 1"
+      - "🇩🇪 Германия БС 2"
   - name: "⚪ 🇵🇱 Польша"
     type: select
     proxies:
       - "🇵🇱 Польша БС 1"
+      - "🇵🇱 Польша БС 2"
+  - name: "⚪ 🇫🇮 Финляндия"
+    type: select
+    proxies:
+      - "🇫🇮 Финляндия БС 1"
+  - name: "⚪ 🇳🇱 Нидерланды"
+    type: select
+    proxies:
+      - "🇳🇱 Нидерланды БС 1"
 
 rules:
   - GEOIP,private,DIRECT,no-resolve

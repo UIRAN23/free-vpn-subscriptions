@@ -55,14 +55,13 @@
         "🇩🇪 Германия БС 1",
         "🇳🇱 Нидерланды БС 1",
         "🇷🇺 Россия БС 1",
-        "🇫🇮 Финляндия БС 1",
         "🇷🇺 Россия БС 2",
         "🇵🇱 Польша БС 1",
+        "🇫🇮 Финляндия БС 1",
         "🇫🇮 Финляндия БС 2",
         "🇫🇮 Финляндия БС 3",
-        "🇷🇺 Россия БС 3",
-        "🇩🇪 Германия БС 2",
         "🇫🇷 Франция БС 1",
+        "🇷🇺 Россия БС 3",
         "🇫🇮 Финляндия БС 4"
       ]
     },
@@ -73,14 +72,13 @@
         "🇩🇪 Германия БС 1",
         "🇳🇱 Нидерланды БС 1",
         "🇷🇺 Россия БС 1",
-        "🇫🇮 Финляндия БС 1",
         "🇷🇺 Россия БС 2",
         "🇵🇱 Польша БС 1",
+        "🇫🇮 Финляндия БС 1",
         "🇫🇮 Финляндия БС 2",
         "🇫🇮 Финляндия БС 3",
-        "🇷🇺 Россия БС 3",
-        "🇩🇪 Германия БС 2",
         "🇫🇷 Франция БС 1",
+        "🇷🇺 Россия БС 3",
         "🇫🇮 Финляндия БС 4"
       ],
       "url": "https://www.gstatic.com/generate_204",
@@ -116,8 +114,7 @@
       "type": "urltest",
       "tag": "🇩🇪 Германия",
       "outbounds": [
-        "🇩🇪 Германия БС 1",
-        "🇩🇪 Германия БС 2"
+        "🇩🇪 Германия БС 1"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "5m",
@@ -188,7 +185,7 @@
         "server_name": "1.aws-lbr.amazonaws.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -203,7 +200,7 @@
       "tag": "🇷🇺 Россия БС 1",
       "server": "139.100.197.28",
       "server_port": 52006,
-      "uuid": "73cffa3c-908b-07d0-a6e7-fa0a4f9f00ec",
+      "uuid": "d10df94c-a4f6-07d0-b242-c1626b86d108",
       "tls": {
         "enabled": true,
         "server_name": "search.setlisting.ru",
@@ -216,30 +213,10 @@
     },
     {
       "type": "vless",
-      "tag": "🇫🇮 Финляндия БС 1",
-      "server": "185.79.138.71",
-      "server_port": 448,
-      "uuid": "0b0915d7-6800-4580-a44b-77d84f105e6a",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.samsung.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "CsDgNRcCwCkPIslfZpKTIK71KFpIFNsotbdzKcZVoH8",
-          "short_id": "cd21e552537c7c0b"
-        }
-      }
-    },
-    {
-      "type": "vless",
       "tag": "🇷🇺 Россия БС 2",
       "server": "193.168.46.180",
       "server_port": 443,
-      "uuid": "d358b1a5-71d8-42f9-9baf-a6c64eef2262",
+      "uuid": "597ad2cb-a0e4-4dd7-9a8a-9cb79f68f8c4",
       "tls": {
         "enabled": true,
         "server_name": "rruu.persik.host",
@@ -273,7 +250,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇫🇮 Финляндия БС 2",
+      "tag": "🇫🇮 Финляндия БС 1",
       "server": "fast_s93.slopllex.app",
       "server_port": 443,
       "uuid": "e0cb6bee-13d2-41a8-9c31-f5fa13942e0f",
@@ -289,7 +266,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇫🇮 Финляндия БС 3",
+      "tag": "🇫🇮 Финляндия БС 2",
       "server": "fast_s36.slopllex.app",
       "server_port": 443,
       "uuid": "3bde3993-ece7-4e26-95f1-a2dda32bbf4a",
@@ -299,6 +276,44 @@
         "utls": {
           "enabled": true,
           "fingerprint": "edge"
+        }
+      },
+      "flow": "xtls-rprx-vision"
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇮 Финляндия БС 3",
+      "server": "45.139.184.183",
+      "server_port": 2053,
+      "uuid": "c7e9c591-2764-423a-afca-efbd010fd396",
+      "tls": {
+        "enabled": true,
+        "server_name": "forfreeuse.rtqa.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "forfreeuse.rtqa.ru"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇷 Франция БС 1",
+      "server": "begin.magazinetut.online",
+      "server_port": 443,
+      "uuid": "85bddbfa-4149-4db0-8092-39a2b228ec60",
+      "tls": {
+        "enabled": true,
+        "server_name": "begin.magazinetut.online",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
         }
       },
       "flow": "xtls-rprx-vision"
@@ -324,51 +339,22 @@
       }
     },
     {
-      "type": "hysteria2",
-      "tag": "🇩🇪 Германия БС 2",
-      "server": "node1.vpnushka.lol",
-      "server_port": 443,
-      "password": "133f76fc-a5ab-463e-b46d-9587d7137e55",
-      "tls": {
-        "enabled": true,
-        "server_name": "node1.vpnushka.lol"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇫🇷 Франция БС 1",
-      "server": "begin.magazinetut.online",
-      "server_port": 443,
-      "uuid": "85bddbfa-4149-4db0-8092-39a2b228ec60",
-      "tls": {
-        "enabled": true,
-        "server_name": "begin.magazinetut.online",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "flow": "xtls-rprx-vision"
-    },
-    {
       "type": "vless",
       "tag": "🇫🇮 Финляндия БС 4",
-      "server": "45.139.184.183",
-      "server_port": 2053,
-      "uuid": "c7e9c591-2764-423a-afca-efbd010fd396",
+      "server": "185.79.138.71",
+      "server_port": 448,
+      "uuid": "0b0915d7-6800-4580-a44b-77d84f105e6a",
       "tls": {
         "enabled": true,
-        "server_name": "forfreeuse.rtqa.ru",
+        "server_name": "www.samsung.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "forfreeuse.rtqa.ru"
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "CsDgNRcCwCkPIslfZpKTIK71KFpIFNsotbdzKcZVoH8",
+          "short_id": "cd21e552537c7c0b"
         }
       }
     }

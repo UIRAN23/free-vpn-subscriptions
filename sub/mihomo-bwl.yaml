@@ -2,8 +2,8 @@
 # profile-update-interval: 1
 # subscription-userinfo: upload=0; download=0; total=0
 # profile-web-page-url: https://uiran23.github.io/free-vpn-subscriptions/
-# Обновлено: 2026-08-16 12:59 UTC
-# Серверов: 12
+# Обновлено: 2026-08-16 13:21 UTC
+# Серверов: 11
 
 mixed-port: 7890
 allow-lan: false
@@ -33,7 +33,7 @@ proxies:
     tls: true
     flow: "xtls-rprx-vision"
     servername: "1.aws-lbr.amazonaws.com"
-    client-fingerprint: "firefox"
+    client-fingerprint: "chrome"
     reality-opts:
       public-key: "s2vIO76C2QmrvyeujAWxTmQtQ51bwMTWDgQESIm8J1c"
       short-id: "bdcaf30f86"
@@ -41,31 +41,18 @@ proxies:
     type: vless
     server: "139.100.197.28"
     port: 52006
-    uuid: "73cffa3c-908b-07d0-a6e7-fa0a4f9f00ec"
+    uuid: "d10df94c-a4f6-07d0-b242-c1626b86d108"
     udp: true
     network: "tcp"
     tls: true
     flow: "xtls-rprx-vision"
     servername: "search.setlisting.ru"
     client-fingerprint: "qq"
-  - name: "🇫🇮 Финляндия БС 1"
-    type: vless
-    server: "185.79.138.71"
-    port: 448
-    uuid: "0b0915d7-6800-4580-a44b-77d84f105e6a"
-    udp: true
-    network: "tcp"
-    tls: true
-    servername: "www.samsung.com"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "CsDgNRcCwCkPIslfZpKTIK71KFpIFNsotbdzKcZVoH8"
-      short-id: "cd21e552537c7c0b"
   - name: "🇷🇺 Россия БС 2"
     type: vless
     server: "193.168.46.180"
     port: 443
-    uuid: "d358b1a5-71d8-42f9-9baf-a6c64eef2262"
+    uuid: "597ad2cb-a0e4-4dd7-9a8a-9cb79f68f8c4"
     udp: true
     network: "tcp"
     tls: true
@@ -86,7 +73,7 @@ proxies:
     flow: "xtls-rprx-vision"
     servername: "id.tutdesignstudio.site"
     client-fingerprint: "edge"
-  - name: "🇫🇮 Финляндия БС 2"
+  - name: "🇫🇮 Финляндия БС 1"
     type: vless
     server: "fast_s93.slopllex.app"
     port: 443
@@ -97,7 +84,7 @@ proxies:
     flow: "xtls-rprx-vision"
     servername: "fast_s93.slopllex.app"
     client-fingerprint: "edge"
-  - name: "🇫🇮 Финляндия БС 3"
+  - name: "🇫🇮 Финляндия БС 2"
     type: vless
     server: "fast_s36.slopllex.app"
     port: 443
@@ -108,36 +95,7 @@ proxies:
     flow: "xtls-rprx-vision"
     servername: "fast_s36.slopllex.app"
     client-fingerprint: "edge"
-  - name: "🇷🇺 Россия БС 3"
-    type: vless
-    server: "45.12.75.242"
-    port: 26424
-    uuid: "633f424e-2b11-48da-a6b3-a849dd71456f"
-    udp: true
-    network: "tcp"
-    tls: true
-    servername: "ya.ru"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "l8AubqcxQO-HRFJy4pZL1vbLOo-eXit69s-XulSELE0"
-      short-id: "23103e1e"
-  - name: "🇩🇪 Германия БС 2"
-    type: hysteria2
-    server: "node1.vpnushka.lol"
-    port: 443
-    password: "133f76fc-a5ab-463e-b46d-9587d7137e55"
-    sni: "node1.vpnushka.lol"
-  - name: "🇫🇷 Франция БС 1"
-    type: vless
-    server: "begin.magazinetut.online"
-    port: 443
-    uuid: "85bddbfa-4149-4db0-8092-39a2b228ec60"
-    udp: true
-    network: "tcp"
-    tls: true
-    flow: "xtls-rprx-vision"
-    client-fingerprint: "chrome"
-  - name: "🇫🇮 Финляндия БС 4"
+  - name: "🇫🇮 Финляндия БС 3"
     type: vless
     server: "45.139.184.183"
     port: 2053
@@ -151,6 +109,42 @@ proxies:
       path: "/"
       headers:
         Host: "forfreeuse.rtqa.ru"
+  - name: "🇫🇷 Франция БС 1"
+    type: vless
+    server: "begin.magazinetut.online"
+    port: 443
+    uuid: "85bddbfa-4149-4db0-8092-39a2b228ec60"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    client-fingerprint: "chrome"
+  - name: "🇷🇺 Россия БС 3"
+    type: vless
+    server: "45.12.75.242"
+    port: 26424
+    uuid: "633f424e-2b11-48da-a6b3-a849dd71456f"
+    udp: true
+    network: "tcp"
+    tls: true
+    servername: "ya.ru"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "l8AubqcxQO-HRFJy4pZL1vbLOo-eXit69s-XulSELE0"
+      short-id: "23103e1e"
+  - name: "🇫🇮 Финляндия БС 4"
+    type: vless
+    server: "185.79.138.71"
+    port: 448
+    uuid: "0b0915d7-6800-4580-a44b-77d84f105e6a"
+    udp: true
+    network: "tcp"
+    tls: true
+    servername: "www.samsung.com"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "CsDgNRcCwCkPIslfZpKTIK71KFpIFNsotbdzKcZVoH8"
+      short-id: "cd21e552537c7c0b"
 
 proxy-groups:
   - name: "PROXY"
@@ -161,14 +155,13 @@ proxy-groups:
       - "🇩🇪 Германия БС 1"
       - "🇳🇱 Нидерланды БС 1"
       - "🇷🇺 Россия БС 1"
-      - "🇫🇮 Финляндия БС 1"
       - "🇷🇺 Россия БС 2"
       - "🇵🇱 Польша БС 1"
+      - "🇫🇮 Финляндия БС 1"
       - "🇫🇮 Финляндия БС 2"
       - "🇫🇮 Финляндия БС 3"
-      - "🇷🇺 Россия БС 3"
-      - "🇩🇪 Германия БС 2"
       - "🇫🇷 Франция БС 1"
+      - "🇷🇺 Россия БС 3"
       - "🇫🇮 Финляндия БС 4"
       - DIRECT
   - name: "⚪ Авто БС"
@@ -180,14 +173,13 @@ proxy-groups:
       - "🇩🇪 Германия БС 1"
       - "🇳🇱 Нидерланды БС 1"
       - "🇷🇺 Россия БС 1"
-      - "🇫🇮 Финляндия БС 1"
       - "🇷🇺 Россия БС 2"
       - "🇵🇱 Польша БС 1"
+      - "🇫🇮 Финляндия БС 1"
       - "🇫🇮 Финляндия БС 2"
       - "🇫🇮 Финляндия БС 3"
-      - "🇷🇺 Россия БС 3"
-      - "🇩🇪 Германия БС 2"
       - "🇫🇷 Франция БС 1"
+      - "🇷🇺 Россия БС 3"
       - "🇫🇮 Финляндия БС 4"
   - name: "🌍 Страны БС"
     type: select
@@ -215,7 +207,6 @@ proxy-groups:
     type: select
     proxies:
       - "🇩🇪 Германия БС 1"
-      - "🇩🇪 Германия БС 2"
   - name: "⚪ 🇫🇷 Франция"
     type: select
     proxies:

@@ -2,8 +2,8 @@
 # profile-update-interval: 1
 # subscription-userinfo: upload=0; download=0; total=0
 # profile-web-page-url: https://uiran23.github.io/free-vpn-subscriptions/
-# Обновлено: 2026-08-17 07:14 UTC
-# Серверов: 18
+# Обновлено: 2026-08-17 08:23 UTC
+# Серверов: 15
 
 mixed-port: 7890
 allow-lan: false
@@ -16,69 +16,28 @@ proxies:
     type: vless
     server: "139.100.197.28"
     port: 52006
-    uuid: "ab2cea85-d7eb-07d0-aa5a-98bab5d37dab"
+    uuid: "4f7ba74a-72d1-07d0-b98c-010ed2a2c731"
     udp: true
     network: "tcp"
     tls: true
     flow: "xtls-rprx-vision"
     servername: "search.setlisting.ru"
     client-fingerprint: "qq"
-  - name: "🇫🇮 Финляндия БС 1"
-    type: vless
-    server: "185.79.138.71"
-    port: 448
-    uuid: "0b0915d7-6800-4580-a44b-77d84f105e6a"
-    udp: true
-    network: "tcp"
-    tls: true
-    servername: "www.samsung.com"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "CsDgNRcCwCkPIslfZpKTIK71KFpIFNsotbdzKcZVoH8"
-      short-id: "cd21e552537c7c0b"
-  - name: "🇷🇺 Россия БС 2"
-    type: vless
-    server: "176.108.240.98"
-    port: 9443
-    uuid: "f4685d27-73e3-4588-9622-add50b84046a"
-    udp: true
-    network: "tcp"
-    tls: true
-    flow: "xtls-rprx-vision"
-    servername: "www.io.ozone.ru"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "im7-98zxWz_OGimQfeoN_Y5p1tAy8KoZCxOe2wOeWS4"
-      short-id: ""
   - name: "🇩🇪 Германия БС 1"
     type: vless
-    server: "185.178.208.176"
+    server: "95.129.236.252"
     port: 443
-    uuid: "54bd89a2-e6a3-4d68-9d17-043ab37118d1"
+    uuid: "62a08ea5-0564-47b4-a92c-25be07ad6358"
     udp: true
     network: "ws"
     tls: true
-    servername: "web3.breathtaking.uk"
+    servername: "benzin.benz.ink"
     client-fingerprint: "firefox"
     ws-opts:
-      path: "/api/v2/client/session/connect"
+      path: "/api/v2/vms/partner/alexey"
       headers:
-        Host: "web3.breathtaking.uk"
-  - name: "🇩🇪 Германия БС 2"
-    type: vless
-    server: "78.159.247.253"
-    port: 2027
-    uuid: "851ed0d8-a37b-452d-8ef2-5b6c2d28a060"
-    udp: true
-    network: "tcp"
-    tls: true
-    flow: "xtls-rprx-vision"
-    servername: "storage.yandex.net"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "ISa-DZOI4LRRb9DHMFYm5oFqBXDjYzz0hVWUfWvzLmo"
-      short-id: "8d3293f0066e129a"
-  - name: "🇷🇺 Россия БС 3"
+        Host: "benzin.benz.ink"
+  - name: "🇷🇺 Россия БС 2"
     type: vless
     server: "193.168.46.180"
     port: 443
@@ -101,10 +60,24 @@ proxies:
     network: "tcp"
     tls: true
     servername: "www.tradingview.com"
-    client-fingerprint: "qq"
+    client-fingerprint: "firefox"
     reality-opts:
       public-key: "doAoyk3TDL7pSojBT8JVINlmjMy31VW7YrHpBhw3bnA"
       short-id: "4b9c77b3"
+  - name: "🇫🇮 Финляндия БС 1"
+    type: vless
+    server: "95.163.232.242"
+    port: 443
+    uuid: "62a08ea5-0564-47b4-a92c-25be07ad6358"
+    udp: true
+    network: "ws"
+    tls: true
+    servername: "w.upgrade101.club"
+    client-fingerprint: "edge"
+    ws-opts:
+      path: "/ws-abe57e7e3790d717a1ca0464"
+      headers:
+        Host: "w.upgrade101.club"
   - name: "🇫🇮 Финляндия БС 2"
     type: vless
     server: "85.193.84.49"
@@ -117,32 +90,7 @@ proxies:
     client-fingerprint: "firefox"
     ws-opts:
       path: "/api/v2/connect"
-  - name: "🇩🇪 Германия БС 3"
-    type: vless
-    server: "benzin.benz.ink"
-    port: 443
-    uuid: "62a08ea5-0564-47b4-a92c-25be07ad6358"
-    udp: true
-    network: "ws"
-    tls: true
-    servername: "benzin.benz.ink"
-    client-fingerprint: "edge"
-    ws-opts:
-      path: "/api/v2/vms/partner/alexey"
-      headers:
-        Host: "benzin.benz.ink"
-  - name: "🇵🇱 Польша БС 1"
-    type: vless
-    server: "185.244.163.223"
-    port: 8443
-    uuid: "b9125df6-2a60-4643-bcba-a5f78cb663a7"
-    udp: true
-    network: "tcp"
-    tls: true
-    flow: "xtls-rprx-vision"
-    servername: "id.tutdesignstudio.site"
-    client-fingerprint: "firefox"
-  - name: "🇷🇺 Россия БС 4"
+  - name: "🇷🇺 Россия БС 3"
     type: vless
     server: "45.12.75.242"
     port: 26424
@@ -155,6 +103,20 @@ proxies:
     reality-opts:
       public-key: "l8AubqcxQO-HRFJy4pZL1vbLOo-eXit69s-XulSELE0"
       short-id: "23103e1e"
+  - name: "🇩🇪 Германия БС 2"
+    type: vless
+    server: "217.19.122.94"
+    port: 2027
+    uuid: "851ed0d8-a37b-452d-8ef2-5b6c2d28a060"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "ISa-DZOI4LRRb9DHMFYm5oFqBXDjYzz0hVWUfWvzLmo"
+      short-id: "dc8109baf0f607ea"
   - name: "🇫🇮 Финляндия БС 3"
     type: vless
     server: "45.139.184.183"
@@ -164,22 +126,11 @@ proxies:
     network: "ws"
     tls: true
     servername: "forfreeuse.rtqa.ru"
-    client-fingerprint: "qq"
+    client-fingerprint: "firefox"
     ws-opts:
       path: "/"
       headers:
         Host: "forfreeuse.rtqa.ru"
-  - name: "🇵🇱 Польша БС 2"
-    type: vless
-    server: "178.250.240.52"
-    port: 443
-    uuid: "28af86fc-34fa-4b4e-b96f-041a1b687823"
-    udp: true
-    network: "tcp"
-    tls: true
-    flow: "xtls-rprx-vision"
-    servername: "nbb--ru28fab01b.vpn.partners"
-    client-fingerprint: "qq"
   - name: "🇳🇱 Нидерланды БС 1"
     type: vless
     server: "95.163.232.98"
@@ -195,45 +146,6 @@ proxies:
       short-id: "a1b2c3d4"
     grpc-opts:
       grpc-service-name: ""
-  - name: "🇫🇮 Финляндия БС 4"
-    type: vless
-    server: "w.upgrade101.club"
-    port: 443
-    uuid: "62a08ea5-0564-47b4-a92c-25be07ad6358"
-    udp: true
-    network: "ws"
-    tls: true
-    servername: "w.upgrade101.club"
-    client-fingerprint: "chrome"
-    ws-opts:
-      path: "/ws-abe57e7e3790d717a1ca0464"
-      headers:
-        Host: "w.upgrade101.club"
-  - name: "🇩🇪 Германия БС 4"
-    type: vless
-    server: "159.195.27.99"
-    port: 443
-    uuid: "859a537b-09cf-4bce-8da4-ecbb72950e3a"
-    udp: true
-    network: "tcp"
-    tls: true
-    flow: "xtls-rprx-vision"
-    servername: "1.oncloudnineservicestreang.com"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "EuExqpNB141gtIjbCmU0yyurbBqiLtGjDg-n95JIuig"
-      short-id: "28415a7918168947"
-  - name: "🇵🇱 Польша БС 3"
-    type: vless
-    server: "nbb--ru28fab01b.vpn.partners"
-    port: 443
-    uuid: "28af86fc-34fa-4b4e-b96f-041a1b687823"
-    udp: true
-    network: "tcp"
-    tls: true
-    flow: "xtls-rprx-vision"
-    servername: "nbb--ru28fab01b.vpn.partners"
-    client-fingerprint: "qq"
   - name: "🇳🇱 Нидерланды БС 2"
     type: vless
     server: "sport.sowt2.app"
@@ -243,9 +155,56 @@ proxies:
     network: "ws"
     tls: true
     servername: "sport.sowt2.app"
-    client-fingerprint: "edge"
+    client-fingerprint: "qq"
     ws-opts:
       path: "/gateway/v1/ws/fd6b5f8ebef9d896772121a7712743ce"
+  - name: "🇫🇮 Финляндия БС 4"
+    type: vless
+    server: "178.250.240.52"
+    port: 443
+    uuid: "28af86fc-34fa-4b4e-b96f-041a1b687823"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "nbb--ru28fab01b.vpn.partners"
+    client-fingerprint: "edge"
+  - name: "🇵🇱 Польша БС 1"
+    type: vless
+    server: "185.244.163.223"
+    port: 8443
+    uuid: "b9125df6-2a60-4643-bcba-a5f78cb663a7"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "id.tutdesignstudio.site"
+    client-fingerprint: "firefox"
+  - name: "🇫🇮 Финляндия БС 5"
+    type: vless
+    server: "nbb--ru28fab01b.vpn.partners"
+    port: 443
+    uuid: "28af86fc-34fa-4b4e-b96f-041a1b687823"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "nbb--ru28fab01b.vpn.partners"
+    client-fingerprint: "firefox"
+  - name: "🇫🇮 Финляндия БС 6"
+    type: vless
+    server: "193.233.255.46"
+    port: 443
+    uuid: "5c22dd50-f75d-4cf5-ba53-721f91d8bfe1"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "fi.sellflow.org"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc"
+      short-id: ""
 
 proxy-groups:
   - name: "PROXY"
@@ -254,23 +213,20 @@ proxy-groups:
       - "⚪ Авто БС"
       - "🌍 Страны БС"
       - "🇷🇺 Россия БС 1"
-      - "🇫🇮 Финляндия БС 1"
-      - "🇷🇺 Россия БС 2"
       - "🇩🇪 Германия БС 1"
-      - "🇩🇪 Германия БС 2"
-      - "🇷🇺 Россия БС 3"
+      - "🇷🇺 Россия БС 2"
       - "🇲🇩 Молдова БС 1"
+      - "🇫🇮 Финляндия БС 1"
       - "🇫🇮 Финляндия БС 2"
-      - "🇩🇪 Германия БС 3"
-      - "🇵🇱 Польша БС 1"
-      - "🇷🇺 Россия БС 4"
+      - "🇷🇺 Россия БС 3"
+      - "🇩🇪 Германия БС 2"
       - "🇫🇮 Финляндия БС 3"
-      - "🇵🇱 Польша БС 2"
       - "🇳🇱 Нидерланды БС 1"
-      - "🇫🇮 Финляндия БС 4"
-      - "🇩🇪 Германия БС 4"
-      - "🇵🇱 Польша БС 3"
       - "🇳🇱 Нидерланды БС 2"
+      - "🇫🇮 Финляндия БС 4"
+      - "🇵🇱 Польша БС 1"
+      - "🇫🇮 Финляндия БС 5"
+      - "🇫🇮 Финляндия БС 6"
       - DIRECT
   - name: "⚪ Авто БС"
     type: url-test
@@ -279,39 +235,29 @@ proxy-groups:
     tolerance: 150
     proxies:
       - "🇷🇺 Россия БС 1"
-      - "🇫🇮 Финляндия БС 1"
-      - "🇷🇺 Россия БС 2"
       - "🇩🇪 Германия БС 1"
-      - "🇩🇪 Германия БС 2"
-      - "🇷🇺 Россия БС 3"
+      - "🇷🇺 Россия БС 2"
       - "🇲🇩 Молдова БС 1"
+      - "🇫🇮 Финляндия БС 1"
       - "🇫🇮 Финляндия БС 2"
-      - "🇩🇪 Германия БС 3"
-      - "🇵🇱 Польша БС 1"
-      - "🇷🇺 Россия БС 4"
+      - "🇷🇺 Россия БС 3"
+      - "🇩🇪 Германия БС 2"
       - "🇫🇮 Финляндия БС 3"
-      - "🇵🇱 Польша БС 2"
       - "🇳🇱 Нидерланды БС 1"
-      - "🇫🇮 Финляндия БС 4"
-      - "🇩🇪 Германия БС 4"
-      - "🇵🇱 Польша БС 3"
       - "🇳🇱 Нидерланды БС 2"
+      - "🇫🇮 Финляндия БС 4"
+      - "🇵🇱 Польша БС 1"
+      - "🇫🇮 Финляндия БС 5"
+      - "🇫🇮 Финляндия БС 6"
   - name: "🌍 Страны БС"
     type: select
     proxies:
-      - "⚪ 🇩🇪 Германия"
       - "⚪ 🇫🇮 Финляндия"
       - "⚪ 🇷🇺 Россия"
-      - "⚪ 🇵🇱 Польша"
+      - "⚪ 🇩🇪 Германия"
       - "⚪ 🇳🇱 Нидерланды"
       - "⚪ 🇲🇩 Молдова"
-  - name: "⚪ 🇩🇪 Германия"
-    type: select
-    proxies:
-      - "🇩🇪 Германия БС 1"
-      - "🇩🇪 Германия БС 2"
-      - "🇩🇪 Германия БС 3"
-      - "🇩🇪 Германия БС 4"
+      - "⚪ 🇵🇱 Польша"
   - name: "⚪ 🇫🇮 Финляндия"
     type: select
     proxies:
@@ -319,19 +265,19 @@ proxy-groups:
       - "🇫🇮 Финляндия БС 2"
       - "🇫🇮 Финляндия БС 3"
       - "🇫🇮 Финляндия БС 4"
+      - "🇫🇮 Финляндия БС 5"
+      - "🇫🇮 Финляндия БС 6"
   - name: "⚪ 🇷🇺 Россия"
     type: select
     proxies:
       - "🇷🇺 Россия БС 1"
       - "🇷🇺 Россия БС 2"
       - "🇷🇺 Россия БС 3"
-      - "🇷🇺 Россия БС 4"
-  - name: "⚪ 🇵🇱 Польша"
+  - name: "⚪ 🇩🇪 Германия"
     type: select
     proxies:
-      - "🇵🇱 Польша БС 1"
-      - "🇵🇱 Польша БС 2"
-      - "🇵🇱 Польша БС 3"
+      - "🇩🇪 Германия БС 1"
+      - "🇩🇪 Германия БС 2"
   - name: "⚪ 🇳🇱 Нидерланды"
     type: select
     proxies:
@@ -341,6 +287,10 @@ proxy-groups:
     type: select
     proxies:
       - "🇲🇩 Молдова БС 1"
+  - name: "⚪ 🇵🇱 Польша"
+    type: select
+    proxies:
+      - "🇵🇱 Польша БС 1"
 
 rules:
   - GEOIP,private,DIRECT,no-resolve

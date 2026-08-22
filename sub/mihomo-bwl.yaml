@@ -2,8 +2,8 @@
 # profile-update-interval: 1
 # subscription-userinfo: upload=0; download=0; total=0
 # profile-web-page-url: https://uiran23.github.io/free-vpn-subscriptions/
-# Обновлено: 2026-08-22 09:08 UTC
-# Серверов: 10
+# Обновлено: 2026-08-22 15:34 UTC
+# Серверов: 14
 
 mixed-port: 7890
 allow-lan: false
@@ -12,92 +12,43 @@ log-level: info
 ipv6: false
 
 proxies:
+  - name: "🇫🇷 Франция БС 1"
+    type: vless
+    server: "185.55.240.199"
+    port: 443
+    uuid: "53c76647-14d1-4df5-99cb-be99ad2e6bd9"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "fr199.mechvpn.online"
+    client-fingerprint: "qq"
+  - name: "🇫🇷 Франция БС 2"
+    type: vless
+    server: "88.214.24.186"
+    port: 443
+    uuid: "53c76647-14d1-4df5-99cb-be99ad2e6bd9"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "fr186.mechvpn.online"
+    client-fingerprint: "edge"
   - name: "🇺🇸 США БС 1"
     type: vless
-    server: "t18.qifei.app"
+    server: "169.40.42.212"
     port: 443
-    uuid: "b98d4c6e-6770-4a31-8256-a4750cdea0e7"
+    uuid: "d65cc14c-f53f-4fe2-b262-97856601319c"
     udp: true
     network: "tcp"
     tls: true
     flow: "xtls-rprx-vision"
-    servername: "www.amazon.com"
+    servername: "yahoo.com"
     client-fingerprint: "chrome"
-    skip-cert-verify: true
     reality-opts:
-      public-key: "0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo"
-      short-id: "1a"
+      public-key: "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg"
+      short-id: "c39cc7310a"
   - name: "🇺🇸 США БС 2"
-    type: vless
-    server: "67.220.73.204"
-    port: 18662
-    uuid: "814bd064-544d-4255-a070-5705c03f6da9"
-    udp: true
-    network: "tcp"
-    tls: true
-    flow: "xtls-rprx-vision"
-    servername: "www.apple.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0"
-      short-id: "48050fab"
-  - name: "🇺🇸 США БС 3"
-    type: vless
-    server: "138.124.180.137"
-    port: 443
-    uuid: "5234b2b7-5e07-422c-8159-d62a676c00c6"
-    udp: true
-    network: "tcp"
-    tls: true
-    flow: "xtls-rprx-vision"
-    servername: "www.apple.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "GBdkyDLfr0LIZo_94Xv8ycAKOmkjArYzwJAEMhuXX2c"
-      short-id: "33acba1b"
-  - name: "🇺🇸 США БС 4"
-    type: vless
-    server: "usa2.razkur.dev"
-    port: 443
-    uuid: "3284cf4e-b74a-4424-ba91-f81408372c78"
-    udp: true
-    network: "tcp"
-    tls: true
-    flow: "xtls-rprx-vision"
-    servername: "usa2.razkur.dev"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "MlXQqlki7M9aZF48YEul5pcRi7vq00UezcwtddeL-08"
-      short-id: ""
-  - name: "🇺🇸 США БС 5"
-    type: vless
-    server: "usa3.razkur.dev"
-    port: 443
-    uuid: "3284cf4e-b74a-4424-ba91-f81408372c78"
-    udp: true
-    network: "tcp"
-    tls: true
-    flow: "xtls-rprx-vision"
-    servername: "usa3.razkur.dev"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "MlXQqlki7M9aZF48YEul5pcRi7vq00UezcwtddeL-08"
-      short-id: ""
-  - name: "🇷🇺 Россия БС 1"
-    type: vless
-    server: "193.168.46.180"
-    port: 443
-    uuid: "3b1608fc-c538-4255-bde1-9467f1d1f03d"
-    udp: true
-    network: "tcp"
-    tls: true
-    flow: "xtls-rprx-vision"
-    servername: "rruu.persik.host"
-    client-fingerprint: "qq"
-    reality-opts:
-      public-key: "D0FqzTuVSzCF8IcFo64SFIpMsaGV47LW3el2GCCVoFY"
-      short-id: "c1a7e9b4711d5f60"
-  - name: "🇺🇸 США БС 6"
     type: vless
     server: "usa1.razkur.dev"
     port: 443
@@ -111,34 +62,103 @@ proxies:
     reality-opts:
       public-key: "MlXQqlki7M9aZF48YEul5pcRi7vq00UezcwtddeL-08"
       short-id: ""
-  - name: "🇺🇸 США БС 7"
+  - name: "🇺🇸 США БС 3"
     type: vless
-    server: "billing.netraidly.ru"
-    port: 40443
-    uuid: "17d29827-7cf1-4115-b40d-548e10ec355d"
+    server: "169.40.42.52"
+    port: 443
+    uuid: "d65cc14c-f53f-4fe2-b262-97856601319c"
     udp: true
     network: "tcp"
     tls: true
     flow: "xtls-rprx-vision"
-    servername: "deepl.com"
+    servername: "yahoo.com"
+    client-fingerprint: "ios"
+    reality-opts:
+      public-key: "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg"
+      short-id: "c39cc7310a"
+  - name: "🇫🇮 Финляндия БС 1"
+    type: vless
+    server: "185.79.138.71"
+    port: 448
+    uuid: "0b0915d7-6800-4580-a44b-77d84f105e6a"
+    udp: true
+    network: "tcp"
+    tls: true
+    servername: "www.samsung.com"
+    client-fingerprint: "edge"
+    reality-opts:
+      public-key: "CsDgNRcCwCkPIslfZpKTIK71KFpIFNsotbdzKcZVoH8"
+      short-id: "cd21e552537c7c0b"
+  - name: "🇫🇷 Франция БС 3"
+    type: vless
+    server: "81.95.4.189"
+    port: 443
+    uuid: "b585dc5e-55bf-4a8b-913a-27c9ccac05c3"
+    udp: true
+    network: "ws"
+    tls: true
+    servername: "bab-6.site"
+    client-fingerprint: "qq"
+    ws-opts:
+      path: "/vws/"
+      headers:
+        Host: "bab-6.site"
+  - name: "🇷🇺 Россия БС 1"
+    type: vless
+    server: "193.168.46.180"
+    port: 443
+    uuid: "50616d33-9864-46ef-af6a-db2ec7b4c069"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "rruu.persik.host"
     client-fingerprint: "qq"
     reality-opts:
-      public-key: "bjOGTQ4xsiFbyCPM_WzoK53L130rW5vZJtuYDJx_pkM"
-      short-id: "aa3c"
-  - name: "🇺🇸 США БС 8"
+      public-key: "D0FqzTuVSzCF8IcFo64SFIpMsaGV47LW3el2GCCVoFY"
+      short-id: "c1a7e9b4711d5f60"
+  - name: "🇺🇸 США БС 4"
     type: vless
-    server: "2.27.57.154"
-    port: 995
-    uuid: "0a11d3b4-682c-4bfb-afb0-820b8285cb4b"
+    server: "usa3.razkur.dev"
+    port: 443
+    uuid: "3284cf4e-b74a-4424-ba91-f81408372c78"
     udp: true
     network: "tcp"
     tls: true
     flow: "xtls-rprx-vision"
-    servername: "ubuntu.com"
+    servername: "usa3.razkur.dev"
     client-fingerprint: "chrome"
     reality-opts:
-      public-key: "6LSBBaOUWujvSovACjcP7m-DI9u9R584qdJxNYnu-24"
-      short-id: "93e1b426caffbf75"
+      public-key: "MlXQqlki7M9aZF48YEul5pcRi7vq00UezcwtddeL-08"
+      short-id: ""
+  - name: "🇺🇸 США БС 5"
+    type: vless
+    server: "usa2.razkur.dev"
+    port: 443
+    uuid: "3284cf4e-b74a-4424-ba91-f81408372c78"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "usa2.razkur.dev"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "MlXQqlki7M9aZF48YEul5pcRi7vq00UezcwtddeL-08"
+      short-id: ""
+  - name: "🇳🇱 Нидерланды БС 1"
+    type: vless
+    server: "185.81.115.12"
+    port: 8443
+    uuid: "ef18d810-719c-4bf1-83c6-615d01f217eb"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "nl.cryptoofarm.com"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "KnTz_Vm-xJnmWu9bREZPqaE2z1JBa3vY5mFAq8ywQXs"
+      short-id: "20f2019b8755f6f3"
   - name: "🇷🇺 Россия БС 2"
     type: vless
     server: "45.12.75.242"
@@ -152,6 +172,34 @@ proxies:
     reality-opts:
       public-key: "l8AubqcxQO-HRFJy4pZL1vbLOo-eXit69s-XulSELE0"
       short-id: "23103e1e"
+  - name: "🇺🇸 США БС 6"
+    type: vless
+    server: "88.218.92.126"
+    port: 13443
+    uuid: "b80b392c-0cf4-42f9-ae54-9f862e3ba276"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "auto.cendora.ru"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "gc9oXe37KCCm3J1dJ03wdGsnxPBdeEkRPOvl_t-vfVM"
+      short-id: "a7f3c91b2e6d84c0"
+  - name: "🇩🇪 Германия БС 1"
+    type: vless
+    server: "78.159.240.117"
+    port: 2027
+    uuid: "851ed0d8-a37b-452d-8ef2-5b6c2d28a060"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "storage.yandex.net"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "ISa-DZOI4LRRb9DHMFYm5oFqBXDjYzz0hVWUfWvzLmo"
+      short-id: "dc8109baf0f607ea"
 
 proxy-groups:
   - name: "PROXY"
@@ -159,16 +207,20 @@ proxy-groups:
     proxies:
       - "⚪ Авто БС"
       - "🌍 Страны БС"
+      - "🇫🇷 Франция БС 1"
+      - "🇫🇷 Франция БС 2"
       - "🇺🇸 США БС 1"
       - "🇺🇸 США БС 2"
       - "🇺🇸 США БС 3"
+      - "🇫🇮 Финляндия БС 1"
+      - "🇫🇷 Франция БС 3"
+      - "🇷🇺 Россия БС 1"
       - "🇺🇸 США БС 4"
       - "🇺🇸 США БС 5"
-      - "🇷🇺 Россия БС 1"
-      - "🇺🇸 США БС 6"
-      - "🇺🇸 США БС 7"
-      - "🇺🇸 США БС 8"
+      - "🇳🇱 Нидерланды БС 1"
       - "🇷🇺 Россия БС 2"
+      - "🇺🇸 США БС 6"
+      - "🇩🇪 Германия БС 1"
       - DIRECT
   - name: "⚪ Авто БС"
     type: url-test
@@ -176,21 +228,29 @@ proxy-groups:
     interval: 300
     tolerance: 150
     proxies:
+      - "🇫🇷 Франция БС 1"
+      - "🇫🇷 Франция БС 2"
       - "🇺🇸 США БС 1"
       - "🇺🇸 США БС 2"
       - "🇺🇸 США БС 3"
+      - "🇫🇮 Финляндия БС 1"
+      - "🇫🇷 Франция БС 3"
+      - "🇷🇺 Россия БС 1"
       - "🇺🇸 США БС 4"
       - "🇺🇸 США БС 5"
-      - "🇷🇺 Россия БС 1"
-      - "🇺🇸 США БС 6"
-      - "🇺🇸 США БС 7"
-      - "🇺🇸 США БС 8"
+      - "🇳🇱 Нидерланды БС 1"
       - "🇷🇺 Россия БС 2"
+      - "🇺🇸 США БС 6"
+      - "🇩🇪 Германия БС 1"
   - name: "🌍 Страны БС"
     type: select
     proxies:
       - "⚪ 🇺🇸 США"
+      - "⚪ 🇫🇷 Франция"
       - "⚪ 🇷🇺 Россия"
+      - "⚪ 🇩🇪 Германия"
+      - "⚪ 🇫🇮 Финляндия"
+      - "⚪ 🇳🇱 Нидерланды"
   - name: "⚪ 🇺🇸 США"
     type: select
     proxies:
@@ -200,13 +260,29 @@ proxy-groups:
       - "🇺🇸 США БС 4"
       - "🇺🇸 США БС 5"
       - "🇺🇸 США БС 6"
-      - "🇺🇸 США БС 7"
-      - "🇺🇸 США БС 8"
+  - name: "⚪ 🇫🇷 Франция"
+    type: select
+    proxies:
+      - "🇫🇷 Франция БС 1"
+      - "🇫🇷 Франция БС 2"
+      - "🇫🇷 Франция БС 3"
   - name: "⚪ 🇷🇺 Россия"
     type: select
     proxies:
       - "🇷🇺 Россия БС 1"
       - "🇷🇺 Россия БС 2"
+  - name: "⚪ 🇩🇪 Германия"
+    type: select
+    proxies:
+      - "🇩🇪 Германия БС 1"
+  - name: "⚪ 🇫🇮 Финляндия"
+    type: select
+    proxies:
+      - "🇫🇮 Финляндия БС 1"
+  - name: "⚪ 🇳🇱 Нидерланды"
+    type: select
+    proxies:
+      - "🇳🇱 Нидерланды БС 1"
 
 rules:
   - GEOIP,private,DIRECT,no-resolve

@@ -2,8 +2,8 @@
 # profile-update-interval: 1
 # subscription-userinfo: upload=0; download=0; total=0
 # profile-web-page-url: https://uiran23.github.io/free-vpn-subscriptions/
-# Обновлено: 2026-08-25 14:26 UTC
-# Серверов: 18
+# Обновлено: 2026-08-25 15:58 UTC
+# Серверов: 22
 
 mixed-port: 7890
 allow-lan: false
@@ -13,22 +13,15 @@ ipv6: false
 
 proxies:
   - name: "🇺🇸 США БС 1"
-    type: vless
-    server: "169.40.42.95"
-    port: 443
-    uuid: "d65cc14c-f53f-4fe2-b262-97856601319c"
-    udp: true
-    network: "tcp"
-    tls: true
-    flow: "xtls-rprx-vision"
-    servername: "yahoo.com"
-    client-fingerprint: "ios"
-    reality-opts:
-      public-key: "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg"
-      short-id: "c39cc7310a"
-  - name: "🇺🇸 США БС 2"
     type: hysteria2
     server: "3.149.228.246"
+    port: 443
+    password: "H7mP2xY9kJ4nQ8wR5tF6vB3z"
+    sni: "vk.com"
+    skip-cert-verify: true
+  - name: "🇺🇸 США БС 2"
+    type: hysteria2
+    server: "18.118.193.169"
     port: 443
     password: "H7mP2xY9kJ4nQ8wR5tF6vB3z"
     sni: "vk.com"
@@ -43,17 +36,24 @@ proxies:
     tls: true
     flow: "xtls-rprx-vision"
     servername: "www.apple.com"
-    client-fingerprint: "firefox"
+    client-fingerprint: "edge"
     reality-opts:
       public-key: "8eXftARun6KH38UZhuqIfPR1VF2DLS9RMBZEnF5k6To"
       short-id: "a3a578ab"
   - name: "🇺🇸 США БС 4"
-    type: hysteria2
-    server: "163.192.14.135"
-    port: 50160
-    password: "099830134df5ac3a04a4b21d39b8c395"
-    sni: "vk.com"
-    skip-cert-verify: true
+    type: vless
+    server: "169.40.42.52"
+    port: 443
+    uuid: "d65cc14c-f53f-4fe2-b262-97856601319c"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "yahoo.com"
+    client-fingerprint: "ios"
+    reality-opts:
+      public-key: "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg"
+      short-id: "c39cc7310a"
   - name: "🇺🇸 США БС 5"
     type: hysteria2
     server: "16.148.5.63"
@@ -95,41 +95,6 @@ proxies:
     reality-opts:
       public-key: "0AVsyS7udTbxKRdSyQ2rtFC63icDQOVWq8FvAhhU-WY"
       short-id: "17faf32cb516c9cb"
-  - name: "🇷🇺 Россия БС 2"
-    type: vless
-    server: "193.168.46.180"
-    port: 443
-    uuid: "6c5e6f9d-ef25-4a89-b5e1-ee479776a30d"
-    udp: true
-    network: "tcp"
-    tls: true
-    flow: "xtls-rprx-vision"
-    servername: "rruu.persik.host"
-    client-fingerprint: "qq"
-    reality-opts:
-      public-key: "D0FqzTuVSzCF8IcFo64SFIpMsaGV47LW3el2GCCVoFY"
-      short-id: "c1a7e9b4711d5f60"
-  - name: "🇯🇵 Япония БС 1"
-    type: hysteria2
-    server: "140.83.85.233"
-    port: 50160
-    password: "3e8790e4fb6629aa819217d9655eafa3"
-    sni: "vk.com"
-    skip-cert-verify: true
-  - name: "🇺🇸 США БС 7"
-    type: vless
-    server: "169.40.42.52"
-    port: 443
-    uuid: "d65cc14c-f53f-4fe2-b262-97856601319c"
-    udp: true
-    network: "tcp"
-    tls: true
-    flow: "xtls-rprx-vision"
-    servername: "yahoo.com"
-    client-fingerprint: "ios"
-    reality-opts:
-      public-key: "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg"
-      short-id: "c39cc7310a"
   - name: "🇰🇷 Корея БС 1"
     type: hysteria2
     server: "168.107.13.220"
@@ -139,21 +104,21 @@ proxies:
     skip-cert-verify: true
   - name: "🇸🇬 Сингапур БС 1"
     type: hysteria2
-    server: "54.255.1.222"
+    server: "13.212.52.5"
     port: 443
     password: "qQe1z5kU8kN6SlKnDt9Ru3Qp"
     sni: "vk.com"
     skip-cert-verify: true
   - name: "🇸🇬 Сингапур БС 2"
     type: hysteria2
-    server: "13.212.52.5"
+    server: "18.141.233.65"
     port: 443
     password: "qQe1z5kU8kN6SlKnDt9Ru3Qp"
     sni: "vk.com"
     skip-cert-verify: true
   - name: "🇸🇬 Сингапур БС 3"
     type: hysteria2
-    server: "54.254.157.26"
+    server: "47.128.224.158"
     port: 443
     password: "qQe1z5kU8kN6SlKnDt9Ru3Qp"
     sni: "vk.com"
@@ -167,18 +132,106 @@ proxies:
     skip-cert-verify: true
   - name: "🇸🇬 Сингапур БС 5"
     type: hysteria2
+    server: "54.254.157.26"
+    port: 443
+    password: "qQe1z5kU8kN6SlKnDt9Ru3Qp"
+    sni: "vk.com"
+    skip-cert-verify: true
+  - name: "🇸🇬 Сингапур БС 6"
+    type: hysteria2
     server: "vpn-sg-002.fastervpn.world"
     port: 443
     password: "H7mP2xY9kJ4nQ9wR5tF6vB3z"
     sni: "vk.com"
     skip-cert-verify: true
-  - name: "🇸🇬 Сингапур БС 6"
+  - name: "🇷🇺 Россия БС 2"
+    type: vless
+    server: "193.168.46.180"
+    port: 443
+    uuid: "8d50f173-a30a-451b-9ea1-702489e77acb"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "rruu.persik.host"
+    client-fingerprint: "qq"
+    reality-opts:
+      public-key: "D0FqzTuVSzCF8IcFo64SFIpMsaGV47LW3el2GCCVoFY"
+      short-id: "c1a7e9b4711d5f60"
+  - name: "🇸🇬 Сингапур БС 7"
     type: hysteria2
-    server: "47.128.224.158"
+    server: "54.255.1.222"
     port: 443
     password: "qQe1z5kU8kN6SlKnDt9Ru3Qp"
     sni: "vk.com"
     skip-cert-verify: true
+  - name: "🇳🇱 Нидерланды БС 1"
+    type: vless
+    server: "bz16.wba-pn.ru"
+    port: 2053
+    uuid: "b712ae49-e20f-44d9-ae80-b81f399c5a3a"
+    udp: true
+    network: "ws"
+    tls: true
+    servername: "bz16.wba-pn.ru"
+    client-fingerprint: "safari"
+    ws-opts:
+      path: "/"
+  - name: "🇷🇺 Россия БС 3"
+    type: vless
+    server: "45.12.75.242"
+    port: 26424
+    uuid: "633f424e-2b11-48da-a6b3-a849dd71456f"
+    udp: true
+    network: "tcp"
+    tls: true
+    servername: "ya.ru"
+    client-fingerprint: "qq"
+    reality-opts:
+      public-key: "l8AubqcxQO-HRFJy4pZL1vbLOo-eXit69s-XulSELE0"
+      short-id: "23103e1e"
+  - name: "🇬🇧 Великобритания БС 1"
+    type: vless
+    server: "188.68.220.99"
+    port: 443
+    uuid: "2daa9f67-8edc-41a2-a401-4a2497640c53"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "uk.nightproducts.ru"
+    client-fingerprint: "qq"
+    reality-opts:
+      public-key: "D-OHTModvYqWAvNpZUlIEB4he1pQ0HUHB4fUd6LyOic"
+      short-id: "ecc652c213fed5d1"
+  - name: "🇻🇮 VI БС 1"
+    type: vless
+    server: "84.23.54.213"
+    port: 443
+    uuid: "710fc22f-06b2-03ef-bb3e-f57c17b670a6"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "www.ray-balance.space"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "3tOekmYYkNW9IwHGuui6Y9bLmXoyiAmwAgtAdUAmDis"
+      short-id: ""
+  - name: "🇫🇷 Франция БС 1"
+    type: vless
+    server: "81.95.4.189"
+    port: 443
+    uuid: "b585dc5e-55bf-4a8b-913a-27c9ccac05c3"
+    udp: true
+    network: "ws"
+    tls: true
+    servername: "bab-6.site"
+    client-fingerprint: "qq"
+    ws-opts:
+      path: "/vws/"
+      headers:
+        Host: "bab-6.site"
 
 proxy-groups:
   - name: "PROXY"
@@ -194,9 +247,6 @@ proxy-groups:
       - "🇺🇸 США БС 6"
       - "🇫🇮 Финляндия БС 1"
       - "🇷🇺 Россия БС 1"
-      - "🇷🇺 Россия БС 2"
-      - "🇯🇵 Япония БС 1"
-      - "🇺🇸 США БС 7"
       - "🇰🇷 Корея БС 1"
       - "🇸🇬 Сингапур БС 1"
       - "🇸🇬 Сингапур БС 2"
@@ -204,6 +254,13 @@ proxy-groups:
       - "🇸🇬 Сингапур БС 4"
       - "🇸🇬 Сингапур БС 5"
       - "🇸🇬 Сингапур БС 6"
+      - "🇷🇺 Россия БС 2"
+      - "🇸🇬 Сингапур БС 7"
+      - "🇳🇱 Нидерланды БС 1"
+      - "🇷🇺 Россия БС 3"
+      - "🇬🇧 Великобритания БС 1"
+      - "🇻🇮 VI БС 1"
+      - "🇫🇷 Франция БС 1"
       - DIRECT
   - name: "⚪ Авто БС"
     type: url-test
@@ -219,9 +276,6 @@ proxy-groups:
       - "🇺🇸 США БС 6"
       - "🇫🇮 Финляндия БС 1"
       - "🇷🇺 Россия БС 1"
-      - "🇷🇺 Россия БС 2"
-      - "🇯🇵 Япония БС 1"
-      - "🇺🇸 США БС 7"
       - "🇰🇷 Корея БС 1"
       - "🇸🇬 Сингапур БС 1"
       - "🇸🇬 Сингапур БС 2"
@@ -229,25 +283,25 @@ proxy-groups:
       - "🇸🇬 Сингапур БС 4"
       - "🇸🇬 Сингапур БС 5"
       - "🇸🇬 Сингапур БС 6"
+      - "🇷🇺 Россия БС 2"
+      - "🇸🇬 Сингапур БС 7"
+      - "🇳🇱 Нидерланды БС 1"
+      - "🇷🇺 Россия БС 3"
+      - "🇬🇧 Великобритания БС 1"
+      - "🇻🇮 VI БС 1"
+      - "🇫🇷 Франция БС 1"
   - name: "🌍 Страны БС"
     type: select
     proxies:
-      - "⚪ 🇺🇸 США"
       - "⚪ 🇸🇬 Сингапур"
+      - "⚪ 🇺🇸 США"
       - "⚪ 🇷🇺 Россия"
       - "⚪ 🇫🇮 Финляндия"
-      - "⚪ 🇯🇵 Япония"
+      - "⚪ 🇫🇷 Франция"
+      - "⚪ 🇬🇧 Великобритания"
       - "⚪ 🇰🇷 Корея"
-  - name: "⚪ 🇺🇸 США"
-    type: select
-    proxies:
-      - "🇺🇸 США БС 1"
-      - "🇺🇸 США БС 2"
-      - "🇺🇸 США БС 3"
-      - "🇺🇸 США БС 4"
-      - "🇺🇸 США БС 5"
-      - "🇺🇸 США БС 6"
-      - "🇺🇸 США БС 7"
+      - "⚪ 🇳🇱 Нидерланды"
+      - "⚪ 🇻🇮 VI"
   - name: "⚪ 🇸🇬 Сингапур"
     type: select
     proxies:
@@ -257,23 +311,46 @@ proxy-groups:
       - "🇸🇬 Сингапур БС 4"
       - "🇸🇬 Сингапур БС 5"
       - "🇸🇬 Сингапур БС 6"
+      - "🇸🇬 Сингапур БС 7"
+  - name: "⚪ 🇺🇸 США"
+    type: select
+    proxies:
+      - "🇺🇸 США БС 1"
+      - "🇺🇸 США БС 2"
+      - "🇺🇸 США БС 3"
+      - "🇺🇸 США БС 4"
+      - "🇺🇸 США БС 5"
+      - "🇺🇸 США БС 6"
   - name: "⚪ 🇷🇺 Россия"
     type: select
     proxies:
       - "🇷🇺 Россия БС 1"
       - "🇷🇺 Россия БС 2"
+      - "🇷🇺 Россия БС 3"
   - name: "⚪ 🇫🇮 Финляндия"
     type: select
     proxies:
       - "🇫🇮 Финляндия БС 1"
-  - name: "⚪ 🇯🇵 Япония"
+  - name: "⚪ 🇫🇷 Франция"
     type: select
     proxies:
-      - "🇯🇵 Япония БС 1"
+      - "🇫🇷 Франция БС 1"
+  - name: "⚪ 🇬🇧 Великобритания"
+    type: select
+    proxies:
+      - "🇬🇧 Великобритания БС 1"
   - name: "⚪ 🇰🇷 Корея"
     type: select
     proxies:
       - "🇰🇷 Корея БС 1"
+  - name: "⚪ 🇳🇱 Нидерланды"
+    type: select
+    proxies:
+      - "🇳🇱 Нидерланды БС 1"
+  - name: "⚪ 🇻🇮 VI"
+    type: select
+    proxies:
+      - "🇻🇮 VI БС 1"
 
 rules:
   - GEOIP,private,DIRECT,no-resolve

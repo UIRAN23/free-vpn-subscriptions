@@ -47,18 +47,29 @@
       "outbounds": [
         "auto-bwl",
         "🇷🇺 Россия",
+        "🇺🇸 США",
+        "🇨🇿 Чехия",
         "🇩🇪 Германия",
         "🇭🇰 Гонконг",
-        "🇸🇬 Сингапур",
-        "🇺🇸 США",
+        "🇯🇵 Япония",
+        "🇳🇱 Нидерланды",
+        "🇵🇱 Польша",
         "🇺🇸 США БС 1",
+        "🇺🇸 США БС 2",
+        "🇺🇸 США БС 3",
+        "🇭🇰 Гонконг БС 1",
         "🇩🇪 Германия БС 1",
         "🇷🇺 Россия БС 1",
-        "🇭🇰 Гонконг БС 1",
-        "🇸🇬 Сингапур БС 1",
-        "🇷🇺 Россия БС 2",
+        "🇳🇱 Нидерланды БС 1",
         "🇩🇪 Германия БС 2",
-        "🇷🇺 Россия БС 3"
+        "🇨🇿 Чехия БС 1",
+        "🇷🇺 Россия БС 2",
+        "🇷🇺 Россия БС 3",
+        "🇵🇱 Польша БС 1",
+        "🇷🇺 Россия БС 4",
+        "🇯🇵 Япония БС 1",
+        "🇨🇿 Чехия БС 2",
+        "🇺🇸 США БС 4"
       ]
     },
     {
@@ -66,13 +77,21 @@
       "tag": "auto-bwl",
       "outbounds": [
         "🇺🇸 США БС 1",
+        "🇺🇸 США БС 2",
+        "🇺🇸 США БС 3",
+        "🇭🇰 Гонконг БС 1",
         "🇩🇪 Германия БС 1",
         "🇷🇺 Россия БС 1",
-        "🇭🇰 Гонконг БС 1",
-        "🇸🇬 Сингапур БС 1",
-        "🇷🇺 Россия БС 2",
+        "🇳🇱 Нидерланды БС 1",
         "🇩🇪 Германия БС 2",
-        "🇷🇺 Россия БС 3"
+        "🇨🇿 Чехия БС 1",
+        "🇷🇺 Россия БС 2",
+        "🇷🇺 Россия БС 3",
+        "🇵🇱 Польша БС 1",
+        "🇷🇺 Россия БС 4",
+        "🇯🇵 Япония БС 1",
+        "🇨🇿 Чехия БС 2",
+        "🇺🇸 США БС 4"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "5m",
@@ -84,7 +103,32 @@
       "outbounds": [
         "🇷🇺 Россия БС 1",
         "🇷🇺 Россия БС 2",
-        "🇷🇺 Россия БС 3"
+        "🇷🇺 Россия БС 3",
+        "🇷🇺 Россия БС 4"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "5m",
+      "tolerance": 150
+    },
+    {
+      "type": "urltest",
+      "tag": "🇺🇸 США",
+      "outbounds": [
+        "🇺🇸 США БС 1",
+        "🇺🇸 США БС 2",
+        "🇺🇸 США БС 3",
+        "🇺🇸 США БС 4"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "5m",
+      "tolerance": 150
+    },
+    {
+      "type": "urltest",
+      "tag": "🇨🇿 Чехия",
+      "outbounds": [
+        "🇨🇿 Чехия БС 1",
+        "🇨🇿 Чехия БС 2"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "5m",
@@ -113,9 +157,9 @@
     },
     {
       "type": "urltest",
-      "tag": "🇸🇬 Сингапур",
+      "tag": "🇯🇵 Япония",
       "outbounds": [
-        "🇸🇬 Сингапур БС 1"
+        "🇯🇵 Япония БС 1"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "5m",
@@ -123,9 +167,19 @@
     },
     {
       "type": "urltest",
-      "tag": "🇺🇸 США",
+      "tag": "🇳🇱 Нидерланды",
       "outbounds": [
-        "🇺🇸 США БС 1"
+        "🇳🇱 Нидерланды БС 1"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "5m",
+      "tolerance": 150
+    },
+    {
+      "type": "urltest",
+      "tag": "🇵🇱 Польша",
+      "outbounds": [
+        "🇵🇱 Польша БС 1"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "5m",
@@ -140,8 +194,20 @@
       "tag": "block"
     },
     {
-      "type": "vless",
+      "type": "hysteria2",
       "tag": "🇺🇸 США БС 1",
+      "server": "163.192.14.135",
+      "server_port": 50160,
+      "password": "099830134df5ac3a04a4b21d39b8c395",
+      "tls": {
+        "enabled": true,
+        "server_name": "vk.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 США БС 2",
       "server": "169.40.42.95",
       "server_port": 443,
       "uuid": "d65cc14c-f53f-4fe2-b262-97856601319c",
@@ -159,6 +225,47 @@
         }
       },
       "flow": "xtls-rprx-vision"
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 США БС 3",
+      "server": "69.63.193.78",
+      "server_port": 13779,
+      "uuid": "928e6cce-8ced-4243-9a48-a6642edd09b0",
+      "tls": {
+        "enabled": true,
+        "server_name": "tesla.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "llTyp52oRXnJmQ3I9UUrmlwbMA79B-wLCRHCu-8dLGg",
+          "short_id": "af1bdd293097b664"
+        }
+      },
+      "flow": "xtls-rprx-vision"
+    },
+    {
+      "type": "vless",
+      "tag": "🇭🇰 Гонконг БС 1",
+      "server": "35.241.98.220",
+      "server_port": 443,
+      "uuid": "96563f88-f743-4395-a3b2-27ec462ae45e",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "bSK8gtmPMlw7gP415tmh6kQzzFiwzxBsT3Kuqql6cRo",
+          "short_id": "ec2c7091fe76336c"
+        }
+      }
     },
     {
       "type": "vless",
@@ -186,7 +293,7 @@
       "tag": "🇷🇺 Россия БС 1",
       "server": "193.168.46.180",
       "server_port": 443,
-      "uuid": "6c40294e-e380-4125-bd8d-d4ac9374fadb",
+      "uuid": "e5b40cb7-0050-48d9-a320-ad47990ed031",
       "tls": {
         "enabled": true,
         "server_name": "rruu.persik.host",
@@ -204,35 +311,61 @@
     },
     {
       "type": "vless",
-      "tag": "🇭🇰 Гонконг БС 1",
-      "server": "35.241.98.220",
-      "server_port": 443,
-      "uuid": "96563f88-f743-4395-a3b2-27ec462ae45e",
+      "tag": "🇳🇱 Нидерланды БС 1",
+      "server": "85.198.70.200",
+      "server_port": 14406,
+      "uuid": "237f91bf-102e-4077-8cc3-baebccb42936",
       "tls": {
         "enabled": true,
-        "server_name": "www.cloudflare.com",
+        "server_name": "vk.ru",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
-          "public_key": "bSK8gtmPMlw7gP415tmh6kQzzFiwzxBsT3Kuqql6cRo",
-          "short_id": "ec2c7091fe76336c"
+          "public_key": "ldAmsl3dqTCUBmlmA8CS9ZnpznP6cFWj9AxNddWnbxY",
+          "short_id": "1a2b3c4d5e6f7a8b"
         }
-      }
+      },
+      "flow": "xtls-rprx-vision"
     },
     {
-      "type": "hysteria2",
-      "tag": "🇸🇬 Сингапур БС 1",
-      "server": "vpn-sg-002.fastervpn.world",
+      "type": "vless",
+      "tag": "🇩🇪 Германия БС 2",
+      "server": "ruc.mythos-wargame.fun",
       "server_port": 443,
-      "password": "H7mP2xY9kJ4nQ9wR5tF6vB3z",
+      "uuid": "d8599494-1224-0004-bdd2-17b94eff21c4",
       "tls": {
         "enabled": true,
-        "server_name": "vk.com",
-        "insecure": true
-      }
+        "server_name": "ruc.mythos-wargame.fun",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "flow": "xtls-rprx-vision"
+    },
+    {
+      "type": "vless",
+      "tag": "🇨🇿 Чехия БС 1",
+      "server": "212.193.26.94",
+      "server_port": 443,
+      "uuid": "c1d62d53-2fcd-4951-ab96-c81486f59775",
+      "tls": {
+        "enabled": true,
+        "server_name": "w-mebel.pro",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "R7NfFaabgh-0a2KR0Bfmn3a-O6mDT550OgXUDygDKBs",
+          "short_id": "c603efb3ddaf633d"
+        }
+      },
+      "flow": "xtls-rprx-vision"
     },
     {
       "type": "vless",
@@ -245,7 +378,7 @@
         "server_name": "ya.ru",
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -256,20 +389,41 @@
     },
     {
       "type": "vless",
-      "tag": "🇩🇪 Германия БС 2",
-      "server": "81.163.23.131",
+      "tag": "🇷🇺 Россия БС 3",
+      "server": "31.200.250.162",
       "server_port": 443,
-      "uuid": "54a33907-c356-40fa-b6f3-844b3e6a8b7c",
+      "uuid": "bed8856b-3b0e-4c4c-8fe0-25b7824a88b2",
       "tls": {
         "enabled": true,
-        "server_name": "google.com",
+        "server_name": "api.max.ru",
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "ios"
         },
         "reality": {
           "enabled": true,
-          "public_key": "vZ22ThhkpXUd5-tY-v5TTrouLHjgYYmeQgqeLt7HRz0",
+          "public_key": "Rpc9MCEogqr44HkgduXGcJqCOGnNiaGyjCb4PDPRVQw",
+          "short_id": "e8c3ff51"
+        }
+      },
+      "flow": "xtls-rprx-vision"
+    },
+    {
+      "type": "vless",
+      "tag": "🇵🇱 Польша БС 1",
+      "server": "in-ru-vk-01.ray-balance.space",
+      "server_port": 443,
+      "uuid": "bc6a863f-f482-03ea-a950-3dc3d3b17249",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.ray-balance.space",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "3tOekmYYkNW9IwHGuui6Y9bLmXoyiAmwAgtAdUAmDis",
           "short_id": ""
         }
       },
@@ -277,7 +431,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇷🇺 Россия БС 3",
+      "tag": "🇷🇺 Россия БС 4",
       "server": "159.194.214.13",
       "server_port": 8443,
       "uuid": "758f49d3-5f5f-47e7-bfa4-4ce96faf800d",
@@ -286,7 +440,7 @@
         "server_name": "cdn.shopify.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "edge"
         },
         "reality": {
           "enabled": true,
@@ -298,6 +452,64 @@
         "type": "grpc",
         "service_name": ""
       }
+    },
+    {
+      "type": "vless",
+      "tag": "🇯🇵 Япония БС 1",
+      "server": "in-ru-vk-01.ray-balance.space",
+      "server_port": 443,
+      "uuid": "bc6a863f-f482-03f2-a950-3dc3d3b17249",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.ray-balance.space",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "3tOekmYYkNW9IwHGuui6Y9bLmXoyiAmwAgtAdUAmDis",
+          "short_id": ""
+        }
+      },
+      "flow": "xtls-rprx-vision"
+    },
+    {
+      "type": "vless",
+      "tag": "🇨🇿 Чехия БС 2",
+      "server": "212.193.26.94",
+      "server_port": 443,
+      "uuid": "c1d62d53-2fcd-4951-ab96-c81486f59775",
+      "tls": {
+        "enabled": true,
+        "server_name": "w-mebel.pro",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "R7NfFaabgh-0a2KR0Bfmn3a-O6mDT550OgXUDygDKBs",
+          "short_id": "c603efb3ddaf633d"
+        }
+      },
+      "flow": "xtls-rprx-vision"
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 США БС 4",
+      "server": "ruc.mythos-wargame.fun",
+      "server_port": 443,
+      "uuid": "d8599494-1224-0009-bdd2-17b94eff21c4",
+      "tls": {
+        "enabled": true,
+        "server_name": "ruc.mythos-wargame.fun",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "flow": "xtls-rprx-vision"
     }
   ],
   "route": {

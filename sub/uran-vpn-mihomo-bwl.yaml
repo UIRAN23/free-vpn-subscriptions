@@ -2,8 +2,8 @@
 # profile-update-interval: 1
 # subscription-userinfo: upload=0; download=0; total=0
 # profile-web-page-url: https://uiran23.github.io/free-vpn-subscriptions/
-# Обновлено: 2026-08-28 19:00 UTC
-# Серверов: 5
+# Обновлено: 2026-08-28 22:16 UTC
+# Серверов: 7
 
 mixed-port: 7890
 allow-lan: false
@@ -12,19 +12,6 @@ log-level: info
 ipv6: false
 
 proxies:
-  - name: "🇭🇰 Гонконг БС 1"
-    type: vless
-    server: "35.241.98.220"
-    port: 443
-    uuid: "96563f88-f743-4395-a3b2-27ec462ae45e"
-    udp: true
-    network: "tcp"
-    tls: true
-    servername: "www.cloudflare.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "bSK8gtmPMlw7gP415tmh6kQzzFiwzxBsT3Kuqql6cRo"
-      short-id: "ec2c7091fe76336c"
   - name: "🇺🇸 США БС 1"
     type: vless
     server: "80.76.44.154"
@@ -46,13 +33,58 @@ proxies:
     password: "41f0d6d3-4a45-4635-8225-2abd2284189b"
     sni: "els2.mangshe.xyz"
     skip-cert-verify: true
+  - name: "🇭🇰 Гонконг БС 1"
+    type: vless
+    server: "35.241.98.220"
+    port: 443
+    uuid: "96563f88-f743-4395-a3b2-27ec462ae45e"
+    udp: true
+    network: "tcp"
+    tls: true
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "bSK8gtmPMlw7gP415tmh6kQzzFiwzxBsT3Kuqql6cRo"
+      short-id: "ec2c7091fe76336c"
+  - name: "🇧🇷 Бразилия БС 1"
+    type: vless
+    server: "185.178.208.176"
+    port: 443
+    uuid: "d61e94ca-59a2-47ac-a172-15850c0e4f62"
+    udp: true
+    network: "ws"
+    tls: true
+    servername: "ncd.crsmaps.com"
+    client-fingerprint: "firefox"
+    ws-opts:
+      path: "/ws/notify/817522358"
+      headers:
+        Host: "ncd.crsmaps.com"
+  - name: "🇳🇱 Нидерланды БС 1"
+    type: vless
+    server: "186.246.12.85"
+    port: 2053
+    uuid: "f62a1751-c1e4-4612-90e7-bd5781c1aede"
+    udp: true
+    network: "ws"
+    tls: true
+    servername: "bz2.wba-pn.ru"
+    client-fingerprint: "safari"
+    ws-opts:
+      path: "/"
   - name: "🇷🇺 Россия БС 2"
-    type: hysteria2
-    server: "els.mangshe.xyz"
-    port: 2056
-    password: "41f0d6d3-4a45-4635-8225-2abd2284189b"
-    sni: "els.mangshe.xyz"
-    skip-cert-verify: true
+    type: vless
+    server: "45.12.75.242"
+    port: 26424
+    uuid: "633f424e-2b11-48da-a6b3-a849dd71456f"
+    udp: true
+    network: "tcp"
+    tls: true
+    servername: "ya.ru"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "l8AubqcxQO-HRFJy4pZL1vbLOo-eXit69s-XulSELE0"
+      short-id: "23103e1e"
   - name: "🇷🇺 Россия БС 3"
     type: hysteria2
     server: "els1.mangshe.xyz"
@@ -67,9 +99,11 @@ proxy-groups:
     proxies:
       - "⚪ Авто БС"
       - "🌍 Страны БС"
-      - "🇭🇰 Гонконг БС 1"
       - "🇺🇸 США БС 1"
       - "🇷🇺 Россия БС 1"
+      - "🇭🇰 Гонконг БС 1"
+      - "🇧🇷 Бразилия БС 1"
+      - "🇳🇱 Нидерланды БС 1"
       - "🇷🇺 Россия БС 2"
       - "🇷🇺 Россия БС 3"
       - DIRECT
@@ -79,16 +113,20 @@ proxy-groups:
     interval: 300
     tolerance: 150
     proxies:
-      - "🇭🇰 Гонконг БС 1"
       - "🇺🇸 США БС 1"
       - "🇷🇺 Россия БС 1"
+      - "🇭🇰 Гонконг БС 1"
+      - "🇧🇷 Бразилия БС 1"
+      - "🇳🇱 Нидерланды БС 1"
       - "🇷🇺 Россия БС 2"
       - "🇷🇺 Россия БС 3"
   - name: "🌍 Страны БС"
     type: select
     proxies:
       - "⚪ 🇷🇺 Россия"
+      - "⚪ 🇧🇷 Бразилия"
       - "⚪ 🇭🇰 Гонконг"
+      - "⚪ 🇳🇱 Нидерланды"
       - "⚪ 🇺🇸 США"
   - name: "⚪ 🇷🇺 Россия"
     type: select
@@ -96,10 +134,18 @@ proxy-groups:
       - "🇷🇺 Россия БС 1"
       - "🇷🇺 Россия БС 2"
       - "🇷🇺 Россия БС 3"
+  - name: "⚪ 🇧🇷 Бразилия"
+    type: select
+    proxies:
+      - "🇧🇷 Бразилия БС 1"
   - name: "⚪ 🇭🇰 Гонконг"
     type: select
     proxies:
       - "🇭🇰 Гонконг БС 1"
+  - name: "⚪ 🇳🇱 Нидерланды"
+    type: select
+    proxies:
+      - "🇳🇱 Нидерланды БС 1"
   - name: "⚪ 🇺🇸 США"
     type: select
     proxies:

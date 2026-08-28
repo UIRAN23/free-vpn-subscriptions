@@ -49,15 +49,18 @@
         "🇷🇺 Россия",
         "🇨🇿 Чехия",
         "🇫🇮 Финляндия",
+        "🇬🇧 Великобритания",
         "🇭🇰 Гонконг",
         "🇱🇻 Латвия",
-        "🇷🇺 Россия БС 1",
+        "🇳🇱 Нидерланды",
+        "🇳🇱 Нидерланды БС 1",
         "🇱🇻 Латвия БС 1",
+        "🇷🇺 Россия БС 1",
+        "🇭🇰 Гонконг БС 1",
         "🇷🇺 Россия БС 2",
         "🇨🇿 Чехия БС 1",
+        "🇬🇧 Великобритания БС 1",
         "🇷🇺 Россия БС 3",
-        "🇨🇿 Чехия БС 2",
-        "🇭🇰 Гонконг БС 1",
         "🇷🇺 Россия БС 4",
         "🇫🇮 Финляндия БС 1"
       ]
@@ -66,13 +69,14 @@
       "type": "urltest",
       "tag": "auto-bwl",
       "outbounds": [
-        "🇷🇺 Россия БС 1",
+        "🇳🇱 Нидерланды БС 1",
         "🇱🇻 Латвия БС 1",
+        "🇷🇺 Россия БС 1",
+        "🇭🇰 Гонконг БС 1",
         "🇷🇺 Россия БС 2",
         "🇨🇿 Чехия БС 1",
+        "🇬🇧 Великобритания БС 1",
         "🇷🇺 Россия БС 3",
-        "🇨🇿 Чехия БС 2",
-        "🇭🇰 Гонконг БС 1",
         "🇷🇺 Россия БС 4",
         "🇫🇮 Финляндия БС 1"
       ],
@@ -97,8 +101,7 @@
       "type": "urltest",
       "tag": "🇨🇿 Чехия",
       "outbounds": [
-        "🇨🇿 Чехия БС 1",
-        "🇨🇿 Чехия БС 2"
+        "🇨🇿 Чехия БС 1"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "5m",
@@ -109,6 +112,16 @@
       "tag": "🇫🇮 Финляндия",
       "outbounds": [
         "🇫🇮 Финляндия БС 1"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "5m",
+      "tolerance": 150
+    },
+    {
+      "type": "urltest",
+      "tag": "🇬🇧 Великобритания",
+      "outbounds": [
+        "🇬🇧 Великобритания БС 1"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "5m",
@@ -135,6 +148,16 @@
       "tolerance": 150
     },
     {
+      "type": "urltest",
+      "tag": "🇳🇱 Нидерланды",
+      "outbounds": [
+        "🇳🇱 Нидерланды БС 1"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "5m",
+      "tolerance": 150
+    },
+    {
       "type": "direct",
       "tag": "direct"
     },
@@ -144,21 +167,21 @@
     },
     {
       "type": "vless",
-      "tag": "🇷🇺 Россия БС 1",
-      "server": "91.243.86.196",
+      "tag": "🇳🇱 Нидерланды БС 1",
+      "server": "31.76.61.232",
       "server_port": 443,
-      "uuid": "34a1ada8-4a1a-434b-8583-7b68668f6e9d",
+      "uuid": "4829c2f5-f45a-4330-9b3c-d381b9efdbec",
       "tls": {
         "enabled": true,
-        "server_name": "www.cloudflare.com",
+        "server_name": "policies.google.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
-          "public_key": "dRPcJM7ZWihjiGNHuIJ4iaCpLxHAKoo59WE-vsTZASs",
-          "short_id": "41f6de54"
+          "public_key": "CMTA5uuaIVIeqHslZMT3CbFwP8F5ysMLii72ybsTlyY",
+          "short_id": "e2a4c6b8"
         }
       },
       "flow": "xtls-rprx-vision"
@@ -174,7 +197,7 @@
         "server_name": "max.ru",
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "edge"
         },
         "reality": {
           "enabled": true,
@@ -185,10 +208,10 @@
     },
     {
       "type": "vless",
-      "tag": "🇷🇺 Россия БС 2",
+      "tag": "🇷🇺 Россия БС 1",
       "server": "193.168.46.180",
       "server_port": 443,
-      "uuid": "2892a4d8-9901-4256-a2be-d095b4d2b847",
+      "uuid": "19007bac-6416-4e35-835d-474b00c75547",
       "tls": {
         "enabled": true,
         "server_name": "rruu.persik.host",
@@ -200,67 +223,6 @@
           "enabled": true,
           "public_key": "D0FqzTuVSzCF8IcFo64SFIpMsaGV47LW3el2GCCVoFY",
           "short_id": "c1a7e9b4711d5f60"
-        }
-      },
-      "flow": "xtls-rprx-vision"
-    },
-    {
-      "type": "vless",
-      "tag": "🇨🇿 Чехия БС 1",
-      "server": "104.171.131.248",
-      "server_port": 443,
-      "uuid": "c1d62d53-2fcd-4951-ab96-c81486f59775",
-      "tls": {
-        "enabled": true,
-        "server_name": "w-mebel.pro",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "R7NfFaabgh-0a2KR0Bfmn3a-O6mDT550OgXUDygDKBs",
-          "short_id": "c603efb3ddaf633d"
-        }
-      },
-      "flow": "xtls-rprx-vision"
-    },
-    {
-      "type": "vless",
-      "tag": "🇷🇺 Россия БС 3",
-      "server": "5.42.109.42",
-      "server_port": 8443,
-      "uuid": "11f3e7b1-5507-46da-a268-1f70a543e40a",
-      "tls": {
-        "enabled": true,
-        "server_name": "run5.wba-pn.ru",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇨🇿 Чехия БС 2",
-      "server": "104.171.131.248",
-      "server_port": 443,
-      "uuid": "c1d62d53-2fcd-4951-ab96-c81486f59775",
-      "tls": {
-        "enabled": true,
-        "server_name": "w-mebel.pro",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "R7NfFaabgh-0a2KR0Bfmn3a-O6mDT550OgXUDygDKBs",
-          "short_id": "c603efb3ddaf633d"
         }
       },
       "flow": "xtls-rprx-vision"
@@ -287,7 +249,69 @@
     },
     {
       "type": "vless",
-      "tag": "🇷🇺 Россия БС 4",
+      "tag": "🇷🇺 Россия БС 2",
+      "server": "5.42.109.42",
+      "server_port": 8443,
+      "uuid": "11f3e7b1-5507-46da-a268-1f70a543e40a",
+      "tls": {
+        "enabled": true,
+        "server_name": "run5.wba-pn.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇨🇿 Чехия БС 1",
+      "server": "104.171.131.248",
+      "server_port": 443,
+      "uuid": "c1d62d53-2fcd-4951-ab96-c81486f59775",
+      "tls": {
+        "enabled": true,
+        "server_name": "w-mebel.pro",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "R7NfFaabgh-0a2KR0Bfmn3a-O6mDT550OgXUDygDKBs",
+          "short_id": "c603efb3ddaf633d"
+        }
+      },
+      "flow": "xtls-rprx-vision"
+    },
+    {
+      "type": "vless",
+      "tag": "🇬🇧 Великобритания БС 1",
+      "server": "89.169.90.11",
+      "server_port": 443,
+      "uuid": "3069559b-3446-415e-8db0-633907b17871",
+      "tls": {
+        "enabled": true,
+        "server_name": "top2127770947.mwscdn.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/v1/data/sync",
+        "headers": {
+          "Host": "top2127770947.mwscdn.ru"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇷🇺 Россия БС 3",
       "server": "45.12.75.242",
       "server_port": 26424,
       "uuid": "633f424e-2b11-48da-a6b3-a849dd71456f",
@@ -296,7 +320,7 @@
         "server_name": "ya.ru",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
@@ -307,8 +331,30 @@
     },
     {
       "type": "vless",
+      "tag": "🇷🇺 Россия БС 4",
+      "server": "176.109.85.71",
+      "server_port": 14443,
+      "uuid": "968469ec-67c9-4fe6-bf72-dd20716add3b",
+      "tls": {
+        "enabled": true,
+        "server_name": "russia.webgate.cc",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/ru",
+        "headers": {
+          "Host": "russia.webgate.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
       "tag": "🇫🇮 Финляндия БС 1",
-      "server": "ru39.overseashost.ru",
+      "server": "135.106.142.158",
       "server_port": 443,
       "uuid": "f23f641d-b83b-0002-8046-c513696f7fe5",
       "tls": {

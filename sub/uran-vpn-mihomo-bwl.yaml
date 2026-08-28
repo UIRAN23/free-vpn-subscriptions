@@ -2,8 +2,8 @@
 # profile-update-interval: 1
 # subscription-userinfo: upload=0; download=0; total=0
 # profile-web-page-url: https://uiran23.github.io/free-vpn-subscriptions/
-# Обновлено: 2026-08-28 11:20 UTC
-# Серверов: 8
+# Обновлено: 2026-08-28 19:00 UTC
+# Серверов: 5
 
 mixed-port: 7890
 allow-lan: false
@@ -25,96 +25,41 @@ proxies:
     reality-opts:
       public-key: "bSK8gtmPMlw7gP415tmh6kQzzFiwzxBsT3Kuqql6cRo"
       short-id: "ec2c7091fe76336c"
-  - name: "🇷🇺 Россия БС 1"
+  - name: "🇺🇸 США БС 1"
     type: vless
-    server: "77.110.113.103"
+    server: "80.76.44.154"
     port: 443
-    uuid: "7ab91da1-d12a-45e6-8653-62d9fddbfae9"
+    uuid: "419f25c1-bc35-412e-93fb-258efee859b5"
     udp: true
     network: "tcp"
     tls: true
     flow: "xtls-rprx-vision"
-    servername: "vk.com"
+    servername: "nl6.murhost.network"
     client-fingerprint: "firefox"
     reality-opts:
-      public-key: "YbSMmjuRFkilXmQH_RZ9uDFwA17yDulRSTBHRVilzXs"
-      short-id: "a3dbdfb829"
-  - name: "🇷🇺 Россия БС 2"
-    type: vless
-    server: "193.168.46.180"
-    port: 443
-    uuid: "e780f6d4-ff7c-4e12-bee1-96b31a77a4f5"
-    udp: true
-    network: "tcp"
-    tls: true
-    flow: "xtls-rprx-vision"
-    servername: "rruu.persik.host"
-    client-fingerprint: "qq"
-    reality-opts:
-      public-key: "D0FqzTuVSzCF8IcFo64SFIpMsaGV47LW3el2GCCVoFY"
-      short-id: "c1a7e9b4711d5f60"
-  - name: "🇷🇺 Россия БС 3"
+      public-key: "XOcyZvF63CHDPnh3UCL-u-X8HYeNGiRtrwDVRLBC1DI"
+      short-id: "f41bc0b00ca1a978"
+  - name: "🇷🇺 Россия БС 1"
     type: hysteria2
     server: "els2.mangshe.xyz"
     port: 2056
     password: "41f0d6d3-4a45-4635-8225-2abd2284189b"
     sni: "els2.mangshe.xyz"
     skip-cert-verify: true
-  - name: "🇬🇧 Великобритания БС 1"
-    type: vless
-    server: "185.178.208.137"
-    port: 443
-    uuid: "0a63c7fa-1cfd-4f54-8275-4cd50422c127"
-    udp: true
-    network: "ws"
-    tls: true
-    servername: "games22.fun"
-    client-fingerprint: "safari"
-    ws-opts:
-      path: "/v1/data/sync"
-      headers:
-        Host: "games22.fun"
-  - name: "🇷🇺 Россия БС 4"
-    type: vless
-    server: "45.12.75.242"
-    port: 26424
-    uuid: "633f424e-2b11-48da-a6b3-a849dd71456f"
-    udp: true
-    network: "tcp"
-    tls: true
-    servername: "ya.ru"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "l8AubqcxQO-HRFJy4pZL1vbLOo-eXit69s-XulSELE0"
-      short-id: "23103e1e"
-  - name: "🇧🇷 Бразилия БС 1"
-    type: vless
-    server: "185.178.208.176"
-    port: 443
-    uuid: "72353b97-1471-4475-9535-04bbf1097181"
-    udp: true
-    network: "ws"
-    tls: true
-    servername: "ncd.crsmaps.com"
-    client-fingerprint: "firefox"
-    ws-opts:
-      path: "/ws/notify/817522358"
-      headers:
-        Host: "ncd.crsmaps.com"
-  - name: "🇷🇺 Россия БС 5"
-    type: vless
-    server: "46.173.28.102"
-    port: 443
-    uuid: "1595b6ec-aece-4756-a002-2c7988d7e023"
-    udp: true
-    network: "tcp"
-    tls: true
-    flow: "xtls-rprx-vision"
-    servername: "eh.vk.com"
-    client-fingerprint: "qq"
-    reality-opts:
-      public-key: "9F7JxyyP-TNLt0dY2xOB0_34I8W0xXIpFY7rZ7-L0Gg"
-      short-id: "19aa22f681923dc8"
+  - name: "🇷🇺 Россия БС 2"
+    type: hysteria2
+    server: "els.mangshe.xyz"
+    port: 2056
+    password: "41f0d6d3-4a45-4635-8225-2abd2284189b"
+    sni: "els.mangshe.xyz"
+    skip-cert-verify: true
+  - name: "🇷🇺 Россия БС 3"
+    type: hysteria2
+    server: "els1.mangshe.xyz"
+    port: 2056
+    password: "41f0d6d3-4a45-4635-8225-2abd2284189b"
+    sni: "els1.mangshe.xyz"
+    skip-cert-verify: true
 
 proxy-groups:
   - name: "PROXY"
@@ -123,13 +68,10 @@ proxy-groups:
       - "⚪ Авто БС"
       - "🌍 Страны БС"
       - "🇭🇰 Гонконг БС 1"
+      - "🇺🇸 США БС 1"
       - "🇷🇺 Россия БС 1"
       - "🇷🇺 Россия БС 2"
       - "🇷🇺 Россия БС 3"
-      - "🇬🇧 Великобритания БС 1"
-      - "🇷🇺 Россия БС 4"
-      - "🇧🇷 Бразилия БС 1"
-      - "🇷🇺 Россия БС 5"
       - DIRECT
   - name: "⚪ Авто БС"
     type: url-test
@@ -138,40 +80,30 @@ proxy-groups:
     tolerance: 150
     proxies:
       - "🇭🇰 Гонконг БС 1"
+      - "🇺🇸 США БС 1"
       - "🇷🇺 Россия БС 1"
       - "🇷🇺 Россия БС 2"
       - "🇷🇺 Россия БС 3"
-      - "🇬🇧 Великобритания БС 1"
-      - "🇷🇺 Россия БС 4"
-      - "🇧🇷 Бразилия БС 1"
-      - "🇷🇺 Россия БС 5"
   - name: "🌍 Страны БС"
     type: select
     proxies:
       - "⚪ 🇷🇺 Россия"
-      - "⚪ 🇧🇷 Бразилия"
-      - "⚪ 🇬🇧 Великобритания"
       - "⚪ 🇭🇰 Гонконг"
+      - "⚪ 🇺🇸 США"
   - name: "⚪ 🇷🇺 Россия"
     type: select
     proxies:
       - "🇷🇺 Россия БС 1"
       - "🇷🇺 Россия БС 2"
       - "🇷🇺 Россия БС 3"
-      - "🇷🇺 Россия БС 4"
-      - "🇷🇺 Россия БС 5"
-  - name: "⚪ 🇧🇷 Бразилия"
-    type: select
-    proxies:
-      - "🇧🇷 Бразилия БС 1"
-  - name: "⚪ 🇬🇧 Великобритания"
-    type: select
-    proxies:
-      - "🇬🇧 Великобритания БС 1"
   - name: "⚪ 🇭🇰 Гонконг"
     type: select
     proxies:
       - "🇭🇰 Гонконг БС 1"
+  - name: "⚪ 🇺🇸 США"
+    type: select
+    proxies:
+      - "🇺🇸 США БС 1"
 
 rules:
   - GEOIP,private,DIRECT,no-resolve

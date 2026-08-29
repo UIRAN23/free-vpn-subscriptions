@@ -2,8 +2,8 @@
 # profile-update-interval: 1
 # subscription-userinfo: upload=0; download=0; total=0
 # profile-web-page-url: https://uiran23.github.io/free-vpn-subscriptions/
-# Обновлено: 2026-08-29 09:22 UTC
-# Серверов: 15
+# Обновлено: 2026-08-29 11:03 UTC
+# Серверов: 16
 
 mixed-port: 7890
 allow-lan: false
@@ -13,24 +13,31 @@ ipv6: false
 
 proxies:
   - name: "🇺🇸 США БС 1"
+    type: hysteria2
+    server: "163.192.14.135"
+    port: 50160
+    password: "099830134df5ac3a04a4b21d39b8c395"
+    sni: "vk.com"
+    skip-cert-verify: true
+  - name: "🇺🇸 США БС 2"
     type: vless
-    server: "50.116.13.24"
-    port: 18608
-    uuid: "cac708f4-8d8d-4a2a-95a3-d81cc817e1db"
+    server: "192.155.87.188"
+    port: 10092
+    uuid: "a0b4d03b-b561-46aa-96f6-d03fa222a65e"
     udp: true
     network: "tcp"
     tls: true
     flow: "xtls-rprx-vision"
     servername: "www.amd.com"
-    client-fingerprint: "chrome"
+    client-fingerprint: "firefox"
     reality-opts:
-      public-key: "kd5rAqDinbh6rM9S8Fl6K5qakNm0G6M96-kzDE69o0E"
-      short-id: "67ed2d5e0744e9"
-  - name: "🇺🇸 США БС 2"
+      public-key: "EUpz9wKWgGn74jxYUKDbk87UwDGEYeCiaZg13m36ki0"
+      short-id: "e482c0320674c651"
+  - name: "🇺🇸 США БС 3"
     type: vless
-    server: "172.233.139.46"
-    port: 53734
-    uuid: "56a1b253-cde4-490f-9c5e-09a523882bdd"
+    server: "216.167.21.32"
+    port: 40573
+    uuid: "095d1015-70da-4eff-af6d-962ff619a679"
     udp: true
     network: "tcp"
     tls: true
@@ -38,9 +45,23 @@ proxies:
     servername: "www.tesla.com"
     client-fingerprint: "firefox"
     reality-opts:
-      public-key: "JAG5rl6KEt7KAV0y8Z2x6orWHymCXRSX49SkEnEftWU"
-      short-id: "a56d7d8da977f860"
-  - name: "🇺🇸 США БС 3"
+      public-key: "aqAR_yPgXQtOazW4nR1Q5RmGIVLQ5TV2ztUWmsjSFVw"
+      short-id: "2012d3de918e0d20"
+  - name: "🇺🇸 США БС 4"
+    type: vless
+    server: "216.167.27.153"
+    port: 24959
+    uuid: "bd046aab-1c63-401a-9167-eef01d767578"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "www.sony.com"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "N_mcQn4Vd4xDG-bEFD6eokQXD0a9KlfeZkc8w9ivuBA"
+      short-id: "4d224a3d6c0fb3"
+  - name: "🇺🇸 США БС 5"
     type: vless
     server: "172.235.43.210"
     port: 53957
@@ -54,11 +75,11 @@ proxies:
     reality-opts:
       public-key: "XUHlbk5VH5z4E2wxZBhlpLZ33qevyQgqU7dheRDgoGQ"
       short-id: "44e82fd7b97b14"
-  - name: "🇺🇸 США БС 4"
+  - name: "🇺🇸 США БС 6"
     type: vless
-    server: "172.239.67.231"
-    port: 52553
-    uuid: "4c0cae78-1b6c-4860-8295-d938829f1d64"
+    server: "50.116.13.24"
+    port: 18608
+    uuid: "cac708f4-8d8d-4a2a-95a3-d81cc817e1db"
     udp: true
     network: "tcp"
     tls: true
@@ -66,9 +87,37 @@ proxies:
     servername: "www.amd.com"
     client-fingerprint: "firefox"
     reality-opts:
-      public-key: "7ettAf7U2AG4PQod_xgNpS6591z6HxjxhEmChKboQRI"
-      short-id: "61b89ff3c5a9469a"
-  - name: "🇺🇸 США БС 5"
+      public-key: "kd5rAqDinbh6rM9S8Fl6K5qakNm0G6M96-kzDE69o0E"
+      short-id: "67ed2d5e0744e9"
+  - name: "🇺🇸 США БС 7"
+    type: vless
+    server: "216.167.27.101"
+    port: 27278
+    uuid: "98a28376-ce73-48be-a6f4-abfa74377b65"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "www.nvidia.com"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "Mmuxa6Y9h2thCEMFlQQi26umkKnsirNXQ5btCCyl3EU"
+      short-id: "994469a256d8"
+  - name: "🇺🇸 США БС 8"
+    type: vless
+    server: "216.167.21.162"
+    port: 39035
+    uuid: "5e130ea4-8a35-43b3-809a-b33b4bf15d2a"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "www.tesla.com"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "iDi_qBUd7W0hkodhE-RCnOY9-RwD3C7acLQAV-abrwQ"
+      short-id: "3f88951857dd6d"
+  - name: "🇺🇸 США БС 9"
     type: vless
     server: "172.236.252.35"
     port: 46645
@@ -82,55 +131,19 @@ proxies:
     reality-opts:
       public-key: "eKBdozYN5nEXV3nGPsKSjHkrzc4BsFrOntoq0QsD7hE"
       short-id: "257df5aa7bfbe5c2"
-  - name: "🇺🇸 США БС 6"
+  - name: "🇺🇸 США БС 10"
     type: vless
-    server: "172.239.67.156"
-    port: 26542
-    uuid: "c020a807-16d3-4ad0-99f7-8379421c8b71"
+    server: "204.48.20.223"
+    port: 30906
+    uuid: "43a13764-23dd-4e01-8b79-cde8a16e13ce"
     udp: true
     network: "tcp"
     tls: true
-    flow: "xtls-rprx-vision"
-    servername: "www.nvidia.com"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "my3biw2X9hZxXzrlw5P9aa9PqlCHgqYMaX5QqNSkBAc"
-      short-id: "916152c18db147"
-  - name: "🇺🇸 США БС 7"
-    type: vless
-    server: "45.79.103.108"
-    port: 18828
-    uuid: "1391b006-8332-4f80-bb1a-b2c1632c086c"
-    udp: true
-    network: "tcp"
-    tls: true
-    flow: "xtls-rprx-vision"
-    servername: "www.tesla.com"
+    servername: "www.cloudflare.com"
     client-fingerprint: "chrome"
     reality-opts:
-      public-key: "o8nzDkm9KtsfzDPDvWKNQ7s21HcrKKsMTuqg2VyWmgw"
-      short-id: "2576868adedf9fc0"
-  - name: "🇺🇸 США БС 8"
-    type: hysteria2
-    server: "163.192.14.135"
-    port: 50160
-    password: "099830134df5ac3a04a4b21d39b8c395"
-    sni: "vk.com"
-    skip-cert-verify: true
-  - name: "🇺🇸 США БС 9"
-    type: vless
-    server: "192.81.131.225"
-    port: 11256
-    uuid: "4817e138-8370-4fdd-aa59-36a6ec0247e2"
-    udp: true
-    network: "tcp"
-    tls: true
-    flow: "xtls-rprx-vision"
-    servername: "www.tesla.com"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "TgKDlrMB3_LCRs_WBX4OMnt87rPc4XVqaPhEAtoXhDc"
-      short-id: "352a7bbcc1ceeb"
+      public-key: "HnQ_s7eu3XUu6upzLoe0jj5ZgsYvM7KXuMG41IwN4R0"
+      short-id: "17a94dc584e3"
   - name: "🇭🇰 Гонконг БС 1"
     type: vless
     server: "35.241.98.220"
@@ -146,17 +159,32 @@ proxies:
       short-id: "ec2c7091fe76336c"
   - name: "🇷🇺 Россия БС 1"
     type: vless
-    server: "45.12.75.242"
-    port: 26424
-    uuid: "633f424e-2b11-48da-a6b3-a849dd71456f"
+    server: "193.168.46.180"
+    port: 443
+    uuid: "ef85e677-d72b-4c55-a5e1-9a35a2f7469d"
     udp: true
     network: "tcp"
     tls: true
-    servername: "ya.ru"
+    flow: "xtls-rprx-vision"
+    servername: "rruu.persik.host"
+    client-fingerprint: "qq"
+    reality-opts:
+      public-key: "D0FqzTuVSzCF8IcFo64SFIpMsaGV47LW3el2GCCVoFY"
+      short-id: "c1a7e9b4711d5f60"
+  - name: "🇳🇱 Нидерланды БС 1"
+    type: vless
+    server: "85.198.70.200"
+    port: 14406
+    uuid: "237f91bf-102e-4077-8cc3-baebccb42936"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "vk.ru"
     client-fingerprint: "firefox"
     reality-opts:
-      public-key: "l8AubqcxQO-HRFJy4pZL1vbLOo-eXit69s-XulSELE0"
-      short-id: "23103e1e"
+      public-key: "ldAmsl3dqTCUBmlmA8CS9ZnpznP6cFWj9AxNddWnbxY"
+      short-id: "1a2b3c4d5e6f7a8b"
   - name: "🇷🇺 Россия БС 2"
     type: hysteria2
     server: "els2.mangshe.xyz"
@@ -172,18 +200,18 @@ proxies:
     sni: "ru.xiaoliyu.cyou"
     skip-cert-verify: true
   - name: "🇷🇺 Россия БС 4"
-    type: hysteria2
-    server: "els.mangshe.xyz"
-    port: 2056
-    password: "41f0d6d3-4a45-4635-8225-2abd2284189b"
-    sni: "els.mangshe.xyz"
-    skip-cert-verify: true
-  - name: "🇷🇺 Россия БС 5"
-    type: hysteria2
-    server: "ru1.xiaoliyu.cyou"
-    port: 4433
-    password: "39b27e20-16f5-45a1-8139-7c9b7f51b6f8"
-    skip-cert-verify: true
+    type: vless
+    server: "45.12.75.242"
+    port: 26424
+    uuid: "633f424e-2b11-48da-a6b3-a849dd71456f"
+    udp: true
+    network: "tcp"
+    tls: true
+    servername: "ya.ru"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "l8AubqcxQO-HRFJy4pZL1vbLOo-eXit69s-XulSELE0"
+      short-id: "23103e1e"
 
 proxy-groups:
   - name: "PROXY"
@@ -200,12 +228,13 @@ proxy-groups:
       - "🇺🇸 США БС 7"
       - "🇺🇸 США БС 8"
       - "🇺🇸 США БС 9"
+      - "🇺🇸 США БС 10"
       - "🇭🇰 Гонконг БС 1"
       - "🇷🇺 Россия БС 1"
+      - "🇳🇱 Нидерланды БС 1"
       - "🇷🇺 Россия БС 2"
       - "🇷🇺 Россия БС 3"
       - "🇷🇺 Россия БС 4"
-      - "🇷🇺 Россия БС 5"
       - DIRECT
   - name: "⚪ Авто БС"
     type: url-test
@@ -222,18 +251,20 @@ proxy-groups:
       - "🇺🇸 США БС 7"
       - "🇺🇸 США БС 8"
       - "🇺🇸 США БС 9"
+      - "🇺🇸 США БС 10"
       - "🇭🇰 Гонконг БС 1"
       - "🇷🇺 Россия БС 1"
+      - "🇳🇱 Нидерланды БС 1"
       - "🇷🇺 Россия БС 2"
       - "🇷🇺 Россия БС 3"
       - "🇷🇺 Россия БС 4"
-      - "🇷🇺 Россия БС 5"
   - name: "🌍 Страны БС"
     type: select
     proxies:
       - "⚪ 🇺🇸 США"
       - "⚪ 🇷🇺 Россия"
       - "⚪ 🇭🇰 Гонконг"
+      - "⚪ 🇳🇱 Нидерланды"
   - name: "⚪ 🇺🇸 США"
     type: select
     proxies:
@@ -246,6 +277,7 @@ proxy-groups:
       - "🇺🇸 США БС 7"
       - "🇺🇸 США БС 8"
       - "🇺🇸 США БС 9"
+      - "🇺🇸 США БС 10"
   - name: "⚪ 🇷🇺 Россия"
     type: select
     proxies:
@@ -253,11 +285,14 @@ proxy-groups:
       - "🇷🇺 Россия БС 2"
       - "🇷🇺 Россия БС 3"
       - "🇷🇺 Россия БС 4"
-      - "🇷🇺 Россия БС 5"
   - name: "⚪ 🇭🇰 Гонконг"
     type: select
     proxies:
       - "🇭🇰 Гонконг БС 1"
+  - name: "⚪ 🇳🇱 Нидерланды"
+    type: select
+    proxies:
+      - "🇳🇱 Нидерланды БС 1"
 
 rules:
   - GEOIP,private,DIRECT,no-resolve

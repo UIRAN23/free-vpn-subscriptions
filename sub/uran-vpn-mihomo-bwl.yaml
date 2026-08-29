@@ -2,8 +2,8 @@
 # profile-update-interval: 1
 # subscription-userinfo: upload=0; download=0; total=0
 # profile-web-page-url: https://uiran23.github.io/free-vpn-subscriptions/
-# Обновлено: 2026-08-29 19:23 UTC
-# Серверов: 7
+# Обновлено: 2026-08-29 21:13 UTC
+# Серверов: 11
 
 mixed-port: 7890
 allow-lan: false
@@ -40,6 +40,17 @@ proxies:
     reality-opts:
       public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
       short-id: "01"
+  - name: "🇳🇱 Нидерланды БС 1"
+    type: vless
+    server: "94.103.1.65"
+    port: 8443
+    uuid: "5495728b-5b89-4330-9193-c6c09920f998"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "n3.plus-abc.ru"
+    client-fingerprint: "firefox"
   - name: "🇭🇰 Гонконг БС 1"
     type: vless
     server: "35.241.98.220"
@@ -55,6 +66,30 @@ proxies:
       short-id: "ec2c7091fe76336c"
   - name: "🇷🇺 Россия БС 1"
     type: vless
+    server: "194.55.239.20"
+    port: 443
+    uuid: "303035c0-dd28-4568-87bb-9a11637c5407"
+    udp: true
+    network: "ws"
+    tls: true
+    servername: "harknmav.fun"
+    client-fingerprint: "firefox"
+    ws-opts:
+      path: "/live.stream.v1.Broadcast/"
+  - name: "🇳🇱 Нидерланды БС 2"
+    type: vless
+    server: "186.246.12.85"
+    port: 2053
+    uuid: "f62a1751-c1e4-4612-90e7-bd5781c1aede"
+    udp: true
+    network: "ws"
+    tls: true
+    servername: "bz2.wba-pn.ru"
+    client-fingerprint: "firefox"
+    ws-opts:
+      path: "/"
+  - name: "🇷🇺 Россия БС 2"
+    type: vless
     server: "45.12.75.242"
     port: 26424
     uuid: "633f424e-2b11-48da-a6b3-a849dd71456f"
@@ -66,14 +101,14 @@ proxies:
     reality-opts:
       public-key: "l8AubqcxQO-HRFJy4pZL1vbLOo-eXit69s-XulSELE0"
       short-id: "23103e1e"
-  - name: "🇷🇺 Россия БС 2"
+  - name: "🇷🇺 Россия БС 3"
     type: hysteria2
     server: "els2.mangshe.xyz"
     port: 2056
     password: "41f0d6d3-4a45-4635-8225-2abd2284189b"
     sni: "els2.mangshe.xyz"
     skip-cert-verify: true
-  - name: "🇳🇱 Нидерланды БС 1"
+  - name: "🇳🇱 Нидерланды БС 3"
     type: vless
     server: "31.77.183.88"
     port: 5001
@@ -83,11 +118,25 @@ proxies:
     tls: true
     flow: "xtls-rprx-vision"
     servername: "max.ru"
-    client-fingerprint: "ios"
+    client-fingerprint: "safari"
     reality-opts:
       public-key: "D-G2rTpSUTAF6Rj0C6Gxnk-uzsaGzM6MSbJX3jCyBBk"
       short-id: "a1b2c3d4"
-  - name: "🇷🇺 Россия БС 3"
+  - name: "🇳🇱 Нидерланды БС 4"
+    type: vless
+    server: "45.133.210.83"
+    port: 443
+    uuid: "392058de-bb7e-44f5-b5bf-9184109cb42b"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "api-maps.yandex.ru"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "cttKOS1BlF-u-mvX63PWNPJK6W_RXfx1wo8yjBEt1hI"
+      short-id: "a2eb8d694a5480ff"
+  - name: "🇷🇺 Россия БС 4"
     type: hysteria2
     server: "els1.mangshe.xyz"
     port: 2056
@@ -103,11 +152,15 @@ proxy-groups:
       - "🌍 Страны БС"
       - "🇺🇸 США БС 1"
       - "🇺🇸 США БС 2"
+      - "🇳🇱 Нидерланды БС 1"
       - "🇭🇰 Гонконг БС 1"
       - "🇷🇺 Россия БС 1"
+      - "🇳🇱 Нидерланды БС 2"
       - "🇷🇺 Россия БС 2"
-      - "🇳🇱 Нидерланды БС 1"
       - "🇷🇺 Россия БС 3"
+      - "🇳🇱 Нидерланды БС 3"
+      - "🇳🇱 Нидерланды БС 4"
+      - "🇷🇺 Россия БС 4"
       - DIRECT
   - name: "⚪ Авто БС"
     type: url-test
@@ -117,24 +170,36 @@ proxy-groups:
     proxies:
       - "🇺🇸 США БС 1"
       - "🇺🇸 США БС 2"
+      - "🇳🇱 Нидерланды БС 1"
       - "🇭🇰 Гонконг БС 1"
       - "🇷🇺 Россия БС 1"
+      - "🇳🇱 Нидерланды БС 2"
       - "🇷🇺 Россия БС 2"
-      - "🇳🇱 Нидерланды БС 1"
       - "🇷🇺 Россия БС 3"
+      - "🇳🇱 Нидерланды БС 3"
+      - "🇳🇱 Нидерланды БС 4"
+      - "🇷🇺 Россия БС 4"
   - name: "🌍 Страны БС"
     type: select
     proxies:
+      - "⚪ 🇳🇱 Нидерланды"
       - "⚪ 🇷🇺 Россия"
       - "⚪ 🇺🇸 США"
       - "⚪ 🇭🇰 Гонконг"
-      - "⚪ 🇳🇱 Нидерланды"
+  - name: "⚪ 🇳🇱 Нидерланды"
+    type: select
+    proxies:
+      - "🇳🇱 Нидерланды БС 1"
+      - "🇳🇱 Нидерланды БС 2"
+      - "🇳🇱 Нидерланды БС 3"
+      - "🇳🇱 Нидерланды БС 4"
   - name: "⚪ 🇷🇺 Россия"
     type: select
     proxies:
       - "🇷🇺 Россия БС 1"
       - "🇷🇺 Россия БС 2"
       - "🇷🇺 Россия БС 3"
+      - "🇷🇺 Россия БС 4"
   - name: "⚪ 🇺🇸 США"
     type: select
     proxies:
@@ -144,10 +209,6 @@ proxy-groups:
     type: select
     proxies:
       - "🇭🇰 Гонконг БС 1"
-  - name: "⚪ 🇳🇱 Нидерланды"
-    type: select
-    proxies:
-      - "🇳🇱 Нидерланды БС 1"
 
 rules:
   - GEOIP,private,DIRECT,no-resolve

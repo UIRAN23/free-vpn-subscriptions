@@ -54,11 +54,11 @@
         "🇺🇸 США БС 1",
         "🇺🇸 США БС 2",
         "🇷🇺 Россия БС 1",
-        "🇷🇺 Россия БС 2",
-        "🇭🇰 Гонконг БС 1",
         "🇩🇪 Германия БС 1",
-        "🇷🇺 Россия БС 3",
+        "🇭🇰 Гонконг БС 1",
+        "🇷🇺 Россия БС 2",
         "🇫🇮 Финляндия БС 1",
+        "🇷🇺 Россия БС 3",
         "🇷🇺 Россия БС 4",
         "🇩🇪 Германия БС 2"
       ]
@@ -70,11 +70,11 @@
         "🇺🇸 США БС 1",
         "🇺🇸 США БС 2",
         "🇷🇺 Россия БС 1",
-        "🇷🇺 Россия БС 2",
-        "🇭🇰 Гонконг БС 1",
         "🇩🇪 Германия БС 1",
-        "🇷🇺 Россия БС 3",
+        "🇭🇰 Гонконг БС 1",
+        "🇷🇺 Россия БС 2",
         "🇫🇮 Финляндия БС 1",
+        "🇷🇺 Россия БС 3",
         "🇷🇺 Россия БС 4",
         "🇩🇪 Германия БС 2"
       ],
@@ -210,22 +210,24 @@
     },
     {
       "type": "vless",
-      "tag": "🇷🇺 Россия БС 2",
-      "server": "5.42.109.42",
-      "server_port": 8443,
-      "uuid": "11f3e7b1-5507-46da-a268-1f70a543e40a",
+      "tag": "🇩🇪 Германия БС 1",
+      "server": "31.77.220.163",
+      "server_port": 13443,
+      "uuid": "1206bad5-dcc9-410e-9595-d9fe9ee54085",
       "tls": {
         "enabled": true,
-        "server_name": "run5.wba-pn.ru",
+        "server_name": "kinopoisk.ru",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "ios"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "oo5V9WHh_7YUFrbq0yQC19FYbq9kKf1ig1-IiLXvbHk",
+          "short_id": "a1b2c3d4"
         }
       },
-      "transport": {
-        "type": "ws",
-        "path": "/"
-      }
+      "flow": "xtls-rprx-vision"
     },
     {
       "type": "vless",
@@ -249,43 +251,21 @@
     },
     {
       "type": "vless",
-      "tag": "🇩🇪 Германия БС 1",
-      "server": "31.77.220.163",
-      "server_port": 13443,
-      "uuid": "1206bad5-dcc9-410e-9595-d9fe9ee54085",
+      "tag": "🇷🇺 Россия БС 2",
+      "server": "5.42.109.42",
+      "server_port": 8443,
+      "uuid": "11f3e7b1-5507-46da-a268-1f70a543e40a",
       "tls": {
         "enabled": true,
-        "server_name": "kinopoisk.ru",
+        "server_name": "run5.wba-pn.ru",
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "oo5V9WHh_7YUFrbq0yQC19FYbq9kKf1ig1-IiLXvbHk",
-          "short_id": "a1b2c3d4"
+          "fingerprint": "firefox"
         }
       },
-      "flow": "xtls-rprx-vision"
-    },
-    {
-      "type": "vless",
-      "tag": "🇷🇺 Россия БС 3",
-      "server": "45.12.75.242",
-      "server_port": 26424,
-      "uuid": "633f424e-2b11-48da-a6b3-a849dd71456f",
-      "tls": {
-        "enabled": true,
-        "server_name": "ya.ru",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "l8AubqcxQO-HRFJy4pZL1vbLOo-eXit69s-XulSELE0",
-          "short_id": "23103e1e"
-        }
+      "transport": {
+        "type": "ws",
+        "path": "/"
       }
     },
     {
@@ -307,6 +287,26 @@
         "path": "/cdn/v3/live",
         "headers": {
           "Host": "cf5.rumedia-cdn.com"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇷🇺 Россия БС 3",
+      "server": "45.12.75.242",
+      "server_port": 26424,
+      "uuid": "633f424e-2b11-48da-a6b3-a849dd71456f",
+      "tls": {
+        "enabled": true,
+        "server_name": "ya.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "l8AubqcxQO-HRFJy4pZL1vbLOo-eXit69s-XulSELE0",
+          "short_id": "23103e1e"
         }
       }
     },

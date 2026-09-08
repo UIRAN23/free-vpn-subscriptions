@@ -2,8 +2,8 @@
 # profile-update-interval: 1
 # subscription-userinfo: upload=0; download=0; total=0
 # profile-web-page-url: https://uiran23.github.io/free-vpn-subscriptions/
-# Обновлено: 2026-09-08 21:49 UTC
-# Серверов: 8
+# Обновлено: 2026-09-08 22:08 UTC
+# Серверов: 10
 
 mixed-port: 7890
 allow-lan: false
@@ -50,7 +50,7 @@ proxies:
     tls: true
     flow: "xtls-rprx-vision"
     servername: "sellflow.org"
-    client-fingerprint: "chrome"
+    client-fingerprint: "qq"
     reality-opts:
       public-key: "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc"
       short-id: ""
@@ -64,13 +64,13 @@ proxies:
     tls: true
     flow: "xtls-rprx-vision"
     servername: "sellflow.org"
-    client-fingerprint: "chrome"
+    client-fingerprint: "firefox"
     reality-opts:
       public-key: "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc"
       short-id: ""
   - name: "🇷🇺 Россия БС 3"
     type: vless
-    server: "78.159.247.166"
+    server: "78.159.247.123"
     port: 7444
     uuid: "0764541b-3e57-4b47-954b-51e996fae5fc"
     udp: true
@@ -78,13 +78,13 @@ proxies:
     tls: true
     flow: "xtls-rprx-vision"
     servername: "akamai.com"
-    client-fingerprint: "chrome"
+    client-fingerprint: "firefox"
     reality-opts:
       public-key: "-P8DgKISSG4jnLuj6ihZDqZs1_zt-juBrhVhTylHiAo"
       short-id: ""
   - name: "🇷🇺 Россия БС 4"
     type: vless
-    server: "78.159.247.123"
+    server: "78.159.247.166"
     port: 7444
     uuid: "0764541b-3e57-4b47-954b-51e996fae5fc"
     udp: true
@@ -110,11 +110,39 @@ proxies:
       public-key: "l8AubqcxQO-HRFJy4pZL1vbLOo-eXit69s-XulSELE0"
       short-id: "23103e1e"
   - name: "🇷🇺 Россия БС 6"
+    type: vless
+    server: "78.159.247.153"
+    port: 443
+    uuid: "0764541b-3e57-4b47-954b-51e996fae5fc"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "on.mcufa.pro"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "-P8DgKISSG4jnLuj6ihZDqZs1_zt-juBrhVhTylHiAo"
+      short-id: ""
+  - name: "🇷🇺 Россия БС 7"
     type: hysteria2
     server: "cdncache.pleiades.codes"
     port: 8443
     password: "e0b9fb0f-1bbd-478b-9580-c2294778338b"
     sni: "cdncache.pleiades.codes"
+  - name: "🇷🇺 Россия БС 8"
+    type: vless
+    server: "217.16.31.162"
+    port: 443
+    uuid: "af9c2bcf-fe68-4379-9c78-6e5f1b4af0e2"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "max.ru"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "SHIYN7zN9aFVxwKK-bIvDbhUgtHvlBhDi1qSl2sWwRw"
+      short-id: "e7"
 
 proxy-groups:
   - name: "PROXY"
@@ -130,6 +158,8 @@ proxy-groups:
       - "🇷🇺 Россия БС 4"
       - "🇷🇺 Россия БС 5"
       - "🇷🇺 Россия БС 6"
+      - "🇷🇺 Россия БС 7"
+      - "🇷🇺 Россия БС 8"
       - DIRECT
   - name: "⚪ Авто БС"
     type: url-test
@@ -145,6 +175,8 @@ proxy-groups:
       - "🇷🇺 Россия БС 4"
       - "🇷🇺 Россия БС 5"
       - "🇷🇺 Россия БС 6"
+      - "🇷🇺 Россия БС 7"
+      - "🇷🇺 Россия БС 8"
   - name: "🌍 Страны БС"
     type: select
     proxies:
@@ -159,6 +191,8 @@ proxy-groups:
       - "🇷🇺 Россия БС 4"
       - "🇷🇺 Россия БС 5"
       - "🇷🇺 Россия БС 6"
+      - "🇷🇺 Россия БС 7"
+      - "🇷🇺 Россия БС 8"
   - name: "⚪ 🇺🇸 США"
     type: select
     proxies:

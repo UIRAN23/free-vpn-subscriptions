@@ -2,8 +2,8 @@
 # profile-update-interval: 1
 # subscription-userinfo: upload=0; download=0; total=0
 # profile-web-page-url: https://uiran23.github.io/free-vpn-subscriptions/
-# Обновлено: 2026-09-08 15:07 UTC
-# Серверов: 9
+# Обновлено: 2026-09-08 15:37 UTC
+# Серверов: 11
 
 mixed-port: 7890
 allow-lan: false
@@ -26,21 +26,14 @@ proxies:
     reality-opts:
       public-key: "Svl81isn16RPAFnjtmYw7A6TPnsEPLHuYYaJht65Rzc"
       short-id: ""
+  - name: "🇰🇷 Корея БС 1"
+    type: hysteria2
+    server: "132.226.226.189"
+    port: 50160
+    password: "1671a252e2a97dc2bda4e515475931da"
+    sni: "www.bing.com"
+    skip-cert-verify: true
   - name: "🇷🇺 Россия БС 1"
-    type: vless
-    server: "78.159.247.123"
-    port: 7444
-    uuid: "0764541b-3e57-4b47-954b-51e996fae5fc"
-    udp: true
-    network: "tcp"
-    tls: true
-    flow: "xtls-rprx-vision"
-    servername: "akamai.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "-P8DgKISSG4jnLuj6ihZDqZs1_zt-juBrhVhTylHiAo"
-      short-id: ""
-  - name: "🇷🇺 Россия БС 2"
     type: vless
     server: "78.159.247.166"
     port: 7444
@@ -54,27 +47,20 @@ proxies:
     reality-opts:
       public-key: "-P8DgKISSG4jnLuj6ihZDqZs1_zt-juBrhVhTylHiAo"
       short-id: ""
-  - name: "🇰🇷 Корея БС 1"
-    type: hysteria2
-    server: "132.226.226.189"
-    port: 50160
-    password: "1671a252e2a97dc2bda4e515475931da"
-    sni: "www.bing.com"
-    skip-cert-verify: true
-  - name: "🇺🇸 США БС 2"
+  - name: "🇷🇺 Россия БС 2"
     type: vless
-    server: "104.21.85.220"
-    port: 443
-    uuid: "7893b302-3882-4c38-9ab6-6313f1575d1a"
+    server: "78.159.247.123"
+    port: 7444
+    uuid: "0764541b-3e57-4b47-954b-51e996fae5fc"
     udp: true
-    network: "ws"
+    network: "tcp"
     tls: true
-    servername: "cf.udpid.org"
+    flow: "xtls-rprx-vision"
+    servername: "akamai.com"
     client-fingerprint: "chrome"
-    ws-opts:
-      path: "/@zyzzzoao"
-      headers:
-        Host: "cf.udpid.org"
+    reality-opts:
+      public-key: "-P8DgKISSG4jnLuj6ihZDqZs1_zt-juBrhVhTylHiAo"
+      short-id: ""
   - name: "🇳🇱 Нидерланды БС 1"
     type: vless
     server: "5.129.210.63"
@@ -90,6 +76,34 @@ proxies:
       short-id: "ac"
     grpc-opts:
       grpc-service-name: ""
+  - name: "🇺🇸 США БС 2"
+    type: vless
+    server: "104.21.85.220"
+    port: 443
+    uuid: "7893b302-3882-4c38-9ab6-6313f1575d1a"
+    udp: true
+    network: "ws"
+    tls: true
+    servername: "cf.udpid.org"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/@zyzzzoao"
+      headers:
+        Host: "cf.udpid.org"
+  - name: "🇸🇪 Швеция БС 1"
+    type: vless
+    server: "defaultenginedimly.rivetpress.me"
+    port: 443
+    uuid: "7a97f64d-5fc7-4011-9028-58d2ba751595"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "defaultenginedimly.rivetpress.me"
+    client-fingerprint: "edge"
+    reality-opts:
+      public-key: "niL0fb-4IaVHr5VCg2yN_5wDTNYEq9W8wi7pDWLPcVg"
+      short-id: "7505bfa3b6b933e6"
   - name: "🇳🇱 Нидерланды БС 2"
     type: vless
     server: "46.243.235.188"
@@ -100,10 +114,23 @@ proxies:
     tls: true
     flow: "xtls-rprx-vision"
     servername: "pool.dataroute.biz"
-    client-fingerprint: "safari"
+    client-fingerprint: "qq"
     reality-opts:
       public-key: "_ilhBTibNauMOEUqylnlBAUTYiqHHtmEDXkx18SHCR4"
       short-id: ""
+  - name: "🇷🇺 Россия БС 3"
+    type: vless
+    server: "45.12.75.242"
+    port: 26424
+    uuid: "633f424e-2b11-48da-a6b3-a849dd71456f"
+    udp: true
+    network: "tcp"
+    tls: true
+    servername: "ya.ru"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "l8AubqcxQO-HRFJy4pZL1vbLOo-eXit69s-XulSELE0"
+      short-id: "23103e1e"
   - name: "🇳🇱 Нидерланды БС 3"
     type: vless
     server: "85.198.70.200"
@@ -118,12 +145,11 @@ proxies:
     reality-opts:
       public-key: "ldAmsl3dqTCUBmlmA8CS9ZnpznP6cFWj9AxNddWnbxY"
       short-id: "1a2b3c4d5e6f7a8b"
-  - name: "🇷🇺 Россия БС 3"
+  - name: "🇷🇺 Россия БС 4"
     type: hysteria2
     server: "cdncache.pleiades.codes"
     port: 8443
     password: "e0b9fb0f-1bbd-478b-9580-c2294778338b"
-    sni: "cdncache.pleiades.codes"
 
 proxy-groups:
   - name: "PROXY"
@@ -132,14 +158,16 @@ proxy-groups:
       - "⚪ Авто БС"
       - "🌍 Страны БС"
       - "🇺🇸 США БС 1"
+      - "🇰🇷 Корея БС 1"
       - "🇷🇺 Россия БС 1"
       - "🇷🇺 Россия БС 2"
-      - "🇰🇷 Корея БС 1"
-      - "🇺🇸 США БС 2"
       - "🇳🇱 Нидерланды БС 1"
+      - "🇺🇸 США БС 2"
+      - "🇸🇪 Швеция БС 1"
       - "🇳🇱 Нидерланды БС 2"
-      - "🇳🇱 Нидерланды БС 3"
       - "🇷🇺 Россия БС 3"
+      - "🇳🇱 Нидерланды БС 3"
+      - "🇷🇺 Россия БС 4"
       - DIRECT
   - name: "⚪ Авто БС"
     type: url-test
@@ -148,33 +176,37 @@ proxy-groups:
     tolerance: 150
     proxies:
       - "🇺🇸 США БС 1"
+      - "🇰🇷 Корея БС 1"
       - "🇷🇺 Россия БС 1"
       - "🇷🇺 Россия БС 2"
-      - "🇰🇷 Корея БС 1"
-      - "🇺🇸 США БС 2"
       - "🇳🇱 Нидерланды БС 1"
+      - "🇺🇸 США БС 2"
+      - "🇸🇪 Швеция БС 1"
       - "🇳🇱 Нидерланды БС 2"
-      - "🇳🇱 Нидерланды БС 3"
       - "🇷🇺 Россия БС 3"
+      - "🇳🇱 Нидерланды БС 3"
+      - "🇷🇺 Россия БС 4"
   - name: "🌍 Страны БС"
     type: select
     proxies:
-      - "⚪ 🇳🇱 Нидерланды"
       - "⚪ 🇷🇺 Россия"
+      - "⚪ 🇳🇱 Нидерланды"
       - "⚪ 🇺🇸 США"
       - "⚪ 🇰🇷 Корея"
-  - name: "⚪ 🇳🇱 Нидерланды"
-    type: select
-    proxies:
-      - "🇳🇱 Нидерланды БС 1"
-      - "🇳🇱 Нидерланды БС 2"
-      - "🇳🇱 Нидерланды БС 3"
+      - "⚪ 🇸🇪 Швеция"
   - name: "⚪ 🇷🇺 Россия"
     type: select
     proxies:
       - "🇷🇺 Россия БС 1"
       - "🇷🇺 Россия БС 2"
       - "🇷🇺 Россия БС 3"
+      - "🇷🇺 Россия БС 4"
+  - name: "⚪ 🇳🇱 Нидерланды"
+    type: select
+    proxies:
+      - "🇳🇱 Нидерланды БС 1"
+      - "🇳🇱 Нидерланды БС 2"
+      - "🇳🇱 Нидерланды БС 3"
   - name: "⚪ 🇺🇸 США"
     type: select
     proxies:
@@ -184,6 +216,10 @@ proxy-groups:
     type: select
     proxies:
       - "🇰🇷 Корея БС 1"
+  - name: "⚪ 🇸🇪 Швеция"
+    type: select
+    proxies:
+      - "🇸🇪 Швеция БС 1"
 
 rules:
   - GEOIP,private,DIRECT,no-resolve

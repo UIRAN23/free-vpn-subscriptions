@@ -87,11 +87,11 @@
         "settings": {
           "vnext": [
             {
-              "address": "169.40.42.16",
+              "address": "172.236.233.59",
               "port": 443,
               "users": [
                 {
-                  "id": "d65cc14c-f53f-4fe2-b262-97856601319c",
+                  "id": "abd1c29a-94cb-4648-8d1e-5baae9d2a807",
                   "encryption": "none",
                   "flow": "xtls-rprx-vision"
                 }
@@ -104,9 +104,9 @@
           "tcpSettings": {},
           "security": "reality",
           "realitySettings": {
-            "serverName": "yahoo.com",
-            "publicKey": "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg",
-            "shortId": "c39cc7310a",
+            "serverName": "www.cloudflare.com",
+            "publicKey": "oTMDLwY2hloBfA7ShzVsrFhjL4QXR6mY32B93rMLxV0",
+            "shortId": "525e0ffc773f48ba",
             "fingerprint": "chrome"
           }
         },
@@ -140,7 +140,7 @@
             "serverName": "akamai.com",
             "publicKey": "-P8DgKISSG4jnLuj6ihZDqZs1_zt-juBrhVhTylHiAo",
             "shortId": "",
-            "fingerprint": "firefox"
+            "fingerprint": "chrome"
           }
         },
         "mux": {
@@ -173,7 +173,7 @@
             "serverName": "akamai.com",
             "publicKey": "-P8DgKISSG4jnLuj6ihZDqZs1_zt-juBrhVhTylHiAo",
             "shortId": "",
-            "fingerprint": "firefox"
+            "fingerprint": "chrome"
           }
         },
         "mux": {
@@ -181,11 +181,11 @@
         }
       },
       {
-        "tag": "bwl-005 🇪🇪 Эстония БС 1",
+        "tag": "bwl-005 🇷🇺 Россия БС 3",
         "protocol": "hysteria",
         "settings": {
-          "address": "91.240.87.46",
-          "port": 59448,
+          "address": "91.240.86.70",
+          "port": 22443,
           "version": 2
         },
         "streamSettings": {
@@ -208,7 +208,7 @@
         }
       },
       {
-        "tag": "bwl-006 🇷🇺 Россия БС 3",
+        "tag": "bwl-006 🇷🇺 Россия БС 4",
         "protocol": "vless",
         "settings": {
           "vnext": [
@@ -241,16 +241,16 @@
         }
       },
       {
-        "tag": "bwl-007 🇷🇺 Россия БС 4",
+        "tag": "bwl-007 🇳🇱 Нидерланды БС 1",
         "protocol": "vless",
         "settings": {
           "vnext": [
             {
-              "address": "217.16.31.162",
-              "port": 443,
+              "address": "85.198.70.200",
+              "port": 14406,
               "users": [
                 {
-                  "id": "af9c2bcf-fe68-4379-9c78-6e5f1b4af0e2",
+                  "id": "237f91bf-102e-4077-8cc3-baebccb42936",
                   "encryption": "none",
                   "flow": "xtls-rprx-vision"
                 }
@@ -263,9 +263,9 @@
           "tcpSettings": {},
           "security": "reality",
           "realitySettings": {
-            "serverName": "max.ru",
-            "publicKey": "SHIYN7zN9aFVxwKK-bIvDbhUgtHvlBhDi1qSl2sWwRw",
-            "shortId": "e7",
+            "serverName": "vk.ru",
+            "publicKey": "ldAmsl3dqTCUBmlmA8CS9ZnpznP6cFWj9AxNddWnbxY",
+            "shortId": "1a2b3c4d5e6f7a8b",
             "fingerprint": "firefox"
           }
         },
@@ -274,32 +274,26 @@
         }
       },
       {
-        "tag": "bwl-008 🇷🇺 Россия БС 5",
-        "protocol": "vless",
+        "tag": "bwl-008 🇪🇪 Эстония БС 1",
+        "protocol": "hysteria",
         "settings": {
-          "vnext": [
-            {
-              "address": "217.16.31.162",
-              "port": 443,
-              "users": [
-                {
-                  "id": "af9c2bcf-fe68-4379-9c78-6e5f1b4af0e2",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
+          "address": "91.240.87.46",
+          "port": 59448,
+          "version": 2
         },
         "streamSettings": {
-          "network": "tcp",
-          "tcpSettings": {},
-          "security": "reality",
-          "realitySettings": {
-            "serverName": "max.ru",
-            "publicKey": "SHIYN7zN9aFVxwKK-bIvDbhUgtHvlBhDi1qSl2sWwRw",
-            "shortId": "e7",
-            "fingerprint": "edge"
+          "network": "hysteria",
+          "hysteriaSettings": {
+            "version": 2,
+            "auth": "5beff945-adaa-492f-85c6-8aaf5df6cfa5"
+          },
+          "security": "tls",
+          "tlsSettings": {
+            "serverName": "hy.quattro-tech.ru",
+            "fingerprint": "firefox",
+            "alpn": [
+              "h3"
+            ]
           }
         },
         "mux": {
@@ -753,11 +747,11 @@
         "settings": {
           "vnext": [
             {
-              "address": "169.40.42.16",
+              "address": "172.236.233.59",
               "port": 443,
               "users": [
                 {
-                  "id": "d65cc14c-f53f-4fe2-b262-97856601319c",
+                  "id": "abd1c29a-94cb-4648-8d1e-5baae9d2a807",
                   "encryption": "none",
                   "flow": "xtls-rprx-vision"
                 }
@@ -770,9 +764,9 @@
           "tcpSettings": {},
           "security": "reality",
           "realitySettings": {
-            "serverName": "yahoo.com",
-            "publicKey": "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg",
-            "shortId": "c39cc7310a",
+            "serverName": "www.cloudflare.com",
+            "publicKey": "oTMDLwY2hloBfA7ShzVsrFhjL4QXR6mY32B93rMLxV0",
+            "shortId": "525e0ffc773f48ba",
             "fingerprint": "chrome"
           }
         },
@@ -997,7 +991,7 @@
             "serverName": "akamai.com",
             "publicKey": "-P8DgKISSG4jnLuj6ihZDqZs1_zt-juBrhVhTylHiAo",
             "shortId": "",
-            "fingerprint": "firefox"
+            "fingerprint": "chrome"
           }
         },
         "mux": {
@@ -1221,7 +1215,7 @@
             "serverName": "akamai.com",
             "publicKey": "-P8DgKISSG4jnLuj6ihZDqZs1_zt-juBrhVhTylHiAo",
             "shortId": "",
-            "fingerprint": "firefox"
+            "fingerprint": "chrome"
           }
         },
         "mux": {
@@ -1371,7 +1365,7 @@
     }
   },
   {
-    "remarks": "🇪🇪 Эстония БС 1",
+    "remarks": "🇷🇺 Россия БС 3",
     "dns": {
       "servers": [
         "1.1.1.1",
@@ -1423,8 +1417,8 @@
         "tag": "proxy",
         "protocol": "hysteria",
         "settings": {
-          "address": "91.240.87.46",
-          "port": 59448,
+          "address": "91.240.86.70",
+          "port": 22443,
           "version": 2
         },
         "streamSettings": {
@@ -1589,7 +1583,7 @@
     }
   },
   {
-    "remarks": "🇷🇺 Россия БС 3",
+    "remarks": "🇷🇺 Россия БС 4",
     "dns": {
       "servers": [
         "1.1.1.1",
@@ -1813,7 +1807,7 @@
     }
   },
   {
-    "remarks": "🇷🇺 Россия БС 4",
+    "remarks": "🇳🇱 Нидерланды БС 1",
     "dns": {
       "servers": [
         "1.1.1.1",
@@ -1867,11 +1861,11 @@
         "settings": {
           "vnext": [
             {
-              "address": "217.16.31.162",
-              "port": 443,
+              "address": "85.198.70.200",
+              "port": 14406,
               "users": [
                 {
-                  "id": "af9c2bcf-fe68-4379-9c78-6e5f1b4af0e2",
+                  "id": "237f91bf-102e-4077-8cc3-baebccb42936",
                   "encryption": "none",
                   "flow": "xtls-rprx-vision"
                 }
@@ -1884,9 +1878,9 @@
           "tcpSettings": {},
           "security": "reality",
           "realitySettings": {
-            "serverName": "max.ru",
-            "publicKey": "SHIYN7zN9aFVxwKK-bIvDbhUgtHvlBhDi1qSl2sWwRw",
-            "shortId": "e7",
+            "serverName": "vk.ru",
+            "publicKey": "ldAmsl3dqTCUBmlmA8CS9ZnpznP6cFWj9AxNddWnbxY",
+            "shortId": "1a2b3c4d5e6f7a8b",
             "fingerprint": "firefox"
           }
         },
@@ -2037,7 +2031,7 @@
     }
   },
   {
-    "remarks": "🇷🇺 Россия БС 5",
+    "remarks": "🇪🇪 Эстония БС 1",
     "dns": {
       "servers": [
         "1.1.1.1",
@@ -2087,31 +2081,25 @@
     "outbounds": [
       {
         "tag": "proxy",
-        "protocol": "vless",
+        "protocol": "hysteria",
         "settings": {
-          "vnext": [
-            {
-              "address": "217.16.31.162",
-              "port": 443,
-              "users": [
-                {
-                  "id": "af9c2bcf-fe68-4379-9c78-6e5f1b4af0e2",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
+          "address": "91.240.87.46",
+          "port": 59448,
+          "version": 2
         },
         "streamSettings": {
-          "network": "tcp",
-          "tcpSettings": {},
-          "security": "reality",
-          "realitySettings": {
-            "serverName": "max.ru",
-            "publicKey": "SHIYN7zN9aFVxwKK-bIvDbhUgtHvlBhDi1qSl2sWwRw",
-            "shortId": "e7",
-            "fingerprint": "edge"
+          "network": "hysteria",
+          "hysteriaSettings": {
+            "version": 2,
+            "auth": "5beff945-adaa-492f-85c6-8aaf5df6cfa5"
+          },
+          "security": "tls",
+          "tlsSettings": {
+            "serverName": "hy.quattro-tech.ru",
+            "fingerprint": "firefox",
+            "alpn": [
+              "h3"
+            ]
           }
         },
         "mux": {

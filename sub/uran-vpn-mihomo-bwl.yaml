@@ -2,8 +2,8 @@
 # profile-update-interval: 1
 # subscription-userinfo: upload=0; download=0; total=0
 # profile-web-page-url: https://uiran23.github.io/free-vpn-subscriptions/
-# Обновлено: 2026-09-09 00:44 UTC
-# Серверов: 11
+# Обновлено: 2026-09-09 04:38 UTC
+# Серверов: 8
 
 mixed-port: 7890
 allow-lan: false
@@ -42,33 +42,19 @@ proxies:
       short-id: "c39cc7310a"
   - name: "🇷🇺 Россия БС 1"
     type: vless
-    server: "45.131.212.30"
-    port: 443
-    uuid: "db9da8fb-c528-42ec-9b9e-e578cf934c04"
+    server: "78.159.247.166"
+    port: 7444
+    uuid: "0764541b-3e57-4b47-954b-51e996fae5fc"
     udp: true
     network: "tcp"
     tls: true
     flow: "xtls-rprx-vision"
-    servername: "sellflow.org"
+    servername: "akamai.com"
     client-fingerprint: "firefox"
     reality-opts:
-      public-key: "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc"
+      public-key: "-P8DgKISSG4jnLuj6ihZDqZs1_zt-juBrhVhTylHiAo"
       short-id: ""
   - name: "🇷🇺 Россия БС 2"
-    type: vless
-    server: "45.131.212.37"
-    port: 443
-    uuid: "db9da8fb-c528-42ec-9b9e-e578cf934c04"
-    udp: true
-    network: "tcp"
-    tls: true
-    flow: "xtls-rprx-vision"
-    servername: "sellflow.org"
-    client-fingerprint: "safari"
-    reality-opts:
-      public-key: "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc"
-      short-id: ""
-  - name: "🇷🇺 Россия БС 3"
     type: vless
     server: "78.159.247.123"
     port: 7444
@@ -78,66 +64,17 @@ proxies:
     tls: true
     flow: "xtls-rprx-vision"
     servername: "akamai.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "-P8DgKISSG4jnLuj6ihZDqZs1_zt-juBrhVhTylHiAo"
-      short-id: ""
-  - name: "🇷🇺 Россия БС 4"
-    type: vless
-    server: "78.159.247.166"
-    port: 7444
-    uuid: "0764541b-3e57-4b47-954b-51e996fae5fc"
-    udp: true
-    network: "tcp"
-    tls: true
-    flow: "xtls-rprx-vision"
-    servername: "akamai.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "-P8DgKISSG4jnLuj6ihZDqZs1_zt-juBrhVhTylHiAo"
-      short-id: ""
-  - name: "🇹🇷 Турция БС 1"
-    type: vless
-    server: "151.241.226.201"
-    port: 2053
-    uuid: "e691b034-dfc9-4f22-80aa-6d4f6404a4df"
-    udp: true
-    network: "tcp"
-    tls: true
-    servername: "www.apple.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "k5COjpopVNGzEuMb457zCrrZegSdBX-d8bg0G6HDsE4"
-      short-id: "9bd613c48251f0db"
-  - name: "🇷🇺 Россия БС 5"
-    type: vless
-    server: "78.159.247.153"
-    port: 443
-    uuid: "0764541b-3e57-4b47-954b-51e996fae5fc"
-    udp: true
-    network: "tcp"
-    tls: true
-    flow: "xtls-rprx-vision"
-    servername: "on.mcufa.pro"
     client-fingerprint: "firefox"
     reality-opts:
       public-key: "-P8DgKISSG4jnLuj6ihZDqZs1_zt-juBrhVhTylHiAo"
       short-id: ""
-  - name: "🇷🇺 Россия БС 6"
-    type: vless
-    server: "78.159.247.213"
-    port: 443
-    uuid: "0764541b-3e57-4b47-954b-51e996fae5fc"
-    udp: true
-    network: "tcp"
-    tls: true
-    flow: "xtls-rprx-vision"
-    servername: "on.mcufa.pro"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "-P8DgKISSG4jnLuj6ihZDqZs1_zt-juBrhVhTylHiAo"
-      short-id: ""
-  - name: "🇷🇺 Россия БС 7"
+  - name: "🇪🇪 Эстония БС 1"
+    type: hysteria2
+    server: "91.240.87.46"
+    port: 59448
+    password: "5beff945-adaa-492f-85c6-8aaf5df6cfa5"
+    sni: "hy.quattro-tech.ru"
+  - name: "🇷🇺 Россия БС 3"
     type: vless
     server: "45.12.75.242"
     port: 26424
@@ -146,16 +83,38 @@ proxies:
     network: "tcp"
     tls: true
     servername: "ya.ru"
-    client-fingerprint: "chrome"
+    client-fingerprint: "qq"
     reality-opts:
       public-key: "l8AubqcxQO-HRFJy4pZL1vbLOo-eXit69s-XulSELE0"
       short-id: "23103e1e"
-  - name: "🇷🇺 Россия БС 8"
-    type: hysteria2
-    server: "cdncache.pleiades.codes"
-    port: 8443
-    password: "e0b9fb0f-1bbd-478b-9580-c2294778338b"
-    sni: "cdncache.pleiades.codes"
+  - name: "🇷🇺 Россия БС 4"
+    type: vless
+    server: "217.16.31.162"
+    port: 443
+    uuid: "af9c2bcf-fe68-4379-9c78-6e5f1b4af0e2"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "max.ru"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "SHIYN7zN9aFVxwKK-bIvDbhUgtHvlBhDi1qSl2sWwRw"
+      short-id: "e7"
+  - name: "🇷🇺 Россия БС 5"
+    type: vless
+    server: "217.16.31.162"
+    port: 443
+    uuid: "af9c2bcf-fe68-4379-9c78-6e5f1b4af0e2"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "max.ru"
+    client-fingerprint: "edge"
+    reality-opts:
+      public-key: "SHIYN7zN9aFVxwKK-bIvDbhUgtHvlBhDi1qSl2sWwRw"
+      short-id: "e7"
 
 proxy-groups:
   - name: "PROXY"
@@ -167,13 +126,10 @@ proxy-groups:
       - "🇺🇸 США БС 2"
       - "🇷🇺 Россия БС 1"
       - "🇷🇺 Россия БС 2"
+      - "🇪🇪 Эстония БС 1"
       - "🇷🇺 Россия БС 3"
       - "🇷🇺 Россия БС 4"
-      - "🇹🇷 Турция БС 1"
       - "🇷🇺 Россия БС 5"
-      - "🇷🇺 Россия БС 6"
-      - "🇷🇺 Россия БС 7"
-      - "🇷🇺 Россия БС 8"
       - DIRECT
   - name: "⚪ Авто БС"
     type: url-test
@@ -185,19 +141,16 @@ proxy-groups:
       - "🇺🇸 США БС 2"
       - "🇷🇺 Россия БС 1"
       - "🇷🇺 Россия БС 2"
+      - "🇪🇪 Эстония БС 1"
       - "🇷🇺 Россия БС 3"
       - "🇷🇺 Россия БС 4"
-      - "🇹🇷 Турция БС 1"
       - "🇷🇺 Россия БС 5"
-      - "🇷🇺 Россия БС 6"
-      - "🇷🇺 Россия БС 7"
-      - "🇷🇺 Россия БС 8"
   - name: "🌍 Страны БС"
     type: select
     proxies:
       - "⚪ 🇷🇺 Россия"
       - "⚪ 🇺🇸 США"
-      - "⚪ 🇹🇷 Турция"
+      - "⚪ 🇪🇪 Эстония"
   - name: "⚪ 🇷🇺 Россия"
     type: select
     proxies:
@@ -206,18 +159,15 @@ proxy-groups:
       - "🇷🇺 Россия БС 3"
       - "🇷🇺 Россия БС 4"
       - "🇷🇺 Россия БС 5"
-      - "🇷🇺 Россия БС 6"
-      - "🇷🇺 Россия БС 7"
-      - "🇷🇺 Россия БС 8"
   - name: "⚪ 🇺🇸 США"
     type: select
     proxies:
       - "🇺🇸 США БС 1"
       - "🇺🇸 США БС 2"
-  - name: "⚪ 🇹🇷 Турция"
+  - name: "⚪ 🇪🇪 Эстония"
     type: select
     proxies:
-      - "🇹🇷 Турция БС 1"
+      - "🇪🇪 Эстония БС 1"
 
 rules:
   - GEOIP,private,DIRECT,no-resolve

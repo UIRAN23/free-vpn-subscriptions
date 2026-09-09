@@ -2,7 +2,7 @@
 # profile-update-interval: 1
 # subscription-userinfo: upload=0; download=0; total=0
 # profile-web-page-url: https://uiran23.github.io/free-vpn-subscriptions/
-# Обновлено: 2026-09-09 00:12 UTC
+# Обновлено: 2026-09-09 00:44 UTC
 # Серверов: 11
 
 mixed-port: 7890
@@ -42,6 +42,20 @@ proxies:
       short-id: "c39cc7310a"
   - name: "🇷🇺 Россия БС 1"
     type: vless
+    server: "45.131.212.30"
+    port: 443
+    uuid: "db9da8fb-c528-42ec-9b9e-e578cf934c04"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "sellflow.org"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc"
+      short-id: ""
+  - name: "🇷🇺 Россия БС 2"
+    type: vless
     server: "45.131.212.37"
     port: 443
     uuid: "db9da8fb-c528-42ec-9b9e-e578cf934c04"
@@ -51,20 +65,6 @@ proxies:
     flow: "xtls-rprx-vision"
     servername: "sellflow.org"
     client-fingerprint: "safari"
-    reality-opts:
-      public-key: "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc"
-      short-id: ""
-  - name: "🇷🇺 Россия БС 2"
-    type: vless
-    server: "45.131.212.30"
-    port: 443
-    uuid: "db9da8fb-c528-42ec-9b9e-e578cf934c04"
-    udp: true
-    network: "tcp"
-    tls: true
-    flow: "xtls-rprx-vision"
-    servername: "sellflow.org"
-    client-fingerprint: "chrome"
     reality-opts:
       public-key: "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc"
       short-id: ""
@@ -92,21 +92,7 @@ proxies:
     tls: true
     flow: "xtls-rprx-vision"
     servername: "akamai.com"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "-P8DgKISSG4jnLuj6ihZDqZs1_zt-juBrhVhTylHiAo"
-      short-id: ""
-  - name: "🇷🇺 Россия БС 5"
-    type: vless
-    server: "78.159.247.153"
-    port: 443
-    uuid: "0764541b-3e57-4b47-954b-51e996fae5fc"
-    udp: true
-    network: "tcp"
-    tls: true
-    flow: "xtls-rprx-vision"
-    servername: "on.mcufa.pro"
-    client-fingerprint: "firefox"
+    client-fingerprint: "chrome"
     reality-opts:
       public-key: "-P8DgKISSG4jnLuj6ihZDqZs1_zt-juBrhVhTylHiAo"
       short-id: ""
@@ -123,23 +109,34 @@ proxies:
     reality-opts:
       public-key: "k5COjpopVNGzEuMb457zCrrZegSdBX-d8bg0G6HDsE4"
       short-id: "9bd613c48251f0db"
-  - name: "🇷🇺 Россия БС 6"
-    type: hysteria2
-    server: "cdncache.pleiades.codes"
-    port: 8443
-    password: "e0b9fb0f-1bbd-478b-9580-c2294778338b"
-  - name: "🇩🇪 Германия БС 1"
+  - name: "🇷🇺 Россия БС 5"
     type: vless
-    server: "185.241.195.146"
+    server: "78.159.247.153"
     port: 443
-    uuid: "da0e9ed5-762f-40f2-9b34-6a00b2b42876"
+    uuid: "0764541b-3e57-4b47-954b-51e996fae5fc"
     udp: true
-    network: "ws"
+    network: "tcp"
     tls: true
-    servername: "dostavka.stroymatdv.cc"
-    client-fingerprint: "edge"
-    ws-opts:
-      path: "/e7ws"
+    flow: "xtls-rprx-vision"
+    servername: "on.mcufa.pro"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "-P8DgKISSG4jnLuj6ihZDqZs1_zt-juBrhVhTylHiAo"
+      short-id: ""
+  - name: "🇷🇺 Россия БС 6"
+    type: vless
+    server: "78.159.247.213"
+    port: 443
+    uuid: "0764541b-3e57-4b47-954b-51e996fae5fc"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "on.mcufa.pro"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "-P8DgKISSG4jnLuj6ihZDqZs1_zt-juBrhVhTylHiAo"
+      short-id: ""
   - name: "🇷🇺 Россия БС 7"
     type: vless
     server: "45.12.75.242"
@@ -153,6 +150,12 @@ proxies:
     reality-opts:
       public-key: "l8AubqcxQO-HRFJy4pZL1vbLOo-eXit69s-XulSELE0"
       short-id: "23103e1e"
+  - name: "🇷🇺 Россия БС 8"
+    type: hysteria2
+    server: "cdncache.pleiades.codes"
+    port: 8443
+    password: "e0b9fb0f-1bbd-478b-9580-c2294778338b"
+    sni: "cdncache.pleiades.codes"
 
 proxy-groups:
   - name: "PROXY"
@@ -166,11 +169,11 @@ proxy-groups:
       - "🇷🇺 Россия БС 2"
       - "🇷🇺 Россия БС 3"
       - "🇷🇺 Россия БС 4"
-      - "🇷🇺 Россия БС 5"
       - "🇹🇷 Турция БС 1"
+      - "🇷🇺 Россия БС 5"
       - "🇷🇺 Россия БС 6"
-      - "🇩🇪 Германия БС 1"
       - "🇷🇺 Россия БС 7"
+      - "🇷🇺 Россия БС 8"
       - DIRECT
   - name: "⚪ Авто БС"
     type: url-test
@@ -184,17 +187,16 @@ proxy-groups:
       - "🇷🇺 Россия БС 2"
       - "🇷🇺 Россия БС 3"
       - "🇷🇺 Россия БС 4"
-      - "🇷🇺 Россия БС 5"
       - "🇹🇷 Турция БС 1"
+      - "🇷🇺 Россия БС 5"
       - "🇷🇺 Россия БС 6"
-      - "🇩🇪 Германия БС 1"
       - "🇷🇺 Россия БС 7"
+      - "🇷🇺 Россия БС 8"
   - name: "🌍 Страны БС"
     type: select
     proxies:
       - "⚪ 🇷🇺 Россия"
       - "⚪ 🇺🇸 США"
-      - "⚪ 🇩🇪 Германия"
       - "⚪ 🇹🇷 Турция"
   - name: "⚪ 🇷🇺 Россия"
     type: select
@@ -206,15 +208,12 @@ proxy-groups:
       - "🇷🇺 Россия БС 5"
       - "🇷🇺 Россия БС 6"
       - "🇷🇺 Россия БС 7"
+      - "🇷🇺 Россия БС 8"
   - name: "⚪ 🇺🇸 США"
     type: select
     proxies:
       - "🇺🇸 США БС 1"
       - "🇺🇸 США БС 2"
-  - name: "⚪ 🇩🇪 Германия"
-    type: select
-    proxies:
-      - "🇩🇪 Германия БС 1"
   - name: "⚪ 🇹🇷 Турция"
     type: select
     proxies:

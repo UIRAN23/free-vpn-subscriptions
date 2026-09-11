@@ -47,13 +47,16 @@
       "outbounds": [
         "auto-bwl",
         "🇳🇱 Нидерланды",
-        "🇺🇸 США",
         "🇷🇺 Россия",
+        "🇺🇸 США",
+        "🇸🇪 Швеция",
         "🇺🇸 США БС 1",
         "🇺🇸 США БС 2",
         "🇳🇱 Нидерланды БС 1",
-        "🇷🇺 Россия БС 1",
         "🇳🇱 Нидерланды БС 2",
+        "🇷🇺 Россия БС 1",
+        "🇷🇺 Россия БС 2",
+        "🇸🇪 Швеция БС 1",
         "🇳🇱 Нидерланды БС 3"
       ]
     },
@@ -64,8 +67,10 @@
         "🇺🇸 США БС 1",
         "🇺🇸 США БС 2",
         "🇳🇱 Нидерланды БС 1",
-        "🇷🇺 Россия БС 1",
         "🇳🇱 Нидерланды БС 2",
+        "🇷🇺 Россия БС 1",
+        "🇷🇺 Россия БС 2",
+        "🇸🇪 Швеция БС 1",
         "🇳🇱 Нидерланды БС 3"
       ],
       "url": "https://www.gstatic.com/generate_204",
@@ -86,6 +91,17 @@
     },
     {
       "type": "urltest",
+      "tag": "🇷🇺 Россия",
+      "outbounds": [
+        "🇷🇺 Россия БС 1",
+        "🇷🇺 Россия БС 2"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "5m",
+      "tolerance": 150
+    },
+    {
+      "type": "urltest",
       "tag": "🇺🇸 США",
       "outbounds": [
         "🇺🇸 США БС 1",
@@ -97,9 +113,9 @@
     },
     {
       "type": "urltest",
-      "tag": "🇷🇺 Россия",
+      "tag": "🇸🇪 Швеция",
       "outbounds": [
-        "🇷🇺 Россия БС 1"
+        "🇸🇪 Швеция БС 1"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "5m",
@@ -165,7 +181,7 @@
         "server_name": "public.betust.net",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "edge"
         },
         "reality": {
           "enabled": true,
@@ -174,26 +190,6 @@
         }
       },
       "flow": "xtls-rprx-vision"
-    },
-    {
-      "type": "vless",
-      "tag": "🇷🇺 Россия БС 1",
-      "server": "45.12.75.242",
-      "server_port": 26424,
-      "uuid": "633f424e-2b11-48da-a6b3-a849dd71456f",
-      "tls": {
-        "enabled": true,
-        "server_name": "ya.ru",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "l8AubqcxQO-HRFJy4pZL1vbLOo-eXit69s-XulSELE0",
-          "short_id": "23103e1e"
-        }
-      }
     },
     {
       "type": "vless",
@@ -215,6 +211,59 @@
         }
       },
       "flow": "xtls-rprx-vision"
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇷🇺 Россия БС 1",
+      "server": "msk.frkn.org",
+      "server_port": 443,
+      "password": "f317b5d6-d399-4d3d-a051-89d674ae953c",
+      "tls": {
+        "enabled": true,
+        "server_name": "msk.frkn.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇷🇺 Россия БС 2",
+      "server": "45.12.75.242",
+      "server_port": 26424,
+      "uuid": "633f424e-2b11-48da-a6b3-a849dd71456f",
+      "tls": {
+        "enabled": true,
+        "server_name": "ya.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "l8AubqcxQO-HRFJy4pZL1vbLOo-eXit69s-XulSELE0",
+          "short_id": "23103e1e"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇸🇪 Швеция БС 1",
+      "server": "185.178.208.176",
+      "server_port": 443,
+      "uuid": "7ae3f794-729a-4862-b7b4-a3d3db92ec2e",
+      "tls": {
+        "enabled": true,
+        "server_name": "founders-blog.online",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/stream/615428/socket",
+        "headers": {
+          "Host": "founders-blog.online"
+        }
+      }
     },
     {
       "type": "vless",

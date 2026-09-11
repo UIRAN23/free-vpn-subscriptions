@@ -47,13 +47,14 @@
       "outbounds": [
         "auto-bwl",
         "🇳🇱 Нидерланды",
-        "🇷🇺 Россия",
         "🇺🇸 США",
+        "🇷🇺 Россия",
         "🇺🇸 США БС 1",
-        "🇷🇺 Россия БС 1",
-        "🇷🇺 Россия БС 2",
+        "🇺🇸 США БС 2",
         "🇳🇱 Нидерланды БС 1",
-        "🇳🇱 Нидерланды БС 2"
+        "🇷🇺 Россия БС 1",
+        "🇳🇱 Нидерланды БС 2",
+        "🇳🇱 Нидерланды БС 3"
       ]
     },
     {
@@ -61,10 +62,11 @@
       "tag": "auto-bwl",
       "outbounds": [
         "🇺🇸 США БС 1",
-        "🇷🇺 Россия БС 1",
-        "🇷🇺 Россия БС 2",
+        "🇺🇸 США БС 2",
         "🇳🇱 Нидерланды БС 1",
-        "🇳🇱 Нидерланды БС 2"
+        "🇷🇺 Россия БС 1",
+        "🇳🇱 Нидерланды БС 2",
+        "🇳🇱 Нидерланды БС 3"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "5m",
@@ -75,18 +77,8 @@
       "tag": "🇳🇱 Нидерланды",
       "outbounds": [
         "🇳🇱 Нидерланды БС 1",
-        "🇳🇱 Нидерланды БС 2"
-      ],
-      "url": "https://www.gstatic.com/generate_204",
-      "interval": "5m",
-      "tolerance": 150
-    },
-    {
-      "type": "urltest",
-      "tag": "🇷🇺 Россия",
-      "outbounds": [
-        "🇷🇺 Россия БС 1",
-        "🇷🇺 Россия БС 2"
+        "🇳🇱 Нидерланды БС 2",
+        "🇳🇱 Нидерланды БС 3"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "5m",
@@ -96,7 +88,18 @@
       "type": "urltest",
       "tag": "🇺🇸 США",
       "outbounds": [
-        "🇺🇸 США БС 1"
+        "🇺🇸 США БС 1",
+        "🇺🇸 США БС 2"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "5m",
+      "tolerance": 150
+    },
+    {
+      "type": "urltest",
+      "tag": "🇷🇺 Россия",
+      "outbounds": [
+        "🇷🇺 Россия БС 1"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "5m",
@@ -132,19 +135,49 @@
       "flow": "xtls-rprx-vision"
     },
     {
-      "type": "hysteria2",
-      "tag": "🇷🇺 Россия БС 1",
-      "server": "msk.frkn.org",
-      "server_port": 443,
-      "password": "f317b5d6-d399-4d3d-a051-89d674ae953c",
+      "type": "vless",
+      "tag": "🇺🇸 США БС 2",
+      "server": "107.173.237.146",
+      "server_port": 8443,
+      "uuid": "1d39f715-2740-4d99-bc3b-197cc48dcee7",
       "tls": {
         "enabled": true,
-        "server_name": "msk.frkn.org"
+        "server_name": "updates.cdn-apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "D3ojIs3AUKP_tV0E4TEjh90HBVJp24Nq3qMfdxD30kc",
+          "short_id": "df8611c07d"
+        }
       }
     },
     {
       "type": "vless",
-      "tag": "🇷🇺 Россия БС 2",
+      "tag": "🇳🇱 Нидерланды БС 1",
+      "server": "188.225.58.153",
+      "server_port": 443,
+      "uuid": "02722550-1915-4629-a653-cbe95e594f70",
+      "tls": {
+        "enabled": true,
+        "server_name": "public.betust.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "j4F4oe2w0O7oqpWeUSa44C9FdBHZEH5fTiXBvEVLIyk",
+          "short_id": "c51d359c"
+        }
+      },
+      "flow": "xtls-rprx-vision"
+    },
+    {
+      "type": "vless",
+      "tag": "🇷🇺 Россия БС 1",
       "server": "45.12.75.242",
       "server_port": 26424,
       "uuid": "633f424e-2b11-48da-a6b3-a849dd71456f",
@@ -164,7 +197,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇳🇱 Нидерланды БС 1",
+      "tag": "🇳🇱 Нидерланды БС 2",
       "server": "85.198.70.200",
       "server_port": 14406,
       "uuid": "237f91bf-102e-4077-8cc3-baebccb42936",
@@ -185,7 +218,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇳🇱 Нидерланды БС 2",
+      "tag": "🇳🇱 Нидерланды БС 3",
       "server": "185.141.227.155",
       "server_port": 20002,
       "uuid": "2b3e8750-b944-42fc-b36e-ec2c64b48a98",

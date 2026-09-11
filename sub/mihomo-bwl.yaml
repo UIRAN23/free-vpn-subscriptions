@@ -2,8 +2,8 @@
 # profile-update-interval: 1
 # subscription-userinfo: upload=0; download=0; total=0
 # profile-web-page-url: https://uiran23.github.io/free-vpn-subscriptions/
-# Обновлено: 2026-09-11 14:24 UTC
-# Серверов: 5
+# Обновлено: 2026-09-11 16:45 UTC
+# Серверов: 6
 
 mixed-port: 7890
 allow-lan: false
@@ -26,12 +26,34 @@ proxies:
     reality-opts:
       public-key: "Svl81isn16RPAFnjtmYw7A6TPnsEPLHuYYaJht65Rzc"
       short-id: ""
-  - name: "🇷🇺 Россия БС 1"
-    type: hysteria2
-    server: "msk.frkn.org"
+  - name: "🇺🇸 США БС 2"
+    type: vless
+    server: "107.173.237.146"
+    port: 8443
+    uuid: "1d39f715-2740-4d99-bc3b-197cc48dcee7"
+    udp: true
+    network: "tcp"
+    tls: true
+    servername: "updates.cdn-apple.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "D3ojIs3AUKP_tV0E4TEjh90HBVJp24Nq3qMfdxD30kc"
+      short-id: "df8611c07d"
+  - name: "🇳🇱 Нидерланды БС 1"
+    type: vless
+    server: "188.225.58.153"
     port: 443
-    password: "f317b5d6-d399-4d3d-a051-89d674ae953c"
-  - name: "🇷🇺 Россия БС 2"
+    uuid: "02722550-1915-4629-a653-cbe95e594f70"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "public.betust.net"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "j4F4oe2w0O7oqpWeUSa44C9FdBHZEH5fTiXBvEVLIyk"
+      short-id: "c51d359c"
+  - name: "🇷🇺 Россия БС 1"
     type: vless
     server: "45.12.75.242"
     port: 26424
@@ -44,7 +66,7 @@ proxies:
     reality-opts:
       public-key: "l8AubqcxQO-HRFJy4pZL1vbLOo-eXit69s-XulSELE0"
       short-id: "23103e1e"
-  - name: "🇳🇱 Нидерланды БС 1"
+  - name: "🇳🇱 Нидерланды БС 2"
     type: vless
     server: "85.198.70.200"
     port: 14406
@@ -58,7 +80,7 @@ proxies:
     reality-opts:
       public-key: "ldAmsl3dqTCUBmlmA8CS9ZnpznP6cFWj9AxNddWnbxY"
       short-id: "1a2b3c4d5e6f7a8b"
-  - name: "🇳🇱 Нидерланды БС 2"
+  - name: "🇳🇱 Нидерланды БС 3"
     type: vless
     server: "185.141.227.155"
     port: 20002
@@ -80,10 +102,11 @@ proxy-groups:
       - "⚪ Авто БС"
       - "🌍 Страны БС"
       - "🇺🇸 США БС 1"
-      - "🇷🇺 Россия БС 1"
-      - "🇷🇺 Россия БС 2"
+      - "🇺🇸 США БС 2"
       - "🇳🇱 Нидерланды БС 1"
+      - "🇷🇺 Россия БС 1"
       - "🇳🇱 Нидерланды БС 2"
+      - "🇳🇱 Нидерланды БС 3"
       - DIRECT
   - name: "⚪ Авто БС"
     type: url-test
@@ -92,30 +115,32 @@ proxy-groups:
     tolerance: 150
     proxies:
       - "🇺🇸 США БС 1"
-      - "🇷🇺 Россия БС 1"
-      - "🇷🇺 Россия БС 2"
+      - "🇺🇸 США БС 2"
       - "🇳🇱 Нидерланды БС 1"
+      - "🇷🇺 Россия БС 1"
       - "🇳🇱 Нидерланды БС 2"
+      - "🇳🇱 Нидерланды БС 3"
   - name: "🌍 Страны БС"
     type: select
     proxies:
       - "⚪ 🇳🇱 Нидерланды"
-      - "⚪ 🇷🇺 Россия"
       - "⚪ 🇺🇸 США"
+      - "⚪ 🇷🇺 Россия"
   - name: "⚪ 🇳🇱 Нидерланды"
     type: select
     proxies:
       - "🇳🇱 Нидерланды БС 1"
       - "🇳🇱 Нидерланды БС 2"
-  - name: "⚪ 🇷🇺 Россия"
-    type: select
-    proxies:
-      - "🇷🇺 Россия БС 1"
-      - "🇷🇺 Россия БС 2"
+      - "🇳🇱 Нидерланды БС 3"
   - name: "⚪ 🇺🇸 США"
     type: select
     proxies:
       - "🇺🇸 США БС 1"
+      - "🇺🇸 США БС 2"
+  - name: "⚪ 🇷🇺 Россия"
+    type: select
+    proxies:
+      - "🇷🇺 Россия БС 1"
 
 rules:
   - GEOIP,private,DIRECT,no-resolve

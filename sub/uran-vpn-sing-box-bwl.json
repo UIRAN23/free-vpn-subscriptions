@@ -46,26 +46,23 @@
       "tag": "proxy",
       "outbounds": [
         "auto-bwl",
-        "🇩🇪 Германия",
         "🇷🇺 Россия",
-        "🇳🇱 Нидерланды",
         "🇺🇸 США",
+        "🇩🇪 Германия",
         "🇪🇪 Эстония",
         "🇱🇹 Литва",
+        "🇳🇱 Нидерланды",
         "🇺🇸 США БС 1",
         "🇺🇸 США БС 2",
         "🇩🇪 Германия БС 1",
-        "🇩🇪 Германия БС 2",
-        "🇩🇪 Германия БС 3",
         "🇷🇺 Россия БС 1",
         "🇪🇪 Эстония БС 1",
-        "🇳🇱 Нидерланды БС 1",
         "🇷🇺 Россия БС 2",
-        "🇱🇹 Литва БС 1",
-        "🇩🇪 Германия БС 4",
-        "🇳🇱 Нидерланды БС 2",
         "🇷🇺 Россия БС 3",
-        "🇷🇺 Россия БС 4"
+        "🇱🇹 Литва БС 1",
+        "🇳🇱 Нидерланды БС 1",
+        "🇷🇺 Россия БС 4",
+        "🇷🇺 Россия БС 5"
       ]
     },
     {
@@ -75,30 +72,14 @@
         "🇺🇸 США БС 1",
         "🇺🇸 США БС 2",
         "🇩🇪 Германия БС 1",
-        "🇩🇪 Германия БС 2",
-        "🇩🇪 Германия БС 3",
         "🇷🇺 Россия БС 1",
         "🇪🇪 Эстония БС 1",
-        "🇳🇱 Нидерланды БС 1",
         "🇷🇺 Россия БС 2",
-        "🇱🇹 Литва БС 1",
-        "🇩🇪 Германия БС 4",
-        "🇳🇱 Нидерланды БС 2",
         "🇷🇺 Россия БС 3",
-        "🇷🇺 Россия БС 4"
-      ],
-      "url": "https://www.gstatic.com/generate_204",
-      "interval": "5m",
-      "tolerance": 150
-    },
-    {
-      "type": "urltest",
-      "tag": "🇩🇪 Германия",
-      "outbounds": [
-        "🇩🇪 Германия БС 1",
-        "🇩🇪 Германия БС 2",
-        "🇩🇪 Германия БС 3",
-        "🇩🇪 Германия БС 4"
+        "🇱🇹 Литва БС 1",
+        "🇳🇱 Нидерланды БС 1",
+        "🇷🇺 Россия БС 4",
+        "🇷🇺 Россия БС 5"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "5m",
@@ -111,18 +92,8 @@
         "🇷🇺 Россия БС 1",
         "🇷🇺 Россия БС 2",
         "🇷🇺 Россия БС 3",
-        "🇷🇺 Россия БС 4"
-      ],
-      "url": "https://www.gstatic.com/generate_204",
-      "interval": "5m",
-      "tolerance": 150
-    },
-    {
-      "type": "urltest",
-      "tag": "🇳🇱 Нидерланды",
-      "outbounds": [
-        "🇳🇱 Нидерланды БС 1",
-        "🇳🇱 Нидерланды БС 2"
+        "🇷🇺 Россия БС 4",
+        "🇷🇺 Россия БС 5"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "5m",
@@ -134,6 +105,16 @@
       "outbounds": [
         "🇺🇸 США БС 1",
         "🇺🇸 США БС 2"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "5m",
+      "tolerance": 150
+    },
+    {
+      "type": "urltest",
+      "tag": "🇩🇪 Германия",
+      "outbounds": [
+        "🇩🇪 Германия БС 1"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "5m",
@@ -160,6 +141,16 @@
       "tolerance": 150
     },
     {
+      "type": "urltest",
+      "tag": "🇳🇱 Нидерланды",
+      "outbounds": [
+        "🇳🇱 Нидерланды БС 1"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "5m",
+      "tolerance": 150
+    },
+    {
       "type": "direct",
       "tag": "direct"
     },
@@ -170,26 +161,6 @@
     {
       "type": "vless",
       "tag": "🇺🇸 США БС 1",
-      "server": "107.173.237.146",
-      "server_port": 8443,
-      "uuid": "1d39f715-2740-4d99-bc3b-197cc48dcee7",
-      "tls": {
-        "enabled": true,
-        "server_name": "updates.cdn-apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "D3ojIs3AUKP_tV0E4TEjh90HBVJp24Nq3qMfdxD30kc",
-          "short_id": "df8611c07d"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇺🇸 США БС 2",
       "server": "47.253.226.114",
       "server_port": 443,
       "uuid": "055a1ce8-2a16-4a0d-a2c2-22826c9b2413",
@@ -210,6 +181,26 @@
     },
     {
       "type": "vless",
+      "tag": "🇺🇸 США БС 2",
+      "server": "107.173.237.146",
+      "server_port": 8443,
+      "uuid": "1d39f715-2740-4d99-bc3b-197cc48dcee7",
+      "tls": {
+        "enabled": true,
+        "server_name": "updates.cdn-apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "D3ojIs3AUKP_tV0E4TEjh90HBVJp24Nq3qMfdxD30kc",
+          "short_id": "df8611c07d"
+        }
+      }
+    },
+    {
+      "type": "vless",
       "tag": "🇩🇪 Германия БС 1",
       "server": "195.66.24.171",
       "server_port": 443,
@@ -220,48 +211,6 @@
         "utls": {
           "enabled": true,
           "fingerprint": "qq"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": ""
-        }
-      },
-      "flow": "xtls-rprx-vision"
-    },
-    {
-      "type": "vless",
-      "tag": "🇩🇪 Германия БС 2",
-      "server": "195.66.24.174",
-      "server_port": 443,
-      "uuid": "ea8eb632-7d56-4bfb-8195-dc34268b5844",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.vk.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": ""
-        }
-      },
-      "flow": "xtls-rprx-vision"
-    },
-    {
-      "type": "vless",
-      "tag": "🇩🇪 Германия БС 3",
-      "server": "195.66.24.173",
-      "server_port": 1932,
-      "uuid": "ea8eb632-7d56-4bfb-8195-dc34268b5844",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.vk.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
@@ -294,29 +243,19 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇳🇱 Нидерланды БС 1",
-      "server": "46.243.235.188",
+      "type": "hysteria2",
+      "tag": "🇷🇺 Россия БС 2",
+      "server": "msk.frkn.org",
       "server_port": 443,
-      "uuid": "ecf728d9-1555-4e12-b178-1d8bd98465e4",
+      "password": "f317b5d6-d399-4d3d-a051-89d674ae953c",
       "tls": {
         "enabled": true,
-        "server_name": "pool.dataroute.biz",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "_ilhBTibNauMOEUqylnlBAUTYiqHHtmEDXkx18SHCR4",
-          "short_id": ""
-        }
-      },
-      "flow": "xtls-rprx-vision"
+        "server_name": "msk.frkn.org"
+      }
     },
     {
       "type": "hysteria2",
-      "tag": "🇷🇺 Россия БС 2",
+      "tag": "🇷🇺 Россия БС 3",
       "server": "msk.frkn.org",
       "server_port": 443,
       "password": "f317b5d6-d399-4d3d-a051-89d674ae953c",
@@ -330,7 +269,7 @@
       "tag": "🇱🇹 Литва БС 1",
       "server": "95.129.236.216",
       "server_port": 443,
-      "uuid": "fd7bf4be-1a5e-4d92-8a3e-a8998d140ff9",
+      "uuid": "9b13deec-ecda-42c9-a369-3a118805dee5",
       "tls": {
         "enabled": true,
         "server_name": "cdnguard.org",
@@ -349,26 +288,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇩🇪 Германия БС 4",
-      "server": "185.241.195.146",
-      "server_port": 443,
-      "uuid": "9d7a69d4-54dd-4bfb-ac73-d5803d98ec03",
-      "tls": {
-        "enabled": true,
-        "server_name": "dostavka.stroymatdv.cc",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/e7ws"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇳🇱 Нидерланды БС 2",
+      "tag": "🇳🇱 Нидерланды БС 1",
       "server": "85.198.70.200",
       "server_port": 14406,
       "uuid": "237f91bf-102e-4077-8cc3-baebccb42936",
@@ -377,7 +297,7 @@
         "server_name": "vk.ru",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -389,7 +309,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇷🇺 Россия БС 3",
+      "tag": "🇷🇺 Россия БС 4",
       "server": "45.12.75.242",
       "server_port": 26424,
       "uuid": "633f424e-2b11-48da-a6b3-a849dd71456f",
@@ -409,7 +329,7 @@
     },
     {
       "type": "hysteria2",
-      "tag": "🇷🇺 Россия БС 4",
+      "tag": "🇷🇺 Россия БС 5",
       "server": "ru1.xiaoliyu.cyou",
       "server_port": 4433,
       "password": "19f72087-4591-4d72-930b-2697078ec2be",

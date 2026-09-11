@@ -46,19 +46,25 @@
       "tag": "proxy",
       "outbounds": [
         "auto-bwl",
-        "🇷🇺 Россия",
         "🇩🇪 Германия",
+        "🇷🇺 Россия",
         "🇺🇸 США",
         "🇦🇹 Австрия",
+        "🇱🇹 Литва",
         "🇳🇱 Нидерланды",
+        "🇵🇱 Польша",
         "🇺🇸 США БС 1",
         "🇺🇸 США БС 2",
         "🇦🇹 Австрия БС 1",
         "🇷🇺 Россия БС 1",
+        "🇱🇹 Литва БС 1",
         "🇷🇺 Россия БС 2",
         "🇩🇪 Германия БС 1",
-        "🇷🇺 Россия БС 3",
         "🇩🇪 Германия БС 2",
+        "🇩🇪 Германия БС 3",
+        "🇵🇱 Польша БС 1",
+        "🇷🇺 Россия БС 3",
+        "🇩🇪 Германия БС 4",
         "🇳🇱 Нидерланды БС 1"
       ]
     },
@@ -70,11 +76,28 @@
         "🇺🇸 США БС 2",
         "🇦🇹 Австрия БС 1",
         "🇷🇺 Россия БС 1",
+        "🇱🇹 Литва БС 1",
         "🇷🇺 Россия БС 2",
         "🇩🇪 Германия БС 1",
-        "🇷🇺 Россия БС 3",
         "🇩🇪 Германия БС 2",
+        "🇩🇪 Германия БС 3",
+        "🇵🇱 Польша БС 1",
+        "🇷🇺 Россия БС 3",
+        "🇩🇪 Германия БС 4",
         "🇳🇱 Нидерланды БС 1"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "5m",
+      "tolerance": 150
+    },
+    {
+      "type": "urltest",
+      "tag": "🇩🇪 Германия",
+      "outbounds": [
+        "🇩🇪 Германия БС 1",
+        "🇩🇪 Германия БС 2",
+        "🇩🇪 Германия БС 3",
+        "🇩🇪 Германия БС 4"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "5m",
@@ -87,17 +110,6 @@
         "🇷🇺 Россия БС 1",
         "🇷🇺 Россия БС 2",
         "🇷🇺 Россия БС 3"
-      ],
-      "url": "https://www.gstatic.com/generate_204",
-      "interval": "5m",
-      "tolerance": 150
-    },
-    {
-      "type": "urltest",
-      "tag": "🇩🇪 Германия",
-      "outbounds": [
-        "🇩🇪 Германия БС 1",
-        "🇩🇪 Германия БС 2"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "5m",
@@ -126,9 +138,29 @@
     },
     {
       "type": "urltest",
+      "tag": "🇱🇹 Литва",
+      "outbounds": [
+        "🇱🇹 Литва БС 1"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "5m",
+      "tolerance": 150
+    },
+    {
+      "type": "urltest",
       "tag": "🇳🇱 Нидерланды",
       "outbounds": [
         "🇳🇱 Нидерланды БС 1"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "5m",
+      "tolerance": 150
+    },
+    {
+      "type": "urltest",
+      "tag": "🇵🇱 Польша",
+      "outbounds": [
+        "🇵🇱 Польша БС 1"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "5m",
@@ -194,7 +226,7 @@
         "server_name": "akashi.vk-portal.net",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "qq"
         },
         "reality": {
           "enabled": true,
@@ -217,6 +249,28 @@
     },
     {
       "type": "vless",
+      "tag": "🇱🇹 Литва БС 1",
+      "server": "95.129.236.216",
+      "server_port": 443,
+      "uuid": "ecb016f8-a8e2-4325-b5b4-00f3cea8123f",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdnguard.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/origin/190546791/fetch",
+        "headers": {
+          "Host": "cdnguard.org"
+        }
+      }
+    },
+    {
+      "type": "vless",
       "tag": "🇷🇺 Россия БС 2",
       "server": "hamal.yokkastars.com",
       "server_port": 40443,
@@ -226,7 +280,7 @@
         "server_name": "deepl.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -239,6 +293,46 @@
     {
       "type": "vless",
       "tag": "🇩🇪 Германия БС 1",
+      "server": "185.241.195.146",
+      "server_port": 443,
+      "uuid": "49fa7a15-9506-443e-a105-282e3471afa0",
+      "tls": {
+        "enabled": true,
+        "server_name": "dostavka.stroymatdv.cc",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/e7ws"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇩🇪 Германия БС 2",
+      "server": "188.225.58.153",
+      "server_port": 443,
+      "uuid": "02722550-1915-4629-a653-cbe95e594f70",
+      "tls": {
+        "enabled": true,
+        "server_name": "public.betust.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "j4F4oe2w0O7oqpWeUSa44C9FdBHZEH5fTiXBvEVLIyk",
+          "short_id": "c51d359c"
+        }
+      },
+      "flow": "xtls-rprx-vision"
+    },
+    {
+      "type": "vless",
+      "tag": "🇩🇪 Германия БС 3",
       "server": "212.233.98.12",
       "server_port": 14443,
       "uuid": "87bd8ffa-7327-47a0-8517-a98eb602d861",
@@ -257,6 +351,27 @@
           "Host": "api.stroymatdv.cc"
         }
       }
+    },
+    {
+      "type": "vless",
+      "tag": "🇵🇱 Польша БС 1",
+      "server": "188.225.27.218",
+      "server_port": 20443,
+      "uuid": "367b6ccd-ecf1-42da-b9d7-375161ab0952",
+      "tls": {
+        "enabled": true,
+        "server_name": "pl3.esimpson.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "eyfWllHdZ8v6gtVISpKvpli--ZnNPm-dKtZAZ4CMs1w",
+          "short_id": "6203299b996fd3e1"
+        }
+      },
+      "flow": "xtls-rprx-vision"
     },
     {
       "type": "vless",
@@ -280,24 +395,25 @@
     },
     {
       "type": "vless",
-      "tag": "🇩🇪 Германия БС 2",
-      "server": "188.225.58.153",
-      "server_port": 443,
-      "uuid": "02722550-1915-4629-a653-cbe95e594f70",
+      "tag": "🇩🇪 Германия БС 4",
+      "server": "95.163.232.163",
+      "server_port": 14443,
+      "uuid": "87bd8ffa-7327-47a0-8517-a98eb602d861",
       "tls": {
         "enabled": true,
-        "server_name": "public.betust.net",
+        "server_name": "key.inetdostup.com",
         "utls": {
           "enabled": true,
           "fingerprint": "edge"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "j4F4oe2w0O7oqpWeUSa44C9FdBHZEH5fTiXBvEVLIyk",
-          "short_id": "c51d359c"
         }
       },
-      "flow": "xtls-rprx-vision"
+      "transport": {
+        "type": "ws",
+        "path": "/mws",
+        "headers": {
+          "Host": "key.inetdostup.com"
+        }
+      }
     },
     {
       "type": "vless",

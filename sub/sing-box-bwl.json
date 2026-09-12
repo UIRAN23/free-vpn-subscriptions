@@ -48,16 +48,10 @@
         "auto-bwl",
         "🇺🇸 США",
         "🇷🇺 Россия",
-        "🇩🇪 Германия",
-        "🇳🇱 Нидерланды",
-        "🇸🇪 Швеция",
         "🇺🇸 США БС 1",
         "🇺🇸 США БС 2",
         "🇺🇸 США БС 3",
-        "🇸🇪 Швеция БС 1",
-        "🇳🇱 Нидерланды БС 1",
         "🇷🇺 Россия БС 1",
-        "🇩🇪 Германия БС 1",
         "🇷🇺 Россия БС 2"
       ]
     },
@@ -68,10 +62,7 @@
         "🇺🇸 США БС 1",
         "🇺🇸 США БС 2",
         "🇺🇸 США БС 3",
-        "🇸🇪 Швеция БС 1",
-        "🇳🇱 Нидерланды БС 1",
         "🇷🇺 Россия БС 1",
-        "🇩🇪 Германия БС 1",
         "🇷🇺 Россия БС 2"
       ],
       "url": "https://www.gstatic.com/generate_204",
@@ -96,36 +87,6 @@
       "outbounds": [
         "🇷🇺 Россия БС 1",
         "🇷🇺 Россия БС 2"
-      ],
-      "url": "https://www.gstatic.com/generate_204",
-      "interval": "5m",
-      "tolerance": 150
-    },
-    {
-      "type": "urltest",
-      "tag": "🇩🇪 Германия",
-      "outbounds": [
-        "🇩🇪 Германия БС 1"
-      ],
-      "url": "https://www.gstatic.com/generate_204",
-      "interval": "5m",
-      "tolerance": 150
-    },
-    {
-      "type": "urltest",
-      "tag": "🇳🇱 Нидерланды",
-      "outbounds": [
-        "🇳🇱 Нидерланды БС 1"
-      ],
-      "url": "https://www.gstatic.com/generate_204",
-      "interval": "5m",
-      "tolerance": 150
-    },
-    {
-      "type": "urltest",
-      "tag": "🇸🇪 Швеция",
-      "outbounds": [
-        "🇸🇪 Швеция БС 1"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "5m",
@@ -202,48 +163,6 @@
       "flow": "xtls-rprx-vision"
     },
     {
-      "type": "vless",
-      "tag": "🇸🇪 Швеция БС 1",
-      "server": "193.233.220.188",
-      "server_port": 443,
-      "uuid": "901cb0b0-0185-4983-b42a-67c431fa2f10",
-      "tls": {
-        "enabled": true,
-        "server_name": "storage.yandex.ru",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "XNRqBVhMN7DRE0OnISDpLpIr2x7V6reBNg1BdBPP8jk",
-          "short_id": "29680d77"
-        }
-      },
-      "flow": "xtls-rprx-vision"
-    },
-    {
-      "type": "vless",
-      "tag": "🇳🇱 Нидерланды БС 1",
-      "server": "72.56.4.84",
-      "server_port": 443,
-      "uuid": "Fluffy_VPN-zKZUa4Ie",
-      "tls": {
-        "enabled": true,
-        "server_name": "absolute-disaster.org",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "Im1i3eUtm7uDxUOA0rNWef9bILxsBvK_ElfejZTpQW0",
-          "short_id": ""
-        }
-      },
-      "flow": "xtls-rprx-vision"
-    },
-    {
       "type": "hysteria2",
       "tag": "🇷🇺 Россия БС 1",
       "server": "msk.frkn.org",
@@ -252,28 +171,6 @@
       "tls": {
         "enabled": true,
         "server_name": "msk.frkn.org"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇩🇪 Германия БС 1",
-      "server": "176.124.214.116",
-      "server_port": 8443,
-      "uuid": "b71637c2-94a5-49bd-8233-b4ed5e3170c3",
-      "tls": {
-        "enabled": true,
-        "server_name": "free-ger1.wooden-table.org",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/images",
-        "headers": {
-          "Host": "free-ger1.wooden-table.org"
-        }
       }
     },
     {
@@ -287,7 +184,7 @@
         "server_name": "ya.ru",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "qq"
         },
         "reality": {
           "enabled": true,

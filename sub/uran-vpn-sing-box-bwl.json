@@ -48,10 +48,12 @@
         "auto-bwl",
         "🇺🇸 США",
         "🇷🇺 Россия",
+        "🇩🇪 Германия",
         "🇺🇸 США БС 1",
         "🇺🇸 США БС 2",
         "🇺🇸 США БС 3",
         "🇷🇺 Россия БС 1",
+        "🇩🇪 Германия БС 1",
         "🇷🇺 Россия БС 2"
       ]
     },
@@ -63,6 +65,7 @@
         "🇺🇸 США БС 2",
         "🇺🇸 США БС 3",
         "🇷🇺 Россия БС 1",
+        "🇩🇪 Германия БС 1",
         "🇷🇺 Россия БС 2"
       ],
       "url": "https://www.gstatic.com/generate_204",
@@ -93,6 +96,16 @@
       "tolerance": 150
     },
     {
+      "type": "urltest",
+      "tag": "🇩🇪 Германия",
+      "outbounds": [
+        "🇩🇪 Германия БС 1"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "5m",
+      "tolerance": 150
+    },
+    {
       "type": "direct",
       "tag": "direct"
     },
@@ -103,6 +116,26 @@
     {
       "type": "vless",
       "tag": "🇺🇸 США БС 1",
+      "server": "107.173.237.146",
+      "server_port": 8443,
+      "uuid": "1d39f715-2740-4d99-bc3b-197cc48dcee7",
+      "tls": {
+        "enabled": true,
+        "server_name": "updates.cdn-apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "D3ojIs3AUKP_tV0E4TEjh90HBVJp24Nq3qMfdxD30kc",
+          "short_id": "df8611c07d"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 США БС 2",
       "server": "47.253.226.114",
       "server_port": 443,
       "uuid": "055a1ce8-2a16-4a0d-a2c2-22826c9b2413",
@@ -120,26 +153,6 @@
         }
       },
       "flow": "xtls-rprx-vision"
-    },
-    {
-      "type": "vless",
-      "tag": "🇺🇸 США БС 2",
-      "server": "107.173.237.146",
-      "server_port": 8443,
-      "uuid": "1d39f715-2740-4d99-bc3b-197cc48dcee7",
-      "tls": {
-        "enabled": true,
-        "server_name": "updates.cdn-apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "D3ojIs3AUKP_tV0E4TEjh90HBVJp24Nq3qMfdxD30kc",
-          "short_id": "df8611c07d"
-        }
-      }
     },
     {
       "type": "vless",
@@ -175,6 +188,25 @@
     },
     {
       "type": "vless",
+      "tag": "🇩🇪 Германия БС 1",
+      "server": "185.241.195.146",
+      "server_port": 443,
+      "uuid": "dcbd1cf0-4f26-4ccb-bc22-7811e9f01c63",
+      "tls": {
+        "enabled": true,
+        "server_name": "dostavka.stroymatdv.cc",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/e7ws"
+      }
+    },
+    {
+      "type": "vless",
       "tag": "🇷🇺 Россия БС 2",
       "server": "45.12.75.242",
       "server_port": 26424,
@@ -184,7 +216,7 @@
         "server_name": "ya.ru",
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,

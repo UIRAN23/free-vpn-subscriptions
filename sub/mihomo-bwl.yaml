@@ -2,8 +2,8 @@
 # profile-update-interval: 1
 # subscription-userinfo: upload=0; download=0; total=0
 # profile-web-page-url: https://uiran23.github.io/free-vpn-subscriptions/
-# Обновлено: 2026-09-12 04:38 UTC
-# Серверов: 5
+# Обновлено: 2026-09-12 05:05 UTC
+# Серверов: 6
 
 mixed-port: 7890
 allow-lan: false
@@ -13,6 +13,19 @@ ipv6: false
 
 proxies:
   - name: "🇺🇸 США БС 1"
+    type: vless
+    server: "107.173.237.146"
+    port: 8443
+    uuid: "1d39f715-2740-4d99-bc3b-197cc48dcee7"
+    udp: true
+    network: "tcp"
+    tls: true
+    servername: "updates.cdn-apple.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "D3ojIs3AUKP_tV0E4TEjh90HBVJp24Nq3qMfdxD30kc"
+      short-id: "df8611c07d"
+  - name: "🇺🇸 США БС 2"
     type: vless
     server: "47.253.226.114"
     port: 443
@@ -26,19 +39,6 @@ proxies:
     reality-opts:
       public-key: "Svl81isn16RPAFnjtmYw7A6TPnsEPLHuYYaJht65Rzc"
       short-id: ""
-  - name: "🇺🇸 США БС 2"
-    type: vless
-    server: "107.173.237.146"
-    port: 8443
-    uuid: "1d39f715-2740-4d99-bc3b-197cc48dcee7"
-    udp: true
-    network: "tcp"
-    tls: true
-    servername: "updates.cdn-apple.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "D3ojIs3AUKP_tV0E4TEjh90HBVJp24Nq3qMfdxD30kc"
-      short-id: "df8611c07d"
   - name: "🇺🇸 США БС 3"
     type: vless
     server: "186.246.19.79"
@@ -58,6 +58,19 @@ proxies:
     server: "msk.frkn.org"
     port: 443
     password: "f317b5d6-d399-4d3d-a051-89d674ae953c"
+    sni: "msk.frkn.org"
+  - name: "🇩🇪 Германия БС 1"
+    type: vless
+    server: "185.241.195.146"
+    port: 443
+    uuid: "dcbd1cf0-4f26-4ccb-bc22-7811e9f01c63"
+    udp: true
+    network: "ws"
+    tls: true
+    servername: "dostavka.stroymatdv.cc"
+    client-fingerprint: "edge"
+    ws-opts:
+      path: "/e7ws"
   - name: "🇷🇺 Россия БС 2"
     type: vless
     server: "45.12.75.242"
@@ -67,7 +80,7 @@ proxies:
     network: "tcp"
     tls: true
     servername: "ya.ru"
-    client-fingerprint: "qq"
+    client-fingerprint: "chrome"
     reality-opts:
       public-key: "l8AubqcxQO-HRFJy4pZL1vbLOo-eXit69s-XulSELE0"
       short-id: "23103e1e"
@@ -82,6 +95,7 @@ proxy-groups:
       - "🇺🇸 США БС 2"
       - "🇺🇸 США БС 3"
       - "🇷🇺 Россия БС 1"
+      - "🇩🇪 Германия БС 1"
       - "🇷🇺 Россия БС 2"
       - DIRECT
   - name: "⚪ Авто БС"
@@ -94,12 +108,14 @@ proxy-groups:
       - "🇺🇸 США БС 2"
       - "🇺🇸 США БС 3"
       - "🇷🇺 Россия БС 1"
+      - "🇩🇪 Германия БС 1"
       - "🇷🇺 Россия БС 2"
   - name: "🌍 Страны БС"
     type: select
     proxies:
       - "⚪ 🇺🇸 США"
       - "⚪ 🇷🇺 Россия"
+      - "⚪ 🇩🇪 Германия"
   - name: "⚪ 🇺🇸 США"
     type: select
     proxies:
@@ -111,6 +127,10 @@ proxy-groups:
     proxies:
       - "🇷🇺 Россия БС 1"
       - "🇷🇺 Россия БС 2"
+  - name: "⚪ 🇩🇪 Германия"
+    type: select
+    proxies:
+      - "🇩🇪 Германия БС 1"
 
 rules:
   - GEOIP,private,DIRECT,no-resolve

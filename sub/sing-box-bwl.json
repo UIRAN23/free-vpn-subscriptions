@@ -49,13 +49,13 @@
         "🇺🇸 США",
         "🇷🇺 Россия",
         "🇩🇪 Германия",
-        "🇱🇹 Литва",
         "🇳🇱 Нидерланды",
+        "🇸🇪 Швеция",
         "🇺🇸 США БС 1",
         "🇺🇸 США БС 2",
         "🇺🇸 США БС 3",
+        "🇸🇪 Швеция БС 1",
         "🇳🇱 Нидерланды БС 1",
-        "🇱🇹 Литва БС 1",
         "🇷🇺 Россия БС 1",
         "🇩🇪 Германия БС 1",
         "🇷🇺 Россия БС 2"
@@ -68,8 +68,8 @@
         "🇺🇸 США БС 1",
         "🇺🇸 США БС 2",
         "🇺🇸 США БС 3",
+        "🇸🇪 Швеция БС 1",
         "🇳🇱 Нидерланды БС 1",
-        "🇱🇹 Литва БС 1",
         "🇷🇺 Россия БС 1",
         "🇩🇪 Германия БС 1",
         "🇷🇺 Россия БС 2"
@@ -113,9 +113,9 @@
     },
     {
       "type": "urltest",
-      "tag": "🇱🇹 Литва",
+      "tag": "🇳🇱 Нидерланды",
       "outbounds": [
-        "🇱🇹 Литва БС 1"
+        "🇳🇱 Нидерланды БС 1"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "5m",
@@ -123,9 +123,9 @@
     },
     {
       "type": "urltest",
-      "tag": "🇳🇱 Нидерланды",
+      "tag": "🇸🇪 Швеция",
       "outbounds": [
-        "🇳🇱 Нидерланды БС 1"
+        "🇸🇪 Швеция БС 1"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "5m",
@@ -203,8 +203,29 @@
     },
     {
       "type": "vless",
+      "tag": "🇸🇪 Швеция БС 1",
+      "server": "193.233.220.188",
+      "server_port": 443,
+      "uuid": "901cb0b0-0185-4983-b42a-67c431fa2f10",
+      "tls": {
+        "enabled": true,
+        "server_name": "storage.yandex.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "XNRqBVhMN7DRE0OnISDpLpIr2x7V6reBNg1BdBPP8jk",
+          "short_id": "29680d77"
+        }
+      },
+      "flow": "xtls-rprx-vision"
+    },
+    {
+      "type": "vless",
       "tag": "🇳🇱 Нидерланды БС 1",
-      "server": "201.24.122.90",
+      "server": "72.56.4.84",
       "server_port": 443,
       "uuid": "Fluffy_VPN-zKZUa4Ie",
       "tls": {
@@ -216,33 +237,11 @@
         },
         "reality": {
           "enabled": true,
-          "public_key": "OUa76n5T-jBSfbEqSW4UH18diioWoMQyQBMBDYO9QF4",
+          "public_key": "Im1i3eUtm7uDxUOA0rNWef9bILxsBvK_ElfejZTpQW0",
           "short_id": ""
         }
       },
       "flow": "xtls-rprx-vision"
-    },
-    {
-      "type": "vless",
-      "tag": "🇱🇹 Литва БС 1",
-      "server": "95.129.236.216",
-      "server_port": 443,
-      "uuid": "c8647b23-6e77-4d0b-818f-bd1b439b930c",
-      "tls": {
-        "enabled": true,
-        "server_name": "cdnguard.org",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/origin/190546791/fetch",
-        "headers": {
-          "Host": "cdnguard.org"
-        }
-      }
     },
     {
       "type": "hysteria2",
@@ -258,23 +257,24 @@
     {
       "type": "vless",
       "tag": "🇩🇪 Германия БС 1",
-      "server": "188.225.58.153",
-      "server_port": 443,
-      "uuid": "02722550-1915-4629-a653-cbe95e594f70",
+      "server": "176.124.214.116",
+      "server_port": 8443,
+      "uuid": "b71637c2-94a5-49bd-8233-b4ed5e3170c3",
       "tls": {
         "enabled": true,
-        "server_name": "public.betust.net",
+        "server_name": "free-ger1.wooden-table.org",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "j4F4oe2w0O7oqpWeUSa44C9FdBHZEH5fTiXBvEVLIyk",
-          "short_id": "c51d359c"
         }
       },
-      "flow": "xtls-rprx-vision"
+      "transport": {
+        "type": "ws",
+        "path": "/images",
+        "headers": {
+          "Host": "free-ger1.wooden-table.org"
+        }
+      }
     },
     {
       "type": "vless",
@@ -287,7 +287,7 @@
         "server_name": "ya.ru",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,

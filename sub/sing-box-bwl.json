@@ -51,16 +51,14 @@
         "🇬🇧 Великобритания",
         "🇰🇷 Корея",
         "🇷🇺 Россия",
-        "🇹🇷 Турция",
         "🇺🇸 США",
         "🇺🇸 США БС 1",
         "🇰🇷 Корея БС 1",
-        "🇹🇷 Турция БС 1",
-        "🇳🇱 Нидерланды БС 1",
         "🇬🇧 Великобритания БС 1",
+        "🇷🇺 Россия БС 1",
+        "🇳🇱 Нидерланды БС 1",
         "🇳🇱 Нидерланды БС 2",
         "🇨🇿 Чехия БС 1",
-        "🇷🇺 Россия БС 1",
         "🇳🇱 Нидерланды БС 3"
       ]
     },
@@ -70,12 +68,11 @@
       "outbounds": [
         "🇺🇸 США БС 1",
         "🇰🇷 Корея БС 1",
-        "🇹🇷 Турция БС 1",
-        "🇳🇱 Нидерланды БС 1",
         "🇬🇧 Великобритания БС 1",
+        "🇷🇺 Россия БС 1",
+        "🇳🇱 Нидерланды БС 1",
         "🇳🇱 Нидерланды БС 2",
         "🇨🇿 Чехия БС 1",
-        "🇷🇺 Россия БС 1",
         "🇳🇱 Нидерланды БС 3"
       ],
       "url": "https://www.gstatic.com/generate_204",
@@ -136,16 +133,6 @@
     },
     {
       "type": "urltest",
-      "tag": "🇹🇷 Турция",
-      "outbounds": [
-        "🇹🇷 Турция БС 1"
-      ],
-      "url": "https://www.gstatic.com/generate_204",
-      "interval": "5m",
-      "tolerance": 150
-    },
-    {
-      "type": "urltest",
       "tag": "🇺🇸 США",
       "outbounds": [
         "🇺🇸 США БС 1"
@@ -199,47 +186,6 @@
     },
     {
       "type": "vless",
-      "tag": "🇹🇷 Турция БС 1",
-      "server": "144.225.65.166",
-      "server_port": 26109,
-      "uuid": "8d0a82ca-41cf-4661-a9d7-ea2e192c5f64",
-      "tls": {
-        "enabled": true,
-        "server_name": "amp-api-edge.apps.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "0EgMUSL26mD_WAqkFmwMXXWSoWRthDKePFxCvfyu3CU",
-          "short_id": ""
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇳🇱 Нидерланды БС 1",
-      "server": "188.225.75.183",
-      "server_port": 12443,
-      "uuid": "a95b3155-bc03-4789-b367-944b83be8f86",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "Nq6KRzyjC95-W9JtG13EwPzNccKnZwMzhxEM_3zkdk8",
-          "short_id": "41a2b7c9"
-        }
-      },
-      "flow": "xtls-rprx-vision"
-    },
-    {
-      "type": "vless",
       "tag": "🇬🇧 Великобритания БС 1",
       "server": "188.225.27.78",
       "server_port": 443,
@@ -249,7 +195,7 @@
         "server_name": "max.ru",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
@@ -261,16 +207,52 @@
     },
     {
       "type": "vless",
-      "tag": "🇳🇱 Нидерланды БС 2",
-      "server": "posa9.api3-max.ru",
+      "tag": "🇷🇺 Россия БС 1",
+      "server": "45.12.75.242",
+      "server_port": 26424,
+      "uuid": "633f424e-2b11-48da-a6b3-a849dd71456f",
+      "tls": {
+        "enabled": true,
+        "server_name": "ya.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "l8AubqcxQO-HRFJy4pZL1vbLOo-eXit69s-XulSELE0",
+          "short_id": "23103e1e"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇳🇱 Нидерланды БС 1",
+      "server": "posa8.api3-max.ru",
       "server_port": 443,
       "uuid": "97ecaad4-452c-45ec-b591-d68d3308aad4",
       "tls": {
         "enabled": true,
-        "server_name": "posa9.api3-max.ru",
+        "server_name": "posa8.api3-max.ru",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
+        }
+      },
+      "flow": "xtls-rprx-vision"
+    },
+    {
+      "type": "vless",
+      "tag": "🇳🇱 Нидерланды БС 2",
+      "server": "posa6.api3-max.ru",
+      "server_port": 443,
+      "uuid": "97ecaad4-452c-45ec-b591-d68d3308aad4",
+      "tls": {
+        "enabled": true,
+        "server_name": "posa6.api3-max.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
         }
       },
       "flow": "xtls-rprx-vision"
@@ -299,28 +281,8 @@
     },
     {
       "type": "vless",
-      "tag": "🇷🇺 Россия БС 1",
-      "server": "45.12.75.242",
-      "server_port": 26424,
-      "uuid": "633f424e-2b11-48da-a6b3-a849dd71456f",
-      "tls": {
-        "enabled": true,
-        "server_name": "ya.ru",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "l8AubqcxQO-HRFJy4pZL1vbLOo-eXit69s-XulSELE0",
-          "short_id": "23103e1e"
-        }
-      }
-    },
-    {
-      "type": "vless",
       "tag": "🇳🇱 Нидерланды БС 3",
-      "server": "posa7.api3-max.ru",
+      "server": "168.113.215.18",
       "server_port": 443,
       "uuid": "97ecaad4-452c-45ec-b591-d68d3308aad4",
       "tls": {
@@ -328,7 +290,7 @@
         "server_name": "posa7.api3-max.ru",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
       },
       "flow": "xtls-rprx-vision"

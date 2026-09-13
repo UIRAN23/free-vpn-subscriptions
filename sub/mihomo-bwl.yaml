@@ -2,8 +2,8 @@
 # profile-update-interval: 1
 # subscription-userinfo: upload=0; download=0; total=0
 # profile-web-page-url: https://uiran23.github.io/free-vpn-subscriptions/
-# Обновлено: 2026-09-13 18:10 UTC
-# Серверов: 6
+# Обновлено: 2026-09-13 20:47 UTC
+# Серверов: 9
 
 mixed-port: 7890
 allow-lan: false
@@ -35,7 +35,7 @@ proxies:
     network: "tcp"
     tls: true
     servername: "updates.cdn-apple.com"
-    client-fingerprint: "firefox"
+    client-fingerprint: "chrome"
     reality-opts:
       public-key: "D3ojIs3AUKP_tV0E4TEjh90HBVJp24Nq3qMfdxD30kc"
       short-id: "df8611c07d"
@@ -58,20 +58,62 @@ proxies:
     reality-opts:
       public-key: "l8AubqcxQO-HRFJy4pZL1vbLOo-eXit69s-XulSELE0"
       short-id: "23103e1e"
+  - name: "🇨🇿 Чехия БС 1"
+    type: vless
+    server: "78.159.247.246"
+    port: 443
+    uuid: "1852b02c-1828-40eb-81ff-4de3d097cb35"
+    udp: true
+    network: "ws"
+    tls: true
+    servername: "sb2.hat.onl"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/ws"
+      headers:
+        Host: "sb2.hat.onl"
   - name: "🇩🇪 Германия БС 1"
     type: vless
     server: "185.229.9.74"
     port: 443
-    uuid: "e5883310-1d8d-476e-ba31-4bc88772a330"
+    uuid: "ea38dce9-c5c3-408a-b2d1-10e2c511145a"
     udp: true
     network: "tcp"
     tls: true
     flow: "xtls-rprx-vision"
-    servername: "max.ru"
+    servername: "www.vk.com"
     client-fingerprint: "firefox"
     reality-opts:
-      public-key: "AD7roAsP-vrlxeyfnVEWj7Cq_2viTSICXo2Psm6B_3E"
-      short-id: "cb425a961bb7d67c"
+      public-key: "7o36V1H4H_34kTMpwCfJmDB1bbd21Rgbk2dM_dAonyM"
+      short-id: "0bb3fbdc6cb178d4"
+  - name: "🇫🇮 Финляндия БС 1"
+    type: vless
+    server: "194.55.244.230"
+    port: 28444
+    uuid: "15553b23-a621-4dfd-995e-2fe28d124526"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "fi.chick-team.ru"
+    client-fingerprint: "edge"
+    reality-opts:
+      public-key: "MXfd9WXeMKb5RApiIBz3do37MVVs7eSjAolIRoVT6zk"
+      short-id: "26b1888d30cae1f1"
+  - name: "🇸🇪 Швеция БС 1"
+    type: vless
+    server: "185.178.208.176"
+    port: 443
+    uuid: "bf542de7-eab9-4cc6-b49f-917617bc02aa"
+    udp: true
+    network: "ws"
+    tls: true
+    servername: "founders-blog.online"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/stream/615428/socket"
+      headers:
+        Host: "founders-blog.online"
   - name: "🇺🇸 США БС 3"
     type: vless
     server: "billing.netraidly.ru"
@@ -97,7 +139,10 @@ proxy-groups:
       - "🇺🇸 США БС 2"
       - "🇷🇺 Россия БС 1"
       - "🇷🇺 Россия БС 2"
+      - "🇨🇿 Чехия БС 1"
       - "🇩🇪 Германия БС 1"
+      - "🇫🇮 Финляндия БС 1"
+      - "🇸🇪 Швеция БС 1"
       - "🇺🇸 США БС 3"
       - DIRECT
   - name: "⚪ Авто БС"
@@ -110,14 +155,20 @@ proxy-groups:
       - "🇺🇸 США БС 2"
       - "🇷🇺 Россия БС 1"
       - "🇷🇺 Россия БС 2"
+      - "🇨🇿 Чехия БС 1"
       - "🇩🇪 Германия БС 1"
+      - "🇫🇮 Финляндия БС 1"
+      - "🇸🇪 Швеция БС 1"
       - "🇺🇸 США БС 3"
   - name: "🌍 Страны БС"
     type: select
     proxies:
       - "⚪ 🇺🇸 США"
       - "⚪ 🇷🇺 Россия"
+      - "⚪ 🇨🇿 Чехия"
       - "⚪ 🇩🇪 Германия"
+      - "⚪ 🇫🇮 Финляндия"
+      - "⚪ 🇸🇪 Швеция"
   - name: "⚪ 🇺🇸 США"
     type: select
     proxies:
@@ -129,10 +180,22 @@ proxy-groups:
     proxies:
       - "🇷🇺 Россия БС 1"
       - "🇷🇺 Россия БС 2"
+  - name: "⚪ 🇨🇿 Чехия"
+    type: select
+    proxies:
+      - "🇨🇿 Чехия БС 1"
   - name: "⚪ 🇩🇪 Германия"
     type: select
     proxies:
       - "🇩🇪 Германия БС 1"
+  - name: "⚪ 🇫🇮 Финляндия"
+    type: select
+    proxies:
+      - "🇫🇮 Финляндия БС 1"
+  - name: "⚪ 🇸🇪 Швеция"
+    type: select
+    proxies:
+      - "🇸🇪 Швеция БС 1"
 
 rules:
   - GEOIP,private,DIRECT,no-resolve

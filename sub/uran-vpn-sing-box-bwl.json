@@ -48,12 +48,18 @@
         "auto-bwl",
         "🇺🇸 США",
         "🇷🇺 Россия",
+        "🇨🇿 Чехия",
         "🇩🇪 Германия",
+        "🇫🇮 Финляндия",
+        "🇸🇪 Швеция",
         "🇺🇸 США БС 1",
         "🇺🇸 США БС 2",
         "🇷🇺 Россия БС 1",
         "🇷🇺 Россия БС 2",
+        "🇨🇿 Чехия БС 1",
         "🇩🇪 Германия БС 1",
+        "🇫🇮 Финляндия БС 1",
+        "🇸🇪 Швеция БС 1",
         "🇺🇸 США БС 3"
       ]
     },
@@ -65,7 +71,10 @@
         "🇺🇸 США БС 2",
         "🇷🇺 Россия БС 1",
         "🇷🇺 Россия БС 2",
+        "🇨🇿 Чехия БС 1",
         "🇩🇪 Германия БС 1",
+        "🇫🇮 Финляндия БС 1",
+        "🇸🇪 Швеция БС 1",
         "🇺🇸 США БС 3"
       ],
       "url": "https://www.gstatic.com/generate_204",
@@ -97,9 +106,39 @@
     },
     {
       "type": "urltest",
+      "tag": "🇨🇿 Чехия",
+      "outbounds": [
+        "🇨🇿 Чехия БС 1"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "5m",
+      "tolerance": 150
+    },
+    {
+      "type": "urltest",
       "tag": "🇩🇪 Германия",
       "outbounds": [
         "🇩🇪 Германия БС 1"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "5m",
+      "tolerance": 150
+    },
+    {
+      "type": "urltest",
+      "tag": "🇫🇮 Финляндия",
+      "outbounds": [
+        "🇫🇮 Финляндия БС 1"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "5m",
+      "tolerance": 150
+    },
+    {
+      "type": "urltest",
+      "tag": "🇸🇪 Швеция",
+      "outbounds": [
+        "🇸🇪 Швеция БС 1"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "5m",
@@ -145,7 +184,7 @@
         "server_name": "updates.cdn-apple.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -187,24 +226,89 @@
     },
     {
       "type": "vless",
+      "tag": "🇨🇿 Чехия БС 1",
+      "server": "78.159.247.246",
+      "server_port": 443,
+      "uuid": "1852b02c-1828-40eb-81ff-4de3d097cb35",
+      "tls": {
+        "enabled": true,
+        "server_name": "sb2.hat.onl",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/ws",
+        "headers": {
+          "Host": "sb2.hat.onl"
+        }
+      }
+    },
+    {
+      "type": "vless",
       "tag": "🇩🇪 Германия БС 1",
       "server": "185.229.9.74",
       "server_port": 443,
-      "uuid": "e5883310-1d8d-476e-ba31-4bc88772a330",
+      "uuid": "ea38dce9-c5c3-408a-b2d1-10e2c511145a",
       "tls": {
         "enabled": true,
-        "server_name": "max.ru",
+        "server_name": "www.vk.com",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
-          "public_key": "AD7roAsP-vrlxeyfnVEWj7Cq_2viTSICXo2Psm6B_3E",
-          "short_id": "cb425a961bb7d67c"
+          "public_key": "7o36V1H4H_34kTMpwCfJmDB1bbd21Rgbk2dM_dAonyM",
+          "short_id": "0bb3fbdc6cb178d4"
         }
       },
       "flow": "xtls-rprx-vision"
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇮 Финляндия БС 1",
+      "server": "194.55.244.230",
+      "server_port": 28444,
+      "uuid": "15553b23-a621-4dfd-995e-2fe28d124526",
+      "tls": {
+        "enabled": true,
+        "server_name": "fi.chick-team.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "MXfd9WXeMKb5RApiIBz3do37MVVs7eSjAolIRoVT6zk",
+          "short_id": "26b1888d30cae1f1"
+        }
+      },
+      "flow": "xtls-rprx-vision"
+    },
+    {
+      "type": "vless",
+      "tag": "🇸🇪 Швеция БС 1",
+      "server": "185.178.208.176",
+      "server_port": 443,
+      "uuid": "bf542de7-eab9-4cc6-b49f-917617bc02aa",
+      "tls": {
+        "enabled": true,
+        "server_name": "founders-blog.online",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/stream/615428/socket",
+        "headers": {
+          "Host": "founders-blog.online"
+        }
+      }
     },
     {
       "type": "vless",

@@ -2,8 +2,8 @@
 # profile-update-interval: 1
 # subscription-userinfo: upload=0; download=0; total=0
 # profile-web-page-url: https://uiran23.github.io/free-vpn-subscriptions/
-# Обновлено: 2026-09-14 14:24 UTC
-# Серверов: 8
+# Обновлено: 2026-09-14 18:36 UTC
+# Серверов: 6
 
 mixed-port: 7890
 allow-lan: false
@@ -26,39 +26,33 @@ proxies:
     reality-opts:
       public-key: "Svl81isn16RPAFnjtmYw7A6TPnsEPLHuYYaJht65Rzc"
       short-id: ""
-  - name: "🇷🇺 Россия БС 1"
-    type: hysteria2
-    server: "91.240.86.70"
-    port: 22443
-    password: "3f63c86c-ac4a-4900-85cf-4fedf93c2ca5"
-    sni: "hy.quattro-tech.ru"
-  - name: "🇳🇱 Нидерланды БС 1"
+  - name: "🇩🇪 Германия БС 1"
     type: vless
-    server: "46.243.235.188"
+    server: "193.168.196.58"
     port: 443
-    uuid: "ecf728d9-1555-4e12-b178-1d8bd98465e4"
+    uuid: "d630b2fa-b7a2-4c97-bea0-66462a1f14af"
     udp: true
     network: "tcp"
     tls: true
     flow: "xtls-rprx-vision"
-    servername: "pool.dataroute.biz"
-    client-fingerprint: "ios"
+    servername: "rutube.ru"
+    client-fingerprint: "chrome"
     reality-opts:
-      public-key: "_ilhBTibNauMOEUqylnlBAUTYiqHHtmEDXkx18SHCR4"
-      short-id: ""
-  - name: "🇷🇺 Россия БС 2"
+      public-key: "vhhWn9SDSPq6LJ_9gPAbUfVc8X4WlGWTCyAk6Td6diE"
+      short-id: "2f707fa3"
+  - name: "🇷🇺 Россия БС 1"
     type: hysteria2
     server: "msk.frkn.org"
     port: 443
     password: "f317b5d6-d399-4d3d-a051-89d674ae953c"
     sni: "msk.frkn.org"
-  - name: "🇷🇺 Россия БС 3"
+  - name: "🇷🇺 Россия БС 2"
     type: hysteria2
-    server: "185-22-155-81.liao.kdns.fr"
-    port: 50160
-    password: "2a0099ded5baa93c55823af39229c5b1"
-    sni: "185-22-155-81.liao.kdns.fr"
-  - name: "🇷🇺 Россия БС 4"
+    server: "91.240.86.70"
+    port: 22443
+    password: "3f63c86c-ac4a-4900-85cf-4fedf93c2ca5"
+    sni: "hy.quattro-tech.ru"
+  - name: "🇷🇺 Россия БС 3"
     type: vless
     server: "45.12.75.242"
     port: 26424
@@ -71,13 +65,6 @@ proxies:
     reality-opts:
       public-key: "l8AubqcxQO-HRFJy4pZL1vbLOo-eXit69s-XulSELE0"
       short-id: "23103e1e"
-  - name: "🇷🇺 Россия БС 5"
-    type: hysteria2
-    server: "els1.mangshe.xyz"
-    port: 2056
-    password: "5d0a6445-a30d-4522-bb1f-94f1d3ad63be"
-    sni: "www.microsoft.com"
-    skip-cert-verify: true
   - name: "🇨🇿 Чехия БС 1"
     type: vless
     server: "78.159.247.246"
@@ -87,7 +74,7 @@ proxies:
     network: "ws"
     tls: true
     servername: "sb2.hat.onl"
-    client-fingerprint: "firefox"
+    client-fingerprint: "chrome"
     ws-opts:
       path: "/ws"
       headers:
@@ -100,12 +87,10 @@ proxy-groups:
       - "⚪ Авто БС"
       - "🌍 Страны БС"
       - "🇺🇸 США БС 1"
+      - "🇩🇪 Германия БС 1"
       - "🇷🇺 Россия БС 1"
-      - "🇳🇱 Нидерланды БС 1"
       - "🇷🇺 Россия БС 2"
       - "🇷🇺 Россия БС 3"
-      - "🇷🇺 Россия БС 4"
-      - "🇷🇺 Россия БС 5"
       - "🇨🇿 Чехия БС 1"
       - DIRECT
   - name: "⚪ Авто БС"
@@ -115,19 +100,17 @@ proxy-groups:
     tolerance: 150
     proxies:
       - "🇺🇸 США БС 1"
+      - "🇩🇪 Германия БС 1"
       - "🇷🇺 Россия БС 1"
-      - "🇳🇱 Нидерланды БС 1"
       - "🇷🇺 Россия БС 2"
       - "🇷🇺 Россия БС 3"
-      - "🇷🇺 Россия БС 4"
-      - "🇷🇺 Россия БС 5"
       - "🇨🇿 Чехия БС 1"
   - name: "🌍 Страны БС"
     type: select
     proxies:
       - "⚪ 🇷🇺 Россия"
       - "⚪ 🇨🇿 Чехия"
-      - "⚪ 🇳🇱 Нидерланды"
+      - "⚪ 🇩🇪 Германия"
       - "⚪ 🇺🇸 США"
   - name: "⚪ 🇷🇺 Россия"
     type: select
@@ -135,16 +118,14 @@ proxy-groups:
       - "🇷🇺 Россия БС 1"
       - "🇷🇺 Россия БС 2"
       - "🇷🇺 Россия БС 3"
-      - "🇷🇺 Россия БС 4"
-      - "🇷🇺 Россия БС 5"
   - name: "⚪ 🇨🇿 Чехия"
     type: select
     proxies:
       - "🇨🇿 Чехия БС 1"
-  - name: "⚪ 🇳🇱 Нидерланды"
+  - name: "⚪ 🇩🇪 Германия"
     type: select
     proxies:
-      - "🇳🇱 Нидерланды БС 1"
+      - "🇩🇪 Германия БС 1"
   - name: "⚪ 🇺🇸 США"
     type: select
     proxies:

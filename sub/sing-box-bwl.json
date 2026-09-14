@@ -48,15 +48,13 @@
         "auto-bwl",
         "🇷🇺 Россия",
         "🇨🇿 Чехия",
-        "🇳🇱 Нидерланды",
+        "🇩🇪 Германия",
         "🇺🇸 США",
         "🇺🇸 США БС 1",
+        "🇩🇪 Германия БС 1",
         "🇷🇺 Россия БС 1",
-        "🇳🇱 Нидерланды БС 1",
         "🇷🇺 Россия БС 2",
         "🇷🇺 Россия БС 3",
-        "🇷🇺 Россия БС 4",
-        "🇷🇺 Россия БС 5",
         "🇨🇿 Чехия БС 1"
       ]
     },
@@ -65,12 +63,10 @@
       "tag": "auto-bwl",
       "outbounds": [
         "🇺🇸 США БС 1",
+        "🇩🇪 Германия БС 1",
         "🇷🇺 Россия БС 1",
-        "🇳🇱 Нидерланды БС 1",
         "🇷🇺 Россия БС 2",
         "🇷🇺 Россия БС 3",
-        "🇷🇺 Россия БС 4",
-        "🇷🇺 Россия БС 5",
         "🇨🇿 Чехия БС 1"
       ],
       "url": "https://www.gstatic.com/generate_204",
@@ -83,9 +79,7 @@
       "outbounds": [
         "🇷🇺 Россия БС 1",
         "🇷🇺 Россия БС 2",
-        "🇷🇺 Россия БС 3",
-        "🇷🇺 Россия БС 4",
-        "🇷🇺 Россия БС 5"
+        "🇷🇺 Россия БС 3"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "5m",
@@ -103,9 +97,9 @@
     },
     {
       "type": "urltest",
-      "tag": "🇳🇱 Нидерланды",
+      "tag": "🇩🇪 Германия",
       "outbounds": [
-        "🇳🇱 Нидерланды БС 1"
+        "🇩🇪 Германия БС 1"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "5m",
@@ -151,40 +145,29 @@
       "flow": "xtls-rprx-vision"
     },
     {
-      "type": "hysteria2",
-      "tag": "🇷🇺 Россия БС 1",
-      "server": "91.240.86.70",
-      "server_port": 22443,
-      "password": "3f63c86c-ac4a-4900-85cf-4fedf93c2ca5",
-      "tls": {
-        "enabled": true,
-        "server_name": "hy.quattro-tech.ru"
-      }
-    },
-    {
       "type": "vless",
-      "tag": "🇳🇱 Нидерланды БС 1",
-      "server": "46.243.235.188",
+      "tag": "🇩🇪 Германия БС 1",
+      "server": "193.168.196.58",
       "server_port": 443,
-      "uuid": "ecf728d9-1555-4e12-b178-1d8bd98465e4",
+      "uuid": "d630b2fa-b7a2-4c97-bea0-66462a1f14af",
       "tls": {
         "enabled": true,
-        "server_name": "pool.dataroute.biz",
+        "server_name": "rutube.ru",
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "_ilhBTibNauMOEUqylnlBAUTYiqHHtmEDXkx18SHCR4",
-          "short_id": ""
+          "public_key": "vhhWn9SDSPq6LJ_9gPAbUfVc8X4WlGWTCyAk6Td6diE",
+          "short_id": "2f707fa3"
         }
       },
       "flow": "xtls-rprx-vision"
     },
     {
       "type": "hysteria2",
-      "tag": "🇷🇺 Россия БС 2",
+      "tag": "🇷🇺 Россия БС 1",
       "server": "msk.frkn.org",
       "server_port": 443,
       "password": "f317b5d6-d399-4d3d-a051-89d674ae953c",
@@ -195,18 +178,18 @@
     },
     {
       "type": "hysteria2",
-      "tag": "🇷🇺 Россия БС 3",
-      "server": "185-22-155-81.liao.kdns.fr",
-      "server_port": 50160,
-      "password": "2a0099ded5baa93c55823af39229c5b1",
+      "tag": "🇷🇺 Россия БС 2",
+      "server": "91.240.86.70",
+      "server_port": 22443,
+      "password": "3f63c86c-ac4a-4900-85cf-4fedf93c2ca5",
       "tls": {
         "enabled": true,
-        "server_name": "185-22-155-81.liao.kdns.fr"
+        "server_name": "hy.quattro-tech.ru"
       }
     },
     {
       "type": "vless",
-      "tag": "🇷🇺 Россия БС 4",
+      "tag": "🇷🇺 Россия БС 3",
       "server": "45.12.75.242",
       "server_port": 26424,
       "uuid": "633f424e-2b11-48da-a6b3-a849dd71456f",
@@ -225,18 +208,6 @@
       }
     },
     {
-      "type": "hysteria2",
-      "tag": "🇷🇺 Россия БС 5",
-      "server": "els1.mangshe.xyz",
-      "server_port": 2056,
-      "password": "5d0a6445-a30d-4522-bb1f-94f1d3ad63be",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.microsoft.com",
-        "insecure": true
-      }
-    },
-    {
       "type": "vless",
       "tag": "🇨🇿 Чехия БС 1",
       "server": "78.159.247.246",
@@ -247,7 +218,7 @@
         "server_name": "sb2.hat.onl",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         }
       },
       "transport": {

@@ -46,23 +46,23 @@
       "tag": "proxy",
       "outbounds": [
         "auto-bwl",
-        "🇺🇸 США",
         "🇷🇺 Россия",
-        "🇨🇭 Швейцария",
-        "🇩🇪 Германия",
+        "🇺🇸 США",
+        "🇨🇿 Чехия",
         "🇪🇪 Эстония",
         "🇱🇻 Латвия",
         "🇳🇱 Нидерланды",
         "🇺🇸 США БС 1",
         "🇺🇸 США БС 2",
-        "🇺🇸 США БС 3",
         "🇷🇺 Россия БС 1",
         "🇱🇻 Латвия БС 1",
         "🇷🇺 Россия БС 2",
-        "🇨🇭 Швейцария БС 1",
         "🇪🇪 Эстония БС 1",
-        "🇩🇪 Германия БС 1",
-        "🇳🇱 Нидерланды БС 1"
+        "🇷🇺 Россия БС 3",
+        "🇳🇱 Нидерланды БС 1",
+        "🇺🇸 США БС 3",
+        "🇨🇿 Чехия БС 1",
+        "🇷🇺 Россия БС 4"
       ]
     },
     {
@@ -71,14 +71,28 @@
       "outbounds": [
         "🇺🇸 США БС 1",
         "🇺🇸 США БС 2",
-        "🇺🇸 США БС 3",
         "🇷🇺 Россия БС 1",
         "🇱🇻 Латвия БС 1",
         "🇷🇺 Россия БС 2",
-        "🇨🇭 Швейцария БС 1",
         "🇪🇪 Эстония БС 1",
-        "🇩🇪 Германия БС 1",
-        "🇳🇱 Нидерланды БС 1"
+        "🇷🇺 Россия БС 3",
+        "🇳🇱 Нидерланды БС 1",
+        "🇺🇸 США БС 3",
+        "🇨🇿 Чехия БС 1",
+        "🇷🇺 Россия БС 4"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "5m",
+      "tolerance": 150
+    },
+    {
+      "type": "urltest",
+      "tag": "🇷🇺 Россия",
+      "outbounds": [
+        "🇷🇺 Россия БС 1",
+        "🇷🇺 Россия БС 2",
+        "🇷🇺 Россия БС 3",
+        "🇷🇺 Россия БС 4"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "5m",
@@ -98,30 +112,9 @@
     },
     {
       "type": "urltest",
-      "tag": "🇷🇺 Россия",
+      "tag": "🇨🇿 Чехия",
       "outbounds": [
-        "🇷🇺 Россия БС 1",
-        "🇷🇺 Россия БС 2"
-      ],
-      "url": "https://www.gstatic.com/generate_204",
-      "interval": "5m",
-      "tolerance": 150
-    },
-    {
-      "type": "urltest",
-      "tag": "🇨🇭 Швейцария",
-      "outbounds": [
-        "🇨🇭 Швейцария БС 1"
-      ],
-      "url": "https://www.gstatic.com/generate_204",
-      "interval": "5m",
-      "tolerance": 150
-    },
-    {
-      "type": "urltest",
-      "tag": "🇩🇪 Германия",
-      "outbounds": [
-        "🇩🇪 Германия БС 1"
+        "🇨🇿 Чехия БС 1"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "5m",
@@ -189,26 +182,6 @@
     {
       "type": "vless",
       "tag": "🇺🇸 США БС 2",
-      "server": "us-1.gsafevpnapi.com",
-      "server_port": 20270,
-      "uuid": "5416ef6f-b8e5-48e9-87e4-3d5649b2e3e0",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.yahoo.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "9I4kbgR2flpbRraCLQ-C0umbyQO26riRY3-GY-Tp9DE",
-          "short_id": "e67d9a00676f15ac"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇺🇸 США БС 3",
       "server": "107.173.237.146",
       "server_port": 8443,
       "uuid": "1d39f715-2740-4d99-bc3b-197cc48dcee7",
@@ -262,27 +235,6 @@
     },
     {
       "type": "vless",
-      "tag": "🇨🇭 Швейцария БС 1",
-      "server": "217.19.122.219",
-      "server_port": 7443,
-      "uuid": "546c818f-1663-4c13-9097-5ee659487e04",
-      "tls": {
-        "enabled": true,
-        "server_name": "s1.cdnguard.org",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "wBB_aSYGm86IhxUcO8jccIsaBJZdNGlo3hTQlJFftkE",
-          "short_id": "f7d9e9a2e78e9a17"
-        }
-      },
-      "flow": "xtls-rprx-vision"
-    },
-    {
-      "type": "vless",
       "tag": "🇪🇪 Эстония БС 1",
       "server": "104.171.133.111",
       "server_port": 23443,
@@ -304,21 +256,22 @@
     },
     {
       "type": "vless",
-      "tag": "🇩🇪 Германия БС 1",
-      "server": "212.233.120.1",
-      "server_port": 443,
-      "uuid": "fc7d52a3-7478-4c09-b533-220eb7dea0f5",
+      "tag": "🇷🇺 Россия БС 3",
+      "server": "45.12.75.242",
+      "server_port": 26424,
+      "uuid": "633f424e-2b11-48da-a6b3-a849dd71456f",
       "tls": {
         "enabled": true,
-        "server_name": "dostavitos.stroymatdv.cc",
+        "server_name": "ya.ru",
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "l8AubqcxQO-HRFJy4pZL1vbLOo-eXit69s-XulSELE0",
+          "short_id": "23103e1e"
         }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/e7ws"
       }
     },
     {
@@ -341,6 +294,61 @@
         }
       },
       "flow": "xtls-rprx-vision"
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 США БС 3",
+      "server": "billing.netraidly.ru",
+      "server_port": 40443,
+      "uuid": "17d29827-7cf1-4115-b40d-548e10ec355d",
+      "tls": {
+        "enabled": true,
+        "server_name": "deepl.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "bjOGTQ4xsiFbyCPM_WzoK53L130rW5vZJtuYDJx_pkM",
+          "short_id": "aa3c"
+        }
+      },
+      "flow": "xtls-rprx-vision"
+    },
+    {
+      "type": "vless",
+      "tag": "🇨🇿 Чехия БС 1",
+      "server": "78.159.247.246",
+      "server_port": 443,
+      "uuid": "1852b02c-1828-40eb-81ff-4de3d097cb35",
+      "tls": {
+        "enabled": true,
+        "server_name": "sb2.hat.onl",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/ws",
+        "headers": {
+          "Host": "sb2.hat.onl"
+        }
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇷🇺 Россия БС 4",
+      "server": "ru1.xiaoliyu.cyou",
+      "server_port": 4433,
+      "password": "19f72087-4591-4d72-930b-2697078ec2be",
+      "tls": {
+        "enabled": true,
+        "server_name": "ru1.xiaoliyu.cyou",
+        "insecure": true
+      }
     }
   ],
   "route": {

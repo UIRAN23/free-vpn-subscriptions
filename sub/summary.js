@@ -1,11 +1,11 @@
 window.__VPN_SUMMARY__ = {
-  "generated_at": "2026-10-25 10:25:35",
+  "generated_at": "2026-10-25 11:37:48",
   "subscription": {
     "name": "URAN VPN",
     "update_interval_hours": 1,
     "update_interval_seconds": 3600,
     "web_page_url": "https://uiran23.github.io/free-vpn-subscriptions/",
-    "generated_at": "2026-10-25 10:08 UTC"
+    "generated_at": "2026-10-25 11:21 UTC"
   },
   "protocols": {
     "allowed": [
@@ -14,13 +14,13 @@ window.__VPN_SUMMARY__ = {
     ]
   },
   "mihomo_nodes": {
-    "all": 133,
-    "normal": 89,
+    "all": 134,
+    "normal": 90,
     "bwl": 44
   },
   "sing_box_nodes": {
-    "all": 133,
-    "normal": 89,
+    "all": 134,
+    "normal": 90,
     "bwl": 44
   },
   "countries": {
@@ -29,35 +29,35 @@ window.__VPN_SUMMARY__ = {
         "code": "US",
         "flag": "🇺🇸",
         "country": "США",
-        "count": 22,
+        "count": 25,
         "file": "xray-countries/all/US-США.txt"
       },
       {
         "code": "NL",
         "flag": "🇳🇱",
         "country": "Нидерланды",
-        "count": 21,
+        "count": 18,
         "file": "xray-countries/all/NL-Нидерланды.txt"
       },
       {
         "code": "RU",
         "flag": "🇷🇺",
         "country": "Россия",
-        "count": 18,
+        "count": 15,
         "file": "xray-countries/all/RU-Россия.txt"
       },
       {
         "code": "DE",
         "flag": "🇩🇪",
         "country": "Германия",
-        "count": 16,
+        "count": 13,
         "file": "xray-countries/all/DE-Германия.txt"
       },
       {
         "code": "GB",
         "flag": "🇬🇧",
         "country": "Великобритания",
-        "count": 6,
+        "count": 10,
         "file": "xray-countries/all/GB-Великобритания.txt"
       },
       {
@@ -117,13 +117,6 @@ window.__VPN_SUMMARY__ = {
         "file": "xray-countries/all/SG-Сингапур.txt"
       },
       {
-        "code": "TR",
-        "flag": "🇹🇷",
-        "country": "Турция",
-        "count": 3,
-        "file": "xray-countries/all/TR-Турция.txt"
-      },
-      {
         "code": "IN",
         "flag": "🇮🇳",
         "country": "Индия",
@@ -131,11 +124,25 @@ window.__VPN_SUMMARY__ = {
         "file": "xray-countries/all/IN-Индия.txt"
       },
       {
+        "code": "IT",
+        "flag": "🇮🇹",
+        "country": "Италия",
+        "count": 2,
+        "file": "xray-countries/all/IT-Италия.txt"
+      },
+      {
         "code": "KZ",
         "flag": "🇰🇿",
         "country": "Казахстан",
         "count": 2,
         "file": "xray-countries/all/KZ-Казахстан.txt"
+      },
+      {
+        "code": "NO",
+        "flag": "🇳🇴",
+        "country": "Норвегия",
+        "count": 2,
+        "file": "xray-countries/all/NO-Норвегия.txt"
       },
       {
         "code": "PL",
@@ -150,6 +157,20 @@ window.__VPN_SUMMARY__ = {
         "country": "Румыния",
         "count": 2,
         "file": "xray-countries/all/RO-Румыния.txt"
+      },
+      {
+        "code": "TR",
+        "flag": "🇹🇷",
+        "country": "Турция",
+        "count": 2,
+        "file": "xray-countries/all/TR-Турция.txt"
+      },
+      {
+        "code": "TW",
+        "flag": "🇹🇼",
+        "country": "Тайвань",
+        "count": 2,
+        "file": "xray-countries/all/TW-Тайвань.txt"
       },
       {
         "code": "EE",
@@ -173,11 +194,11 @@ window.__VPN_SUMMARY__ = {
         "file": "xray-countries/all/GR-GR.txt"
       },
       {
-        "code": "IT",
-        "flag": "🇮🇹",
-        "country": "Италия",
+        "code": "LV",
+        "flag": "🇱🇻",
+        "country": "Латвия",
         "count": 1,
-        "file": "xray-countries/all/IT-Италия.txt"
+        "file": "xray-countries/all/LV-Латвия.txt"
       },
       {
         "code": "MY",
@@ -185,13 +206,6 @@ window.__VPN_SUMMARY__ = {
         "country": "MY",
         "count": 1,
         "file": "xray-countries/all/MY-MY.txt"
-      },
-      {
-        "code": "NO",
-        "flag": "🇳🇴",
-        "country": "Норвегия",
-        "count": 1,
-        "file": "xray-countries/all/NO-Норвегия.txt"
       },
       {
         "code": "RS",
@@ -215,13 +229,6 @@ window.__VPN_SUMMARY__ = {
         "file": "xray-countries/all/SE-Швеция.txt"
       },
       {
-        "code": "TW",
-        "flag": "🇹🇼",
-        "country": "Тайвань",
-        "count": 1,
-        "file": "xray-countries/all/TW-Тайвань.txt"
-      },
-      {
         "code": "UA",
         "flag": "🇺🇦",
         "country": "Украина",
@@ -231,24 +238,24 @@ window.__VPN_SUMMARY__ = {
     ],
     "normal": [
       {
-        "code": "NL",
-        "flag": "🇳🇱",
-        "country": "Нидерланды",
-        "count": 19,
-        "file": "xray-countries/normal/NL-Нидерланды.txt"
-      },
-      {
         "code": "US",
         "flag": "🇺🇸",
         "country": "США",
-        "count": 16,
+        "count": 19,
         "file": "xray-countries/normal/US-США.txt"
+      },
+      {
+        "code": "NL",
+        "flag": "🇳🇱",
+        "country": "Нидерланды",
+        "count": 17,
+        "file": "xray-countries/normal/NL-Нидерланды.txt"
       },
       {
         "code": "DE",
         "flag": "🇩🇪",
         "country": "Германия",
-        "count": 10,
+        "count": 8,
         "file": "xray-countries/normal/DE-Германия.txt"
       },
       {
@@ -259,18 +266,18 @@ window.__VPN_SUMMARY__ = {
         "file": "xray-countries/normal/FR-Франция.txt"
       },
       {
+        "code": "GB",
+        "flag": "🇬🇧",
+        "country": "Великобритания",
+        "count": 4,
+        "file": "xray-countries/normal/GB-Великобритания.txt"
+      },
+      {
         "code": "JP",
         "flag": "🇯🇵",
         "country": "Япония",
         "count": 4,
         "file": "xray-countries/normal/JP-Япония.txt"
-      },
-      {
-        "code": "RU",
-        "flag": "🇷🇺",
-        "country": "Россия",
-        "count": 4,
-        "file": "xray-countries/normal/RU-Россия.txt"
       },
       {
         "code": "CA",
@@ -308,18 +315,18 @@ window.__VPN_SUMMARY__ = {
         "file": "xray-countries/normal/CH-Швейцария.txt"
       },
       {
-        "code": "GB",
-        "flag": "🇬🇧",
-        "country": "Великобритания",
-        "count": 2,
-        "file": "xray-countries/normal/GB-Великобритания.txt"
-      },
-      {
         "code": "IN",
         "flag": "🇮🇳",
         "country": "Индия",
         "count": 2,
         "file": "xray-countries/normal/IN-Индия.txt"
+      },
+      {
+        "code": "RU",
+        "flag": "🇷🇺",
+        "country": "Россия",
+        "count": 2,
+        "file": "xray-countries/normal/RU-Россия.txt"
       },
       {
         "code": "SG",
@@ -329,11 +336,11 @@ window.__VPN_SUMMARY__ = {
         "file": "xray-countries/normal/SG-Сингапур.txt"
       },
       {
-        "code": "TR",
-        "flag": "🇹🇷",
-        "country": "Турция",
+        "code": "TW",
+        "flag": "🇹🇼",
+        "country": "Тайвань",
         "count": 2,
-        "file": "xray-countries/normal/TR-Турция.txt"
+        "file": "xray-countries/normal/TW-Тайвань.txt"
       },
       {
         "code": "EE",
@@ -341,6 +348,13 @@ window.__VPN_SUMMARY__ = {
         "country": "Эстония",
         "count": 1,
         "file": "xray-countries/normal/EE-Эстония.txt"
+      },
+      {
+        "code": "IT",
+        "flag": "🇮🇹",
+        "country": "Италия",
+        "count": 1,
+        "file": "xray-countries/normal/IT-Италия.txt"
       },
       {
         "code": "KZ",
@@ -355,6 +369,13 @@ window.__VPN_SUMMARY__ = {
         "country": "MY",
         "count": 1,
         "file": "xray-countries/normal/MY-MY.txt"
+      },
+      {
+        "code": "NO",
+        "flag": "🇳🇴",
+        "country": "Норвегия",
+        "count": 1,
+        "file": "xray-countries/normal/NO-Норвегия.txt"
       },
       {
         "code": "PL",
@@ -392,11 +413,11 @@ window.__VPN_SUMMARY__ = {
         "file": "xray-countries/normal/SE-Швеция.txt"
       },
       {
-        "code": "TW",
-        "flag": "🇹🇼",
-        "country": "Тайвань",
+        "code": "TR",
+        "flag": "🇹🇷",
+        "country": "Турция",
         "count": 1,
-        "file": "xray-countries/normal/TW-Тайвань.txt"
+        "file": "xray-countries/normal/TR-Турция.txt"
       },
       {
         "code": "UA",
@@ -411,15 +432,15 @@ window.__VPN_SUMMARY__ = {
         "code": "RU",
         "flag": "🇷🇺",
         "country": "Россия",
-        "count": 14,
+        "count": 13,
         "file": "xray-countries/bwl/RU-Россия.txt"
       },
       {
-        "code": "DE",
-        "flag": "🇩🇪",
-        "country": "Германия",
+        "code": "GB",
+        "flag": "🇬🇧",
+        "country": "Великобритания",
         "count": 6,
-        "file": "xray-countries/bwl/DE-Германия.txt"
+        "file": "xray-countries/bwl/GB-Великобритания.txt"
       },
       {
         "code": "US",
@@ -429,18 +450,11 @@ window.__VPN_SUMMARY__ = {
         "file": "xray-countries/bwl/US-США.txt"
       },
       {
-        "code": "GB",
-        "flag": "🇬🇧",
-        "country": "Великобритания",
-        "count": 4,
-        "file": "xray-countries/bwl/GB-Великобритания.txt"
-      },
-      {
-        "code": "NL",
-        "flag": "🇳🇱",
-        "country": "Нидерланды",
-        "count": 2,
-        "file": "xray-countries/bwl/NL-Нидерланды.txt"
+        "code": "DE",
+        "flag": "🇩🇪",
+        "country": "Германия",
+        "count": 5,
+        "file": "xray-countries/bwl/DE-Германия.txt"
       },
       {
         "code": "CA",
@@ -492,6 +506,20 @@ window.__VPN_SUMMARY__ = {
         "file": "xray-countries/bwl/KZ-Казахстан.txt"
       },
       {
+        "code": "LV",
+        "flag": "🇱🇻",
+        "country": "Латвия",
+        "count": 1,
+        "file": "xray-countries/bwl/LV-Латвия.txt"
+      },
+      {
+        "code": "NL",
+        "flag": "🇳🇱",
+        "country": "Нидерланды",
+        "count": 1,
+        "file": "xray-countries/bwl/NL-Нидерланды.txt"
+      },
+      {
         "code": "NO",
         "flag": "🇳🇴",
         "country": "Норвегия",
@@ -530,23 +558,23 @@ window.__VPN_SUMMARY__ = {
   },
   "countries_published": true,
   "exit_probe": {
-    "tested": 1481,
-    "ok": 261,
-    "normal": 167,
-    "bwl": 94
+    "tested": 1484,
+    "ok": 243,
+    "normal": 161,
+    "bwl": 82
   },
   "service_probe": {
-    "tested": 261,
+    "tested": 243,
     "filter": {
       "enabled": true,
       "normal_min_ok": 1,
       "bwl_min_ok": 1,
-      "before_normal": 167,
-      "before_bwl": 94,
-      "kept_normal": 154,
-      "kept_bwl": 87,
-      "dropped_normal": 13,
-      "dropped_bwl": 7,
+      "before_normal": 161,
+      "before_bwl": 82,
+      "kept_normal": 151,
+      "kept_bwl": 79,
+      "dropped_normal": 10,
+      "dropped_bwl": 3,
       "targets": [
         "telegram",
         "discord",
@@ -560,96 +588,96 @@ window.__VPN_SUMMARY__ = {
         "telegram": {
           "name": "Telegram",
           "url": "https://telegram.org/",
-          "total_nodes": 167,
-          "tested": 167,
+          "total_nodes": 161,
+          "tested": 161,
           "skipped": 0,
           "ok": 140,
-          "avg_ms": 1587
+          "avg_ms": 1299
         },
         "discord": {
           "name": "Discord",
           "url": "https://discord.com/api/v10/gateway",
-          "total_nodes": 167,
-          "tested": 167,
+          "total_nodes": 161,
+          "tested": 161,
           "skipped": 0,
-          "ok": 139,
-          "avg_ms": 1615
+          "ok": 143,
+          "avg_ms": 1303
         },
         "youtube": {
           "name": "YouTube",
           "url": "https://www.youtube.com/generate_204",
-          "total_nodes": 167,
-          "tested": 167,
+          "total_nodes": 161,
+          "tested": 161,
           "skipped": 0,
-          "ok": 142,
-          "avg_ms": 1586
+          "ok": 139,
+          "avg_ms": 1264
         },
         "github": {
           "name": "GitHub",
           "url": "https://api.github.com/zen",
-          "total_nodes": 167,
-          "tested": 167,
+          "total_nodes": 161,
+          "tested": 161,
           "skipped": 0,
-          "ok": 139,
-          "avg_ms": 1708
+          "ok": 142,
+          "avg_ms": 1364
         },
         "gemini": {
           "name": "Gemini API",
           "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent",
-          "total_nodes": 167,
-          "tested": 23,
-          "skipped": 144,
+          "total_nodes": 161,
+          "tested": 36,
+          "skipped": 125,
           "ok": 0,
           "avg_ms": null,
           "region_ok": 0,
-          "eligible": 163,
+          "eligible": 159,
           "cached": 0,
-          "live_tested": 23
+          "live_tested": 36
         }
       },
       "bwl": {
         "telegram": {
           "name": "Telegram",
           "url": "https://telegram.org/",
-          "total_nodes": 94,
-          "tested": 94,
+          "total_nodes": 82,
+          "tested": 82,
           "skipped": 0,
-          "ok": 81,
-          "avg_ms": 1421
+          "ok": 75,
+          "avg_ms": 1299
         },
         "discord": {
           "name": "Discord",
           "url": "https://discord.com/api/v10/gateway",
-          "total_nodes": 94,
-          "tested": 94,
+          "total_nodes": 82,
+          "tested": 82,
           "skipped": 0,
-          "ok": 87,
-          "avg_ms": 1340
+          "ok": 76,
+          "avg_ms": 1234
         },
         "youtube": {
           "name": "YouTube",
           "url": "https://www.youtube.com/generate_204",
-          "total_nodes": 94,
-          "tested": 94,
+          "total_nodes": 82,
+          "tested": 82,
           "skipped": 0,
-          "ok": 82,
-          "avg_ms": 1344
+          "ok": 76,
+          "avg_ms": 1256
         },
         "github": {
           "name": "GitHub",
           "url": "https://api.github.com/zen",
-          "total_nodes": 94,
-          "tested": 94,
+          "total_nodes": 82,
+          "tested": 82,
           "skipped": 0,
-          "ok": 83,
-          "avg_ms": 1344
+          "ok": 78,
+          "avg_ms": 1350
         },
         "gemini": {
           "name": "Gemini API",
           "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent",
-          "total_nodes": 94,
+          "total_nodes": 82,
           "tested": 0,
-          "skipped": 94,
+          "skipped": 82,
           "ok": 0,
           "avg_ms": null,
           "region_ok": 0,
@@ -664,51 +692,51 @@ window.__VPN_SUMMARY__ = {
         "telegram": {
           "name": "Telegram",
           "url": "https://telegram.org/",
-          "total_nodes": 89,
-          "tested": 89,
+          "total_nodes": 90,
+          "tested": 90,
           "skipped": 0,
-          "ok": 85,
-          "avg_ms": 1504
+          "ok": 88,
+          "avg_ms": 1284
         },
         "discord": {
           "name": "Discord",
           "url": "https://discord.com/api/v10/gateway",
-          "total_nodes": 89,
-          "tested": 89,
+          "total_nodes": 90,
+          "tested": 90,
           "skipped": 0,
-          "ok": 83,
-          "avg_ms": 1437
+          "ok": 89,
+          "avg_ms": 1112
         },
         "youtube": {
           "name": "YouTube",
           "url": "https://www.youtube.com/generate_204",
-          "total_nodes": 89,
-          "tested": 89,
+          "total_nodes": 90,
+          "tested": 90,
           "skipped": 0,
-          "ok": 85,
-          "avg_ms": 1367
+          "ok": 86,
+          "avg_ms": 1171
         },
         "github": {
           "name": "GitHub",
           "url": "https://api.github.com/zen",
-          "total_nodes": 89,
-          "tested": 89,
+          "total_nodes": 90,
+          "tested": 90,
           "skipped": 0,
-          "ok": 84,
-          "avg_ms": 1423
+          "ok": 88,
+          "avg_ms": 1119
         },
         "gemini": {
           "name": "Gemini API",
           "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent",
-          "total_nodes": 89,
-          "tested": 13,
-          "skipped": 76,
+          "total_nodes": 90,
+          "tested": 12,
+          "skipped": 78,
           "ok": 0,
           "avg_ms": null,
           "region_ok": 0,
-          "eligible": 85,
+          "eligible": 88,
           "cached": 0,
-          "live_tested": 13
+          "live_tested": 12
         }
       },
       "bwl": {
@@ -718,8 +746,8 @@ window.__VPN_SUMMARY__ = {
           "total_nodes": 44,
           "tested": 44,
           "skipped": 0,
-          "ok": 40,
-          "avg_ms": 1336
+          "ok": 41,
+          "avg_ms": 1268
         },
         "discord": {
           "name": "Discord",
@@ -727,8 +755,8 @@ window.__VPN_SUMMARY__ = {
           "total_nodes": 44,
           "tested": 44,
           "skipped": 0,
-          "ok": 44,
-          "avg_ms": 1327
+          "ok": 41,
+          "avg_ms": 1244
         },
         "youtube": {
           "name": "YouTube",
@@ -736,8 +764,8 @@ window.__VPN_SUMMARY__ = {
           "total_nodes": 44,
           "tested": 44,
           "skipped": 0,
-          "ok": 40,
-          "avg_ms": 1274
+          "ok": 41,
+          "avg_ms": 1260
         },
         "github": {
           "name": "GitHub",
@@ -745,8 +773,8 @@ window.__VPN_SUMMARY__ = {
           "total_nodes": 44,
           "tested": 44,
           "skipped": 0,
-          "ok": 40,
-          "avg_ms": 1293
+          "ok": 43,
+          "avg_ms": 1442
         },
         "gemini": {
           "name": "Gemini API",
@@ -764,67 +792,58 @@ window.__VPN_SUMMARY__ = {
       }
     },
     "published_nodes": {
-      "normal": 89,
+      "normal": 90,
       "bwl": 44,
-      "all": 133
+      "all": 134
     },
     "gemini_cache": {
       "enabled": true,
       "entries": 0,
       "fresh": 0,
       "ttl_hours": 72.0,
-      "eligible_unique": 92,
+      "eligible_unique": 96,
       "cache_hits": 0,
       "live_scheduled": 40,
-      "not_scheduled": 52,
-      "propagated_nodes": 9,
+      "not_scheduled": 56,
+      "propagated_nodes": 24,
       "saved_entries": 0
     },
     "gemini_api_health": {
-      "requests": 14,
+      "requests": 12,
       "region_ok": 0,
       "region_blocked": 0,
       "faults": 12,
       "quota_errors": 0,
-      "network_errors": 2,
+      "network_errors": 0,
       "disabled": true,
       "disabled_reason": "auth:UNAUTHENTICATED",
       "fault_limit": 8,
       "quota_limit": 5,
       "final_interval_seconds": 6.2,
       "status_counts": {
-        "0": 2,
-        "401": 10,
-        "403": 2
+        "401": 11,
+        "403": 1
       },
       "api_status_counts": {
-        "UNAUTHENTICATED": 10
+        "UNAUTHENTICATED": 11
       },
       "top_errors": [
         {
           "error": "api_error:The bound service account is deleted or disabled. The service account bound to the API key must be active.",
-          "count": 10
+          "count": 11
         },
         {
           "error": "invalid_gemini_api_response",
-          "count": 2
-        },
-        {
-          "error": "curl: (97) Can't complete SOCKS5 connection to generativelanguage.googleapis.com. (1)",
-          "count": 1
-        },
-        {
-          "error": "curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to generativelanguage.googleapis.com:443",
           "count": 1
         }
       ]
     },
     "gemini_web_health": {
-      "requests": 163,
-      "app_served": 96,
+      "requests": 159,
+      "app_served": 107,
       "blocked": 0,
-      "refused": 38,
-      "unreachable": 29,
+      "refused": 26,
+      "unreachable": 26,
       "refused_statuses": [
         302,
         401,
@@ -835,17 +854,17 @@ window.__VPN_SUMMARY__ = {
       "url": "https://gemini.google.com/app?hl=en",
       "max_body_bytes": 150000,
       "status_counts": {
-        "0": 27,
-        "200": 98,
-        "302": 7,
-        "403": 21,
-        "429": 10
+        "0": 24,
+        "200": 109,
+        "302": 5,
+        "403": 21
       },
       "body_sizes": {
-        "<1000": 34,
-        "<10000": 32,
+        "<1000": 29,
+        "<10000": 21,
         "<100000": 1,
-        ">=150000": 96
+        "<150000": 1,
+        ">=150000": 107
       },
       "markers": {}
     }
@@ -855,54 +874,54 @@ window.__VPN_SUMMARY__ = {
     "across_modes": false,
     "normal": {
       "mode": "normal",
-      "before": 154,
-      "after": 89,
-      "dropped": 65,
-      "unique_exit_ips": 89,
+      "before": 151,
+      "after": 90,
+      "dropped": 61,
+      "unique_exit_ips": 90,
       "top_locations_after": {
-        "NL:HAAR": 15,
-        "DE:FRA": 5,
+        "NL:HAAR": 14,
         "US:NEW": 5,
+        "DE:FRA": 4,
+        "GB:LON": 4,
         "DE:NUE": 3,
         "FI:HEL": 3,
         "FR:PAR": 3,
         "JP:TYO": 3,
-        "NL:AMS": 3,
         "CA:TORO": 2,
         "CH:ZRH": 2,
-        "DE:DUSS": 2,
-        "GB:LON": 2,
         "HK:FO": 2,
         "IN:NEW": 2,
         "KR:CHUN": 2,
-        "RU:MOW": 2,
-        "RU:SHER": 2,
+        "NL:AMS": 2,
         "SG:SIN": 2,
+        "TW:TPE": 2,
         "US:BEAR": 2,
-        "US:CHI": 2
+        "US:CHI": 2,
+        "US:REST": 2,
+        "US:SAN": 2
       }
     },
     "bwl": {
       "mode": "bwl",
-      "before": 87,
+      "before": 79,
       "after": 44,
-      "dropped": 43,
+      "dropped": 35,
       "unique_exit_ips": 44,
       "top_locations_after": {
         "RU:MOW": 11,
-        "DE:FRA": 4,
-        "RU:SHER": 3,
-        "DE:DUSS": 2,
-        "GB:CITY": 2,
-        "GB:LON": 2,
+        "GB:LON": 5,
+        "DE:DUSS": 3,
+        "DE:FRA": 2,
+        "RU:SHER": 2,
         "CA:TORO": 1,
         "CH:GENE": 1,
         "ES:BARC": 1,
         "FI:HEL": 1,
+        "GB:CITY": 1,
         "GR:THES": 1,
         "IT:MIL": 1,
         "KZ:ALMA": 1,
-        "NL:AMS": 1,
+        "LV:RIGA": 1,
         "NL:ENSC": 1,
         "NO:OSL": 1,
         "PL:GDAN": 1,
@@ -913,64 +932,55 @@ window.__VPN_SUMMARY__ = {
     }
   },
   "xray_json": {
-    "all": 114,
-    "normal": 68,
+    "all": 111,
+    "normal": 65,
     "bwl": 45
   },
   "gemini_nodes": {
     "enabled": true,
-    "normal": 61,
+    "normal": 69,
     "bwl": 0,
     "probe": "Gemini web page plus generateContent API",
     "criterion": "the app page loads without a region block and the API never refused the region",
-    "web_ok": 61,
+    "web_ok": 69,
     "api_verified": 0,
     "api_blocked": 0,
     "web_blocked": 0,
     "api_ok_but_web_refused": 0,
     "model": "gemini-3.5-flash",
     "key_configured": true,
-    "all": 61,
-    "eligible": 85,
-    "tested": 13,
+    "all": 69,
+    "eligible": 88,
+    "tested": 12,
     "cached": 0,
-    "live_tested": 13,
-    "published_normal": 89,
+    "live_tested": 12,
+    "published_normal": 90,
     "health": {
-      "requests": 14,
+      "requests": 12,
       "region_ok": 0,
       "region_blocked": 0,
       "faults": 12,
       "quota_errors": 0,
-      "network_errors": 2,
+      "network_errors": 0,
       "disabled": true,
       "disabled_reason": "auth:UNAUTHENTICATED",
       "fault_limit": 8,
       "quota_limit": 5,
       "final_interval_seconds": 6.2,
       "status_counts": {
-        "0": 2,
-        "401": 10,
-        "403": 2
+        "401": 11,
+        "403": 1
       },
       "api_status_counts": {
-        "UNAUTHENTICATED": 10
+        "UNAUTHENTICATED": 11
       },
       "top_errors": [
         {
           "error": "api_error:The bound service account is deleted or disabled. The service account bound to the API key must be active.",
-          "count": 10
+          "count": 11
         },
         {
           "error": "invalid_gemini_api_response",
-          "count": 2
-        },
-        {
-          "error": "curl: (97) Can't complete SOCKS5 connection to generativelanguage.googleapis.com. (1)",
-          "count": 1
-        },
-        {
-          "error": "curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to generativelanguage.googleapis.com:443",
           "count": 1
         }
       ]
@@ -978,36 +988,36 @@ window.__VPN_SUMMARY__ = {
   },
   "gemini_wiring": {
     "ok": true,
-    "verified_nodes": 61,
+    "verified_nodes": 69,
     "domains": 43,
     "problems": []
   },
   "timings": {
-    "total_seconds": 1032.5,
+    "total_seconds": 987.2,
     "phases": [
       {
         "name": "fetch-sources",
-        "seconds": 4.6
+        "seconds": 3.7
       },
       {
         "name": "parse-links",
-        "seconds": 24.2
+        "seconds": 13.3
       },
       {
         "name": "resolve+geoip",
-        "seconds": 11.5
+        "seconds": 16.3
       },
       {
         "name": "tcp-check",
-        "seconds": 15.3
+        "seconds": 11.9
       },
       {
         "name": "exit-probe",
-        "seconds": 835.3
+        "seconds": 824.5
       },
       {
         "name": "service-probe",
-        "seconds": 137.1
+        "seconds": 114.5
       },
       {
         "name": "filter+dedupe",
@@ -1015,25 +1025,25 @@ window.__VPN_SUMMARY__ = {
       },
       {
         "name": "write-outputs",
-        "seconds": 0.2
+        "seconds": 0.1
       },
       {
         "name": "validate",
-        "seconds": 4.3
+        "seconds": 2.9
       }
     ],
     "slowest": [
       {
         "name": "exit-probe",
-        "seconds": 835.3
+        "seconds": 824.5
       },
       {
         "name": "service-probe",
-        "seconds": 137.1
+        "seconds": 114.5
       },
       {
-        "name": "parse-links",
-        "seconds": 24.2
+        "name": "resolve+geoip",
+        "seconds": 16.3
       }
     ]
   },

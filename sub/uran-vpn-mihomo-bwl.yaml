@@ -2,8 +2,8 @@
 # profile-update-interval: 1
 # subscription-userinfo: upload=0; download=0; total=0
 # profile-web-page-url: https://uiran23.github.io/free-vpn-subscriptions/
-# Обновлено: 2026-11-03 07:14 UTC
-# Серверов: 29
+# Обновлено: 2026-11-03 09:28 UTC
+# Серверов: 24
 
 mixed-port: 7890
 allow-lan: false
@@ -28,6 +28,20 @@ proxies:
       short-id: "896f52ba2cfca903"
   - name: "🇺🇸 США БС 2"
     type: vless
+    server: "47.253.226.114"
+    port: 443
+    uuid: "055a1ce8-2a16-4a0d-a2c2-22826c9b2413"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "Svl81isn16RPAFnjtmYw7A6TPnsEPLHuYYaJht65Rzc"
+      short-id: ""
+  - name: "🇺🇸 США БС 3"
+    type: vless
     server: "195.211.98.43"
     port: 443
     uuid: "1b4b11d5-4c2d-4533-9a55-636757cdee94"
@@ -40,7 +54,7 @@ proxies:
     reality-opts:
       public-key: "xPnpkXu5qfwIArlHKvJsqKJnGdGbJK1tT2GzWMyLohA"
       short-id: "9c56fddf237e8eaf"
-  - name: "🇺🇸 США БС 3"
+  - name: "🇺🇸 США БС 4"
     type: vless
     server: "167.17.69.171"
     port: 443
@@ -54,34 +68,6 @@ proxies:
     reality-opts:
       public-key: "ALT8hIGeZEhi0sQFbXP_ntBg8Xo-v7i0YCLrqTnBxRk"
       short-id: "0990d22f"
-  - name: "🇺🇸 США БС 4"
-    type: vless
-    server: "47.253.226.114"
-    port: 443
-    uuid: "055a1ce8-2a16-4a0d-a2c2-22826c9b2413"
-    udp: true
-    network: "tcp"
-    tls: true
-    flow: "xtls-rprx-vision"
-    servername: "www.cloudflare.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "Svl81isn16RPAFnjtmYw7A6TPnsEPLHuYYaJht65Rzc"
-      short-id: ""
-  - name: "🇺🇸 США БС 5"
-    type: vless
-    server: "5.34.178.120"
-    port: 443
-    uuid: "9063f9fb-e88a-4ee0-b4a4-a92ca7316a9f"
-    udp: true
-    network: "tcp"
-    tls: true
-    flow: "xtls-rprx-vision"
-    servername: "www.cloudflare.com"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "EVhq2BxKuw2Cody1DmF_HPvUYKwzdXbHP47blUv-eRM"
-      short-id: "55ab5559e3a6d10a"
   - name: "🇨🇦 Канада БС 1"
     type: vless
     server: "209.200.246.148"
@@ -92,10 +78,24 @@ proxies:
     tls: true
     flow: "xtls-rprx-vision"
     servername: "www.cloudflare.com"
-    client-fingerprint: "chrome"
+    client-fingerprint: "firefox"
     reality-opts:
       public-key: "uTmb-ytXsx8p0fkBz7A76SHpWk7_oVutIA4LGTE8BQk"
       short-id: "f98843107912e782"
+  - name: "🇺🇸 США БС 5"
+    type: vless
+    server: "195.211.98.43"
+    port: 443
+    uuid: "1b4b11d5-4c2d-4533-9a55-636757cdee94"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "xPnpkXu5qfwIArlHKvJsqKJnGdGbJK1tT2GzWMyLohA"
+      short-id: "9c56fddf237e8eaf"
   - name: "🇨🇭 Швейцария БС 1"
     type: vless
     server: "45.90.59.15"
@@ -110,20 +110,6 @@ proxies:
     reality-opts:
       public-key: "P7S4UPFlQbmiBr4txyy8NZIMTrmO3UdxyH16WBU-YzY"
       short-id: "19253fae84102271"
-  - name: "🇩🇪 Германия БС 1"
-    type: vless
-    server: "82.118.19.153"
-    port: 443
-    uuid: "adcaa148-7c66-4282-a81a-99ec8afa029d"
-    udp: true
-    network: "tcp"
-    tls: true
-    flow: "xtls-rprx-vision"
-    servername: "www.cloudflare.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "Tiuy8om5Lk0pWL95-8LaFFTwH0vbURVMoOkaW9xGaiE"
-      short-id: "670ed9f350bd8ee0"
   - name: "🇷🇴 Румыния БС 1"
     type: vless
     server: "46.28.67.55"
@@ -152,6 +138,20 @@ proxies:
     reality-opts:
       public-key: "R5ycsjJ-v024902dMSqTsSdqxUwCFEXMebdBEWFt9VU"
       short-id: "cd6065902eea7a02"
+  - name: "🇵🇱 Польша БС 1"
+    type: vless
+    server: "82.118.22.161"
+    port: 443
+    uuid: "05488656-d4bf-4634-8b2e-e4ff5a56c7e2"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "xY1KpNxaIGmi6jfeudYQ_aaLGQqWK_uHStnwUFd2_2E"
+      short-id: "fa3ea655619a3e78"
   - name: "🇪🇸 Испания БС 1"
     type: vless
     server: "46.28.71.247"
@@ -166,55 +166,50 @@ proxies:
     reality-opts:
       public-key: "v4MuZIvFrTPT5GHMSaPryUAbIZlLstmsUTzmC1E-JTE"
       short-id: "0dfc23fe80778c00"
+  - name: "🇱🇻 Латвия БС 1"
+    type: vless
+    server: "195.123.213.28"
+    port: 443
+    uuid: "02fcc1a4-ee90-4970-8bbb-4ffaa8109d24"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "NMgy1XgCSXExOg6Tg8xG9lCWttMF6sjdpB41lZy6FWo"
+      short-id: "5c256336e3b673fa"
   - name: "🇷🇺 Россия БС 1"
     type: hysteria2
     server: "103.88.243.142"
     port: 11592
     password: "41edb44c8e"
     sni: "srv-17e124.21freedom.net"
-  - name: "🇬🇷 GR БС 1"
+  - name: "🇷🇺 Россия БС 2"
     type: vless
-    server: "85.90.197.220"
-    port: 443
-    uuid: "8f704ed6-9a1a-4d04-94dd-1bff501716de"
+    server: "185.147.27.183"
+    port: 8443
+    uuid: "379998c5-2a71-4202-9c74-522e0c3c5404"
     udp: true
     network: "tcp"
     tls: true
     flow: "xtls-rprx-vision"
-    servername: "www.cloudflare.com"
+    servername: "user-6a917f32.noooo.win"
     client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "biNcdU5mywtNw-KyPpLHindBxdEyAolT1WJ26N0b7y4"
-      short-id: "94acb54627612d43"
   - name: "🇱🇹 Литва БС 1"
     type: vless
-    server: "185.178.208.167"
+    server: "lorettmay.top"
     port: 443
     uuid: "2232d904-8e6a-4202-8240-6efd8aec02e9"
     udp: true
     network: "ws"
     tls: true
     servername: "lorettmay.top"
-    client-fingerprint: "ios"
+    client-fingerprint: "qq"
     ws-opts:
       path: "/blog/posts"
-      headers:
-        Host: "lorettmay.top"
   - name: "🇪🇪 Эстония БС 1"
-    type: vless
-    server: "109.71.247.200"
-    port: 443
-    uuid: "7ad63b26-bf70-4872-8fab-ebaf73a1e19d"
-    udp: true
-    network: "tcp"
-    tls: true
-    flow: "xtls-rprx-vision"
-    servername: "static-47.topp-con.xyz"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "LEziyH-E4k9hehGRJkVi1FadVObB_NZJy8U7oUCVWXU"
-      short-id: "b9120cd53ffd7bba"
-  - name: "🇪🇪 Эстония БС 2"
     type: vless
     server: "147.45.245.17"
     port: 443
@@ -228,11 +223,25 @@ proxies:
     reality-opts:
       public-key: "4GpOXPkTdvuF1mgBH6n9AFYRvGEh7K2ETgE8asmNASY"
       short-id: "38146bd64aece7a5"
+  - name: "🇪🇪 Эстония БС 2"
+    type: vless
+    server: "109.71.247.200"
+    port: 443
+    uuid: "7ad63b26-bf70-4872-8fab-ebaf73a1e19d"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "static-47.topp-con.xyz"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "LEziyH-E4k9hehGRJkVi1FadVObB_NZJy8U7oUCVWXU"
+      short-id: "b9120cd53ffd7bba"
   - name: "🇳🇱 Нидерланды БС 1"
     type: vless
     server: "147.45.108.45"
     port: 443
-    uuid: "Fluffy_VPN-zKZUa4Ie"
+    uuid: "1e2b9c0c-4f9b-56f5-a062-1c4f2d2aa200"
     udp: true
     network: "tcp"
     tls: true
@@ -242,18 +251,6 @@ proxies:
     reality-opts:
       public-key: "IuzAWh6UM62Txrnh_No9y5n6wmZecyR1ki8z5xor-0g"
       short-id: ""
-  - name: "🇵🇱 Польша БС 1"
-    type: vless
-    server: "84.23.52.120"
-    port: 28447
-    uuid: "4d8132cb-f4e3-428c-91ff-2b4f7a868551"
-    udp: true
-    network: "ws"
-    tls: true
-    servername: "pl.sparxiecn.com"
-    client-fingerprint: "firefox"
-    ws-opts:
-      path: "/lovelive"
   - name: "🇪🇪 Эстония БС 3"
     type: vless
     server: "5.129.202.80"
@@ -268,32 +265,6 @@ proxies:
     reality-opts:
       public-key: "NY2bvH4IFKTstWkBWwyU5MmlzuKk0nU08cBoHlti2S8"
       short-id: "2ef2b10d5143d798"
-  - name: "🇵🇱 Польша БС 2"
-    type: vless
-    server: "84.23.52.120"
-    port: 28453
-    uuid: "4d8132cb-f4e3-428c-91ff-2b4f7a868551"
-    udp: true
-    network: "ws"
-    tls: true
-    servername: "pl.sparxiecn.com"
-    client-fingerprint: "ios"
-    ws-opts:
-      path: "/lovelive"
-  - name: "🇩🇪 Германия БС 2"
-    type: vless
-    server: "185.103.100.113"
-    port: 443
-    uuid: "5c32201a-6c0e-451b-8f0a-24b4bd40df59"
-    udp: true
-    network: "tcp"
-    tls: true
-    flow: "xtls-rprx-vision"
-    servername: "images.porsche.com"
-    client-fingerprint: "safari"
-    reality-opts:
-      public-key: "kBTMVLCNE0jjwuJF6H5-65l5Pe0QToS0Hg-9Tmaa7Sk"
-      short-id: "1a2b3c4d"
   - name: "🇳🇱 Нидерланды БС 2"
     type: hysteria2
     server: "5.129.235.85"
@@ -301,52 +272,25 @@ proxies:
     password: "gf1:gfhysteria2024"
     sni: "vk.com"
     skip-cert-verify: true
-  - name: "🇩🇪 Германия БС 3"
+  - name: "🇺🇸 США БС 6"
     type: vless
-    server: "185.103.100.113"
+    server: "201.51.4.89"
     port: 443
-    uuid: "5c32201a-6c0e-451b-8f0a-24b4bd40df59"
+    uuid: "7ad63b26-bf70-4872-8fab-ebaf73a1e19d"
     udp: true
     network: "tcp"
     tls: true
     flow: "xtls-rprx-vision"
-    servername: "images.porsche.com"
-    client-fingerprint: "ios"
+    servername: "cache-89.topp-con.xyz"
+    client-fingerprint: "firefox"
     reality-opts:
-      public-key: "kBTMVLCNE0jjwuJF6H5-65l5Pe0QToS0Hg-9Tmaa7Sk"
-      short-id: "1a2b3c4d"
-  - name: "🇩🇪 Германия БС 4"
+      public-key: "LEziyH-E4k9hehGRJkVi1FadVObB_NZJy8U7oUCVWXU"
+      short-id: "b9120cd53ffd7bba"
+  - name: "🇩🇪 Германия БС 1"
     type: vless
-    server: "185.103.100.113"
+    server: "82.118.19.153"
     port: 443
-    uuid: "5c32201a-6c0e-451b-8f0a-24b4bd40df59"
-    udp: true
-    network: "tcp"
-    tls: true
-    flow: "xtls-rprx-vision"
-    servername: "images.porsche.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "kBTMVLCNE0jjwuJF6H5-65l5Pe0QToS0Hg-9Tmaa7Sk"
-      short-id: "1a2b3c4d"
-  - name: "🇳🇱 Нидерланды БС 3"
-    type: vless
-    server: "186.246.9.29"
-    port: 443
-    uuid: "b2847c3b-5278-4b06-9c66-bc919d2dfec7"
-    udp: true
-    network: "tcp"
-    tls: true
-    servername: "wordpress.com"
-    client-fingerprint: "safari"
-    reality-opts:
-      public-key: "MPNMomAMn_lu9YMYjD2jAQWrI-rTM4hj9Jgg9d6qzTA"
-      short-id: "50ad5564"
-  - name: "🇵🇱 Польша БС 3"
-    type: vless
-    server: "82.118.22.161"
-    port: 443
-    uuid: "05488656-d4bf-4634-8b2e-e4ff5a56c7e2"
+    uuid: "adcaa148-7c66-4282-a81a-99ec8afa029d"
     udp: true
     network: "tcp"
     tls: true
@@ -354,34 +298,23 @@ proxies:
     servername: "www.cloudflare.com"
     client-fingerprint: "chrome"
     reality-opts:
-      public-key: "xY1KpNxaIGmi6jfeudYQ_aaLGQqWK_uHStnwUFd2_2E"
-      short-id: "fa3ea655619a3e78"
-  - name: "🇵🇱 Польша БС 4"
+      public-key: "Tiuy8om5Lk0pWL95-8LaFFTwH0vbURVMoOkaW9xGaiE"
+      short-id: "670ed9f350bd8ee0"
+  - name: "🇬🇷 GR БС 1"
     type: vless
-    server: "84.23.52.120"
-    port: 28449
-    uuid: "4d8132cb-f4e3-428c-91ff-2b4f7a868551"
-    udp: true
-    network: "ws"
-    tls: true
-    servername: "pl.sparxiecn.com"
-    client-fingerprint: "ios"
-    ws-opts:
-      path: "/lovelive"
-  - name: "🇨🇭 Швейцария БС 2"
-    type: vless
-    server: "ch2.h1cloud.net"
-    port: 25879
-    uuid: "241306b3-9f27-4ed3-9524-6c0792c55856"
+    server: "85.90.197.220"
+    port: 443
+    uuid: "8f704ed6-9a1a-4d04-94dd-1bff501716de"
     udp: true
     network: "tcp"
     tls: true
-    servername: "www.bing.com"
-    client-fingerprint: "qq"
+    flow: "xtls-rprx-vision"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "firefox"
     reality-opts:
-      public-key: "XuI492LMe1OPIwQH5TQlIo33JRqMM3kfnto62tbx5FU"
-      short-id: "f1a7a14461a3f389"
-  - name: "🇺🇸 США БС 6"
+      public-key: "biNcdU5mywtNw-KyPpLHindBxdEyAolT1WJ26N0b7y4"
+      short-id: "94acb54627612d43"
+  - name: "🇺🇸 США БС 7"
     type: vless
     server: "87.228.92.124"
     port: 443
@@ -405,31 +338,26 @@ proxy-groups:
       - "🇺🇸 США БС 2"
       - "🇺🇸 США БС 3"
       - "🇺🇸 США БС 4"
-      - "🇺🇸 США БС 5"
       - "🇨🇦 Канада БС 1"
+      - "🇺🇸 США БС 5"
       - "🇨🇭 Швейцария БС 1"
-      - "🇩🇪 Германия БС 1"
       - "🇷🇴 Румыния БС 1"
       - "🇮🇹 Италия БС 1"
+      - "🇵🇱 Польша БС 1"
       - "🇪🇸 Испания БС 1"
+      - "🇱🇻 Латвия БС 1"
       - "🇷🇺 Россия БС 1"
-      - "🇬🇷 GR БС 1"
+      - "🇷🇺 Россия БС 2"
       - "🇱🇹 Литва БС 1"
       - "🇪🇪 Эстония БС 1"
       - "🇪🇪 Эстония БС 2"
       - "🇳🇱 Нидерланды БС 1"
-      - "🇵🇱 Польша БС 1"
       - "🇪🇪 Эстония БС 3"
-      - "🇵🇱 Польша БС 2"
-      - "🇩🇪 Германия БС 2"
       - "🇳🇱 Нидерланды БС 2"
-      - "🇩🇪 Германия БС 3"
-      - "🇩🇪 Германия БС 4"
-      - "🇳🇱 Нидерланды БС 3"
-      - "🇵🇱 Польша БС 3"
-      - "🇵🇱 Польша БС 4"
-      - "🇨🇭 Швейцария БС 2"
       - "🇺🇸 США БС 6"
+      - "🇩🇪 Германия БС 1"
+      - "🇬🇷 GR БС 1"
+      - "🇺🇸 США БС 7"
       - DIRECT
   - name: "⚪ Авто БС"
     type: url-test
@@ -441,47 +369,43 @@ proxy-groups:
       - "🇺🇸 США БС 2"
       - "🇺🇸 США БС 3"
       - "🇺🇸 США БС 4"
-      - "🇺🇸 США БС 5"
       - "🇨🇦 Канада БС 1"
+      - "🇺🇸 США БС 5"
       - "🇨🇭 Швейцария БС 1"
-      - "🇩🇪 Германия БС 1"
       - "🇷🇴 Румыния БС 1"
       - "🇮🇹 Италия БС 1"
+      - "🇵🇱 Польша БС 1"
       - "🇪🇸 Испания БС 1"
+      - "🇱🇻 Латвия БС 1"
       - "🇷🇺 Россия БС 1"
-      - "🇬🇷 GR БС 1"
+      - "🇷🇺 Россия БС 2"
       - "🇱🇹 Литва БС 1"
       - "🇪🇪 Эстония БС 1"
       - "🇪🇪 Эстония БС 2"
       - "🇳🇱 Нидерланды БС 1"
-      - "🇵🇱 Польша БС 1"
       - "🇪🇪 Эстония БС 3"
-      - "🇵🇱 Польша БС 2"
-      - "🇩🇪 Германия БС 2"
       - "🇳🇱 Нидерланды БС 2"
-      - "🇩🇪 Германия БС 3"
-      - "🇩🇪 Германия БС 4"
-      - "🇳🇱 Нидерланды БС 3"
-      - "🇵🇱 Польша БС 3"
-      - "🇵🇱 Польша БС 4"
-      - "🇨🇭 Швейцария БС 2"
       - "🇺🇸 США БС 6"
+      - "🇩🇪 Германия БС 1"
+      - "🇬🇷 GR БС 1"
+      - "🇺🇸 США БС 7"
   - name: "🌍 Страны БС"
     type: select
     proxies:
       - "⚪ 🇺🇸 США"
-      - "⚪ 🇩🇪 Германия"
-      - "⚪ 🇵🇱 Польша"
       - "⚪ 🇪🇪 Эстония"
       - "⚪ 🇳🇱 Нидерланды"
-      - "⚪ 🇨🇭 Швейцария"
+      - "⚪ 🇷🇺 Россия"
       - "⚪ 🇨🇦 Канада"
+      - "⚪ 🇨🇭 Швейцария"
+      - "⚪ 🇩🇪 Германия"
       - "⚪ 🇪🇸 Испания"
       - "⚪ 🇬🇷 GR"
       - "⚪ 🇮🇹 Италия"
       - "⚪ 🇱🇹 Литва"
+      - "⚪ 🇱🇻 Латвия"
+      - "⚪ 🇵🇱 Польша"
       - "⚪ 🇷🇴 Румыния"
-      - "⚪ 🇷🇺 Россия"
   - name: "⚪ 🇺🇸 США"
     type: select
     proxies:
@@ -491,20 +415,7 @@ proxy-groups:
       - "🇺🇸 США БС 4"
       - "🇺🇸 США БС 5"
       - "🇺🇸 США БС 6"
-  - name: "⚪ 🇩🇪 Германия"
-    type: select
-    proxies:
-      - "🇩🇪 Германия БС 1"
-      - "🇩🇪 Германия БС 2"
-      - "🇩🇪 Германия БС 3"
-      - "🇩🇪 Германия БС 4"
-  - name: "⚪ 🇵🇱 Польша"
-    type: select
-    proxies:
-      - "🇵🇱 Польша БС 1"
-      - "🇵🇱 Польша БС 2"
-      - "🇵🇱 Польша БС 3"
-      - "🇵🇱 Польша БС 4"
+      - "🇺🇸 США БС 7"
   - name: "⚪ 🇪🇪 Эстония"
     type: select
     proxies:
@@ -516,16 +427,23 @@ proxy-groups:
     proxies:
       - "🇳🇱 Нидерланды БС 1"
       - "🇳🇱 Нидерланды БС 2"
-      - "🇳🇱 Нидерланды БС 3"
-  - name: "⚪ 🇨🇭 Швейцария"
+  - name: "⚪ 🇷🇺 Россия"
     type: select
     proxies:
-      - "🇨🇭 Швейцария БС 1"
-      - "🇨🇭 Швейцария БС 2"
+      - "🇷🇺 Россия БС 1"
+      - "🇷🇺 Россия БС 2"
   - name: "⚪ 🇨🇦 Канада"
     type: select
     proxies:
       - "🇨🇦 Канада БС 1"
+  - name: "⚪ 🇨🇭 Швейцария"
+    type: select
+    proxies:
+      - "🇨🇭 Швейцария БС 1"
+  - name: "⚪ 🇩🇪 Германия"
+    type: select
+    proxies:
+      - "🇩🇪 Германия БС 1"
   - name: "⚪ 🇪🇸 Испания"
     type: select
     proxies:
@@ -542,14 +460,18 @@ proxy-groups:
     type: select
     proxies:
       - "🇱🇹 Литва БС 1"
+  - name: "⚪ 🇱🇻 Латвия"
+    type: select
+    proxies:
+      - "🇱🇻 Латвия БС 1"
+  - name: "⚪ 🇵🇱 Польша"
+    type: select
+    proxies:
+      - "🇵🇱 Польша БС 1"
   - name: "⚪ 🇷🇴 Румыния"
     type: select
     proxies:
       - "🇷🇴 Румыния БС 1"
-  - name: "⚪ 🇷🇺 Россия"
-    type: select
-    proxies:
-      - "🇷🇺 Россия БС 1"
 
 rules:
   - GEOIP,private,DIRECT,no-resolve

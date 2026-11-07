@@ -2,8 +2,8 @@
 # profile-update-interval: 1
 # subscription-userinfo: upload=0; download=0; total=0
 # profile-web-page-url: https://uiran23.github.io/free-vpn-subscriptions/
-# Обновлено: 2026-11-07 07:05 UTC
-# Серверов: 77
+# Обновлено: 2026-11-07 13:57 UTC
+# Серверов: 83
 
 mixed-port: 7890
 allow-lan: false
@@ -14,51 +14,86 @@ ipv6: false
 proxies:
   - name: "★ 🇺🇸 США 1"
     type: vless
-    server: "47.253.226.114"
-    port: 443
-    uuid: "055a1ce8-2a16-4a0d-a2c2-22826c9b2413"
+    server: "143.246.62.191"
+    port: 8443
+    uuid: "eb8c97f7-a154-4442-91b0-54c0d055ad0b"
     udp: true
     network: "tcp"
     tls: true
-    flow: "xtls-rprx-vision"
-    servername: "www.cloudflare.com"
+    servername: "github.githubassets.com"
     client-fingerprint: "chrome"
     reality-opts:
-      public-key: "Svl81isn16RPAFnjtmYw7A6TPnsEPLHuYYaJht65Rzc"
-      short-id: ""
-  - name: "★ 🇺🇸 США 2"
+      public-key: "4g6gX0ueJap7pY_iTDx23h6bzo3KIOTcFzP1Uacn0QA"
+      short-id: "4ad2e4e660550e43"
+  - name: "🇺🇸 США 2"
+    type: hysteria2
+    server: "7be5fe79-tmm5c0-ttx5yr-1j0y6.los.hyhuawei.com"
+    port: 443
+    password: "1cce7df2-251c-11ee-9409-f23c9164ca5d"
+  - name: "★ 🇺🇸 США 3"
     type: hysteria2
     server: "hy2.123266.xyz"
     port: 33333
     password: "bce6c821-200d-421f-bf3d-7159e5246ea0"
     skip-cert-verify: true
-  - name: "★ 🇨🇦 Канада 1"
-    type: vless
-    server: "209.200.246.148"
+  - name: "🇺🇸 США 4"
+    type: hysteria2
+    server: "807fc395-tmm5c0-u5ip77-duku.los.hyhuawei.com"
     port: 443
-    uuid: "ca52e2b6-fb9f-4dac-b6dc-49da9923f251"
+    password: "8e0f8ef2-5fe3-11ec-a8bf-f23c91cfbbc9"
+    sni: "807fc395-tmm5c0-u5ip77-duku.los.hyhuawei.com"
+  - name: "★ 🇺🇸 США 5"
+    type: vless
+    server: "15.204.97.219"
+    port: 23576
+    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
     udp: true
     network: "tcp"
     tls: true
     flow: "xtls-rprx-vision"
-    servername: "www.cloudflare.com"
+    servername: "fuck.rkn"
     client-fingerprint: "chrome"
     reality-opts:
-      public-key: "uTmb-ytXsx8p0fkBz7A76SHpWk7_oVutIA4LGTE8BQk"
-      short-id: "f98843107912e782"
-  - name: "★ 🇺🇸 США 3"
+      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
+      short-id: "01"
+  - name: "★ 🇺🇸 США 6"
     type: vless
-    server: "199.7.140.201"
-    port: 443
-    uuid: "a52ac672-0f5f-4070-b8fd-6b5685fc8004"
+    server: "108.61.119.63"
+    port: 18580
+    uuid: "e9a8144e-5237-488a-afb1-9ca3d8d54c80"
     udp: true
     network: "tcp"
     tls: true
-    servername: "www.cloudflare.com"
+    servername: "us007.zestapp778.com"
+    client-fingerprint: "chrome"
+  - name: "★ 🇨🇦 Канада 1"
+    type: vless
+    server: "81.19.140.181"
+    port: 443
+    uuid: "db80088c-32a1-4cb8-a907-0f3cb7844152"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "ca1.japancase.site"
     client-fingerprint: "firefox"
     reality-opts:
-      public-key: "LRAkgKlj5BPtVAGEIZfO5LvDZ5Eg91X0CBKIYhBC1jE"
-      short-id: ""
+      public-key: "zN5buqMK95hn0mv3vKlfoOAi99ehuvP73cUuyNbZNWc"
+      short-id: "dbd6b473c7038dd5"
+  - name: "★ 🇺🇸 США 7"
+    type: vless
+    server: "169.40.42.163"
+    port: 443
+    uuid: "d65cc14c-f53f-4fe2-b262-97856601319c"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "yahoo.com"
+    client-fingerprint: "random"
+    reality-opts:
+      public-key: "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg"
+      short-id: "c39cc7310a"
   - name: "🇨🇦 Канада 2"
     type: vless
     server: "66.70.179.198"
@@ -72,11 +107,25 @@ proxies:
     reality-opts:
       public-key: "k4l6TxwkBbx9DhZAFpByq5rfCWFSgyOex3f_eFe9CWU"
       short-id: "83f8317a948bb769"
-  - name: "🇺🇸 США 4"
+  - name: "★ 🇺🇸 США 8"
     type: vless
-    server: "167.17.69.171"
+    server: "169.40.42.202"
     port: 443
-    uuid: "00144519-7e0d-476b-8d28-435576af9262"
+    uuid: "d65cc14c-f53f-4fe2-b262-97856601319c"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "yahoo.com"
+    client-fingerprint: "ios"
+    reality-opts:
+      public-key: "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg"
+      short-id: "c39cc7310a"
+  - name: "★ 🇨🇦 Канада 3"
+    type: vless
+    server: "209.200.246.148"
+    port: 443
+    uuid: "ca52e2b6-fb9f-4dac-b6dc-49da9923f251"
     udp: true
     network: "tcp"
     tls: true
@@ -84,14 +133,9 @@ proxies:
     servername: "www.cloudflare.com"
     client-fingerprint: "chrome"
     reality-opts:
-      public-key: "ALT8hIGeZEhi0sQFbXP_ntBg8Xo-v7i0YCLrqTnBxRk"
-      short-id: "0990d22f"
-  - name: "🇺🇸 США 5"
-    type: hysteria2
-    server: "7be5fe79-tmm5c0-ttx5yr-1j0y6.los.hyhuawei.com"
-    port: 443
-    password: "1cce7df2-251c-11ee-9409-f23c9164ca5d"
-  - name: "★ 🇺🇸 США 6"
+      public-key: "uTmb-ytXsx8p0fkBz7A76SHpWk7_oVutIA4LGTE8BQk"
+      short-id: "f98843107912e782"
+  - name: "★ 🇺🇸 США 9"
     type: vless
     server: "169.40.42.35"
     port: 443
@@ -101,11 +145,11 @@ proxies:
     tls: true
     flow: "xtls-rprx-vision"
     servername: "yahoo.com"
-    client-fingerprint: "chrome"
+    client-fingerprint: "ios"
     reality-opts:
       public-key: "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg"
       short-id: "c39cc7310a"
-  - name: "★ 🇺🇸 США 7"
+  - name: "★ 🇺🇸 США 10"
     type: vless
     server: "23.95.115.116"
     port: 2053
@@ -119,21 +163,7 @@ proxies:
     reality-opts:
       public-key: "plwyjJZIVDt1OtwDAxfcLjDsR7dseVCe9Ia3HceIKEg"
       short-id: "a1b2c3d4"
-  - name: "★ 🇺🇸 США 8"
-    type: vless
-    server: "169.40.42.168"
-    port: 443
-    uuid: "d65cc14c-f53f-4fe2-b262-97856601319c"
-    udp: true
-    network: "tcp"
-    tls: true
-    flow: "xtls-rprx-vision"
-    servername: "yahoo.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg"
-      short-id: "c39cc7310a"
-  - name: "★ 🇺🇸 США 9"
+  - name: "★ 🇺🇸 США 11"
     type: vless
     server: "169.40.42.74"
     port: 443
@@ -147,19 +177,59 @@ proxies:
     reality-opts:
       public-key: "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg"
       short-id: "c39cc7310a"
-  - name: "🇺🇸 США 10"
-    type: hysteria2
-    server: "807fc395-tmm5c0-u5ip77-duku.los.hyhuawei.com"
+  - name: "★ 🇺🇸 США 12"
+    type: vless
+    server: "169.40.42.89"
     port: 443
-    password: "8e0f8ef2-5fe3-11ec-a8bf-f23c91cfbbc9"
-    sni: "807fc395-tmm5c0-u5ip77-duku.los.hyhuawei.com"
-  - name: "★ 🇳🇱 Нидерланды 1"
+    uuid: "d65cc14c-f53f-4fe2-b262-97856601319c"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "yahoo.com"
+    client-fingerprint: "ios"
+    reality-opts:
+      public-key: "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg"
+      short-id: "c39cc7310a"
+  - name: "★ 🇺🇸 США 13"
+    type: vless
+    server: "169.40.42.231"
+    port: 443
+    uuid: "d65cc14c-f53f-4fe2-b262-97856601319c"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "yahoo.com"
+    client-fingerprint: "ios"
+    reality-opts:
+      public-key: "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg"
+      short-id: "c39cc7310a"
+  - name: "★ 🇯🇵 Япония 1"
     type: hysteria2
-    server: "84.32.102.163"
-    port: 20443
-    password: "4fa0ca1b-0742-419d-8fd2-3f698e06b206"
-    sni: "hy62c5d8.w-mebel.pro"
-  - name: "★ 🇳🇱 Нидерланды 2"
+    server: "vp3.yysyy.online"
+    port: 443
+    password: "96ab5cd282733fd4c312a61f972f330a"
+    sni: "vp3.yysyy.online"
+    skip-cert-verify: true
+  - name: "★ 🇯🇵 Япония 2"
+    type: hysteria2
+    server: "8.211.175.236"
+    port: 8443
+    password: "u63SxILNwtrQZ7Y1ZrFaZfsA"
+    skip-cert-verify: true
+  - name: "★ 🇯🇵 Япония 3"
+    type: hysteria2
+    server: "freedom.chenlan.top"
+    port: 12765
+    password: "STYyftThFn"
+  - name: "★ 🇯🇵 Япония 4"
+    type: hysteria2
+    server: "138.3.208.26"
+    port: 50160
+    password: "184cdec28da5a09450803c8debcd2cc9"
+    skip-cert-verify: true
+  - name: "★ 🇳🇱 Нидерланды 1"
     type: vless
     server: "51.158.206.12"
     port: 23576
@@ -173,65 +243,9 @@ proxies:
     reality-opts:
       public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
       short-id: "01"
-  - name: "🇳🇱 Нидерланды 3"
+  - name: "★ 🇳🇱 Нидерланды 2"
     type: vless
-    server: "89.105.218.138"
-    port: 443
-    uuid: "90157e25-cee1-4217-921e-91f300bc1a24"
-    udp: true
-    network: "tcp"
-    tls: true
-    flow: "xtls-rprx-vision"
-    servername: "golos.mail.ru"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs"
-      short-id: "428ef87fd47a3a32"
-  - name: "★ 🇳🇱 Нидерланды 4"
-    type: vless
-    server: "51.158.206.96"
-    port: 23576
-    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
-    udp: true
-    network: "tcp"
-    tls: true
-    flow: "xtls-rprx-vision"
-    servername: "fuck.rkn"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
-      short-id: "01"
-  - name: "★ 🇳🇱 Нидерланды 5"
-    type: vless
-    server: "51.158.206.8"
-    port: 23576
-    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
-    udp: true
-    network: "tcp"
-    tls: true
-    flow: "xtls-rprx-vision"
-    servername: "fuck.rkn"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
-      short-id: "01"
-  - name: "★ 🇳🇱 Нидерланды 6"
-    type: vless
-    server: "51.158.206.20"
-    port: 23576
-    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
-    udp: true
-    network: "tcp"
-    tls: true
-    flow: "xtls-rprx-vision"
-    servername: "fuck.rkn"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
-      short-id: "01"
-  - name: "🇳🇱 Нидерланды 7"
-    type: vless
-    server: "51.158.206.93"
+    server: "51.158.206.26"
     port: 23576
     uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
     udp: true
@@ -251,8 +265,50 @@ proxies:
     sni: "www.microsoft.com"
     skip-cert-verify: true
   - name: "★ 🇫🇷 Франция 2"
+    type: hysteria2
+    server: "62.210.7.139"
+    port: 60111
+    password: "github.com/Alvin9999-newpac/fanqiang"
+    sni: "css.rbxcdn.com"
+    skip-cert-verify: true
+  - name: "★ 🇳🇱 Нидерланды 3"
     type: vless
-    server: "62.210.91.2"
+    server: "51.158.206.93"
+    port: 23576
+    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "fuck.rkn"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
+      short-id: "01"
+  - name: "🇳🇱 Нидерланды 4"
+    type: vless
+    server: "51.158.206.97"
+    port: 23576
+    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "fuck.rkn"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
+      short-id: "01"
+  - name: "★ 🇰🇷 Корея 1"
+    type: hysteria2
+    server: "132.226.226.189"
+    port: 50160
+    password: "1671a252e2a97dc2bda4e515475931da"
+    sni: "132.226.226.189"
+    skip-cert-verify: true
+  - name: "🇳🇱 Нидерланды 5"
+    type: vless
+    server: "51.158.206.8"
     port: 23576
     uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
     udp: true
@@ -266,14 +322,13 @@ proxies:
       short-id: "01"
   - name: "★ 🇫🇷 Франция 3"
     type: hysteria2
-    server: "62.210.124.146"
-    port: 22000
-    password: "dongtaiwang.com"
-    sni: "www.microsoft.com"
-    skip-cert-verify: true
-  - name: "★ 🇳🇱 Нидерланды 8"
+    server: "194.113.235.254"
+    port: 23661
+    password: "40546f3a-0590-4a5a-a104-6eb2e6ba5f0c"
+    sni: "fr.verymad.net"
+  - name: "★ 🇳🇱 Нидерланды 6"
     type: vless
-    server: "51.158.206.26"
+    server: "51.158.206.20"
     port: 23576
     uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
     udp: true
@@ -285,7 +340,56 @@ proxies:
     reality-opts:
       public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
       short-id: "01"
-  - name: "★ 🇳🇱 Нидерланды 9"
+  - name: "★ 🇫🇷 Франция 4"
+    type: vless
+    server: "62.210.91.2"
+    port: 23576
+    uuid: "48ff2b70-e180-582f-8866-d9a2edeed5f5"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "fuck.rkn"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s"
+      short-id: "01"
+  - name: "★ 🇰🇷 Корея 2"
+    type: hysteria2
+    server: "152.69.231.175"
+    port: 50160
+    password: "1beb216e3f60aea9555dae60d219a5ca"
+    skip-cert-verify: true
+  - name: "★ 🇨🇭 Швейцария 1"
+    type: hysteria2
+    server: "208.69.78.217"
+    port: 21084
+    password: "capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw"
+    sni: "vpn.local"
+    skip-cert-verify: true
+    obfs: "salamander"
+    obfs-password: "mbQXP2ASuHbF6ZPq"
+  - name: "★ 🇰🇷 Корея 3"
+    type: hysteria2
+    server: "152.67.200.82"
+    port: 50160
+    password: "3d7634af8cb2c6cb4bac1c0efad8b43d"
+    sni: "off"
+    skip-cert-verify: true
+  - name: "🇧🇾 Беларусь 1"
+    type: vless
+    server: "15d7fft.nl11.h1clayd.click"
+    port: 443
+    uuid: "b7b8ee80-db83-4276-8c68-87dc88b0b0b5"
+    udp: true
+    network: "tcp"
+    tls: true
+    servername: "15d7fft.nl11.h1clayd.click"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "xv6OUZcyzEHXFMTfumuJH-1Rd4NQ0cdmWikek4mm0m4"
+      short-id: "c71118d9399fb8c2"
+  - name: "★ 🇳🇱 Нидерланды 7"
     type: hysteria2
     server: "130.49.161.70"
     port: 443
@@ -293,114 +397,95 @@ proxies:
     sni: "hy2.aspidnet.xyz"
     obfs: "salamander"
     obfs-password: "rG07s3COMIEvdnQipRyWzx_H_2xygNC3"
+  - name: "★ 🇭🇰 Гонконг 1"
+    type: vless
+    server: "209.33.160.122"
+    port: 39098
+    uuid: "7852e4df-db54-4f75-a35e-3b8fbe89e56d"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "dash.cloudflare.com"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "DtOZ39u6MyQMG96tl13-M7-HeaqQzW2RLBVPk9py-Vg"
+      short-id: ""
+  - name: "★ 🇭🇰 Гонконг 2"
+    type: hysteria2
+    server: "202.146.222.89"
+    port: 443
+    password: "H7mP2xY9kJ4nQ8wR5tF6vB3z"
+    sni: "202.146.222.89"
+    skip-cert-verify: true
+  - name: "★ 🇭🇰 Гонконг 3"
+    type: hysteria2
+    server: "202.146.222.174"
+    port: 443
+    password: "H7mP2xY9kJ4nQ8wR5tF6vB3z"
+    sni: "https://t.me/oneclickvpnkeys"
+    skip-cert-verify: true
+  - name: "🇪🇪 Эстония 1"
+    type: vless
+    server: "ee.subv.ru"
+    port: 443
+    uuid: "90157e25-cee1-4217-921e-91f300bc1a24"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "dvizhok.su"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs"
+      short-id: "428ef87fd47a3a32"
+  - name: "★ 🇱🇻 Латвия 1"
+    type: hysteria2
+    server: "104.165.205.42"
+    port: 8443
+    password: "54d2f622-fd71-4f5f-8813-832b68f4ca3b"
+    sni: "speedtestmark.com"
+  - name: "★ 🇹🇼 Тайвань 1"
+    type: hysteria2
+    server: "103.115.109.49"
+    port: 443
+    password: "H7mP2xY9kJ4nQ8wR5tF6vB3z"
+    skip-cert-verify: true
+  - name: "★ 🇸🇪 Швеция 1"
+    type: vless
+    server: "sw.golangwikito.cfd"
+    port: 443
+    uuid: "f8d52ece-fad4-478d-875d-df6eed3befa7"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "sw.golangwikito.cfd"
+    client-fingerprint: "ios"
+    reality-opts:
+      public-key: "Kb8SsVPprs46BJSUNp5JvWLI-TFEiHmlBOXLQd37Glg"
+      short-id: "a1037b25dcef6aa7"
   - name: "★ 🇩🇪 Германия 1"
     type: hysteria2
     server: "5.45.100.100"
     port: 51511
     password: "miaoge110"
     skip-cert-verify: true
-  - name: "★ 🇩🇪 Германия 2"
-    type: hysteria2
-    server: "84.32.98.84"
-    port: 20443
-    password: "4fa0ca1b-0742-419d-8fd2-3f698e06b206"
-    sni: "hy6b373d.w-mebel.pro"
-  - name: "🇦🇱 AL 1"
+  - name: "★ 🇦🇹 Австрия 1"
     type: vless
-    server: "5d0319t.nl7.h1clayd.click"
+    server: "fdat.titun.su"
     port: 443
-    uuid: "cda0862a-0f87-4be9-8ed8-1d0c9e382839"
-    udp: true
-    network: "tcp"
-    tls: true
-    servername: "5d0319t.nl7.h1clayd.click"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "l-GzBDuNuhnjxoRlZqKvT7jAt_sbVAxhGFsAttO5kXs"
-      short-id: "361d0dd59c70516f"
-  - name: "★ 🇵🇱 Польша 1"
-    type: hysteria2
-    server: "13.143.189.80"
-    port: 4444
-    password: "a35c508f-4d5d-4531-842e-6e9d43c762c0"
-    sni: "pl3.nexfile.net"
-    skip-cert-verify: true
-  - name: "🇷🇺 Россия 1"
-    type: hysteria2
-    server: "steel7.hadsvpn.com"
-    port: 443
-    password: "23c82941-70f4-4381-90db-bd28e9a902e9"
-  - name: "★ 🇯🇵 Япония 1"
-    type: hysteria2
-    server: "vp3.yysyy.online"
-    port: 443
-    password: "96ab5cd282733fd4c312a61f972f330a"
-    sni: "vp3.yysyy.online"
-    skip-cert-verify: true
-  - name: "★ 🇯🇵 Япония 2"
-    type: hysteria2
-    server: "8.211.175.236"
-    port: 8443
-    password: "u63SxILNwtrQZ7Y1ZrFaZfsA"
-    skip-cert-verify: true
-  - name: "🇦🇹 Австрия 1"
-    type: vless
-    server: "178.22.31.72"
-    port: 443
-    uuid: "db80088c-32a1-4cb8-a907-0f3cb7844152"
+    uuid: "90157e25-cee1-4217-921e-91f300bc1a24"
     udp: true
     network: "tcp"
     tls: true
     flow: "xtls-rprx-vision"
-    servername: "at1.japancase.site"
+    servername: "banket-restoran.su"
     client-fingerprint: "firefox"
     reality-opts:
-      public-key: "zEntiD6D81wY__YHPvIw78e09CBIgYkyQ5meIo7c_hg"
-      short-id: "41ae8e266bc3346f"
-  - name: "★ 🇯🇵 Япония 3"
-    type: hysteria2
-    server: "freedom.chenlan.top"
-    port: 12765
-    password: "STYyftThFn"
-    sni: "freedom.chenlan.top"
-  - name: "★ 🇳🇱 Нидерланды 10"
-    type: hysteria2
-    server: "51.15.19.206"
-    port: 8443
-    password: "HowdyHysteria2023w0W"
-    sni: "t.me"
-    skip-cert-verify: true
-    obfs: "salamander"
-    obfs-password: "HysteriaHowdy"
-  - name: "★ 🇩🇪 Германия 3"
-    type: vless
-    server: "de-2.ffpn.pro"
-    port: 443
-    uuid: "727a9178-d7f0-4142-8205-b0d19959ded0"
-    udp: true
-    network: "tcp"
-    tls: true
-    flow: "xtls-rprx-vision"
-    servername: "de-2.ffpn.pro"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "DCpi9-1rSXxBnEIAQ9U3mTqHivk7vHJRV_T2pWw5vCc"
-      short-id: "681fc2dd643bc2f3"
-  - name: "★ 🇯🇵 Япония 4"
-    type: hysteria2
-    server: "138.3.208.26"
-    port: 50160
-    password: "184cdec28da5a09450803c8debcd2cc9"
-    sni: "1"
-    skip-cert-verify: true
-  - name: "★ 🇰🇷 Корея 1"
-    type: hysteria2
-    server: "132.226.226.189"
-    port: 50160
-    password: "1671a252e2a97dc2bda4e515475931da"
-    sni: "132.226.226.189"
-    skip-cert-verify: true
-  - name: "🇳🇱 Нидерланды 11"
+      public-key: "1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs"
+      short-id: "428ef87fd47a3a32"
+  - name: "★ 🇳🇱 Нидерланды 8"
     type: hysteria2
     server: "hysteria.udpgw.com"
     port: 8443
@@ -409,76 +494,66 @@ proxies:
     skip-cert-verify: true
     obfs: "salamander"
     obfs-password: "HysteriaHowdy"
-  - name: "★ 🇰🇷 Корея 2"
-    type: hysteria2
-    server: "152.69.231.175"
-    port: 50160
-    password: "1beb216e3f60aea9555dae60d219a5ca"
-    skip-cert-verify: true
-  - name: "★ 🇳🇱 Нидерланды 12"
+  - name: "★ 🇸🇬 Сингапур 1"
     type: vless
-    server: "50.7.176.65"
+    server: "134.255.211.36"
     port: 443
-    uuid: "3bb97d46-789b-4229-88f6-9beb222a4137"
+    uuid: "c5f59ef3-9540-49fa-bd1e-c6c2f79df49a"
     udp: true
     network: "tcp"
     tls: true
     flow: "xtls-rprx-vision"
-    servername: "smart2.khinikadze.com"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "lIZbI6KG18rkVDyMhLo7e6KvmffxR6fvFNzzC-O9vT8"
-      short-id: ""
-  - name: "🇷🇺 Россия 2"
-    type: vless
-    server: "188.130.209.204"
-    port: 443
-    uuid: "4a0812f0-f9d7-4afd-9ae3-6c38e1e59485"
-    udp: true
-    network: "tcp"
-    tls: true
-    flow: "xtls-rprx-vision"
-    servername: "promo-digital.wb.ru"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "3p6W4rMBh1HCwbjq4lcbWO0KjkqTshJU5lkTix5nwTc"
-      short-id: "d3f314d0b692f63d"
-  - name: "★ 🇹🇼 Тайвань 1"
-    type: hysteria2
-    server: "103.115.109.49"
-    port: 443
-    password: "H7mP2xY9kJ4nQ8wR5tF6vB3z"
-    sni: "https://t.me/oneclickvpnkeys"
-    skip-cert-verify: true
-  - name: "★ 🇭🇰 Гонконг 1"
-    type: hysteria2
-    server: "202.146.222.174"
-    port: 443
-    password: "H7mP2xY9kJ4nQ8wR5tF6vB3z"
-    sni: "202.146.222.174"
-    skip-cert-verify: true
-  - name: "★ 🇳🇱 Нидерланды 13"
-    type: vless
-    server: "nl5.japancase.site"
-    port: 443
-    uuid: "db80088c-32a1-4cb8-a907-0f3cb7844152"
-    udp: true
-    network: "tcp"
-    tls: true
-    flow: "xtls-rprx-vision"
-    servername: "nl5.japancase.site"
+    servername: "sg-sin.probe.geomyip.com"
     client-fingerprint: "chrome"
     reality-opts:
-      public-key: "Yw0T7qr5Wk3HCqV8h6V9N5wcInMxQ0XsxUuLV62_bEM"
-      short-id: "c498d5e4a069592c"
-  - name: "★ 🇭🇰 Гонконг 2"
+      public-key: "KcI3PoYu2yF7whv-e0C7JnRyUoUiUDu6tOlUBPYYbCk"
+      short-id: "2e96bf6afa823abb"
+  - name: "★ 🇩🇪 Германия 2"
+    type: vless
+    server: "sino.bestsellers1.site"
+    port: 2083
+    uuid: "0386df1b-7abd-4676-f3c6-d65d691023b9"
+    udp: true
+    network: "ws"
+    tls: true
+    servername: "sino.bestsellers1.site"
+    client-fingerprint: "chrome"
+    ws-opts:
+      path: "/"
+  - name: "🇷🇺 Россия 1"
     type: hysteria2
-    server: "202.146.222.89"
+    server: "steel7.hadsvpn.com"
     port: 443
-    password: "H7mP2xY9kJ4nQ8wR5tF6vB3z"
-    sni: "202.146.222.89"
-    skip-cert-verify: true
-  - name: "🇷🇺 Россия 3"
+    password: "23c82941-70f4-4381-90db-bd28e9a902e9"
+  - name: "🇸🇬 Сингапур 2"
+    type: vless
+    server: "134.185.81.5"
+    port: 47881
+    uuid: "59b203b2-b1bc-4e9c-a9e5-ccb8f691bf72"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "www.tesla.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "6XmXX1QXGodmtqU37Zx9CDHnCnPtonRdq8ieLmt__g4"
+      short-id: "38d72071"
+  - name: "★ 🇬🇧 Великобритания 1"
+    type: vless
+    server: "50.7.227.77"
+    port: 443
+    uuid: "90157e25-cee1-4217-921e-91f300bc1a24"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "bizorg.su"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs"
+      short-id: "428ef87fd47a3a32"
+  - name: "🇷🇺 Россия 2"
     type: vless
     server: "147.45.104.86"
     port: 7443
@@ -492,6 +567,116 @@ proxies:
     reality-opts:
       public-key: "KbjX7IJnVtwq2USeRmLgXzACOtFCiA5lnsXhIFOX3ho"
       short-id: "a7eb8a4e"
+  - name: "★ 🇩🇪 Германия 3"
+    type: vless
+    server: "de-2.ffpn.pro"
+    port: 443
+    uuid: "727a9178-d7f0-4142-8205-b0d19959ded0"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "de-2.ffpn.pro"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "DCpi9-1rSXxBnEIAQ9U3mTqHivk7vHJRV_T2pWw5vCc"
+      short-id: "681fc2dd643bc2f3"
+  - name: "🇳🇱 Нидерланды 9"
+    type: vless
+    server: "ams2.shtil.io"
+    port: 444
+    uuid: "254f28cb-d0c1-41e9-a06b-f2155213ff04"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "ams2.shtil.io"
+    client-fingerprint: "firefox"
+  - name: "★ 🇩🇪 Германия 4"
+    type: vless
+    server: "94.183.234.245"
+    port: 443
+    uuid: "5de0c218-0138-45d8-94d2-c2c3f37a1a6d"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "www.bing.com"
+    client-fingerprint: "qq"
+    reality-opts:
+      public-key: "tfFzmbVByvoZxxIEUiHMv22_k0-nQz00L0XjU0bd_Fc"
+      short-id: "7f1e29593aa94ad1"
+  - name: "🇫🇷 Франция 5"
+    type: vless
+    server: "ai.smrtai.top"
+    port: 443
+    uuid: "086bf957-9cd0-4e55-8280-bbef10435b41"
+    udp: true
+    network: "tcp"
+    tls: true
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "R-w7BpNgtryZRBMyRoHx81OnjzAwrKhVtV1EUKLFJzc"
+      short-id: "086bf957"
+  - name: "★ 🇳🇱 Нидерланды 10"
+    type: hysteria2
+    server: "51.15.19.206"
+    port: 8443
+    password: "HowdyHysteria2023w0W"
+    sni: "t.me"
+    skip-cert-verify: true
+    obfs: "salamander"
+    obfs-password: "HysteriaHowdy"
+  - name: "★ 🇰🇷 Корея 4"
+    type: vless
+    server: "3.39.4.109"
+    port: 13672
+    uuid: "814bd064-544d-4255-a070-5705c03f6da9"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "www.apple.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0"
+      short-id: "48050fab"
+  - name: "★ 🇦🇹 Австрия 2"
+    type: vless
+    server: "at1.japancase.site"
+    port: 443
+    uuid: "db80088c-32a1-4cb8-a907-0f3cb7844152"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "at1.japancase.site"
+    client-fingerprint: "edge"
+    reality-opts:
+      public-key: "zEntiD6D81wY__YHPvIw78e09CBIgYkyQ5meIo7c_hg"
+      short-id: "41ae8e266bc3346f"
+  - name: "★ 🇳🇱 Нидерланды 11"
+    type: vless
+    server: "176.116.0.252"
+    port: 443
+    uuid: "71b566cb-78c4-48e4-af5b-720e4f7884f2"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "alex.xvanta.online"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "FWMXp0NyvEUgXtbyEbGv8Ultiqif8FqKTATZxbeiJwU"
+      short-id: "2b762b951707f99f"
+  - name: "★ 🇵🇱 Польша 1"
+    type: hysteria2
+    server: "13.143.189.80"
+    port: 4444
+    password: "a35c508f-4d5d-4531-842e-6e9d43c762c0"
+    sni: "pl3.nexfile.net"
+    skip-cert-verify: true
   - name: "★ 🇸🇦 SA 1"
     type: vless
     server: "81.208.170.142"
@@ -507,42 +692,47 @@ proxies:
       short-id: "775eb6408888248e"
     grpc-opts:
       grpc-service-name: ""
-  - name: "★ 🇭🇰 Гонконг 3"
+  - name: "★ 🇳🇱 Нидерланды 12"
+    type: vless
+    server: "13.143.232.161"
+    port: 443
+    uuid: "cda0862a-0f87-4be9-8ed8-1d0c9e382839"
+    udp: true
+    network: "tcp"
+    tls: true
+    servername: "f0d7aft.nl13.h1clayd.click"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "kkCGiCQCKnkozJR1KKCRNtmdBECmThCgI9VSv7iDcWI"
+      short-id: "8956c57cb4c4f8d2"
+  - name: "★ 🇹🇷 Турция 1"
+    type: vless
+    server: "147.45.66.62"
+    port: 443
+    uuid: "db80088c-32a1-4cb8-a907-0f3cb7844152"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "tr3.japancase.site"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "B5Rbu23-J_PmzD6d-5ra_pxKaXd1MeRf6IT4jT_6PEM"
+      short-id: "071c3bd86b0c3c73"
+  - name: "★ 🇩🇪 Германия 5"
+    type: hysteria2
+    server: "84.32.98.84"
+    port: 20443
+    password: "4fa0ca1b-0742-419d-8fd2-3f698e06b206"
+    sni: "hy6b373d.w-mebel.pro"
+  - name: "★ 🇭🇰 Гонконг 4"
     type: hysteria2
     server: "202.146.222.29"
     port: 443
     password: "H7mP2xY9kJ4nQ8wR5tF6vB3z"
     sni: "www.bing.com"
     skip-cert-verify: true
-  - name: "★ 🇰🇷 Корея 3"
-    type: hysteria2
-    server: "152.67.200.82"
-    port: 50160
-    password: "3d7634af8cb2c6cb4bac1c0efad8b43d"
-    sni: "off"
-    skip-cert-verify: true
-  - name: "★ 🇩🇪 Германия 4"
-    type: vless
-    server: "94.183.234.245"
-    port: 443
-    uuid: "5de0c218-0138-45d8-94d2-c2c3f37a1a6d"
-    udp: true
-    network: "tcp"
-    tls: true
-    flow: "xtls-rprx-vision"
-    servername: "www.bing.com"
-    client-fingerprint: "qq"
-    reality-opts:
-      public-key: "tfFzmbVByvoZxxIEUiHMv22_k0-nQz00L0XjU0bd_Fc"
-      short-id: "7f1e29593aa94ad1"
-  - name: "★ 🇭🇰 Гонконг 4"
-    type: hysteria2
-    server: "vpn-hk-004.fastervpn.world"
-    port: 443
-    password: "H7mP2xY9kJ4nQ8wR5tF6vB3z"
-    sni: "vpn-hk-004.fastervpn.world"
-    skip-cert-verify: true
-  - name: "★ 🇬🇧 Великобритания 1"
+  - name: "★ 🇬🇧 Великобритания 2"
     type: vless
     server: "46.250.240.80"
     port: 2053
@@ -555,137 +745,45 @@ proxies:
     reality-opts:
       public-key: "CYFeysLf--_IVhxQOCd3ZxLrAVWFFOkJzvIGHOVXN3E"
       short-id: "4cc9dc65f7770115"
-  - name: "★ 🇸🇬 Сингапур 1"
+  - name: "★ 🇮🇳 Индия 1"
     type: vless
-    server: "134.255.211.36"
+    server: "122.176.216.52"
     port: 443
-    uuid: "c5f59ef3-9540-49fa-bd1e-c6c2f79df49a"
+    uuid: "16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88"
     udp: true
-    network: "tcp"
+    network: "ws"
     tls: true
-    flow: "xtls-rprx-vision"
-    servername: "sg-sin.probe.geomyip.com"
+    servername: "app-6ada5023.deploy.meerasolution.com"
     client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "KcI3PoYu2yF7whv-e0C7JnRyUoUiUDu6tOlUBPYYbCk"
-      short-id: "2e96bf6afa823abb"
+    ws-opts:
+      path: "/ws/16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88"
+      headers:
+        Host: "app-6ada5023.deploy.meerasolution.com"
   - name: "🇯🇵 Япония 5"
     type: vless
-    server: "104.17.210.74"
+    server: "104.16.10.48"
     port: 443
     uuid: "4e4f1f70-5e56-4a76-bb9d-db087f4690c4"
     udp: true
     network: "ws"
     tls: true
     servername: "jp3.yohototo.top"
-    client-fingerprint: "chrome"
+    client-fingerprint: "qq"
     ws-opts:
       path: "/tyxyws"
       headers:
         Host: "jp3.yohototo.top"
-  - name: "🇺🇸 США 11"
-    type: hysteria2
-    server: "starlink-ft.251313.xyz"
-    port: 443
-    password: "https://xship.best"
-    sni: "xship.top"
-    skip-cert-verify: true
-  - name: "★ 🇫🇮 Финляндия 1"
-    type: hysteria2
-    server: "179.253.82.19"
-    port: 4444
-    password: "a35c508f-4d5d-4531-842e-6e9d43c762c0"
-    sni: "fl3.nexfile.net"
-  - name: "★ 🇸🇮 Словения 1"
+  - name: "★ 🇫🇷 Франция 6"
     type: vless
-    server: "92.42.201.160"
-    port: 14443
-    uuid: "a60da2ca-0abf-49f8-9dcb-156989d76ad2"
+    server: "w.geogame.ir"
+    port: 2053
+    uuid: "fbda2834-b1e7-4148-afb9-deda31036a30"
     udp: true
     network: "tcp"
     tls: true
-    flow: "xtls-rprx-vision"
-    servername: "node-slo05.rkitman.ru"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "fmZQYGYXw4xYtiuMFvH4Dgse1DBoGazt-vWM7LOdchY"
-      short-id: "e013fa99a81badcc"
-  - name: "🇺🇸 США 12"
-    type: vless
-    server: "108.61.119.63"
-    port: 18580
-    uuid: "e9a8144e-5237-488a-afb1-9ca3d8d54c80"
-    udp: true
-    network: "tcp"
-    tls: true
-    servername: "us007.zestapp778.com"
+    servername: "w.geogame.ir"
     client-fingerprint: "chrome"
-  - name: "★ 🇺🇸 США 13"
-    type: vless
-    server: "136.0.197.99"
-    port: 49520
-    uuid: "ca4cb252-3fcb-4937-9d08-c39683e46e42"
-    udp: true
-    network: "tcp"
-    tls: true
-    flow: "xtls-rprx-vision"
-    servername: "www.ebay.com"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "c4S7RKiXGJElV2F5_cPCUc_NDZzjpcPHTEs-OwO6A2c"
-      short-id: ""
-  - name: "★ 🇸🇮 Словения 2"
-    type: vless
-    server: "92.42.201.155"
-    port: 14443
-    uuid: "a60da2ca-0abf-49f8-9dcb-156989d76ad2"
-    udp: true
-    network: "tcp"
-    tls: true
-    flow: "xtls-rprx-vision"
-    servername: "node-slo04.rkitman.ru"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "mGTe1s-luknrPURs4KI4fjdCXZAq03f_-b7by6Dr-CI"
-      short-id: "e204defc87a8949e"
-  - name: "★ 🇨🇭 Швейцария 1"
-    type: vless
-    server: "179.43.166.190"
-    port: 443
-    uuid: "90157e25-cee1-4217-921e-91f300bc1a24"
-    udp: true
-    network: "tcp"
-    tls: true
-    flow: "xtls-rprx-vision"
-    servername: "perevodchiki.su"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs"
-      short-id: "428ef87fd47a3a32"
-  - name: "★ 🇨🇭 Швейцария 2"
-    type: hysteria2
-    server: "208.69.78.217"
-    port: 21084
-    password: "capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw"
-    sni: "vpn.local"
-    skip-cert-verify: true
-    obfs: "salamander"
-    obfs-password: "mbQXP2ASuHbF6ZPq"
-  - name: "★ 🇩🇪 Германия 5"
-    type: vless
-    server: "music.3apes.online"
-    port: 443
-    uuid: "12776e55-6230-48b9-b069-1bb8a04b4237"
-    udp: true
-    network: "tcp"
-    tls: true
-    flow: "xtls-rprx-vision"
-    servername: "music.3apes.online"
-    client-fingerprint: "qq"
-    reality-opts:
-      public-key: "q4_o7NvD6vQg4hYsyO29Q6PVufjTJHDUbQTqstre9EQ"
-      short-id: ""
-  - name: "🇸🇬 Сингапур 2"
+  - name: "★ 🇸🇬 Сингапур 3"
     type: vless
     server: "43.163.112.174"
     port: 443
@@ -699,90 +797,71 @@ proxies:
     reality-opts:
       public-key: "mXQudYHNu0pebcdk1_qn-UgcmwhjaV7y9UrYu3HX7Rg"
       short-id: "0123456789abcdef"
-  - name: "🇵🇪 Перу 1"
+  - name: "🇦🇱 AL 1"
     type: vless
-    server: "134.185.81.5"
-    port: 47881
-    uuid: "59b203b2-b1bc-4e9c-a9e5-ccb8f691bf72"
+    server: "5d0319t.nl7.h1clayd.click"
+    port: 443
+    uuid: "cda0862a-0f87-4be9-8ed8-1d0c9e382839"
+    udp: true
+    network: "tcp"
+    tls: true
+    servername: "5d0319t.nl7.h1clayd.click"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "l-GzBDuNuhnjxoRlZqKvT7jAt_sbVAxhGFsAttO5kXs"
+      short-id: "361d0dd59c70516f"
+  - name: "★ 🇳🇱 Нидерланды 13"
+    type: vless
+    server: "50.7.176.65"
+    port: 443
+    uuid: "3bb97d46-789b-4229-88f6-9beb222a4137"
     udp: true
     network: "tcp"
     tls: true
     flow: "xtls-rprx-vision"
-    servername: "www.tesla.com"
-    client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "6XmXX1QXGodmtqU37Zx9CDHnCnPtonRdq8ieLmt__g4"
-      short-id: "38d72071"
-  - name: "🇸🇬 Сингапур 3"
-    type: vless
-    server: "140.235.11.243"
-    port: 56984
-    uuid: "e9a8144e-5237-488a-afb1-9ca3d8d54c80"
-    udp: true
-    network: "tcp"
-    tls: true
-    servername: "sg1.zestapp778.com"
+    servername: "smart2.khinikadze.com"
     client-fingerprint: "firefox"
-  - name: "★ 🇩🇪 Германия 6"
-    type: hysteria2
-    server: "fi-p1.h1cloud.net"
-    port: 25482
-    password: "p5xt6oLOA3qikIaj"
-    sni: "www.bing.com"
-    skip-cert-verify: true
-  - name: "★ 🇧🇾 Беларусь 1"
+    reality-opts:
+      public-key: "lIZbI6KG18rkVDyMhLo7e6KvmffxR6fvFNzzC-O9vT8"
+      short-id: ""
+  - name: "★ 🇬🇧 Великобритания 3"
     type: vless
-    server: "15d7fft.nl11.h1clayd.click"
-    port: 443
-    uuid: "b7b8ee80-db83-4276-8c68-87dc88b0b0b5"
+    server: "51.38.71.147"
+    port: 8443
+    uuid: "c08f0056-7a6d-4931-813b-aaa3cdd00aed"
     udp: true
     network: "tcp"
     tls: true
-    servername: "15d7fft.nl11.h1clayd.click"
+    servername: "node-uk.connectsuite.org"
     client-fingerprint: "chrome"
-    reality-opts:
-      public-key: "xv6OUZcyzEHXFMTfumuJH-1Rd4NQ0cdmWikek4mm0m4"
-      short-id: "c71118d9399fb8c2"
-  - name: "🇺🇦 Украина 1"
+  - name: "★ 🇩🇪 Германия 6"
     type: vless
-    server: "staging.lastilhame.monster"
+    server: "music.3apes.online"
     port: 443
-    uuid: "106d20f6-d70a-40e2-b69b-8e82baf8d117"
+    uuid: "12776e55-6230-48b9-b069-1bb8a04b4237"
     udp: true
     network: "tcp"
     tls: true
     flow: "xtls-rprx-vision"
-    servername: "www.microsoft.com"
-    client-fingerprint: "chrome"
+    servername: "music.3apes.online"
+    client-fingerprint: "qq"
     reality-opts:
-      public-key: "FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg"
-      short-id: "60500a63ad12"
+      public-key: "q4_o7NvD6vQg4hYsyO29Q6PVufjTJHDUbQTqstre9EQ"
+      short-id: ""
   - name: "🇵🇱 Польша 2"
     type: vless
-    server: "185.86.147.175"
+    server: "bhjolq0d0l.flowersgood.top"
     port: 443
     uuid: "7955bf18-35c4-412d-aabd-c0b36c793063"
     udp: true
     network: "ws"
     tls: true
     servername: "bhjolq0d0l.flowersgood.top"
-    client-fingerprint: "firefox"
+    client-fingerprint: "chrome"
     ws-opts:
       path: "/service/telemetry/045d381f1166/"
       headers:
         Host: "bhjolq0d0l.flowersgood.top"
-  - name: "🇫🇮 Финляндия 2"
-    type: hysteria2
-    server: "89.125.214.221"
-    port: 19455
-    password: "190edece-2750-454c-b766-0570fc32deca"
-    sni: "mshvpn.online"
-  - name: "★ 🇺🇸 США 14"
-    type: hysteria2
-    server: "177.202.75.56"
-    port: 443
-    password: "146d567c-6335-4e63-a8aa-7ec068642440"
-    sni: "fi1.obxodvpn.us"
   - name: "🇩🇪 Германия БС 1"
     type: vless
     server: "5.252.179.15"
@@ -793,24 +872,35 @@ proxies:
     tls: true
     flow: "xtls-rprx-vision"
     servername: "www.bing.com"
-    client-fingerprint: "firefox"
+    client-fingerprint: "qq"
     reality-opts:
       public-key: "XQB2zIgrhD8AtxgYFM8UiiWYt1sLVBLhMg1M4-sGMAY"
       short-id: "296f27de82dad7ff"
-  - name: "🇷🇺 Россия БС 1"
+  - name: "🇧🇬 Болгария БС 1"
     type: vless
-    server: "188.130.209.204"
-    port: 443
-    uuid: "4a0812f0-f9d7-4afd-9ae3-6c38e1e59485"
+    server: "168.113.128.70"
+    port: 20105
+    uuid: "9aff658c-1f80-4c82-9213-48ca26996142"
     udp: true
     network: "tcp"
     tls: true
     flow: "xtls-rprx-vision"
-    servername: "promo-digital.wb.ru"
+    servername: "ripelever.net"
+    client-fingerprint: "chrome"
+  - name: "🇩🇪 Германия БС 2"
+    type: vless
+    server: "91.215.43.80"
+    port: 443
+    uuid: "e9b117e4-8be9-4105-9354-a5e0663294f0"
+    udp: true
+    network: "ws"
+    tls: true
+    servername: "metrics.api.downloader-pet.xyz"
     client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "3p6W4rMBh1HCwbjq4lcbWO0KjkqTshJU5lkTix5nwTc"
-      short-id: "d3f314d0b692f63d"
+    ws-opts:
+      path: "/gateway/v1/ws/a901ed17102fc3090ca1ab052c672f47"
+      headers:
+        Host: "metrics.api.downloader-pet.xyz"
   - name: "🇺🇸 США БС 1"
     type: vless
     server: "04535dt.us9.h1clayd.click"
@@ -824,20 +914,34 @@ proxies:
     reality-opts:
       public-key: "UoS8qZ74hP_ECcncCz55lzvlcVss3R7VA0WYZE0YQCY"
       short-id: "ba2a3dce62b99092"
-  - name: "🇺🇸 США БС 2"
+  - name: "🇨🇭 Швейцария БС 1"
     type: vless
-    server: "45.143.94.91"
+    server: "87.242.87.165"
     port: 8443
-    uuid: "3837e7a5-d40e-4b85-8700-5f9725a5a2cb"
+    uuid: "fa8c52f8-d800-4ddd-bdc3-4f8a24b073c6"
     udp: true
     network: "tcp"
     tls: true
     flow: "xtls-rprx-vision"
-    servername: "us1.cloudvienta.com"
+    servername: "codifyr.ru"
     client-fingerprint: "firefox"
     reality-opts:
-      public-key: "3Kgy_0tHtOzEn9_mEylNsBVlAHNngT6S4AuYy5wEOSU"
-      short-id: "0c37b64d1935ebc1"
+      public-key: "WCGVWrqI3t-c5ZIbUEmwjN3wiFFT7xV09PIio-OQGHU"
+      short-id: "d16860c57700c886"
+  - name: "🇳🇱 Нидерланды БС 1"
+    type: vless
+    server: "95.129.236.239"
+    port: 443
+    uuid: "b4c190fb-e77e-4aff-8545-6067ba70e54d"
+    udp: true
+    network: "ws"
+    tls: true
+    servername: "content-iv1k.login.opendns.stream"
+    client-fingerprint: "firefox"
+    ws-opts:
+      path: "/ws/events/961a89255e00"
+      headers:
+        Host: "content-iv1k.login.opendns.stream"
   - name: "🇵🇱 Польша БС 1"
     type: vless
     server: "185.86.147.175"
@@ -847,7 +951,7 @@ proxies:
     network: "ws"
     tls: true
     servername: "bhjolq0d0l.flowersgood.top"
-    client-fingerprint: "firefox"
+    client-fingerprint: "chrome"
     ws-opts:
       path: "/service/telemetry/045d381f1166/"
       headers:
@@ -863,81 +967,87 @@ proxy-groups:
       - "⚪ Авто БС"
       - "🌍 Страны"
       - "★ 🇺🇸 США 1"
-      - "★ 🇺🇸 США 2"
-      - "★ 🇨🇦 Канада 1"
+      - "🇺🇸 США 2"
       - "★ 🇺🇸 США 3"
-      - "🇨🇦 Канада 2"
       - "🇺🇸 США 4"
-      - "🇺🇸 США 5"
+      - "★ 🇺🇸 США 5"
       - "★ 🇺🇸 США 6"
+      - "★ 🇨🇦 Канада 1"
       - "★ 🇺🇸 США 7"
+      - "🇨🇦 Канада 2"
       - "★ 🇺🇸 США 8"
+      - "★ 🇨🇦 Канада 3"
       - "★ 🇺🇸 США 9"
-      - "🇺🇸 США 10"
-      - "★ 🇳🇱 Нидерланды 1"
-      - "★ 🇳🇱 Нидерланды 2"
-      - "🇳🇱 Нидерланды 3"
-      - "★ 🇳🇱 Нидерланды 4"
-      - "★ 🇳🇱 Нидерланды 5"
-      - "★ 🇳🇱 Нидерланды 6"
-      - "🇳🇱 Нидерланды 7"
-      - "★ 🇫🇷 Франция 1"
-      - "★ 🇫🇷 Франция 2"
-      - "★ 🇫🇷 Франция 3"
-      - "★ 🇳🇱 Нидерланды 8"
-      - "★ 🇳🇱 Нидерланды 9"
-      - "★ 🇩🇪 Германия 1"
-      - "★ 🇩🇪 Германия 2"
-      - "🇦🇱 AL 1"
-      - "★ 🇵🇱 Польша 1"
-      - "🇷🇺 Россия 1"
+      - "★ 🇺🇸 США 10"
+      - "★ 🇺🇸 США 11"
+      - "★ 🇺🇸 США 12"
+      - "★ 🇺🇸 США 13"
       - "★ 🇯🇵 Япония 1"
       - "★ 🇯🇵 Япония 2"
-      - "🇦🇹 Австрия 1"
       - "★ 🇯🇵 Япония 3"
-      - "★ 🇳🇱 Нидерланды 10"
-      - "★ 🇩🇪 Германия 3"
       - "★ 🇯🇵 Япония 4"
+      - "★ 🇳🇱 Нидерланды 1"
+      - "★ 🇳🇱 Нидерланды 2"
+      - "★ 🇫🇷 Франция 1"
+      - "★ 🇫🇷 Франция 2"
+      - "★ 🇳🇱 Нидерланды 3"
+      - "🇳🇱 Нидерланды 4"
       - "★ 🇰🇷 Корея 1"
-      - "🇳🇱 Нидерланды 11"
+      - "🇳🇱 Нидерланды 5"
+      - "★ 🇫🇷 Франция 3"
+      - "★ 🇳🇱 Нидерланды 6"
+      - "★ 🇫🇷 Франция 4"
       - "★ 🇰🇷 Корея 2"
-      - "★ 🇳🇱 Нидерланды 12"
-      - "🇷🇺 Россия 2"
-      - "★ 🇹🇼 Тайвань 1"
-      - "★ 🇭🇰 Гонконг 1"
-      - "★ 🇳🇱 Нидерланды 13"
-      - "★ 🇭🇰 Гонконг 2"
-      - "🇷🇺 Россия 3"
-      - "★ 🇸🇦 SA 1"
-      - "★ 🇭🇰 Гонконг 3"
-      - "★ 🇰🇷 Корея 3"
-      - "★ 🇩🇪 Германия 4"
-      - "★ 🇭🇰 Гонконг 4"
-      - "★ 🇬🇧 Великобритания 1"
-      - "★ 🇸🇬 Сингапур 1"
-      - "🇯🇵 Япония 5"
-      - "🇺🇸 США 11"
-      - "★ 🇫🇮 Финляндия 1"
-      - "★ 🇸🇮 Словения 1"
-      - "🇺🇸 США 12"
-      - "★ 🇺🇸 США 13"
-      - "★ 🇸🇮 Словения 2"
       - "★ 🇨🇭 Швейцария 1"
-      - "★ 🇨🇭 Швейцария 2"
-      - "★ 🇩🇪 Германия 5"
+      - "★ 🇰🇷 Корея 3"
+      - "🇧🇾 Беларусь 1"
+      - "★ 🇳🇱 Нидерланды 7"
+      - "★ 🇭🇰 Гонконг 1"
+      - "★ 🇭🇰 Гонконг 2"
+      - "★ 🇭🇰 Гонконг 3"
+      - "🇪🇪 Эстония 1"
+      - "★ 🇱🇻 Латвия 1"
+      - "★ 🇹🇼 Тайвань 1"
+      - "★ 🇸🇪 Швеция 1"
+      - "★ 🇩🇪 Германия 1"
+      - "★ 🇦🇹 Австрия 1"
+      - "★ 🇳🇱 Нидерланды 8"
+      - "★ 🇸🇬 Сингапур 1"
+      - "★ 🇩🇪 Германия 2"
+      - "🇷🇺 Россия 1"
       - "🇸🇬 Сингапур 2"
-      - "🇵🇪 Перу 1"
-      - "🇸🇬 Сингапур 3"
+      - "★ 🇬🇧 Великобритания 1"
+      - "🇷🇺 Россия 2"
+      - "★ 🇩🇪 Германия 3"
+      - "🇳🇱 Нидерланды 9"
+      - "★ 🇩🇪 Германия 4"
+      - "🇫🇷 Франция 5"
+      - "★ 🇳🇱 Нидерланды 10"
+      - "★ 🇰🇷 Корея 4"
+      - "★ 🇦🇹 Австрия 2"
+      - "★ 🇳🇱 Нидерланды 11"
+      - "★ 🇵🇱 Польша 1"
+      - "★ 🇸🇦 SA 1"
+      - "★ 🇳🇱 Нидерланды 12"
+      - "★ 🇹🇷 Турция 1"
+      - "★ 🇩🇪 Германия 5"
+      - "★ 🇭🇰 Гонконг 4"
+      - "★ 🇬🇧 Великобритания 2"
+      - "★ 🇮🇳 Индия 1"
+      - "🇯🇵 Япония 5"
+      - "★ 🇫🇷 Франция 6"
+      - "★ 🇸🇬 Сингапур 3"
+      - "🇦🇱 AL 1"
+      - "★ 🇳🇱 Нидерланды 13"
+      - "★ 🇬🇧 Великобритания 3"
       - "★ 🇩🇪 Германия 6"
-      - "★ 🇧🇾 Беларусь 1"
-      - "🇺🇦 Украина 1"
       - "🇵🇱 Польша 2"
-      - "🇫🇮 Финляндия 2"
-      - "★ 🇺🇸 США 14"
       - "🇩🇪 Германия БС 1"
-      - "🇷🇺 Россия БС 1"
+      - "🇧🇬 Болгария БС 1"
+      - "🇩🇪 Германия БС 2"
       - "🇺🇸 США БС 1"
-      - "🇺🇸 США БС 2"
+      - "🇨🇭 Швейцария БС 1"
+      - "🇳🇱 Нидерланды БС 1"
       - "🇵🇱 Польша БС 1"
       - DIRECT
   - name: "🌐 Умный"
@@ -954,77 +1064,81 @@ proxy-groups:
     tolerance: 150
     proxies:
       - "★ 🇺🇸 США 1"
-      - "★ 🇺🇸 США 2"
-      - "★ 🇨🇦 Канада 1"
+      - "🇺🇸 США 2"
       - "★ 🇺🇸 США 3"
-      - "🇨🇦 Канада 2"
       - "🇺🇸 США 4"
-      - "🇺🇸 США 5"
+      - "★ 🇺🇸 США 5"
       - "★ 🇺🇸 США 6"
+      - "★ 🇨🇦 Канада 1"
       - "★ 🇺🇸 США 7"
+      - "🇨🇦 Канада 2"
       - "★ 🇺🇸 США 8"
+      - "★ 🇨🇦 Канада 3"
       - "★ 🇺🇸 США 9"
-      - "🇺🇸 США 10"
-      - "★ 🇳🇱 Нидерланды 1"
-      - "★ 🇳🇱 Нидерланды 2"
-      - "🇳🇱 Нидерланды 3"
-      - "★ 🇳🇱 Нидерланды 4"
-      - "★ 🇳🇱 Нидерланды 5"
-      - "★ 🇳🇱 Нидерланды 6"
-      - "🇳🇱 Нидерланды 7"
-      - "★ 🇫🇷 Франция 1"
-      - "★ 🇫🇷 Франция 2"
-      - "★ 🇫🇷 Франция 3"
-      - "★ 🇳🇱 Нидерланды 8"
-      - "★ 🇳🇱 Нидерланды 9"
-      - "★ 🇩🇪 Германия 1"
-      - "★ 🇩🇪 Германия 2"
-      - "🇦🇱 AL 1"
-      - "★ 🇵🇱 Польша 1"
-      - "🇷🇺 Россия 1"
+      - "★ 🇺🇸 США 10"
+      - "★ 🇺🇸 США 11"
+      - "★ 🇺🇸 США 12"
+      - "★ 🇺🇸 США 13"
       - "★ 🇯🇵 Япония 1"
       - "★ 🇯🇵 Япония 2"
-      - "🇦🇹 Австрия 1"
       - "★ 🇯🇵 Япония 3"
-      - "★ 🇳🇱 Нидерланды 10"
-      - "★ 🇩🇪 Германия 3"
       - "★ 🇯🇵 Япония 4"
+      - "★ 🇳🇱 Нидерланды 1"
+      - "★ 🇳🇱 Нидерланды 2"
+      - "★ 🇫🇷 Франция 1"
+      - "★ 🇫🇷 Франция 2"
+      - "★ 🇳🇱 Нидерланды 3"
+      - "🇳🇱 Нидерланды 4"
       - "★ 🇰🇷 Корея 1"
-      - "🇳🇱 Нидерланды 11"
+      - "🇳🇱 Нидерланды 5"
+      - "★ 🇫🇷 Франция 3"
+      - "★ 🇳🇱 Нидерланды 6"
+      - "★ 🇫🇷 Франция 4"
       - "★ 🇰🇷 Корея 2"
-      - "★ 🇳🇱 Нидерланды 12"
-      - "🇷🇺 Россия 2"
-      - "★ 🇹🇼 Тайвань 1"
-      - "★ 🇭🇰 Гонконг 1"
-      - "★ 🇳🇱 Нидерланды 13"
-      - "★ 🇭🇰 Гонконг 2"
-      - "🇷🇺 Россия 3"
-      - "★ 🇸🇦 SA 1"
-      - "★ 🇭🇰 Гонконг 3"
-      - "★ 🇰🇷 Корея 3"
-      - "★ 🇩🇪 Германия 4"
-      - "★ 🇭🇰 Гонконг 4"
-      - "★ 🇬🇧 Великобритания 1"
-      - "★ 🇸🇬 Сингапур 1"
-      - "🇯🇵 Япония 5"
-      - "🇺🇸 США 11"
-      - "★ 🇫🇮 Финляндия 1"
-      - "★ 🇸🇮 Словения 1"
-      - "🇺🇸 США 12"
-      - "★ 🇺🇸 США 13"
-      - "★ 🇸🇮 Словения 2"
       - "★ 🇨🇭 Швейцария 1"
-      - "★ 🇨🇭 Швейцария 2"
-      - "★ 🇩🇪 Германия 5"
+      - "★ 🇰🇷 Корея 3"
+      - "🇧🇾 Беларусь 1"
+      - "★ 🇳🇱 Нидерланды 7"
+      - "★ 🇭🇰 Гонконг 1"
+      - "★ 🇭🇰 Гонконг 2"
+      - "★ 🇭🇰 Гонконг 3"
+      - "🇪🇪 Эстония 1"
+      - "★ 🇱🇻 Латвия 1"
+      - "★ 🇹🇼 Тайвань 1"
+      - "★ 🇸🇪 Швеция 1"
+      - "★ 🇩🇪 Германия 1"
+      - "★ 🇦🇹 Австрия 1"
+      - "★ 🇳🇱 Нидерланды 8"
+      - "★ 🇸🇬 Сингапур 1"
+      - "★ 🇩🇪 Германия 2"
+      - "🇷🇺 Россия 1"
       - "🇸🇬 Сингапур 2"
-      - "🇵🇪 Перу 1"
-      - "🇸🇬 Сингапур 3"
+      - "★ 🇬🇧 Великобритания 1"
+      - "🇷🇺 Россия 2"
+      - "★ 🇩🇪 Германия 3"
+      - "🇳🇱 Нидерланды 9"
+      - "★ 🇩🇪 Германия 4"
+      - "🇫🇷 Франция 5"
+      - "★ 🇳🇱 Нидерланды 10"
+      - "★ 🇰🇷 Корея 4"
+      - "★ 🇦🇹 Австрия 2"
+      - "★ 🇳🇱 Нидерланды 11"
+      - "★ 🇵🇱 Польша 1"
+      - "★ 🇸🇦 SA 1"
+      - "★ 🇳🇱 Нидерланды 12"
+      - "★ 🇹🇷 Турция 1"
+      - "★ 🇩🇪 Германия 5"
+      - "★ 🇭🇰 Гонконг 4"
+      - "★ 🇬🇧 Великобритания 2"
+      - "★ 🇮🇳 Индия 1"
+      - "🇯🇵 Япония 5"
+      - "★ 🇫🇷 Франция 6"
+      - "★ 🇸🇬 Сингапур 3"
+      - "🇦🇱 AL 1"
+      - "★ 🇳🇱 Нидерланды 13"
+      - "★ 🇬🇧 Великобритания 3"
       - "★ 🇩🇪 Германия 6"
-      - "★ 🇧🇾 Беларусь 1"
-      - "🇺🇦 Украина 1"
       - "🇵🇱 Польша 2"
-      - "🇫🇮 Финляндия 2"
-      - "★ 🇺🇸 США 14"
   - name: "⚪ Авто БС"
     type: url-test
     url: "https://www.gstatic.com/generate_204"
@@ -1032,9 +1146,11 @@ proxy-groups:
     tolerance: 150
     proxies:
       - "🇩🇪 Германия БС 1"
-      - "🇷🇺 Россия БС 1"
+      - "🇧🇬 Болгария БС 1"
+      - "🇩🇪 Германия БС 2"
       - "🇺🇸 США БС 1"
-      - "🇺🇸 США БС 2"
+      - "🇨🇭 Швейцария БС 1"
+      - "🇳🇱 Нидерланды БС 1"
       - "🇵🇱 Польша БС 1"
   - name: "★ Gemini"
     type: select
@@ -1050,112 +1166,123 @@ proxy-groups:
     tolerance: 150
     proxies:
       - "★ 🇺🇸 США 1"
-      - "★ 🇺🇸 США 2"
-      - "★ 🇨🇦 Канада 1"
       - "★ 🇺🇸 США 3"
+      - "★ 🇺🇸 США 5"
       - "★ 🇺🇸 США 6"
+      - "★ 🇨🇦 Канада 1"
       - "★ 🇺🇸 США 7"
       - "★ 🇺🇸 США 8"
+      - "★ 🇨🇦 Канада 3"
       - "★ 🇺🇸 США 9"
-      - "★ 🇳🇱 Нидерланды 1"
-      - "★ 🇳🇱 Нидерланды 2"
-      - "★ 🇳🇱 Нидерланды 4"
-      - "★ 🇳🇱 Нидерланды 5"
-      - "★ 🇳🇱 Нидерланды 6"
-      - "★ 🇫🇷 Франция 1"
-      - "★ 🇫🇷 Франция 2"
-      - "★ 🇫🇷 Франция 3"
-      - "★ 🇳🇱 Нидерланды 8"
-      - "★ 🇳🇱 Нидерланды 9"
-      - "★ 🇩🇪 Германия 1"
-      - "★ 🇩🇪 Германия 2"
-      - "★ 🇵🇱 Польша 1"
+      - "★ 🇺🇸 США 10"
+      - "★ 🇺🇸 США 11"
+      - "★ 🇺🇸 США 12"
+      - "★ 🇺🇸 США 13"
       - "★ 🇯🇵 Япония 1"
       - "★ 🇯🇵 Япония 2"
       - "★ 🇯🇵 Япония 3"
-      - "★ 🇳🇱 Нидерланды 10"
-      - "★ 🇩🇪 Германия 3"
       - "★ 🇯🇵 Япония 4"
+      - "★ 🇳🇱 Нидерланды 1"
+      - "★ 🇳🇱 Нидерланды 2"
+      - "★ 🇫🇷 Франция 1"
+      - "★ 🇫🇷 Франция 2"
+      - "★ 🇳🇱 Нидерланды 3"
       - "★ 🇰🇷 Корея 1"
+      - "★ 🇫🇷 Франция 3"
+      - "★ 🇳🇱 Нидерланды 6"
+      - "★ 🇫🇷 Франция 4"
       - "★ 🇰🇷 Корея 2"
-      - "★ 🇳🇱 Нидерланды 12"
-      - "★ 🇹🇼 Тайвань 1"
-      - "★ 🇭🇰 Гонконг 1"
-      - "★ 🇳🇱 Нидерланды 13"
-      - "★ 🇭🇰 Гонконг 2"
-      - "★ 🇸🇦 SA 1"
-      - "★ 🇭🇰 Гонконг 3"
-      - "★ 🇰🇷 Корея 3"
-      - "★ 🇩🇪 Германия 4"
-      - "★ 🇭🇰 Гонконг 4"
-      - "★ 🇬🇧 Великобритания 1"
-      - "★ 🇸🇬 Сингапур 1"
-      - "★ 🇫🇮 Финляндия 1"
-      - "★ 🇸🇮 Словения 1"
-      - "★ 🇺🇸 США 13"
-      - "★ 🇸🇮 Словения 2"
       - "★ 🇨🇭 Швейцария 1"
-      - "★ 🇨🇭 Швейцария 2"
+      - "★ 🇰🇷 Корея 3"
+      - "★ 🇳🇱 Нидерланды 7"
+      - "★ 🇭🇰 Гонконг 1"
+      - "★ 🇭🇰 Гонконг 2"
+      - "★ 🇭🇰 Гонконг 3"
+      - "★ 🇱🇻 Латвия 1"
+      - "★ 🇹🇼 Тайвань 1"
+      - "★ 🇸🇪 Швеция 1"
+      - "★ 🇩🇪 Германия 1"
+      - "★ 🇦🇹 Австрия 1"
+      - "★ 🇳🇱 Нидерланды 8"
+      - "★ 🇸🇬 Сингапур 1"
+      - "★ 🇩🇪 Германия 2"
+      - "★ 🇬🇧 Великобритания 1"
+      - "★ 🇩🇪 Германия 3"
+      - "★ 🇩🇪 Германия 4"
+      - "★ 🇳🇱 Нидерланды 10"
+      - "★ 🇰🇷 Корея 4"
+      - "★ 🇦🇹 Австрия 2"
+      - "★ 🇳🇱 Нидерланды 11"
+      - "★ 🇵🇱 Польша 1"
+      - "★ 🇸🇦 SA 1"
+      - "★ 🇳🇱 Нидерланды 12"
+      - "★ 🇹🇷 Турция 1"
       - "★ 🇩🇪 Германия 5"
+      - "★ 🇭🇰 Гонконг 4"
+      - "★ 🇬🇧 Великобритания 2"
+      - "★ 🇮🇳 Индия 1"
+      - "★ 🇫🇷 Франция 6"
+      - "★ 🇸🇬 Сингапур 3"
+      - "★ 🇳🇱 Нидерланды 13"
+      - "★ 🇬🇧 Великобритания 3"
       - "★ 🇩🇪 Германия 6"
-      - "★ 🇧🇾 Беларусь 1"
-      - "★ 🇺🇸 США 14"
   - name: "🌍 Страны"
     type: select
     proxies:
-      - "⚫ 🇺🇸 США"
       - "⚫ 🇳🇱 Нидерланды"
+      - "⚫ 🇺🇸 США"
       - "⚫ 🇩🇪 Германия"
+      - "⚫ 🇫🇷 Франция"
       - "⚫ 🇯🇵 Япония"
       - "⚫ 🇭🇰 Гонконг"
-      - "⚫ 🇫🇷 Франция"
       - "⚫ 🇰🇷 Корея"
-      - "⚫ 🇷🇺 Россия"
-      - "⚫ 🇸🇬 Сингапур"
       - "⚫ 🇨🇦 Канада"
-      - "⚫ 🇨🇭 Швейцария"
-      - "⚫ 🇫🇮 Финляндия"
-      - "⚫ 🇵🇱 Польша"
-      - "⚫ 🇸🇮 Словения"
-      - "⚫ 🇦🇱 AL"
+      - "⚫ 🇬🇧 Великобритания"
+      - "⚫ 🇸🇬 Сингапур"
       - "⚫ 🇦🇹 Австрия"
-      - "⚪ 🇺🇸 США"
+      - "⚫ 🇵🇱 Польша"
+      - "⚫ 🇷🇺 Россия"
+      - "⚫ 🇦🇱 AL"
+      - "⚫ 🇧🇾 Беларусь"
+      - "⚫ 🇨🇭 Швейцария"
       - "⚪ 🇩🇪 Германия"
+      - "⚪ 🇧🇬 Болгария"
+      - "⚪ 🇨🇭 Швейцария"
+      - "⚪ 🇳🇱 Нидерланды"
       - "⚪ 🇵🇱 Польша"
-      - "⚪ 🇷🇺 Россия"
-  - name: "⚫ 🇺🇸 США"
-    type: select
-    proxies:
-      - "★ 🇺🇸 США 1"
-      - "★ 🇺🇸 США 2"
-      - "★ 🇺🇸 США 3"
-      - "🇺🇸 США 4"
-      - "🇺🇸 США 5"
-      - "★ 🇺🇸 США 6"
-      - "★ 🇺🇸 США 7"
-      - "★ 🇺🇸 США 8"
-      - "★ 🇺🇸 США 9"
-      - "🇺🇸 США 10"
-      - "🇺🇸 США 11"
-      - "🇺🇸 США 12"
-      - "★ 🇺🇸 США 13"
-      - "★ 🇺🇸 США 14"
+      - "⚪ 🇺🇸 США"
   - name: "⚫ 🇳🇱 Нидерланды"
     type: select
     proxies:
       - "★ 🇳🇱 Нидерланды 1"
       - "★ 🇳🇱 Нидерланды 2"
-      - "🇳🇱 Нидерланды 3"
-      - "★ 🇳🇱 Нидерланды 4"
-      - "★ 🇳🇱 Нидерланды 5"
+      - "★ 🇳🇱 Нидерланды 3"
+      - "🇳🇱 Нидерланды 4"
+      - "🇳🇱 Нидерланды 5"
       - "★ 🇳🇱 Нидерланды 6"
-      - "🇳🇱 Нидерланды 7"
+      - "★ 🇳🇱 Нидерланды 7"
       - "★ 🇳🇱 Нидерланды 8"
-      - "★ 🇳🇱 Нидерланды 9"
+      - "🇳🇱 Нидерланды 9"
       - "★ 🇳🇱 Нидерланды 10"
-      - "🇳🇱 Нидерланды 11"
+      - "★ 🇳🇱 Нидерланды 11"
       - "★ 🇳🇱 Нидерланды 12"
       - "★ 🇳🇱 Нидерланды 13"
+  - name: "⚫ 🇺🇸 США"
+    type: select
+    proxies:
+      - "★ 🇺🇸 США 1"
+      - "🇺🇸 США 2"
+      - "★ 🇺🇸 США 3"
+      - "🇺🇸 США 4"
+      - "★ 🇺🇸 США 5"
+      - "★ 🇺🇸 США 6"
+      - "★ 🇺🇸 США 7"
+      - "★ 🇺🇸 США 8"
+      - "★ 🇺🇸 США 9"
+      - "★ 🇺🇸 США 10"
+      - "★ 🇺🇸 США 11"
+      - "★ 🇺🇸 США 12"
+      - "★ 🇺🇸 США 13"
   - name: "⚫ 🇩🇪 Германия"
     type: select
     proxies:
@@ -1165,6 +1292,15 @@ proxy-groups:
       - "★ 🇩🇪 Германия 4"
       - "★ 🇩🇪 Германия 5"
       - "★ 🇩🇪 Германия 6"
+  - name: "⚫ 🇫🇷 Франция"
+    type: select
+    proxies:
+      - "★ 🇫🇷 Франция 1"
+      - "★ 🇫🇷 Франция 2"
+      - "★ 🇫🇷 Франция 3"
+      - "★ 🇫🇷 Франция 4"
+      - "🇫🇷 Франция 5"
+      - "★ 🇫🇷 Франция 6"
   - name: "⚫ 🇯🇵 Япония"
     type: select
     proxies:
@@ -1180,80 +1316,83 @@ proxy-groups:
       - "★ 🇭🇰 Гонконг 2"
       - "★ 🇭🇰 Гонконг 3"
       - "★ 🇭🇰 Гонконг 4"
-  - name: "⚫ 🇫🇷 Франция"
-    type: select
-    proxies:
-      - "★ 🇫🇷 Франция 1"
-      - "★ 🇫🇷 Франция 2"
-      - "★ 🇫🇷 Франция 3"
   - name: "⚫ 🇰🇷 Корея"
     type: select
     proxies:
       - "★ 🇰🇷 Корея 1"
       - "★ 🇰🇷 Корея 2"
       - "★ 🇰🇷 Корея 3"
-  - name: "⚫ 🇷🇺 Россия"
-    type: select
-    proxies:
-      - "🇷🇺 Россия 1"
-      - "🇷🇺 Россия 2"
-      - "🇷🇺 Россия 3"
-  - name: "⚫ 🇸🇬 Сингапур"
-    type: select
-    proxies:
-      - "★ 🇸🇬 Сингапур 1"
-      - "🇸🇬 Сингапур 2"
-      - "🇸🇬 Сингапур 3"
+      - "★ 🇰🇷 Корея 4"
   - name: "⚫ 🇨🇦 Канада"
     type: select
     proxies:
       - "★ 🇨🇦 Канада 1"
       - "🇨🇦 Канада 2"
-  - name: "⚫ 🇨🇭 Швейцария"
+      - "★ 🇨🇦 Канада 3"
+  - name: "⚫ 🇬🇧 Великобритания"
     type: select
     proxies:
-      - "★ 🇨🇭 Швейцария 1"
-      - "★ 🇨🇭 Швейцария 2"
-  - name: "⚫ 🇫🇮 Финляндия"
+      - "★ 🇬🇧 Великобритания 1"
+      - "★ 🇬🇧 Великобритания 2"
+      - "★ 🇬🇧 Великобритания 3"
+  - name: "⚫ 🇸🇬 Сингапур"
     type: select
     proxies:
-      - "★ 🇫🇮 Финляндия 1"
-      - "🇫🇮 Финляндия 2"
+      - "★ 🇸🇬 Сингапур 1"
+      - "🇸🇬 Сингапур 2"
+      - "★ 🇸🇬 Сингапур 3"
+  - name: "⚫ 🇦🇹 Австрия"
+    type: select
+    proxies:
+      - "★ 🇦🇹 Австрия 1"
+      - "★ 🇦🇹 Австрия 2"
   - name: "⚫ 🇵🇱 Польша"
     type: select
     proxies:
       - "★ 🇵🇱 Польша 1"
       - "🇵🇱 Польша 2"
-  - name: "⚫ 🇸🇮 Словения"
+  - name: "⚫ 🇷🇺 Россия"
     type: select
     proxies:
-      - "★ 🇸🇮 Словения 1"
-      - "★ 🇸🇮 Словения 2"
+      - "🇷🇺 Россия 1"
+      - "🇷🇺 Россия 2"
   - name: "⚫ 🇦🇱 AL"
     type: select
     proxies:
       - "🇦🇱 AL 1"
-  - name: "⚫ 🇦🇹 Австрия"
+  - name: "⚫ 🇧🇾 Беларусь"
     type: select
     proxies:
-      - "🇦🇹 Австрия 1"
-  - name: "⚪ 🇺🇸 США"
+      - "🇧🇾 Беларусь 1"
+  - name: "⚫ 🇨🇭 Швейцария"
     type: select
     proxies:
-      - "🇺🇸 США БС 1"
-      - "🇺🇸 США БС 2"
+      - "★ 🇨🇭 Швейцария 1"
   - name: "⚪ 🇩🇪 Германия"
     type: select
     proxies:
       - "🇩🇪 Германия БС 1"
+      - "🇩🇪 Германия БС 2"
+  - name: "⚪ 🇧🇬 Болгария"
+    type: select
+    proxies:
+      - "🇧🇬 Болгария БС 1"
+  - name: "⚪ 🇨🇭 Швейцария"
+    type: select
+    proxies:
+      - "🇨🇭 Швейцария БС 1"
+  - name: "⚪ 🇳🇱 Нидерланды"
+    type: select
+    proxies:
+      - "🇳🇱 Нидерланды БС 1"
   - name: "⚪ 🇵🇱 Польша"
     type: select
     proxies:
       - "🇵🇱 Польша БС 1"
-  - name: "⚪ 🇷🇺 Россия"
+  - name: "⚪ 🇺🇸 США"
     type: select
     proxies:
-      - "🇷🇺 Россия БС 1"
+      - "🇺🇸 США БС 1"
 
 rules:
   - GEOIP,private,DIRECT,no-resolve

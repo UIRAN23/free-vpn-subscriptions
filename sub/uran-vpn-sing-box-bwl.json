@@ -46,49 +46,26 @@
       "tag": "proxy",
       "outbounds": [
         "auto-bwl",
-        "🇵🇱 Польша",
         "🇺🇸 США",
         "🇩🇪 Германия",
-        "🇫🇷 Франция",
-        "🇱🇻 Латвия",
+        "🇵🇱 Польша",
+        "🇷🇺 Россия",
+        "🇩🇪 Германия БС 1",
+        "🇷🇺 Россия БС 1",
         "🇺🇸 США БС 1",
         "🇺🇸 США БС 2",
-        "🇩🇪 Германия БС 1",
-        "🇵🇱 Польша БС 1",
-        "🇵🇱 Польша БС 2",
-        "🇫🇷 Франция БС 1",
-        "🇱🇻 Латвия БС 1",
-        "🇺🇸 США БС 3",
-        "🇵🇱 Польша БС 3",
-        "🇩🇪 Германия БС 2"
+        "🇵🇱 Польша БС 1"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto-bwl",
       "outbounds": [
+        "🇩🇪 Германия БС 1",
+        "🇷🇺 Россия БС 1",
         "🇺🇸 США БС 1",
         "🇺🇸 США БС 2",
-        "🇩🇪 Германия БС 1",
-        "🇵🇱 Польша БС 1",
-        "🇵🇱 Польша БС 2",
-        "🇫🇷 Франция БС 1",
-        "🇱🇻 Латвия БС 1",
-        "🇺🇸 США БС 3",
-        "🇵🇱 Польша БС 3",
-        "🇩🇪 Германия БС 2"
-      ],
-      "url": "https://www.gstatic.com/generate_204",
-      "interval": "5m",
-      "tolerance": 150
-    },
-    {
-      "type": "urltest",
-      "tag": "🇵🇱 Польша",
-      "outbounds": [
-        "🇵🇱 Польша БС 1",
-        "🇵🇱 Польша БС 2",
-        "🇵🇱 Польша БС 3"
+        "🇵🇱 Польша БС 1"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "5m",
@@ -99,8 +76,7 @@
       "tag": "🇺🇸 США",
       "outbounds": [
         "🇺🇸 США БС 1",
-        "🇺🇸 США БС 2",
-        "🇺🇸 США БС 3"
+        "🇺🇸 США БС 2"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "5m",
@@ -110,8 +86,7 @@
       "type": "urltest",
       "tag": "🇩🇪 Германия",
       "outbounds": [
-        "🇩🇪 Германия БС 1",
-        "🇩🇪 Германия БС 2"
+        "🇩🇪 Германия БС 1"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "5m",
@@ -119,9 +94,9 @@
     },
     {
       "type": "urltest",
-      "tag": "🇫🇷 Франция",
+      "tag": "🇵🇱 Польша",
       "outbounds": [
-        "🇫🇷 Франция БС 1"
+        "🇵🇱 Польша БС 1"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "5m",
@@ -129,9 +104,9 @@
     },
     {
       "type": "urltest",
-      "tag": "🇱🇻 Латвия",
+      "tag": "🇷🇺 Россия",
       "outbounds": [
-        "🇱🇻 Латвия БС 1"
+        "🇷🇺 Россия БС 1"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "5m",
@@ -144,48 +119,6 @@
     {
       "type": "block",
       "tag": "block"
-    },
-    {
-      "type": "vless",
-      "tag": "🇺🇸 США БС 1",
-      "server": "47.253.226.114",
-      "server_port": 443,
-      "uuid": "055a1ce8-2a16-4a0d-a2c2-22826c9b2413",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "Svl81isn16RPAFnjtmYw7A6TPnsEPLHuYYaJht65Rzc",
-          "short_id": ""
-        }
-      },
-      "flow": "xtls-rprx-vision"
-    },
-    {
-      "type": "vless",
-      "tag": "🇺🇸 США БС 2",
-      "server": "167.17.69.171",
-      "server_port": 443,
-      "uuid": "00144519-7e0d-476b-8d28-435576af9262",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "ALT8hIGeZEhi0sQFbXP_ntBg8Xo-v7i0YCLrqTnBxRk",
-          "short_id": "0990d22f"
-        }
-      },
-      "flow": "xtls-rprx-vision"
     },
     {
       "type": "vless",
@@ -210,90 +143,28 @@
     },
     {
       "type": "vless",
-      "tag": "🇵🇱 Польша БС 1",
-      "server": "94.249.180.86",
+      "tag": "🇷🇺 Россия БС 1",
+      "server": "188.130.209.204",
       "server_port": 443,
-      "uuid": "0de1d303-d7de-0001-8679-c4cb67e2e2cc",
+      "uuid": "4a0812f0-f9d7-4afd-9ae3-6c38e1e59485",
       "tls": {
         "enabled": true,
-        "server_name": "amd.com",
+        "server_name": "promo-digital.wb.ru",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
-          "public_key": "WWeAHWUVD-phmnjNJ823cer0c4CMIbEs08AhsuEZmDc",
-          "short_id": "a696de84963656de"
+          "public_key": "3p6W4rMBh1HCwbjq4lcbWO0KjkqTshJU5lkTix5nwTc",
+          "short_id": "d3f314d0b692f63d"
         }
       },
       "flow": "xtls-rprx-vision"
     },
     {
       "type": "vless",
-      "tag": "🇵🇱 Польша БС 2",
-      "server": "82.118.22.161",
-      "server_port": 443,
-      "uuid": "05488656-d4bf-4634-8b2e-e4ff5a56c7e2",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "xY1KpNxaIGmi6jfeudYQ_aaLGQqWK_uHStnwUFd2_2E",
-          "short_id": "fa3ea655619a3e78"
-        }
-      },
-      "flow": "xtls-rprx-vision"
-    },
-    {
-      "type": "vless",
-      "tag": "🇫🇷 Франция БС 1",
-      "server": "ai.smrtai.top",
-      "server_port": 443,
-      "uuid": "086bf957-9cd0-4e55-8280-bbef10435b41",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "R-w7BpNgtryZRBMyRoHx81OnjzAwrKhVtV1EUKLFJzc",
-          "short_id": "086bf957"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇱🇻 Латвия БС 1",
-      "server": "195.123.213.28",
-      "server_port": 443,
-      "uuid": "02fcc1a4-ee90-4970-8bbb-4ffaa8109d24",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "NMgy1XgCSXExOg6Tg8xG9lCWttMF6sjdpB41lZy6FWo",
-          "short_id": "5c256336e3b673fa"
-        }
-      },
-      "flow": "xtls-rprx-vision"
-    },
-    {
-      "type": "vless",
-      "tag": "🇺🇸 США БС 3",
+      "tag": "🇺🇸 США БС 1",
       "server": "04535dt.us9.h1clayd.click",
       "server_port": 443,
       "uuid": "cda0862a-0f87-4be9-8ed8-1d0c9e382839",
@@ -302,7 +173,7 @@
         "server_name": "04535dt.us9.h1clayd.click",
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
@@ -313,7 +184,28 @@
     },
     {
       "type": "vless",
-      "tag": "🇵🇱 Польша БС 3",
+      "tag": "🇺🇸 США БС 2",
+      "server": "45.143.94.91",
+      "server_port": 8443,
+      "uuid": "3837e7a5-d40e-4b85-8700-5f9725a5a2cb",
+      "tls": {
+        "enabled": true,
+        "server_name": "us1.cloudvienta.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "3Kgy_0tHtOzEn9_mEylNsBVlAHNngT6S4AuYy5wEOSU",
+          "short_id": "0c37b64d1935ebc1"
+        }
+      },
+      "flow": "xtls-rprx-vision"
+    },
+    {
+      "type": "vless",
+      "tag": "🇵🇱 Польша БС 1",
       "server": "185.86.147.175",
       "server_port": 443,
       "uuid": "7955bf18-35c4-412d-aabd-c0b36c793063",
@@ -331,25 +223,6 @@
         "headers": {
           "Host": "bhjolq0d0l.flowersgood.top"
         }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇩🇪 Германия БС 2",
-      "server": "renderer-bridge-2-133.mirra.now",
-      "server_port": 443,
-      "uuid": "27653b37-603c-4c90-b1f5-25c4d23f8932",
-      "tls": {
-        "enabled": true,
-        "server_name": "renderer-bridge-2-133.mirra.now",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "VideoRenderer"
       }
     }
   ],

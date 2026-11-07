@@ -2,7 +2,7 @@
 # profile-update-interval: 1
 # subscription-userinfo: upload=0; download=0; total=0
 # profile-web-page-url: https://uiran23.github.io/free-vpn-subscriptions/
-# Обновлено: 2026-11-07 13:57 UTC
+# Обновлено: 2026-11-07 18:44 UTC
 # Серверов: 7
 
 mixed-port: 7890
@@ -12,32 +12,63 @@ log-level: info
 ipv6: false
 
 proxies:
-  - name: "🇩🇪 Германия БС 1"
+  - name: "🇺🇸 США БС 1"
     type: vless
-    server: "5.252.179.15"
+    server: "47.253.226.114"
     port: 443
-    uuid: "0ab273e4-cea6-41d0-bbab-41071d2fc455"
+    uuid: "055a1ce8-2a16-4a0d-a2c2-22826c9b2413"
     udp: true
     network: "tcp"
     tls: true
     flow: "xtls-rprx-vision"
-    servername: "www.bing.com"
-    client-fingerprint: "qq"
-    reality-opts:
-      public-key: "XQB2zIgrhD8AtxgYFM8UiiWYt1sLVBLhMg1M4-sGMAY"
-      short-id: "296f27de82dad7ff"
-  - name: "🇧🇬 Болгария БС 1"
-    type: vless
-    server: "168.113.128.70"
-    port: 20105
-    uuid: "9aff658c-1f80-4c82-9213-48ca26996142"
-    udp: true
-    network: "tcp"
-    tls: true
-    flow: "xtls-rprx-vision"
-    servername: "ripelever.net"
+    servername: "www.cloudflare.com"
     client-fingerprint: "chrome"
-  - name: "🇩🇪 Германия БС 2"
+    reality-opts:
+      public-key: "Svl81isn16RPAFnjtmYw7A6TPnsEPLHuYYaJht65Rzc"
+      short-id: ""
+  - name: "🇺🇸 США БС 2"
+    type: vless
+    server: "167.17.69.171"
+    port: 443
+    uuid: "00144519-7e0d-476b-8d28-435576af9262"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "random"
+    reality-opts:
+      public-key: "ALT8hIGeZEhi0sQFbXP_ntBg8Xo-v7i0YCLrqTnBxRk"
+      short-id: "0990d22f"
+  - name: "🇵🇱 Польша БС 1"
+    type: vless
+    server: "82.118.22.161"
+    port: 443
+    uuid: "05488656-d4bf-4634-8b2e-e4ff5a56c7e2"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "chrome"
+    reality-opts:
+      public-key: "xY1KpNxaIGmi6jfeudYQ_aaLGQqWK_uHStnwUFd2_2E"
+      short-id: "fa3ea655619a3e78"
+  - name: "🇱🇻 Латвия БС 1"
+    type: vless
+    server: "195.123.213.28"
+    port: 443
+    uuid: "02fcc1a4-ee90-4970-8bbb-4ffaa8109d24"
+    udp: true
+    network: "tcp"
+    tls: true
+    flow: "xtls-rprx-vision"
+    servername: "www.cloudflare.com"
+    client-fingerprint: "firefox"
+    reality-opts:
+      public-key: "NMgy1XgCSXExOg6Tg8xG9lCWttMF6sjdpB41lZy6FWo"
+      short-id: "5c256336e3b673fa"
+  - name: "🇩🇪 Германия БС 1"
     type: vless
     server: "91.215.43.80"
     port: 443
@@ -51,7 +82,7 @@ proxies:
       path: "/gateway/v1/ws/a901ed17102fc3090ca1ab052c672f47"
       headers:
         Host: "metrics.api.downloader-pet.xyz"
-  - name: "🇺🇸 США БС 1"
+  - name: "🇺🇸 США БС 3"
     type: vless
     server: "04535dt.us9.h1clayd.click"
     port: 443
@@ -64,35 +95,7 @@ proxies:
     reality-opts:
       public-key: "UoS8qZ74hP_ECcncCz55lzvlcVss3R7VA0WYZE0YQCY"
       short-id: "ba2a3dce62b99092"
-  - name: "🇨🇭 Швейцария БС 1"
-    type: vless
-    server: "87.242.87.165"
-    port: 8443
-    uuid: "fa8c52f8-d800-4ddd-bdc3-4f8a24b073c6"
-    udp: true
-    network: "tcp"
-    tls: true
-    flow: "xtls-rprx-vision"
-    servername: "codifyr.ru"
-    client-fingerprint: "firefox"
-    reality-opts:
-      public-key: "WCGVWrqI3t-c5ZIbUEmwjN3wiFFT7xV09PIio-OQGHU"
-      short-id: "d16860c57700c886"
-  - name: "🇳🇱 Нидерланды БС 1"
-    type: vless
-    server: "95.129.236.239"
-    port: 443
-    uuid: "b4c190fb-e77e-4aff-8545-6067ba70e54d"
-    udp: true
-    network: "ws"
-    tls: true
-    servername: "content-iv1k.login.opendns.stream"
-    client-fingerprint: "firefox"
-    ws-opts:
-      path: "/ws/events/961a89255e00"
-      headers:
-        Host: "content-iv1k.login.opendns.stream"
-  - name: "🇵🇱 Польша БС 1"
+  - name: "🇵🇱 Польша БС 2"
     type: vless
     server: "185.86.147.175"
     port: 443
@@ -101,7 +104,7 @@ proxies:
     network: "ws"
     tls: true
     servername: "bhjolq0d0l.flowersgood.top"
-    client-fingerprint: "chrome"
+    client-fingerprint: "firefox"
     ws-opts:
       path: "/service/telemetry/045d381f1166/"
       headers:
@@ -113,13 +116,13 @@ proxy-groups:
     proxies:
       - "⚪ Авто БС"
       - "🌍 Страны БС"
-      - "🇩🇪 Германия БС 1"
-      - "🇧🇬 Болгария БС 1"
-      - "🇩🇪 Германия БС 2"
       - "🇺🇸 США БС 1"
-      - "🇨🇭 Швейцария БС 1"
-      - "🇳🇱 Нидерланды БС 1"
+      - "🇺🇸 США БС 2"
       - "🇵🇱 Польша БС 1"
+      - "🇱🇻 Латвия БС 1"
+      - "🇩🇪 Германия БС 1"
+      - "🇺🇸 США БС 3"
+      - "🇵🇱 Польша БС 2"
       - DIRECT
   - name: "⚪ Авто БС"
     type: url-test
@@ -127,47 +130,39 @@ proxy-groups:
     interval: 300
     tolerance: 150
     proxies:
-      - "🇩🇪 Германия БС 1"
-      - "🇧🇬 Болгария БС 1"
-      - "🇩🇪 Германия БС 2"
       - "🇺🇸 США БС 1"
-      - "🇨🇭 Швейцария БС 1"
-      - "🇳🇱 Нидерланды БС 1"
+      - "🇺🇸 США БС 2"
       - "🇵🇱 Польша БС 1"
+      - "🇱🇻 Латвия БС 1"
+      - "🇩🇪 Германия БС 1"
+      - "🇺🇸 США БС 3"
+      - "🇵🇱 Польша БС 2"
   - name: "🌍 Страны БС"
     type: select
     proxies:
-      - "⚪ 🇩🇪 Германия"
-      - "⚪ 🇧🇬 Болгария"
-      - "⚪ 🇨🇭 Швейцария"
-      - "⚪ 🇳🇱 Нидерланды"
-      - "⚪ 🇵🇱 Польша"
       - "⚪ 🇺🇸 США"
-  - name: "⚪ 🇩🇪 Германия"
-    type: select
-    proxies:
-      - "🇩🇪 Германия БС 1"
-      - "🇩🇪 Германия БС 2"
-  - name: "⚪ 🇧🇬 Болгария"
-    type: select
-    proxies:
-      - "🇧🇬 Болгария БС 1"
-  - name: "⚪ 🇨🇭 Швейцария"
-    type: select
-    proxies:
-      - "🇨🇭 Швейцария БС 1"
-  - name: "⚪ 🇳🇱 Нидерланды"
-    type: select
-    proxies:
-      - "🇳🇱 Нидерланды БС 1"
-  - name: "⚪ 🇵🇱 Польша"
-    type: select
-    proxies:
-      - "🇵🇱 Польша БС 1"
+      - "⚪ 🇵🇱 Польша"
+      - "⚪ 🇩🇪 Германия"
+      - "⚪ 🇱🇻 Латвия"
   - name: "⚪ 🇺🇸 США"
     type: select
     proxies:
       - "🇺🇸 США БС 1"
+      - "🇺🇸 США БС 2"
+      - "🇺🇸 США БС 3"
+  - name: "⚪ 🇵🇱 Польша"
+    type: select
+    proxies:
+      - "🇵🇱 Польша БС 1"
+      - "🇵🇱 Польша БС 2"
+  - name: "⚪ 🇩🇪 Германия"
+    type: select
+    proxies:
+      - "🇩🇪 Германия БС 1"
+  - name: "⚪ 🇱🇻 Латвия"
+    type: select
+    proxies:
+      - "🇱🇻 Латвия БС 1"
 
 rules:
   - GEOIP,private,DIRECT,no-resolve
